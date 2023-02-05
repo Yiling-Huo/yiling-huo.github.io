@@ -2,9 +2,8 @@
 layout: post
 title: 17 Dec 2020, Coderre et al. (2020), and thoughts
 date: 2020-12-17 20:01
-author: balalahelo
-comments: true
-categories: [EEG, ERP, N400, visual narrative, 未分类]
+author: Yiling Huo
+categories: Reading notes
 ---
 <!-- wp:paragraph -->
 <p>The paper was actually read yesterday, but yesterday I felt there weren’t much to talk about alongside. Today was hospital day, I did my PET scan. Funny enough, I’ve now been inside PET scanners more times than MRI scanners. This was my third PET, and I finally googled the question I’ve always wondered about, why do they ask us to drink milk before the scan? I first searched in English and found nothing, then Japanese and also nothing. I finally googled in Chinese (sorry GFW), and found the disappointing answer that they just needed something inside our stomach to get a better stomach image. It actually didn’t matter at all whether it’s milk or water or anything. It feels funny now thinking about how my mom always put so much effort to make me fresh sugar free soy milk the night before, because of my lactose intolerance . I guess the reason why I found nothing in the first two searches was other countries may not specify the milk part. I also guess the reason why we especially asked patients to drink milk instead of any other liquid is that milk is probably one of the least likely drinks to contain sugar? During my search I found images explaining how blood sugar level massively affects PET scan quality, which is very interesting.</p>

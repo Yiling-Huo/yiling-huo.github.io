@@ -2,9 +2,8 @@
 layout: post
 title: 19 Dec 2020, Fengler, Meyer, &amp; Friederici (2016)
 date: 2020-12-19 16:48
-author: balalahelo
-comments: true
-categories: [brain maturation, fMRI, functional selectivity, Max Planck, 未分类]
+author: Yiling Huo
+categories: Reading notes
 ---
 <!-- wp:paragraph -->
 <p>An fMRI study from Max Planck looking at developmental attunement of the brain (PO &amp; IPL/pSTG) to functional selective language processing.</p>

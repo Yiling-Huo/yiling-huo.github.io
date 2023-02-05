@@ -1,10 +1,9 @@
 ---
 layout: post
-title: 18 April 2021, thoughts &amp; Perfors et al. (2010)
+title: 18 April 2021, thoughts & Perfors et al. (2010)
 date: 2021-04-18 13:13
-author: balalahelo
-comments: true
-categories: [未分类]
+author: Yiling Huo
+categories: Reading notes
 ---
 <!-- wp:paragraph -->
 <p>This article introduces the Bayesian learning model. I'm not particularly familiar with developmental cognitive science, but this article surprisingly gave me some intuitive examples of things I didn't understand about Bayesian stats, especially about the basic concepts, priors and what they represent. </p>

@@ -2,9 +2,8 @@
 layout: post
 title: 7 Jan 2021, Boylan &amp; Pylkkänen (2016)
 date: 2021-01-07 16:33
-author: balalahelo
-comments: true
-categories: [未分类]
+author: Yiling Huo
+categories: Reading notes
 ---
 <!-- wp:paragraph -->
 <p>This is an unpublished work I bumped into while surfing the internet. A simultaneous MEG and EEG study on localization of the N400 and the P600.</p>

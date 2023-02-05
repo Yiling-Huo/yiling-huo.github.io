@@ -1,10 +1,9 @@
 ---
 layout: post
-title: 12 March 2021, Pulvermüller &amp; Grisoni (2020)
+title: 12 March 2021, Pulvermüller & Grisoni (2020)
 date: 2021-03-12 11:37
-author: balalahelo
-comments: true
-categories: [EEG, ERP, prediction potential, 未分类]
+author: Yiling Huo
+categories: Reading notes
 ---
 <!-- wp:paragraph -->
 <p>A very interesting brief introduction? review? of the novel prediction potential (PP), a slow negative-going potential shift preceding predictable (predicted?) stimuli.</p>

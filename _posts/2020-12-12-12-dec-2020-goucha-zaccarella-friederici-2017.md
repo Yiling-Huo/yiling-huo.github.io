@@ -2,9 +2,8 @@
 layout: post
 title: 12 Dec 2020, Goucha, Zaccarella, &amp; Friederici (2017)
 date: 2020-12-12 21:20
-author: balalahelo
-comments: true
-categories: [arcuate fascicle, language faculty, Max Planck, review, 未分类]
+author: Yiling Huo
+categories: Reading notes
 ---
 <!-- wp:paragraph -->
 <p>This is a review that integrated theoretical linguistics, neuroscience of language, and evolutionary evidence in establishing that the arcuate fascicle is vital and human unique in labeling of word combinations. In doing so they also reviewed the locus and function of the language circuit in the brain. A very Max Planck article that’s nicely written. (This paper can also work as an index of brain anatomy of language, with roles of cortices and pathways concisely explained :), together with the ontogeny one.)</p>

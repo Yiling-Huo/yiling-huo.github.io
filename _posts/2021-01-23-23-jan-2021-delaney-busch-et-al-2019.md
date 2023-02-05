@@ -2,9 +2,8 @@
 layout: post
 title: 23 Jan 2021, Delaney-Busch et al. 2019
 date: 2021-01-23 21:41
-author: balalahelo
-comments: true
-categories: [adaptations, model simulation, N400, 未分类]
+author: Yiling Huo
+categories: Reading notes
 ---
 <!-- wp:paragraph -->
 <p>A study that fitted a Bayesian learning model to ERP data to study trial-by-trial N400 modulation in two-word priming settings.</p>
