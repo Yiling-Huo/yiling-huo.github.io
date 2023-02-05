@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resources
-permalink:/resources/
+permalink: /resources/
 ---
 
 Scripts and resorces that I have created or modified. All available on my [github](https://github.com/Yiling-Huo/resources_huo)
