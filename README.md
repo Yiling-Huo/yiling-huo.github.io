@@ -1,3 +1,3 @@
-# yiling-huo.github.io
+theme: architect
 
-theme: minima
+# yiling-huo.github.io
