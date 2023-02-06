@@ -90,4 +90,5 @@ If the participant did not respond with a common noun, frequency of `no_match` w
 After the processing, you will need to **manually integret sub- and super-category responses**. For example, in the sample output, for sentence two, you may consider adding the frequency of 玫瑰, 鲜花, 花朵, 野花 to the frequency of 花. 
 
 **References**
+
 Cai, Q., & Brysbaert, M. (2010). SUBTLEX-CH: Chinese Word and Character Frequencies Based on Film Subtitles. Plos ONE, 5(6), e10729. https://doi.org/10.1371/journal.pone.0010729.
