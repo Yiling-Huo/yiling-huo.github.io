@@ -34,12 +34,12 @@ plugins:
   - jekyll-feed
 
 header_pages:
- - index.markdown
- - CV.markdown
- - publications.markdown
+ - index.md
+ - CV.md
+ - publications.md
  - teaching.md
- - Tutorials/index.md
- - resources.markdown
+ - tutorial.md
+ - resources.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
