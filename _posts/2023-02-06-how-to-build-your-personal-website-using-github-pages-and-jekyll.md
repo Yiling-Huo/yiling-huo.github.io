@@ -90,6 +90,14 @@ After installing MSYS2 and MINGW development toolchain, press ENTER to exit.
 
 ![run ridk3](/images/website_tutorial/ridk3.png)
 
+open another command prompt, run `gem install jekyll bundler`.
+
+![jekinstall](/images/website_tutorial/jekinstall.png)
+
+Jekyll should be installed. Run `jekyll -v` to check if Jekyll is properly installed. Properly installed, the message should show current Jekyll version.
+
+![jekv](/images/website_tutorial/jekv.png)
+
 ### **Step 4: Initialise website using Jekyll** <a name="step4"></a>
 
 #### Search for 'cmd' in your Start menu to open a command prompt.
