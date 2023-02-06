@@ -17,7 +17,9 @@ I have created two scripts to extract the frequency of **every common noun** app
 On this page, I will explain step-by-step how my scripts work.
 
 ### On this page
-1. [](#step1)
+1. [Step 1: Preparation](#step1)
+2. [Step 2: Create a word index using SUBTLEX-CH](#step2)
+3. [Step 3: Process cloze responses](#step3)
 
 ### **Step 1: Preparation** <a name="step1"></a>
 
@@ -32,7 +34,7 @@ Pre-process your data. Your data should be in **long form** (one response per ro
 
 `sample_data.csv` provides some [sample data](https://github.com/Yiling-Huo/resources_huo/blob/main/Python_scripts/Automated_processing_of_Chinese_cloze_responses/sample_data.csv).
 
-![sample data](/image/cloze_tutorial/exdata.png)
+![sample data](/images/cloze_tutorial/exdata.png)
 
 Finally, put `your data.csv`, `SUBTLEX-CH-WF_PoS.xlsx`, `01_create_index_using_SUBTLEX_CH_PoS.py`, and `02_process_cloze_data.py` in the same folder. 
 
@@ -42,7 +44,7 @@ Run `01_create_index_using_SUBTLEX_CH_PoS.py`. Required modules: os, [openpyxl](
 
 This should create `index.csv` in the index folder. 
 
-![index](/image/cloze_tutorial/index.png)
+![index](/images/cloze_tutorial/index.png)
 
 *If you would like to process not only nouns, you can modify line 46 to include all parts of speech you would like to include. A list of part of speech coding used in the database can be found [here](https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch/labels.doc).*
 
@@ -81,7 +83,7 @@ Run `02_process_cloze_data.py`.
 
 An output file should be created in the same folder. 
 
-![output](/image/cloze_tutorial/output.png)
+![output](/images/cloze_tutorial/output.png)
 
 If the participant did not respond with a common noun, frequency of `no_match` will +1. As we can see, for the second sentence, one participant did not respond with any word in our common noun corpus. If you have too many `no_match`s, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
 
