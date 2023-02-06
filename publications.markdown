@@ -6,7 +6,7 @@ permalink: /publications/
 
 ## Publications
 
-(I'm working hard to having something here!)
+(I'm working hard to have something here!)
 
 ## Talks & Posters
 
