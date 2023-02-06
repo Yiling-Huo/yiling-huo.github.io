@@ -12,7 +12,7 @@ One possible solution is to use a text segmentation tool. Many good text segment
 
 SUBTLEX-CH is a database of word frequencies based on a corpus of film and television subtitles (33.5 million words). I chose to process my cloze data based on this database bacause it includes most Chinese words, and its format is fairly easy to process. 
 
-I have created two scripts to extract the frequency of **every common noun** appeared in responses (common noun as opposted to propoer nouns such as names, institutes). The scripts only count nouns as nouns are the most common target words in psycholinguistics experiments using eye-tracking or ERP methods. You can modify the script to accommodate the parts of speech you would like to include in your results.
+I have created two scripts to extract the frequency of **every noun** (including common nouns and proper nouns) appeared in responses. The scripts only count nouns as nouns are the most common target words in psycholinguistics experiments using eye-tracking or ERP methods. You can modify the script to accommodate the parts of speech you would like to include in your results.
 
 On this page, I will explain step-by-step how my scripts work.
 
@@ -47,16 +47,16 @@ This should create `index.csv` in the index folder.
 
 ![index](/images/cloze_tutorial/index.png)
 
-*If you would like to process not only nouns, you can modify line 46 to include all parts of speech you would like to include. A list of part of speech coding used in the database can be found [here](https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch/labels.doc).*
+*If you would like to process not only nouns, you can modify line 21 to include all parts of speech you would like to include. A list of part of speech coding used in the database can be found [here](https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch/labels.doc).*
 
 ```python
-46            if row[3] == 'n': # common noun is marked using 'n' in SUBTLEX-CH
+21 pos = ['n', 'ng', 'nr', 'ns', 'nt', 'nx', 'nz']
 ```
 
 *For example, if you want both nouns and adjectives:*
 
 ```python
-46            if row[3] in ['n', 'a']:
+21 pos = ['n', 'ng', 'nr', 'ns', 'nt', 'nx', 'nz', 'a']
 ```
 
 ### **Step 3: Process cloze responses** <a name="step3"></a>
@@ -86,11 +86,11 @@ An output file should be created in the same folder.
 
 ![output](/images/cloze_tutorial/output.png)
 
-If the participant did not respond with a common noun, frequency of `no_match` will +1. As we can see, for the second sentence, one participant did not respond with any word in our common noun corpus. If you have too many `no_match`s, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
+If the participant did not respond with a common noun, frequency of `no_match` will +1. If you have too many `no_match`s, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
 
 ### **Step 4: Manually integret sub- and super-category responses** <a name="step4"></a>
 
-After the processing, you will need to **manually integret sub- and super-category responses**. For example, in the sample output, for sentence two, you may consider adding the frequency of 玫瑰, 鲜花, 花朵, 野花 to the frequency of 花. 
+After the processing, you will need to **manually integret sub- and super-category responses**. For example, in the sample output, for sentence two, you may consider adding the frequency of 雏菊, 玫瑰, 鲜花, 花朵, 野花 etc. to the frequency of 花. 
 
 **References**
 
