@@ -86,7 +86,7 @@ An output file should be created in the same folder.
 
 ![output](/images/cloze_tutorial/output.png)
 
-If the participant did not respond with a common noun, frequency of `no_match` will +1. If you have too many `no_match`s, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
+If the participant did not respond with a noun, frequency of `no_match` will +1. If you have too many `no_match`'s, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
 
 ### **Step 4: Manually integret sub- and super-category responses** <a name="step4"></a>
 
