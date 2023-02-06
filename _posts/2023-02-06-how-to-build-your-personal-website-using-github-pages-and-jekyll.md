@@ -106,9 +106,9 @@ Jekyll should be installed. Run `jekyll -v` to check if Jekyll is properly insta
 
 #### In the command prompt, go to your local directory for your website (the one we just cloned from Github).
 
-Upon opening a command prompt, you will be locatd to one of your local drives. If your directory is not in the same drive, simply put `\<Drive\>:` in the command line (then press enter) to move to the correct drive.
+Upon opening a command prompt, you will be locatd to one of your local drives. If your directory is not in the same drive, simply put `<Drive>:` in the command line (then press enter) to move to the correct drive.
 
-Then, type `cd \<your directory\>` to go to your directory.
+Then, type `cd <your directory>` to go to your directory.
 
 ![cd](/images/website_tutorial/cd.png)
 
@@ -248,7 +248,7 @@ Under Actions, you should see that Github is trying to build the website. **When
 
 ![action](/images/website_tutorial/action.png)
 
-**Now everyone can access your website using your url.**
+**Now everyone can access your website using your url /<your user name/>.github.io.**
 
 #### Have some patience, and have fun!
 
