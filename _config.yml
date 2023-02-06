@@ -36,6 +36,7 @@ plugins:
 header_pages:
  - CV.markdown
  - publications.markdown
+ - teaching.md
  - Tutorials/index.md
  - resources.markdown
 
