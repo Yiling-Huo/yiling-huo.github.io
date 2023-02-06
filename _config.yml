@@ -36,8 +36,8 @@ plugins:
 header_pages:
  - CV.markdown
  - publications.markdown
+ - Tutorials/index.md
  - resources.markdown
- - /tutorials/index.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.

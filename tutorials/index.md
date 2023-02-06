@@ -1,5 +1,6 @@
 ---
-layout: home
-title: Reading notes
-permalink: /notes/
+layout: category
+title: Tutorials
+permalink: /tutorials/
+categories: Tutorials
 ---
