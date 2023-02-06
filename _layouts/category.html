@@ -26,7 +26,7 @@ h3{
         </a>
       </h3>
       <span class="post-meta">{{ post.date | date_to_long_string }}</span>
-      {{ post.excerpt }}
+      {{ post.content | truncatewords: 100 }}
     </li>
   {% endfor %}
   </ul>
