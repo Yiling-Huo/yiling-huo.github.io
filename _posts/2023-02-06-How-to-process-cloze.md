@@ -20,6 +20,7 @@ On this page, I will explain step-by-step how my scripts work.
 1. [Step 1: Preparation](#step1)
 2. [Step 2: Create a word index using SUBTLEX-CH](#step2)
 3. [Step 3: Process cloze responses](#step3)
+4. [Step 4: Manually integret sub- and super-category responses](#step4)
 
 ### **Step 1: Preparation** <a name="step1"></a>
 
@@ -86,6 +87,8 @@ An output file should be created in the same folder.
 ![output](/images/cloze_tutorial/output.png)
 
 If the participant did not respond with a common noun, frequency of `no_match` will +1. As we can see, for the second sentence, one participant did not respond with any word in our common noun corpus. If you have too many `no_match`s, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
+
+### **Step 4: Manually integret sub- and super-category responses** <a name="step4"></a>
 
 After the processing, you will need to **manually integret sub- and super-category responses**. For example, in the sample output, for sentence two, you may consider adding the frequency of 玫瑰, 鲜花, 花朵, 野花 to the frequency of 花. 
 
