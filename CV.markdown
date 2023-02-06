@@ -4,6 +4,8 @@ title: CV
 permalink: /cv/
 ---
 
+<a href="CV HUO Yiling 2023 Feb.pdf" download>download CV</a>
+
 ## Education
 
 - **Current** University College London – MPhil/PhD Linguistics
