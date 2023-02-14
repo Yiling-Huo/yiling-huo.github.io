@@ -19,11 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Yiling Huo
-author：
-  name: Yiling Huo 霍怡伶
-  email: yiling.huo.18@ucl.ac.uk
+email: yiling.huo.18@ucl.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi! I'm Yiling, and this is my personal page. I'm interested in how the human mind processes language. So far, I've worked on the topic of prediction during language comprehension, using eye-tracking.
+  Hi! I'm Yiling Huo 霍怡伶, and this is my personal . I'm interested in how the human mind processes language. So far, I've worked on the topic of prediction during language comprehension, using eye-tracking.
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: YlHuo
