@@ -94,7 +94,7 @@ The output csv file contains five columns:
 
 ![output](/images/cloze_tutorial/output.png)
 
-If the participant did not respond with a noun, frequency of `no_match` will +1. If you have too many `no_match`'s, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
+If the participant did not respond with a noun (or any of the parts of speech you are interested in), the script will count `no_match` once, and this entry of response will still be added to the total number_of_response. If your frequency of `no_match` is too high for a sentence, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
 
 ### **Step 4: Manually integret sub- and super-category responses** <a name="step4"></a>
 
