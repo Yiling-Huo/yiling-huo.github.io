@@ -31,7 +31,7 @@ Go to [my resources page](https://github.com/Yiling-Huo/resources_huo/tree/main/
 Pre-process your data. Your data should be in **long form** (one response per row), in `.csv` format, and contain at least these two columns:
 
 - sentence: your sentence frames
-- respons: your participant's response
+- response: your participant's response
 
 `sample_data.csv` provides some [sample data](https://github.com/Yiling-Huo/resources_huo/blob/main/Python_scripts/Automated_processing_of_Chinese_cloze_responses/sample_data.csv).
 
@@ -83,6 +83,14 @@ Check lines 23 to 32 for the variables, customise if needed:
 Run `02_process_cloze_data.py`. 
 
 An output file should be created in the same folder. 
+
+The output csv file contains five columns:
+
+- sentence: your sentence frame
+- response: the word being counted
+- count: number of times the word appeared in all responses
+- cloze_probability: count / number_of_response
+- number_of_response: number of people who provided a response to this sentence
 
 ![output](/images/cloze_tutorial/output.png)
 
