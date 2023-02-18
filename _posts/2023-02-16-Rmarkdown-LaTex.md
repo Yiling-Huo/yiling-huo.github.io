@@ -380,4 +380,4 @@ It's possible to write chapters of books with `.rmd` and combine them with `.rnw
 
 You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStutio, turn on visual editor at the toolbar:
 
-![visual_editor](/images/rmdtex_tutorial/visual_editor.png)s
+![visual_editor](/images/rmdtex_tutorial/visual_editor.png)
