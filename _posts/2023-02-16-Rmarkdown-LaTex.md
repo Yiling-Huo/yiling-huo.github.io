@@ -31,6 +31,8 @@ In this post, I will walk you step by step through how I set up everything to us
     - [Including syntax trees](#step2.6)
     - [References and citations](#step2.7)
 3. [Write a journal article with R Markdown](#step3)
+4. [To be updated: Write a book with R Markdown](#step4)
+5. [Tips](#step5)
 
 Useful resources:
 
@@ -374,3 +376,11 @@ For example, I have created an example using the Taylor & Francis Journal Articl
 ## **4. To be updated: Write a book with R Markdown** <a name="step4"></a>
 
 It's possible to write chapters of books with `.rmd` and combine them with `.rnw`. More detail to be updated!
+
+## **5. Tips** <a name="step5"></a>
+
+### Use RStudio's visual editor 
+
+You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStutio, turn on visual editor at the toolbar:
+
+![visual_editor](/images/rmdtex_tutorial/visual_editor.png)
