@@ -78,9 +78,9 @@ Use [markdown syntax](https://www.markdownguide.org/basic-syntax/) to write your
 
 ### **Including R and/or other languages codes and results:** <a name="step2.2"></a>
 
-In RStudio, you can include a R code chunk in your document by pressing Ctrl + Alt + I (Mac: Cmd + Option + I); or clicking the Add Chunk button in the toolbar; or simply typing ` ```{r} ` and ` ``` `. 
+In RStudio, you can include a R code chunk in your document by pressing Ctrl + Alt + I (Mac: Cmd + Option + I); or clicking the Add Chunk button in the toolbar; or simply typing ` ```{r}``` `. 
 
-You can name your chunk by typing after {r, separeated by a space: ` ```{r chunk_name} `. Chunk options are separated by comma: ` ```{r chunk_name, echo = TRUE, message = FALSE, warning = FALSE} `. Chunk options control whether and how the code and the results are shown in your output document. You can find a list of all possible chunk ooptions at the [knitr documentation](https://yihui.org/knitr/options/). 
+You can name your chunk by typing after {r, separeated by a space: ` ```{r chunk_name}``` `. Chunk options are separated by comma: ` ```{r chunk_name, echo = TRUE, message = FALSE, warning = FALSE}``` `. Chunk options control whether and how the code and the results are shown in your output document. You can find a list of all possible chunk ooptions at the [knitr documentation](https://yihui.org/knitr/options/). 
 
 ````{r}
 ```{r}
@@ -101,10 +101,14 @@ R Markdown supports many languages other than R through the `knitr` package. A l
 
 ````{python}
 ```{python}
-a = "Hello"
-b = "world"
+a = True
 
-print(a + " " + b)
+if a == True:
+  b = 1
+else:
+  b = 2
+
+print("The value of b is: " + str(b))
 ```
 ```` 
 
@@ -222,7 +226,7 @@ output:
 
 ### **Including math equations:** <a name="step2.5"></a>
 
-Inline mathematics are enclosed in dollar signs on both sides. For example, `$E=mc^2$` will render ![\Large E=mc^2](https://latex.codecogs.com/svg.latex?\Large&space;E=mc^2) . 
+Inline mathematics are enclosed in dollar signs on both sides. For example, `$E=mc^2$` will render ![\Large E=mc^2](https://latex.codecogs.com/svg.latex?\Large&space;E=mc^2).  
 
 Use double dollar signs for displayed equations. For example, `$$E=mc^2$$` will render:
 
