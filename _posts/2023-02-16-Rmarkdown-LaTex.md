@@ -179,7 +179,7 @@ plot
 
 #### *method 1: markdown tables*
 
-Markdown allows you to create simple tables. Use pipes (|) to create cells and use multiple hyphens (---) to separate the header from other cells. More details [here](https://www.markdownguide.org/extended-syntax/). For example:
+Markdown allows you to create simple tables. Use pipes (\|) to create cells and use multiple hyphens (---) to separate the header from other cells. More details [here](https://www.markdownguide.org/extended-syntax/). For example:
 
 ```
 | p-value | decision |
@@ -192,7 +192,7 @@ Markdown allows you to create simple tables. Use pipes (|) to create cells and u
 
 #### *method 2: LaTeX tables*
 
-If your table goes beyond the capacity of markdown, for example, if you want to merge cells, you can directly include a LaTeX table as a LaTeX chunk. Don't worry about not knowing LaTeX, there are many online tools such as [tablesgenerator](https://www.tablesgenerator.com/) that allow you to generate LaTeX code for tables. Simple copy and paste the codes in your document. You can also make it a code chunk. For example: 
+If your table goes beyond the capacity of markdown, for example, if you want to merge cells, you can directly include a LaTeX table as a LaTeX chunk. Don't worry about not knowing LaTeX, there are many online tools such as [tablesgenerator](https://www.tablesgenerator.com/) that allow you to generate LaTeX code for tables. Simply copy and paste the codes in your document. You can also make it a code chunk. For example: 
 
 ````
 ```{=latex}
@@ -216,17 +216,17 @@ The table generator may tell you to add packages to your dobument preamble, you 
 ---
 output:
   pdf_document: 
-    extra_dependencies: ["multirow", "booktabs", "qtree"]
+    extra_dependencies: ["multirow", "booktabs"]
 ---
 ```
 
 ### **Including math equations:** <a name="step2.5"></a>
 
-Inline mathematics are enclosed in dollar signs on both sides. For example, `$E=mc^2$` will render $E=mc^2$. 
+Inline mathematics are enclosed in dollar signs on both sides. For example, `$E=mc^2$` will render ![\Large E=mc^2](https://latex.codecogs.com/svg.latex?\Large&space;E=mc^2) . 
 
 Use double dollar signs for displayed equations. For example, `$$E=mc^2$$` will render:
 
-$$E=mc^2$$
+![\Large E=mc^2](https://latex.codecogs.com/svg.latex?\Large&space;E=mc^2) 
 
 A list of how to write common mathmatical notations can be found [here](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html). 
 
@@ -259,7 +259,7 @@ The `qtree` package allows users to write syntax trees in phrase marker style, a
 
 #### *Citing others' work:*
 
-Citations can be managed simply. To begin, you can put all of your citations in `.bib` format in a `.bib` file. (To create a new `.bib` file, simply create a new `.txt` file then change the extension.) Put the `.bib` file in the same folder as your `.rmd` file. Inside the `.bib` file, write your citations like this: 
+Citations can be managed simply. To begin, you can put all of your citations in `.bib` format in a `.bib` file. (To create a new `.bib` file, simply create a new `.txt` file then change the extension.) Put the `.bib` file in the same folder as your `.rmd` file. From your source material, simply look for BibTeX format citation, then copy and paste to the `.bib` file. Like this: 
 
 ```
 @article{kutas1984brain,
@@ -280,7 +280,6 @@ Citations can be managed simply. To begin, you can put all of your citations in 
   publisher={MIT press}
 }
 ```
-From your source material, simply look for BibTeX format citation, copy and paste.
 
 Specify your reference file in the YAML header:
 
