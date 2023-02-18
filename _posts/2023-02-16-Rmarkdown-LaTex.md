@@ -63,8 +63,6 @@ Select Default Output Format: PDF.
 
 A `.rmd` file will be created, including some default text showing you how to write in markdown syntax and how to include R codes and plots. 
 
-![default_rmd](/images/rmdtex_tutorial/default_rmd.png)
-
 The `.rmd` file contains two parts: a YAML header, which is enclosed in triple dashes on either side; and the text body. Inside the YAML header, we specify global variables for the document, and Pandoc will read the YAML header and adjust the LaTeX preamble accordingly during output. 
 
 We can edit this `.rmd` file and knit it: 
@@ -383,4 +381,4 @@ It's possible to write chapters of books with `.rmd` and combine them with `.rnw
 
 You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStutio, turn on visual editor at the toolbar:
 
-![visual_editor](/images/rmdtex_tutorial/visual_editor.png)
+![visual_editor](/images/rmdtex_tutorial/visual_editor.png)s
