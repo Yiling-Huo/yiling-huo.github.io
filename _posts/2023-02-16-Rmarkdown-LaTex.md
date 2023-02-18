@@ -78,7 +78,13 @@ Use [markdown syntax](https://www.markdownguide.org/basic-syntax/) to write your
 
 ### **Including R and/or other languages codes and results:** <a name="step2.2"></a>
 
-In RStudio, you can include a R code chunk in your document by pressing Ctrl + Alt + I (Mac: Cmd + Option + I); or clicking the Add Chunk button in the toolbar; or simply typing. 
+In RStudio, you can include a R code chunk in your document by pressing Ctrl + Alt + I (Mac: Cmd + Option + I); or clicking the Add Chunk button in the toolbar; or simply typing:
+
+````{r}
+```{r}
+
+```
+````
 
 You can name your chunk by typing after {r, separeated by a space: `{r chunk_name}`. Chunk options are separated by comma: `{r chunk_name, echo = TRUE, message = FALSE, warning = FALSE}`. Chunk options control whether and how the code and the results are shown in your output document. You can find a list of all possible chunk ooptions at the [knitr documentation](https://yihui.org/knitr/options/). 
 
