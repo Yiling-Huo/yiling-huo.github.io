@@ -12,7 +12,7 @@ categories: Ads
 - Friday, 24 February 2023 09:00 - 10:05
 - Friday, 24 February 2023 13:00 - 14:05
 - Friday, 24 February 2023 14:30 - 15:35
-- Saturday, 25 February 2023 14:00 - 15:05
+- Saturday, 25 February 2023 10:00 - 11:05
 - Saturday, 25 February 2023 15:30 - 16:35
 - Monday, 27 February 2023 09:00 - 10:05
 - Wednesday, 1 March 2023 09:00 - 10:05
