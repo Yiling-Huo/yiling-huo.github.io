@@ -3,7 +3,7 @@ layout: post
 title: 18 March 2021, Hoeks and Brouwer (2014)
 date: 2021-03-18 19:12
 author: Yiling Huo
-categories: Reading notes
+categories: Reading_notes
 ---
 <!-- wp:paragraph -->
 <p>A chapter of the Oxford handbook of language and social psychology, about potential usage of ERPs (N400 and P600) in the study of active communication.</p>

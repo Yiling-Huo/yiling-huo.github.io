@@ -3,7 +3,7 @@ layout: post
 title: 12 March 2021, Pulvermüller & Grisoni (2020)
 date: 2021-03-12 11:37
 author: Yiling Huo
-categories: Reading notes
+categories: Reading_notes
 ---
 <!-- wp:paragraph -->
 <p>A very interesting brief introduction? review? of the novel prediction potential (PP), a slow negative-going potential shift preceding predictable (predicted?) stimuli.</p>
