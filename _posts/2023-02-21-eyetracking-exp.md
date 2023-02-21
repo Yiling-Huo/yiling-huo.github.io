@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Eye-tracking experiment recruiting native Mandarin Chinese speakers
-date: 2023-02-16 21:00
+date: 2023-02-21 11:00
 author: Yiling Huo
 categories: Ads
 ---
