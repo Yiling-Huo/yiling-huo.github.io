@@ -24,6 +24,6 @@ More details of this experiment <a href="/images/eyetracking-ad/Study_Informatio
  
 If you are interested, please take a look! We have open time slots for this week and next week. This is a initial-stage experiment and more time slots may open up later. 
 
-The official recruiting platform for this experiment is [UCL's SONA system](https://uclpsychology.sona-systems.com/). If you have a SONA account, you can directly log in to SONA and sign up for this experiment [here](https://uclpsychology.sona-systems.com/default.aspx?p_return_experiment_id=10075). If you do not have a SONA account, you can take a look at empty time slots [here](https://yiling-huo.github.io/ads/empty-slots.html) and [email me](mailto:yiling.huo.18@ucl.ac.uk) with your preferred time slot. I will only be able to offer monetary compensation for email sign-ups. 
+The official recruiting platform for this experiment is [UCL's SONA system](https://uclpsychology.sona-systems.com/). If you have a SONA account, you can directly log in to SONA and sign up for this experiment [here](https://uclpsychology.sona-systems.com/default.aspx?p_return_experiment_id=10075). If you do not have a SONA account, you can take a look at empty time slots [here](https://yiling-huo.github.io/ads/2023/02/21/empty-slots.html) and [email me](mailto:yiling.huo.18@ucl.ac.uk) with your preferred time slot. I will only be able to offer monetary compensation for email sign-ups. 
 
 If you have any questions, please [email me](mailto:yiling.huo.18@ucl.ac.uk). 
