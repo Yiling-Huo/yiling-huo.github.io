@@ -74,7 +74,7 @@ After cloning, your local directory should have been created. Inside, you will f
 
 Next, we need to install [Jekyll](https://jekyllrb.com/). Jekyll is a static site generator, written in Ruby. On Windows, go to [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/) and follow the steps:
 
-#### First, go to [RubyIntaller](https://rubyinstaller.org/downloads/) and download and install Ruby + Devkit 3.1.3.
+#### First, go to [RubyInstaller](https://rubyinstaller.org/downloads/) and download and install Ruby + Devkit 3.1.3.
 
 ![download ruby](/images/website_tutorial/ruby1.png)
 
@@ -82,7 +82,7 @@ Next, we need to install [Jekyll](https://jekyllrb.com/). Jekyll is a static sit
 
 ![run ridk](/images/website_tutorial/ridk.png)
 
-#### Then, enter option 3: MSYS2 and MINGW developmenttt toolchai
+#### Then, enter option 3: MSYS2 and MINGW development toolchain
 
 ![run ridk2](/images/website_tutorial/ridk2.png)
 
