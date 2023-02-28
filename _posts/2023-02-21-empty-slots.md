@@ -6,11 +6,11 @@ author: Yiling Huo
 categories: Ads
 ---
 
-- Monday, 27 Feburary 2023 13:00 - 14:05
-- Monday, 27 Feburary 2023 14:30 - 15:35
-- Tuesday, 28 Feburary 2023 09:00 - 10:05
-- Tuesday, 28 Feburary 2023 13:00 - 14:05
-- Tuesday, 28 Feburary 2023 14:30 - 15:35
+- Monday, 27 February 2023 13:00 - 14:05
+- Monday, 27 February 2023 14:30 - 15:35
+- Tuesday, 28 February 2023 09:00 - 10:05
+- Tuesday, 28 February 2023 13:00 - 14:05
+- Tuesday, 28 February 2023 14:30 - 15:35
 - Friday, 3 March 2023 09:00 - 10:05
 - Friday, 3 March 2023 10:30 - 11:35
 - Friday, 3 March 2023 13:00 - 14:05

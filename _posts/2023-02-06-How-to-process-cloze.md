@@ -10,7 +10,7 @@ categories: Tutorials
 
 One possible solution is to use a text segmentation tool. Many good text segmentation tools exist for Chinese for python, such as [Jieba](https://github.com/fxsjy/jieba), [SnowNLP](https://github.com/isnowfy/snownlp), [PkuSeg](https://github.com/lancopku/pkuseg-python). However, I find that text segmentation is not necessary for processing cloze responses. Instead, I present a solution based on a Chinese word database, [SUBTLEX-CH](https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch).
 
-SUBTLEX-CH is a database of word frequencies based on a corpus of film and television subtitles (33.5 million words). I chose to process my cloze data based on this database bacause it includes most Chinese words, and its format is fairly easy to process. 
+SUBTLEX-CH is a database of word frequencies based on a corpus of film and television subtitles (33.5 million words). I chose to process my cloze data based on this database because it includes most Chinese words, and its format is fairly easy to process. 
 
 I have created two scripts to extract the frequency of **every noun** (including common nouns and proper nouns) appeared in responses. The scripts only count nouns as nouns are the most common target words in psycholinguistics experiments using eye-tracking or ERP methods. You can modify the script to accommodate the parts of speech you would like to include in your results.
 
@@ -63,7 +63,7 @@ This should create `index.csv` in the index folder.
 
 Open `02_process_cloze_data.py`. 
 
-This script will first sort the index from longest to shortest, and count each appearences of the longest possible word(s) in each response. For example, if the participant responded with "北京烤鸭", "北京" and "烤鸭" will be counted once respectively, while "北" or "鸭" will not be counted. This aviods multiple counting. 
+This script will first sort the index from longest to shortest, and count each appearances of the longest possible word(s) in each response. For example, if the participant responded with "北京烤鸭", "北京" and "烤鸭" will be counted once respectively, while "北" or "鸭" will not be counted. This avoids multiple counting. 
 
 Check lines 23 to 32 for the variables, customise if needed:
 

@@ -10,9 +10,9 @@ As an academic rooky I feel that I will eventually need to deal with LaTeX one w
 
 LaTeX comes in a thousand flavours and each person will have a different preference. This post is therefore mostly recording what I have done for myself. 
 
-For context, I study psycholinguistics, where I put participants inside or in front of machines and do experiments with them (non-invasively, of course). So I already regularly deal with not-quire-small data sets in R, and share my workflow and results with supervisors and colleagues using R Markdown. I also teach an introduction to statistics with R workshop where it'd be nice to prepare handouts that can include R codes and R results. I am also interested in sharing stuff I created with the community so it'd be nice to create pretty documentations. So when I learned that I can integret LaTeX with R Markdown, I immediately felt that this is where I want to start. 
+For context, I study psycholinguistics, where I put participants inside or in front of machines and do experiments with them (non-invasively, of course). So I already regularly deal with not-quire-small data sets in R, and share my workflow and results with supervisors and colleagues using R Markdown. I also teach an introduction to statistics with R workshop where it'd be nice to prepare handouts that can include R codes and R results. I am also interested in sharing stuff I created with the community so it'd be nice to create pretty documentations. So when I learned that I can integrate LaTeX with R Markdown, I immediately felt that this is where I want to start. 
 
-Some other things about my solusion that I like include:
+Some other things about my solution that I like include:
 
 - I can use RStudio's MS word style visual editor to edit the documents.
 - I'm already working with R and RStudio, and I want to minimise new software that needed to be installed. 
@@ -46,7 +46,7 @@ Useful resources:
 
 My solution requires [R](https://cloud.r-project.org/), [RStudio](https://posit.co/downloads/), and [Pandoc](https://pandoc.org/installing.html).
 
-Inside RStudio, install tinytex and TinyTeX by running `install.packages("tinytex")` and then `tinytex::install_tinytex()` in the console. 
+Inside RStudio, install [tinytex](https://yihui.org/tinytex/) and TinyTeX by running `install.packages("tinytex")` and then `tinytex::install_tinytex()` in the console. 
 
 >How it works:
 >1. In RStudio, I create R Markdown `.rmd` files and write my texts, codes, and generate my results and plots. 
@@ -86,7 +86,7 @@ In RStudio, you can include a R code chunk in your document by pressing Ctrl + A
 ```
 ````
 
-You can name your chunk by typing after {r, separeated by a space: `{r chunk_name}`. Chunk options are separated by comma: `{r chunk_name, echo = TRUE, message = FALSE, warning = FALSE}`. Chunk options control whether and how the code and the results are shown in your output document. You can find a list of all possible chunk ooptions at the [knitr documentation](https://yihui.org/knitr/options/). 
+You can name your chunk by typing after {r, separated by a space: `{r chunk_name}`. Chunk options are separated by comma: `{r chunk_name, echo = TRUE, message = FALSE, warning = FALSE}`. Chunk options control whether and how the code and the results are shown in your output document. You can find a list of all possible chunk options at the [knitr documentation](https://yihui.org/knitr/options/). 
 
 ````{r}
 ```{r}
@@ -220,7 +220,7 @@ If your table goes beyond the capacity of markdown, for example, if you want to 
 
 ![latex_table](/images/rmdtex_tutorial/latex_table.png)
 
-The table generator may tell you to add packages to your dobument preamble, you can do so in the YAML header at the beginning of your document. For example:
+The table generator may tell you to add packages to your document preamble, you can do so in the YAML header at the beginning of your document. For example:
 
 ```
 ---
@@ -238,7 +238,7 @@ Use double dollar signs for displayed equations. For example, `$$E=mc^2$$` will 
 
 ![\Large E=mc^2](https://latex.codecogs.com/svg.latex?\Large&space;E=mc^2) 
 
-A list of how to write common mathmatical notations can be found [here](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html). 
+A list of how to write common mathematical notations can be found [here](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html). 
 
 
 ### **Including syntax trees:** <a name="step2.6"></a>
@@ -299,7 +299,7 @@ bibliography: references.bib
 ---
 ```
 
-Note that the first argument is your citation `key`, such as `kutas1984brain` and `chomsky2014minimalist`. To cite an item in-text, simply write `@key`. To enclose citation in parentehses, write `[@key]`. To cite multiple items in one parentehses, write `[@key1; @key2; @key3]`. More detailed explanation can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html). 
+Note that the first argument is your citation `key`, such as `kutas1984brain` and `chomsky2014minimalist`. To cite an item in-text, simply write `@key`. To enclose citation in parentheses, write `[@key]`. To cite multiple items in one parentheses, write `[@key1; @key2; @key3]`. More detailed explanation can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html). 
 
 Citation style is managed by `.csl` files. Download the desired `.csl` file [here](https://www.zotero.org/styles?q=APA) and put it in the same folder. 
 
@@ -388,7 +388,7 @@ It's possible to write chapters of books with `.rmd` and combine them with `.rnw
 
 ### Use RStudio's visual editor 
 
-You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStutio, turn on visual editor at the toolbar:
+You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStudio, turn on visual editor at the toolbar:
 
 ![visual_editor](/images/rmdtex_tutorial/visual_editor.png)
 

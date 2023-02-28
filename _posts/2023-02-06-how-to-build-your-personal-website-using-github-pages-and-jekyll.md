@@ -82,7 +82,7 @@ Next, we need to install [Jekyll](https://jekyllrb.com/). Jekyll is a static sit
 
 ![run ridk](/images/website_tutorial/ridk.png)
 
-#### Then, enter option 3: MSYS2 and MINGW develoment toolchain
+#### Then, enter option 3: MSYS2 and MINGW developmenttt toolchai
 
 ![run ridk2](/images/website_tutorial/ridk2.png)
 
@@ -106,7 +106,7 @@ Jekyll should be installed. Run `jekyll -v` to check if Jekyll is properly insta
 
 #### In the command prompt, go to your local directory for your website (the one we just cloned from Github).
 
-Upon opening a command prompt, you will be locatd to one of your local drives. If your directory is not in the same drive, simply put `<Drive>:` in the command line (then press enter) to move to the correct drive.
+Upon opening a command prompt, you will be located to one of your local drives. If your directory is not in the same drive, simply put `<Drive>:` in the command line (then press enter) to move to the correct drive.
 
 Then, type `cd <your directory>` to go to your directory.
 
@@ -141,17 +141,17 @@ gem "github-pages", "~> 227", group: :jekyll_plugins
 gem "webrick", "~> 1.8"
 ```
 
-To open the Gemfile, simple right click and select open with any text editor (Notpad, for example). To comment out simply means to put a '#' at the beginning of the line. Your Gemfile should look like this:
+To open the Gemfile, simple right click and select open with any text editor (Notepad, for example). To comment out simply means to put a '#' at the beginning of the line. Your Gemfile should look like this:
 
 ![gemfile1](/images/website_tutorial/gemfile1.png)
 
-Then, inside the `_congig.yml`, comment out these two lines:
+Then, inside the `_config.yml`, comment out these two lines:
 
 ```Ruby
 #baseurl: "" 
 #url: ""
 ```
-![congig1](/images/website_tutorial/congig.png)
+![config1](/images/website_tutorial/congig.png)
 
 We won't need these because Github Pages will automatically set these urls.
 
@@ -185,7 +185,7 @@ Inside `_config.yml`, notice these variables:
 
 Edit these variables to edit the header and footers. Note that any changes to `_config.yml` will require re-running `bundle exec jekyll serve` to take effect.
 
-Page files such as `index.markdown` have two main components, the YAML header and the content. The YAML header is enclosed in triple dashes on either side. Inside the YAML header, you can set values for various variables for your page. For now, the only varialbe specified is `layout:`. We can add more variables such as `title:` or `permalink:` for other pages. The home page does not need a `permalink:`. 
+Page files such as `index.markdown` have two main components, the YAML header and the content. The YAML header is enclosed in triple dashes on either side. Inside the YAML header, you can set values for various variables for your page. For now, the only variable specified is `layout:`. We can add more variables such as `title:` or `permalink:` for other pages. The home page does not need a `permalink:`. 
 
 After the YAML, we can simply add some content to be shown on the home page. Because this is a markdown file, we can use both [markdown syntax](https://www.markdownguide.org/basic-syntax/) and [html syntax](https://www.arubanetworks.com/techdocs/ClearPass/CPGuest_UG_HTML_6.5/Content/Reference/BasicHTMLSyntax.htm#:~:text=HTML%20is%20a%20markup%20language,example%2C%20.). 
 
