@@ -298,6 +298,13 @@ Specify your reference file in the YAML header:
 bibliography: references.bib
 ---
 ```
+Or use multiple bib files:
+
+```
+---
+bibliography: ["references1.bib", "references2.bib"]
+---
+```
 
 Note that the first argument is your citation `key`, such as `kutas1984brain` and `chomsky2014minimalist`. To cite an item in-text, simply write `@key`. To enclose citation in parentheses, write `[@key]`. To cite multiple items in one parentheses, write `[@key1; @key2; @key3]`. More detailed explanation can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html). 
 
