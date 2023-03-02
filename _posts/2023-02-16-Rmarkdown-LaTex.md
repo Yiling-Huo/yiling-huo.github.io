@@ -28,8 +28,9 @@ In this post, I will walk you step by step through how I set up everything to us
     - [Including figures and plots](#step2.3)
     - [Including tables](#step2.4)
     - [Including math equations](#step2.5)
-    - [Including syntax trees](#step2.6)
-    - [References and citations](#step2.7)
+    - [References and citations](#step2.6)
+    - [Including syntax trees](#step2.7)
+    - [Including linguistic examples](#step2.8)
 3. [Write a journal article with R Markdown](#step3)
 4. [To be updated: Write a book with R Markdown](#step4)
 5. [Tips](#step5)
@@ -240,32 +241,7 @@ Use double dollar signs for displayed equations. For example, `$$E=mc^2$$` will 
 
 A list of how to write common mathematical notations can be found [here](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html). 
 
-
-### **Including syntax trees:** <a name="step2.6"></a>
-
-I work closely with linguistics, so one day I may need to include syntax trees in my documents.
-
-Syntax trees can be easily included as LaTeX codes using the package [Qtree](https://www.ling.upenn.edu/advice/latex/qtree/qtreenotes.pdf). Include the `qtree` package in the YAML header:
-
-```
----
-output:
-  pdf_document: 
-    extra_dependencies: ["qtree"]
----
-```
-
-The `qtree` package allows users to write syntax trees in phrase marker style, and will generate trees during output:
-
-````
-```{=latex}
-\Tree [.S This [.VP [.V is ] \qroof{a simple tree}.NP ] ]
-```
-````
-
-![tree](/images/rmdtex_tutorial/tree.png)
-
-### **References and citations:** <a name="step2.7"></a>
+### **References and citations:** <a name="step2.6"></a>
 
 #### *Citing others' work:*
 
@@ -374,6 +350,72 @@ Figure \ref{figkey} shows how to reference figures.
 ```` 
 
 ![fig_ref](/images/rmdtex_tutorial/fig_ref.png)
+
+### **Including syntax trees:** <a name="step2.7"></a>
+
+I work closely with linguistics, so one day I may need to include syntax trees in my documents.
+
+Syntax trees can be easily included as LaTeX codes using the package [Qtree](https://www.ling.upenn.edu/advice/latex/qtree/qtreenotes.pdf). Include the `qtree` package in the YAML header:
+
+```
+---
+output:
+  pdf_document: 
+    extra_dependencies: ["qtree"]
+---
+```
+
+The `qtree` package allows users to write syntax trees in phrase marker style, and will generate trees during output:
+
+````
+```{=latex}
+\Tree [.S This [.VP [.V is ] \qroof{a simple tree}.NP ] ]
+```
+````
+
+![tree](/images/rmdtex_tutorial/tree.png)
+
+### **Including linguistic examples:** <a name="step2.8"></a>
+
+It appears that including linguistic examples can only be done in LaTeX syntax. So in this section I will have to go against what I was claiming in the beginning of this tutorial, and talk about how to include linguistic examples using LaTeX. 
+
+There are several LaTeX packages that deal with linguistic examples, in this tutorial I will use [bg4e](http://www.bakoma-tex.com/doc/latex/gb4e/gb4e-doc.pdf). 
+
+Include the `bg4e` package in the YAML header:
+
+```
+output: 
+  pdf_document:
+    extra_dependencies: ["gb4e"]
+```
+
+The simplest linguistic example using `bg4e` looks like this: 
+
+```{=latex}
+\begin{exe}
+\ex
+\label{label-name}
+This is not a pipe. 
+\end{exe}
+```
+
+![lingexp](/images/rmdtex_tutorial/lingexp.png)
+
+Reference the examples using `\label{label-name}` and `\ref{label-name}`. 
+
+The `bg4e` package allows more formatting of examples, such as ungrammatical marking, listing, glosses, etc. You can refer to their [documentation](http://www.bakoma-tex.com/doc/latex/gb4e/gb4e-doc.pdf) for more details. 
+
+```
+\begin{exe}
+\ex
+\label{label-name}
+\gll zhe bu shi yi ge yandou. \\
+This NEG is one CL pipe\\
+\trans ‘This is not a pipe.’
+\end{exe}
+```
+
+![lingexp1](/images/rmdtex_tutorial/lingexp1.png)
 
 ## **3. Write a journal article with R Markdown** <a name="step3"></a>
 
