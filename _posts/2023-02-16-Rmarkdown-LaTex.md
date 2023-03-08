@@ -233,7 +233,7 @@ output:
 
 ### **Including math equations:** <a name="step2.5"></a>
 
-Inline mathematics are enclosed in dollar signs on both sides. No need to put spaces between the dollar signs and your equation. For example, if you write `$E=mc^2$`, Pandoc will render ![\Large E=mc^2](https://latex.codecogs.com/svg.latex?\Large&space;E=mc^2)
+Inline mathematics are enclosed in dollar signs on both sides. No need to put spaces between the dollar signs and your equation. For example, `$E=mc^2$` will render ![\Large E=mc^2](https://latex.codecogs.com/svg.latex?\Large&space;E=mc^2)
 
 Use double dollar signs for displayed equations. For example, `$$E=mc^2$$` will render:
 
