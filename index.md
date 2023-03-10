@@ -7,7 +7,7 @@ title: About
 ---
 
 <font size="+1">
-<img src="profile_image_2_square.jpg" alt="" align="left" height="55%" width="55%" vspace="20" hspace="25">
+<img src="/images/profile_image_2_square.jpg" alt="" align="left" height="55%" width="55%" vspace="20" hspace="25">
 
 <p style="padding: 5em 0 1em 0;"><h2>About me</h2></p>
 
