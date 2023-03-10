@@ -3,7 +3,7 @@ layout: post
 title: Automated processing of Chinese cloze responses
 date: 2023-02-06 16:00
 author: Yiling Huo
-categories: [Tutorials, 'Psycholinguistics (data analysis)']
+categories: [Tutorials, 'Psycholinguistics']
 ---
 
 <p>The cloze task is widely used in psycholinguistics, mainly to determine the predictability of a word given certain context. In a cloze task, the participant sees incomplete sentences, and is asked to complete the sentences by writing down one or a few words. The predictability, or the cloze probability, of a given word is the proportion of people who fill a gap in a sentence with that specific word. Therefore, processing cloze responses includes counting the frequency of each word appeared in all responses. In many languages, such as English, this task is easy to automate: word boundaries are easy to determine. In languages such as Chinese, where no written word boundaries exist, we need a solution to automate the processing of cloze responses. </p>
@@ -26,14 +26,14 @@ On this page, I will explain step-by-step how my scripts work.
 
 Go to [SUBTLEX-CH](https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch) and download `SUBTLEX-CH-WF-PoS.zip`. Extract `SUBTLEX-CH-WF_PoS.xlsx`.
 
-Go to [my resources page](https://github.com/Yiling-Huo/resources_huo/tree/main/Python_scripts/Automated_processing_of_Chinese_cloze_responses) and download `01_create_index_using_SUBTLEX_CH_PoS.py` and `02_process_cloze_data.py`. 
+Download the python scripts and some sample data <a href="/files/resources/python/chinese-cloze.zip" download>here</a>. Extract everything, including `01_create_index_using_SUBTLEX_CH_PoS.py` and `02_process_cloze_data.py`. 
 
 Pre-process your data. Your data should be in **long form** (one response per row), in `.csv` format, and contain at least these two columns:
 
 - sentence: your sentence frames
 - response: your participant's response
 
-`sample_data.csv` provides some [sample data](https://github.com/Yiling-Huo/resources_huo/blob/main/Python_scripts/Automated_processing_of_Chinese_cloze_responses/sample_data.csv).
+`sample_data.csv` provides some sample data.
 
 ![sample data](/images/cloze_tutorial/exdata.png)
 
