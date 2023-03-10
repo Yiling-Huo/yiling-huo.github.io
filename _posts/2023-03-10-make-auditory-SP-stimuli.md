@@ -41,7 +41,7 @@ Select Run - Run. You will be presented with a user interface, where you can spe
 - The specifics:
     - **critical tier number**: The index of the interval tier that Praat will use to process the recordings. 
     - **soa in seconds**: Your stimulus-onset asynchrony (SOA). In seconds. 
-    - **stretch fragments**: If checked, Praat will stretch fragments that are shorter than your SOA. 
+    - **stretch fragments**: If checked, Praat will stretch fragments that are shorter than your SOA to the length of your SOA, so that stimuli can be perceived as continuous. 
     - **allow overtime**: If unchecked, Praat will compress fragments that are longer than your SOA. If checked, Praat will not compress long fragments (*note that this will not preserve the SOA*).
     - **minimum silence duration seconds**: You can optionally define a minimum duration of silence, if you wish to make sure each fragment is separated by at least some silence. 
     
