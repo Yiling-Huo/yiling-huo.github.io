@@ -41,3 +41,5 @@ Select Run - Run. You will be presented with a user interface, where you can spe
 Define the variables based on what you need, then select OK. Praat will start processing your files, and an output file summarising all pitch information extracted will be created in the same folder:
 
 ![csv](/images/tutorial_pitch/csv.png)
+
+File selection procedure used in this script is from [Scott Seyfarth annotation.Praat](https://gist.github.com/scjs/ffbbba71cc8b3ff9d0476c82b2df9d0f). 

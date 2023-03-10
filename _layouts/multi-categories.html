@@ -35,7 +35,7 @@ h3{
                 </a>
             </h3>
             <span class="post-meta">{{ post.date | date_to_long_string }}</span>
-            {{ post.content | truncatewords: 100 }}
+            {{ post.content | truncatewords: 60 }}
             </li>
         {% endfor %}
         </ul>
