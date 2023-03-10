@@ -8,6 +8,8 @@ categories: [Tutorials, 'Coding/Programming']
 
 As an academic rooky I feel that I will eventually need to deal with LaTeX one way or another. However, I wonder whether I have to fully learn LaTeX if I'm already familiar with markdown, a way simpler formatting language. So I started searching the internet for solutions, and I think I found something useful for me. 
 
+<!--excerpt-->
+
 LaTeX comes in a thousand flavours and each person will have a different preference. This post is therefore mostly recording what I have done for myself. 
 
 For context, I study psycholinguistics, where I put participants inside or in front of machines and do experiments with them (non-invasively, of course). So I already regularly deal with not-quire-small data sets in R, and share my workflow and results with supervisors and colleagues using R Markdown. I also teach an introduction to statistics with R workshop where it'd be nice to prepare handouts that can include R codes and R results. I am also interested in sharing stuff I created with the community so it'd be nice to create pretty documentations. So when I learned that I can integrate LaTeX with R Markdown, I immediately felt that this is where I want to start. 

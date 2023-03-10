@@ -43,6 +43,8 @@ header_pages:
  - tutorial.md
  - resources.md
 
+excerpt_separator: "<!--excerpt-->"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

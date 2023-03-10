@@ -8,6 +8,8 @@ categories: [Tutorials, 'Psycholinguistics']
 
 On this page I present a Praat script that extracts pitch contour information based on `.wav` sounds and `.Textgrid` files. 
 
+<!--excerpt-->
+
 This script is useful for analysing lexical tone, but can be also useful for other analyses where pitch contour is important, e.g. intonation. 
 
 ## Step 1: Preparation

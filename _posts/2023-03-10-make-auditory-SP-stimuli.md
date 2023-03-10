@@ -8,6 +8,8 @@ categories: [Tutorials, 'Psycholinguistics']
 
 Psycholinguistic research sometimes require the stimuli to have specific timing. On this page, I share a Praat script that given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids. 
 
+<!--excerpt-->
+
 ### Step 1: Preparation
 
 Download the <a href="/files/resources/praat/auditory-SP-stimuli-from-textgrid" download>Praat script</a>.

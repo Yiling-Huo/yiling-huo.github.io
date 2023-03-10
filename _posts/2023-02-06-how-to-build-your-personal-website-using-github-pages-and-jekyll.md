@@ -8,6 +8,8 @@ categories: [Tutorials, 'Coding/Programming']
 
 This is what I did to build my personal website using Github Pages and Jekyll. 
 
+<!--excerpt-->
+
 The advantage of Github Pages and Jekyll is that it's free and quite easy to set up. There are also tons of free themes you can use to make your website pleasant to look at. 
 
 In this tutorial, I will help you set up your personal website step-by-step. There are loads of website building tutorials out there, but I still wrote this one because I find many tutorials assume the reader has some knowledge of website building. In this tutorial, I will assume you have no prior knowledge of website developing or any programming language. 

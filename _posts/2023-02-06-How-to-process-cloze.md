@@ -8,6 +8,8 @@ categories: [Tutorials, 'Psycholinguistics']
 
 <p>The cloze task is widely used in psycholinguistics, mainly to determine the predictability of a word given certain context. In a cloze task, the participant sees incomplete sentences, and is asked to complete the sentences by writing down one or a few words. The predictability, or the cloze probability, of a given word is the proportion of people who fill a gap in a sentence with that specific word. Therefore, processing cloze responses includes counting the frequency of each word appeared in all responses. In many languages, such as English, this task is easy to automate: word boundaries are easy to determine. In languages such as Chinese, where no written word boundaries exist, we need a solution to automate the processing of cloze responses. </p>
 
+<!--excerpt-->
+
 One possible solution is to use a text segmentation tool. Many good text segmentation tools exist for Chinese for python, such as [Jieba](https://github.com/fxsjy/jieba), [SnowNLP](https://github.com/isnowfy/snownlp), [PkuSeg](https://github.com/lancopku/pkuseg-python). However, I find that text segmentation is not necessary for processing cloze responses. Instead, I present a solution based on a Chinese word database, [SUBTLEX-CH](https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch).
 
 SUBTLEX-CH is a database of word frequencies based on a corpus of film and television subtitles (33.5 million words). I chose to process my cloze data based on this database because it includes most Chinese words, and its format is fairly easy to process. 
