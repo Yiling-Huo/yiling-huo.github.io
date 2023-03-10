@@ -34,17 +34,22 @@ Select Praat - Open Praat script..., and select `auditory-SP-stimuli-from-textgr
 Select Run - Run. You will be presented with a user interface, where you can specify a number of variables. 
 
 - The generals:
-    - file directory: Where your `.wav` and `.Textgrid` files are located. *Do not put `\` at the end*.
-    - save directory: Where you want your output files to be saved. *Do not put `\` at the end*.
-    - txt file name: Aside from manipulating the `.wav` files, the script will also generate a `.txt` file in the end which indicates the onset and offset of each interval in the final product. Define the `.txt` file's name here. 
-    - new sound file name ending: You can optionally rename your output `.wav` files. For example, if you say `_sp` here, your `01.wav` will output `01_sp.wav`. Leave blank if you do not want to rename the output files. 
+    - **file directory**: Where your `.wav` and `.Textgrid` files are located. *Do not put `\` at the end*.
+    - **save directory**: Where you want your output files to be saved. *Do not put `\` at the end*.
+    - **txt file name**: Aside from manipulating the `.wav` files, the script will also generate a `.txt` file in the end which indicates the onset and offset of each interval in the final product. Define the `.txt` file's name here. 
+    - **new sound file name ending**: You can optionally rename your output `.wav` files. For example, if you say `_sp` here, your `01.wav` will output `01_sp.wav`. Leave blank if you do not want to rename the output files. 
 - The specifics:
-    - critical tier number: The index of the interval tier that Praat will use to process the recordings. 
-    - soa in seconds: Your stimulus-onset asynchrony (SOA). In seconds. 
-    - allow overtime: If unchecked, Praat will compress fragments that are longer than your SOA. If checked, Praat will not compress long fragments (*note that this will not preserve the SOA*).
-    - minimum silence duration seconds: You can optionally define a minimum duration of silence, if you wish to make sure each fragment is separated by at least some silence. If `allow overtime` is unchecked, Praat will compress long fragments such that SOA is preserved after minimum silence is added to the end of the fragment. If `allow overtime` is unchecked, Praat will simply attach the minimum silence to the end of the fragment (*note that this will not preserve the SOA*).
-    - punctuation name: The name of your punctuation interval. ***Note that this entry cannot be left blank. If you do not have punctuation in your stimuli, put at least one character here that is not the full name of any of your intervals.***
-    - punctuation duration: The duration of punctuation. In seconds.
+    - **critical tier number**: The index of the interval tier that Praat will use to process the recordings. 
+    - **soa in seconds**: Your stimulus-onset asynchrony (SOA). In seconds. 
+    - **stretch fragments**: If checked, Praat will stretch fragments that are shorter than your SOA. 
+    - **allow overtime**: If unchecked, Praat will compress fragments that are longer than your SOA. If checked, Praat will not compress long fragments (*note that this will not preserve the SOA*).
+    - **minimum silence duration seconds**: You can optionally define a minimum duration of silence, if you wish to make sure each fragment is separated by at least some silence. 
+    
+        If `allow overtime` is unchecked, Praat will compress long fragments such that SOA is preserved after minimum silence is added to the end of the fragment. If `allow overtime` is unchecked, Praat will simply attach the minimum silence to the end of the fragment (*note that this will not preserve the SOA*).
+
+        If `stretch fragments` is checked, Praat will stretch short fragments such that the duration of stretched fragments + minimum silence = SOA. 
+    - **punctuation name**: The name of your punctuation interval. ***Note that this entry cannot be left blank. If you do not have punctuation in your stimuli, put at least one character here that is not the full name of any of your intervals.***
+    - **punctuation duration**: The duration of punctuation. In seconds.
 
 
 ![praatui](/images/auditory_sp_tutorial/praatui.png)

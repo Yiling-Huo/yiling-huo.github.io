@@ -31,14 +31,14 @@ Select Praat - Open Praat script..., and select `extract_pitch_contour`.
 Select Run - Run. You will be presented with a user interface, where you can specify a number of variables. 
 
 - General variables:
-    - Tier number: index of the tier of interest (where the intervals are defined). 
-    - Sound file extensions: The extension of should files in your folder (e.g.: .wav)
-    - Result file name: name of the result file. Recommended extension `.csv`
-    - Normalise by: precision of sampling. For example, 10 means that Praat will extract pitch information at time 0%, 10%, 20%, ..., 100% (10+1 data points in total); and 50 means that Praat will extract pitch information at times 0%, 2%, 4%, 6%, ..., 100% (50+1 data points in total). 
+    - **Tier number**: index of the tier of interest (where the intervals are defined). 
+    - **Sound file extensions**: The extension of should files in your folder (e.g.: .wav)
+    - **Result file name**: name of the result file. Recommended extension `.csv`
+    - **Normalise by**: precision of sampling. For example, 10 means that Praat will extract pitch information at time 0%, 10%, 20%, ..., 100% (10+1 data points in total); and 50 means that Praat will extract pitch information at times 0%, 2%, 4%, 6%, ..., 100% (50+1 data points in total). 
 - Pitch parameters:
-    - Time steps: (Praat default: 0.0) the measurement interval (frame duration), in seconds. If you supply 0, Praat will use a time step of 0.75 / (pitch floor), e.g. 0.01 seconds if the pitch floor is 75 Hz; in this example, Praat computes 100 pitch values per second.
-    - Pitch floor: (Praat default: 75 Hz) candidates below this frequency will not be recruited. This parameter determines the length of the analysis window: it will be 3 longest periods long, i.e., if the pitch floor is 75 Hz, the window will be 3/75 = 0.04 seconds long.
-    - Pitch ceiling: (Praat default: 600 Hz) candidates above this frequency will be ignored.
+    - **Time steps**: (Praat default: 0.0) the measurement interval (frame duration), in seconds. If you supply 0, Praat will use a time step of 0.75 / (pitch floor), e.g. 0.01 seconds if the pitch floor is 75 Hz; in this example, Praat computes 100 pitch values per second.
+    - **Pitch floor**: (Praat default: 75 Hz) candidates below this frequency will not be recruited. This parameter determines the length of the analysis window: it will be 3 longest periods long, i.e., if the pitch floor is 75 Hz, the window will be 3/75 = 0.04 seconds long.
+    - **Pitch ceiling**: (Praat default: 600 Hz) candidates above this frequency will be ignored.
 
 Define the variables based on what you need, then select OK. Praat will start processing your files, and an output file summarising all pitch information extracted will be created in the same folder:
 

@@ -32,6 +32,7 @@ sentence new_sound_file_name_ending
 comment The Specifics:
 real critical_tier_number 1
 real soa_in_seconds 0.8
+boolean stretch_fragments 0
 boolean allow_overtime 0
 real minimum_silence_duration_seconds 0.03
 sentence punctuation_name p
@@ -89,13 +90,34 @@ for ifile from 1 to numberOfFiles
       select 'intervalname$'
       soundDuration = Get total duration
       if soundDuration < maxtime
-         silenceDuration = soa_in_seconds - soundDuration
-         mySilence = Create Sound from formula... silence 1 0 silenceDuration samplingFrequency 0
-         select 'intervalname$'
-         plus mySilence
-         allSound = Concatenate
-         segmentDuration = Get total duration
-         appendFileLine: txt_output$, newFileName$, " ", x, " ", name$, " ", 0, " ", segmentDuration
+         if stretch_fragments = 0
+            silenceDuration = soa_in_seconds - soundDuration
+            mySilence = Create Sound from formula... silence 1 0 silenceDuration samplingFrequency 0
+            select 'intervalname$'
+            plus mySilence
+            allSound = Concatenate
+            segmentDuration = Get total duration
+            appendFileLine: txt_output$, newFileName$, " ", x, " ", name$, " ", 0, " ", segmentDuration
+         else
+            select 'intervalname$'
+            rate = maxtime/soundDuration
+            To Manipulation... 0.01 50 1000
+            Create DurationTier: "shorten", 0, soundDuration
+            Add point: 0, rate
+            manipulationName$ = "Manipulation " + name$
+            plus 'manipulationName$'
+            Replace duration tier
+            select 'manipulationName$'
+            myNewSpeech = Get resynthesis (overlap-add)
+            newDuration = Get total duration
+            silenceDuration = soa_in_seconds - newDuration
+            mySilence = Create Sound from formula... silence 1 0 silenceDuration samplingFrequency 0
+            select 'intervalname$'
+            plus mySilence
+            allSound = Concatenate
+            segmentDuration = Get total duration
+            appendFileLine: txt_output$, newFileName$, " ", x, " ", name$, " ", 0, " ", segmentDuration
+         endif
       else
          if allow_overtime = 1
             mySilence = Create Sound from formula... silence 1 0 minimum_silence_duration_seconds samplingFrequency 0
@@ -148,18 +170,44 @@ for ifile from 1 to numberOfFiles
          select 'intervalname$'
          soundDuration = Get total duration
          if soundDuration < maxtime
-            silenceDuration = soa_in_seconds - soundDuration
-            mySilence = Create Sound from formula... silence 1 0 silenceDuration samplingFrequency 0
-            select 'intervalname$'
-            plus mySilence
-            myNewSound = Concatenate
-            select allSound
-            plus myNewSound
-            allSound = Concatenate
-            x = x+1
-            preDuration = segmentDuration
-            segmentDuration = Get total duration
-            appendFileLine: txt_output$, newFileName$, " ", x, " ", name$, " ", preDuration, " ", segmentDuration
+            if stretch_fragments = 0
+               silenceDuration = soa_in_seconds - soundDuration
+               mySilence = Create Sound from formula... silence 1 0 silenceDuration samplingFrequency 0
+               select 'intervalname$'
+               plus mySilence
+               myNewSound = Concatenate
+               select allSound
+               plus myNewSound
+               allSound = Concatenate
+               x = x+1
+               preDuration = segmentDuration
+               segmentDuration = Get total duration
+               appendFileLine: txt_output$, newFileName$, " ", x, " ", name$, " ", preDuration, " ", segmentDuration
+            else
+               select 'intervalname$'
+               rate = maxtime/soundDuration
+               To Manipulation... 0.01 50 1000
+               Create DurationTier: "shorten", 0, soundDuration
+               Add point: 0, rate
+               manipulationName$ = "Manipulation " + name$
+               plus 'manipulationName$'
+               Replace duration tier
+               select 'manipulationName$'
+               myNewSpeech = Get resynthesis (overlap-add)
+               newDuration = Get total duration
+               silenceDuration = soa_in_seconds - newDuration
+               mySilence = Create Sound from formula... silence 1 0 silenceDuration samplingFrequency 0
+               select 'intervalname$'
+               plus mySilence
+               myNewSound = Concatenate
+               select allSound
+               plus myNewSound
+               allSound = Concatenate
+               x = x+1
+               preDuration = segmentDuration
+               segmentDuration = Get total duration
+               appendFileLine: txt_output$, newFileName$, " ", x, " ", name$, " ", preDuration, " ", segmentDuration
+            endif
          else
             if allow_overtime = 1
                mySilence = Create Sound from formula... silence 1 0 minimum_silence_duration_seconds samplingFrequency 0
