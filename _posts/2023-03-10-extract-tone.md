@@ -18,7 +18,7 @@ Download the <a href="/files/resources/praat/extract_pitch_contour" download>Pra
 
 Gather your `.wav` files and your `.Textgrid` files in the same folder. The `.Textgrid` files should have the same name as the `.wav` files. The `.Textgrid` files should contain at least one interval tier, based on which pitch contour information should be extracted. 
 
-For example, I am extracting the pitch contour of each syllable in my Chinese sentences, for further lexical tone analyses. My `.Textgrid` should contain one interval tier, where each syllable should be a named interval. 
+For example, I am extracting the pitch contour of each syllable in a Chinese phrase, for further lexical tone analyses. My `.Textgrid` should contain one interval tier, where each syllable should be a named interval. 
 
 ![praat1](/images/tutorial_pitch/praat1.png)
 
