@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<style>
+h3{
+    padding: 1em 0 0 0;
+    margin: 0px;
+}
+</style>
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <ul  style="list-style-type: none">
+    {% for i in page.subcat %}
+        <li><a href="#{{ i }}">{{ i }}</a></li>
+    {% endfor %}
+  </ul>
+
+  {{ content }}
+
+
+  {% for item in page.subcat %}
+    {% if item != page.category %}
+        <h2 style="margin: 1.5em 0 0 0;">{{ item }}</h2><a name="{{ item }}"></a>
+        <ul style="list-style-type: none">
+        {% for post in site.categories[item] %}
+            <li>
+            <h3>
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h3>
+            <span class="post-meta">{{ post.date | date_to_long_string }}</span>
+            {{ post.content | truncatewords: 100 }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+  {% endfor %}
+
+</div>

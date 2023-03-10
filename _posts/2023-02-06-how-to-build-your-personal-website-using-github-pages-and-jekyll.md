@@ -3,7 +3,7 @@ layout: post
 title: How to build your personal website using Github Pages and Jekyll on Windows (for dummies)
 date: 2023-02-06 10:00
 author: Yiling Huo
-categories: Tutorials
+categories: [Tutorials, 'Coding/Programming']
 ---
 
 This is what I did to build my personal website using Github Pages and Jekyll. 

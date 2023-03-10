@@ -1,6 +1,7 @@
 ---
-layout: category
+layout: multi-categories
 title: Tutorials
 permalink: /tutorials/
-categories: Tutorials
+category: Tutorials
+subcat: ['Psycholinguistics (data analysis)', 'Coding/Programming']
 ---
