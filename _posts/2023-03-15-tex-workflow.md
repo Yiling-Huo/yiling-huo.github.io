@@ -162,6 +162,8 @@ If you are using `xeCJK`, switch to xelatex engine by adding `--pdf-engine=xelat
 pandoc -C --pdf-engine=xelatex input.md -o output.pdf
 ```
 
+Pandoc options are very powerful. Detailed formatting such as using templates are all realised using options. More details at [Pandoc User's Guide](https://pandoc.org/MANUAL.html#options). 
+
 Your output file should be created:
 
 ![md-output](/images/tutorial_mdtex/md-output.png)
@@ -177,8 +179,6 @@ pandoc -C input.tex -o output.docx
 ![md-output1](/images/tutorial_mdtex/md-output1.png)
 
 *Note that `.docx` requires more detailed options to work perfectly. I only use the `.docx` files so that my supervisor can directly comment and edit the texts on MS Teams. So missing a few unimportant elements or images not being the best size is trivial to me.*
-
-Pandoc options are very powerful. Detailed formatting such as using templates are all realised using options. More details at [Pandoc User's Guide](https://pandoc.org/MANUAL.html#options). 
 
 #### **More elements to your `.md` file**
 
@@ -211,6 +211,8 @@ output:
 ```
 pandoc -C input.tex -o output.docx
 ```
+
+![rmd-output1](/images/tutorial_mdtex/rmd-output1.png)
 
 #### **More elements to your `.Rmd` file**
 
