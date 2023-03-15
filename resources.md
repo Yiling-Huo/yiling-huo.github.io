@@ -30,4 +30,4 @@ Scripts and resorces that I have created or modified.
 - Remove outliers:
 
   <a href="/files/resources/r/remove_outlier_function.R" download>Download</a>. 
-  A simple function that remove outliers from a data frame based on the 3s.d. rule. 
+  A simple function that removes outliers from a data frame based on the 3s.d. rule. 
