@@ -438,7 +438,7 @@ This NEG is one CL pipe\\
 
 ![lingexp1](/images/tutorial_rmdtex/lingexp1.png)
 
-### **Including Including Chinese and Japanese characters** <a name="step2.9"></a>
+### **Including Chinese and Japanese characters** <a name="step2.9"></a>
 
 The easiest way to include some Chinese and Japanese characters in an otherwise English document is using XeTeX's `xeCJK` package. This package also supports Korean characters, with some font settings, details [here](https://www.overleaf.com/learn/latex/Korean) and [here](https://www.jkangpathology.com/post/2020-10-27-use-korean-font-in-rmarkdown/). To use this package, the PDF engine has to be set to XeTeX. 
 
