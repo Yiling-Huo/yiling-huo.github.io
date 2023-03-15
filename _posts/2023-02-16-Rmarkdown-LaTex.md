@@ -33,6 +33,7 @@ In this post, I will walk you step by step through how I set up everything to us
     - [References and citations](#step2.6)
     - [Including syntax trees](#step2.7)
     - [Including linguistic examples](#step2.8)
+    - [Including Chinese and Japanese characters](#step2.9)
 3. [Write a journal article with R Markdown](#step3)
 4. [To be updated: Write a book with R Markdown](#step4)
 5. [Tips](#step5)
@@ -62,7 +63,7 @@ Create a new `.rmd` file: File - New File - R Markdown...
 
 Select Default Output Format: PDF. 
 
-![create_rmd](/images/rmdtex_tutorial/create_rmd.png)
+![create_rmd](/images/tutorial_rmdtex/create_rmd.png)
 
 A `.rmd` file will be created, including some default text showing you how to write in markdown syntax and how to include R codes and plots. 
 
@@ -70,7 +71,7 @@ The `.rmd` file contains two parts: a YAML header, which is enclosed in triple d
 
 We can edit this `.rmd` file and knit it: 
 
-![example_rmd](/images/rmdtex_tutorial/example_rmd.png) ![example_pdf](/images/rmdtex_tutorial/example_pdf.png)
+![example_rmd](/images/tutorial_rmdtex/example_rmd.png) ![example_pdf](/images/tutorial_rmdtex/example_pdf.png)
 
 
 ### **Writing your texts in R Markdown:** <a name="step2.1"></a>
@@ -104,7 +105,7 @@ t.test(value ~ group, data=data_2, var.equal=TRUE)
 ```
 ````
 
-![r_chunk](/images/rmdtex_tutorial/r_chunk.png)
+![r_chunk](/images/tutorial_rmdtex/r_chunk.png)
 
 R Markdown supports many languages other than R through the `knitr` package. A list of supported languages can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html). For example, if I want to include a chunk of python code: 
 
@@ -121,7 +122,7 @@ print("The value of b is: " + str(b))
 ```
 ```` 
 
-![python](/images/rmdtex_tutorial/python.png)
+![python](/images/tutorial_rmdtex/python.png)
 
 ### **Including figures and plots:** <a name="step2.3"></a>
 
@@ -149,16 +150,26 @@ print(ggplot_object)
 dev.off()
 ```
 
-In your `.rmd`, specify chunk options, then use `knitr` to include the plot:
+In your `.rmd`, you can include your figures in a R code chunk. Specify chunk options, then use `knitr` to include the plot:
 
 ````{r}
-```{r, echo=FALSE, out.width="40%", out.height="40%", fig.align="center", fig.cap="\\label{fig:fig1}Plot of our data"}
+```{r, echo=FALSE, out.width="40%", fig.align="center", fig.cap="\\label{figure-label}Plot of our data"}
 
 knitr::include_graphics("./file_name.pdf")
 ```
 ```` 
 
-![pdf_plot](/images/rmdtex_tutorial/pdf_plot.png)
+Put your `.pdf` figure in the same folder as your `.rmd`, or specify the relative path to your figure such as `(./path/to/figure/figure.pdf)`. 
+
+The above line includes some common LaTeX figure configurations you can directly add to your markdown file: `\label{figure-name}` allows you to label your figure for cross referencing, `out.width=40%` allows you to control the size of the figure. 
+
+Alternatively, you can include images using Markdown syntax:
+
+```{markdown}
+![Your-caption. \label{figure-label}](file_name.pdf){width=40%}
+```
+
+![pdf_plot](/images/tutorial_rmdtex/pdf_plot.png)
 
 Other images can also be included in this manner. 
 
@@ -201,7 +212,7 @@ Markdown allows you to create simple tables. Use pipes (\|) to create cells and 
 | $p<0.05$ | reject $H_0$ |
 ```
 
-![simple_table](/images/rmdtex_tutorial/simple_table.png)
+![simple_table](/images/tutorial_rmdtex/simple_table.png)
 
 #### *method 2: LaTeX tables*
 
@@ -221,7 +232,7 @@ If your table goes beyond the capacity of markdown, for example, if you want to 
 ```
 ````
 
-![latex_table](/images/rmdtex_tutorial/latex_table.png)
+![latex_table](/images/tutorial_rmdtex/latex_table.png)
 
 The table generator may tell you to add packages to your document preamble, you can do so in the YAML header at the beginning of your document. For example:
 
@@ -301,9 +312,9 @@ The N400 ERP component's amplitude is associated with a word's predictability (c
 **References**
 ```
 
-![citation](/images/rmdtex_tutorial/citation.png)
+![citation](/images/tutorial_rmdtex/citation.png)
 
-#### *Labelling and referencing tables and figures:*
+#### *Labelling and cross referencing tables and figures:*
 
 Labelling and referencing tables and figures can be managed by some simple LaTeX syntax. 
 
@@ -319,7 +330,7 @@ Table: \label{tablekey} Your Caption.
 In Table \ref{tablekey}, we can learn about how to reference tables. 
 ```
 
-![table_ref](/images/rmdtex_tutorial/table_ref.png)
+![table_ref](/images/tutorial_rmdtex/table_ref.png)
 
 To label and reference a LaTeX table, include lines `\caption{}` and `\label{}` after line `\begin{table}[]`. Online table generators can take care of this. 
 
@@ -340,7 +351,7 @@ Cell 1       & Cell 2      \\ \cmidrule(r){1-2}
 In Table \ref{tablekey2}, we can learn about how to reference tables.
 ````
 
-To label and reference a figure, use the `fig.cap=""` option:
+To label and reference a figure, include `\label{}` in your figure caption:
 
 ````{r}
 ```{r, echo=FALSE, out.width="40%", out.height="40%", fig.align="center", fig.cap="\\label{figkey}Plot of our data"}
@@ -351,7 +362,15 @@ knitr::include_graphics("./file_name.pdf")
 Figure \ref{figkey} shows how to reference figures. 
 ```` 
 
-![fig_ref](/images/rmdtex_tutorial/fig_ref.png)
+Or
+
+````{markdown}
+![Your-caption. \label{figkey}](file_name.pdf){width=40%}
+
+Figure \ref{figkey} shows how to reference figures. 
+```` 
+
+![fig_ref](/images/tutorial_rmdtex/fig_ref.png)
 
 ### **Including syntax trees:** <a name="step2.7"></a>
 
@@ -375,7 +394,7 @@ The `qtree` package allows users to write syntax trees in phrase marker style, a
 ```
 ````
 
-![tree](/images/rmdtex_tutorial/tree.png)
+![tree](/images/tutorial_rmdtex/tree.png)
 
 ### **Including linguistic examples:** <a name="step2.8"></a>
 
@@ -401,7 +420,7 @@ This is not a pipe.
 \end{exe}
 ```
 
-![lingexp](/images/rmdtex_tutorial/lingexp.png)
+![lingexp](/images/tutorial_rmdtex/lingexp.png)
 
 Reference the examples using `\label{label-name}` and `\ref{label-name}`. 
 
@@ -417,7 +436,33 @@ This NEG is one CL pipe\\
 \end{exe}
 ```
 
-![lingexp1](/images/rmdtex_tutorial/lingexp1.png)
+![lingexp1](/images/tutorial_rmdtex/lingexp1.png)
+
+### **Including Including Chinese and Japanese characters** <a name="step2.9"></a>
+
+The easiest way to include some Chinese and Japanese characters in an otherwise English document is using XeTeX's `xeCJK` package. This package also supports Korean characters, with some font settings, details [here](https://www.overleaf.com/learn/latex/Korean) and [here](https://www.jkangpathology.com/post/2020-10-27-use-korean-font-in-rmarkdown/). To use this package, the PDF engine has to be set to XeTeX. 
+
+In your YAML header, specify the PDF engine, and use the `xeCJK` package: 
+
+```
+output: 
+   pdf_document:
+       latex_engine: xelatex
+       extra_dependencies: ["xeCJK"]
+```
+
+Then you can freely include the characters in your document:
+
+```
+For example, my document needs these characters:
+
+- 用中文说你好
+- 日本語でこんにちは
+```
+
+![utf-8-characters](/images/tutorial_rmdtex/utf-8.png)
+
+*Note that your PC needs to have fonts for these languages installed.*
 
 ## **3. Write a journal article with R Markdown** <a name="step3"></a>
 
@@ -429,7 +474,7 @@ In File - New File - R Markdown..., select using templates, and select your targ
 
 For example, I have created an example using the Taylor & Francis Journal Article template: 
 
-![example_article](/images/rmdtex_tutorial/example_article.png) ![example_article_pdf](/images/rmdtex_tutorial/example_article_pdf.png)
+![example_article](/images/tutorial_rmdtex/example_article.png) ![example_article_pdf](/images/tutorial_rmdtex/example_article_pdf.png)
 
 ## **4. To be updated: Write a book with R Markdown** <a name="step4"></a>
 
@@ -441,7 +486,7 @@ It's possible to write chapters of books with `.rmd` and combine them with `.rnw
 
 You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStudio, turn on visual editor at the toolbar:
 
-![visual_editor](/images/rmdtex_tutorial/visual_editor.png)
+![visual_editor](/images/tutorial_rmdtex/visual_editor.png)
 
 ### Keep_tex: yes
 

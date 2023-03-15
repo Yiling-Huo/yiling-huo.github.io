@@ -32,17 +32,17 @@ The first thing we need to do is set up Github Pages.
 
 Github is an internet hosting service for all kinds of coding. You will probably find it useful for other purposes, too!
 
-![register github](/images/website_tutorial/signup_github.png)
+![register github](/images/tutorial_website/signup_github.png)
 
 #### After registering, go to your github page and create a new repository.
 
-<img src="/images/website_tutorial/new_repo1.png" width="80%" height="80%">
+<img src="/images/tutorial_website/new_repo1.png" width="80%" height="80%">
 
 On the create new repository page, you must **name your repository with \<your user name\>.github.io**. Naming your repository this way will allow Github to know this is a repository for Github Pages, Github's site hosting service. If you have capical letters in your unser name, those need to be in lower case. (My repository already exists, so there is an error.) 
 
 While creating your repository, select 'Add a README file'.
 
-<img src="/images/website_tutorial/new_repo2.png" width="80%" height="80%">
+<img src="/images/tutorial_website/new_repo2.png" width="80%" height="80%">
 
 ### **Step 2: Pull repository for local editing** <a name="step2"></a>
 
@@ -54,23 +54,23 @@ Git for Windows allows you to use the version control system Git on the Windows 
 
 While installing Git for Windows, we don't need to change any settings. 
 
-![install git](/images/website_tutorial/install_git.png)
+![install git](/images/tutorial_website/install_git.png)
 
 After installing, go to your list of apps, open Git GUI, and select Clone Existing Repository.
 
-![git gui](/images/website_tutorial/gitgui1.png)
+![git gui](/images/tutorial_website/gitgui1.png)
 
-![git clone](/images/website_tutorial/clone_repo1.png)
+![git clone](/images/tutorial_website/clone_repo1.png)
 
 Go to your Github repository, copy the url, and paste to Source Location in Git GUI. Write down your target local directory in Target Directory. Note that your local directory **must not already exist**. Then click Clone.
 
-![copy repo](/images/website_tutorial/clone_repo2.png)
+![copy repo](/images/tutorial_website/clone_repo2.png)
 
-![git clone3](/images/website_tutorial/clone_repo3.png)
+![git clone3](/images/tutorial_website/clone_repo3.png)
 
 After cloning, your local directory should have been created. Inside, you will find a hidden folder named .git, and your README file. 
 
-![local folder](/images/website_tutorial/local_folder.png)
+![local folder](/images/tutorial_website/local_folder.png)
 
 ### **Step 3: Install Jekyll** <a name="step3"></a>
 
@@ -78,49 +78,49 @@ Next, we need to install [Jekyll](https://jekyllrb.com/). Jekyll is a static sit
 
 #### First, go to [RubyInstaller](https://rubyinstaller.org/downloads/) and download and install Ruby + Devkit 3.1.3.
 
-![download ruby](/images/website_tutorial/ruby1.png)
+![download ruby](/images/tutorial_website/ruby1.png)
 
 #### At the last stage of installation wizard, select the Run 'ridk install' option.
 
-![run ridk](/images/website_tutorial/ridk.png)
+![run ridk](/images/tutorial_website/ridk.png)
 
 #### Then, enter option 3: MSYS2 and MINGW development toolchain
 
-![run ridk2](/images/website_tutorial/ridk2.png)
+![run ridk2](/images/tutorial_website/ridk2.png)
 
 After installing MSYS2 and MINGW development toolchain, press ENTER to exit. 
 
-![run ridk3](/images/website_tutorial/ridk3.png)
+![run ridk3](/images/tutorial_website/ridk3.png)
 
 open another command prompt, run `gem install jekyll bundler`.
 
-![jekinstall](/images/website_tutorial/jekinstall.png)
+![jekinstall](/images/tutorial_website/jekinstall.png)
 
 Jekyll should be installed. Run `jekyll -v` to check if Jekyll is properly installed. Properly installed, the message should show current Jekyll version.
 
-![jekv](/images/website_tutorial/jekv.png)
+![jekv](/images/tutorial_website/jekv.png)
 
 ### **Step 4: Initialise website using Jekyll** <a name="step4"></a>
 
-#### Search for 'cmd' in your Start menu to open a command prompt.
+#### Search `cmd` in your Start menu to open a command prompt.
 
-![cmd](/images/website_tutorial/cmd.png)
+![cmd](/images/tutorial_website/cmd.png)
 
 #### In the command prompt, go to your local directory for your website (the one we just cloned from Github).
 
 Upon opening a command prompt, you will be located to one of your local drives. If your directory is not in the same drive, simply put `<Drive>:` in the command line (then press enter) to move to the correct drive.
 
-Then, type `cd <your directory>` to go to your directory.
+Then, run `cd <your directory>` to go to your directory.
 
-![cd](/images/website_tutorial/cd.png)
+![cd](/images/tutorial_website/cd.png)
 
 #### Run `jekyll new --skip-bundle . --force` to initialise your website. 
 
-![initialise](/images/website_tutorial/initialise.png)
+![initialise](/images/tutorial_website/initialise.png)
 
 After initialising, you should see these files in your folder:
 
-![after initialising](/images/website_tutorial/initialise2.png)
+![after initialising](/images/tutorial_website/initialise2.png)
 
 Some very important files for your website are (from [Samuel Flender's tutorial](https://towardsdatascience.com/how-to-launch-your-personal-website-with-github-pages-and-jekyll-7b653db43ec0)):
 
@@ -145,7 +145,7 @@ gem "webrick", "~> 1.8"
 
 To open the Gemfile, simple right click and select open with any text editor (Notepad, for example). To comment out simply means to put a '#' at the beginning of the line. Your Gemfile should look like this:
 
-![gemfile1](/images/website_tutorial/gemfile1.png)
+![gemfile1](/images/tutorial_website/gemfile1.png)
 
 Then, inside the `_config.yml`, comment out these two lines:
 
@@ -153,13 +153,13 @@ Then, inside the `_config.yml`, comment out these two lines:
 #baseurl: "" 
 #url: ""
 ```
-![config1](/images/website_tutorial/congig.png)
+![config1](/images/tutorial_website/congig.png)
 
 We won't need these because Github Pages will automatically set these urls.
 
 Lastly, in the command prompt, run `bundle install`:
 
-![bundle install](/images/website_tutorial/bundle.png)
+![bundle install](/images/tutorial_website/bundle.png)
 
 This will install all the needed dependencies (gems).
 
@@ -171,10 +171,10 @@ In the command prompt, run `bundle exec jekyll serve`.
 
 This will generate a local url for your website. Copy the url to a browser and take a look:
 
-![jekyll serve](/images/website_tutorial/serve.png)
+![jekyll serve](/images/tutorial_website/serve.png)
 <p>
 </p>
-![initial page](/images/website_tutorial/page.png)
+![initial page](/images/tutorial_website/page.png)
 
 We have a home page made using Jekyll's default theme, called `minima`. It's a minimalist theme suitable for many purposes. In the `home` layout, as we are seeing here, we have a header that navigates around our website, some content (empty for now), a module that shows all of our posts (for now, we have the auto-generated example post), and a footer of our website information. 
 
@@ -183,7 +183,7 @@ We have a home page made using Jekyll's default theme, called `minima`. It's a m
 To edits the elements shown on the page, we need to open `_config.yml` and `index.markdown`. 
 
 Inside `_config.yml`, notice these variables:
-![congig2](/images/website_tutorial/congig2.png)
+![congig2](/images/tutorial_website/congig2.png)
 
 Edit these variables to edit the header and footers. Note that any changes to `_config.yml` will require re-running `bundle exec jekyll serve` to take effect.
 
@@ -195,9 +195,9 @@ For example, to make my text bold, I can simply put `**text**`.
 
 I have made some changes two these two files and the website now looks like this: 
 
-![congig3](/images/website_tutorial/congig3.png)
-![index file](/images/website_tutorial/index1.png)
-![page2](/images/website_tutorial/page2.png)
+![congig3](/images/tutorial_website/congig3.png)
+![index file](/images/tutorial_website/index1.png)
+![page2](/images/tutorial_website/page2.png)
 
 #### You may find it easier to edit markdown files in an editor app, [VS Code](https://code.visualstudio.com/) for example. 
 
@@ -207,8 +207,8 @@ To add a new page, simply create a new markdown file. To do this without an edit
 
 For example, I have created `new_page.md` and it looks like this:
 
-![new page](/images/website_tutorial/newpage.png)
-![new page2](/images/website_tutorial/newpage2.png)
+![new page](/images/tutorial_website/newpage.png)
+![new page2](/images/tutorial_website/newpage2.png)
 
 You can take a look of [my pages](https://yiling-huo.github.io/) that I created using these steps. 
 
@@ -238,17 +238,17 @@ git push origin master
 
 This will create a new branch called 'master' in your repository, and upload everything in your local directory.
 
-![push](/images/website_tutorial/push.png)
+![push](/images/tutorial_website/push.png)
 
 #### On Github, in your repository, go to Settings - Pages - Branch.
 
 Select the branch you just pushed to (master), and save.
 
-![push2](/images/website_tutorial/setting.png)
+![push2](/images/tutorial_website/setting.png)
 
 Under Actions, you should see that Github is trying to build the website. **When the orange dot turns green. Your website is ready!**
 
-![action](/images/website_tutorial/action.png)
+![action](/images/tutorial_website/action.png)
 
 **Now everyone can access your website using your url /<your user name/>.github.io.**
 

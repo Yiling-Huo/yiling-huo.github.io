@@ -37,7 +37,7 @@ Pre-process your data. Your data should be in **long form** (one response per ro
 
 `sample_data.csv` provides some sample data.
 
-![sample data](/images/cloze_tutorial/exdata.png)
+![sample data](/images/tutorial_cloze/exdata.png)
 
 Finally, put `your data.csv`, `SUBTLEX-CH-WF_PoS.xlsx`, `01_create_index_using_SUBTLEX_CH_PoS.py`, and `02_process_cloze_data.py` in the same folder. 
 
@@ -47,7 +47,7 @@ Run `01_create_index_using_SUBTLEX_CH_PoS.py`. Required modules: os, [openpyxl](
 
 This should create `index.csv` in the index folder. 
 
-![index](/images/cloze_tutorial/index.png)
+![index](/images/tutorial_cloze/index.png)
 
 *If you would like to process not only nouns, you can modify line 21 to include all parts of speech you would like to include. A list of part of speech coding used in the database can be found [here](https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch/labels.doc).*
 
@@ -94,7 +94,7 @@ The output csv file contains five columns:
 - cloze_probability: count / number_of_response
 - number_of_response: number of people who provided a response to this sentence
 
-![output](/images/cloze_tutorial/output.png)
+![output](/images/tutorial_cloze/output.png)
 
 If the participant did not respond with a noun (or any of the parts of speech you are interested in), the script will count `no_match` once, and this entry of response will still be added to the total number_of_response. If your frequency of `no_match` is too high for a sentence, it's probable that SUBTLEX-CH did not have your target word. Simply add your target word to the index to solve this. You can either modify the scripts, or simply modify `index.csv`.
 

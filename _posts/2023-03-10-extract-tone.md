@@ -22,6 +22,8 @@ For example, I am extracting the pitch contour of each syllable in a Chinese phr
 
 ![praat1](/images/tutorial_pitch/praat1.png)
 
+*Note: Inside your `.Textgrid`, you may want to choose to set the interval boundaries around the vowel (where pitch contour information is mostly carried), to better capture the pitch contour. Or you may want to set the interval boundaries around the entire syllable, like what I did with ka and fei in the example, to better represent the length of the syllable, although this will result in some 'undefined'/NA values during some consonants.*
+
 ## Step 2: Run the script
 
 Download and open [Praat](https://www.fon.hum.uva.nl/praat/).
