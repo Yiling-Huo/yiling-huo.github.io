@@ -23,9 +23,9 @@ Or
 - Convert to `.pdf` using `knitr` to make pretty documents.
 - Convert to `.docx` using `knitr` to collaborate. 
 
-I'm keeping both options because 
+For now, I'm keeping both options because 
 1. The text editor I'm using, [VS Code](https://code.visualstudio.com/), does not support document outline for `.Rmd`. So it's easier to organise the text if I write in `.md`. 
-2. I prefer using VS Code to write rather than RStudio (which does support document outline for `.Rmd`), as I'm used to writing stuff while looking at the Calibri font which is the MS Word default font, which is easily achievable in VS Code. 
+2. I prefer using VS Code to write rather than RStudio (which does support document outline for `.Rmd`), as I'm used to writing stuff while looking at the MS Word default font Calibri, which is easily achievable in VS Code. 
 3. However, `knitr` and `rticles` makes it easier to convert documents and use publisher templates, instead of writing a long command line, it's just a few simple clicks. 
 4. Also, sometimes my documents need to include codes, which I find is easier to do with `.Rmd`. 
 5. Nevertheless it's easy enough to switch back and forth between `.md` and `.Rmd`, so I can have the best of both worlds. 
@@ -39,8 +39,9 @@ I'm keeping both options because
 3. [Example](#example)
     - [Writing in `.md` then rendering `.pdf` and/or `.docx`](#md)
     - [Writing in `.Rmd` then rendering `.pdf` and/or `.docx`](#rmd)
+    - [One (silly) trick](#silly-trick)
 
-## 1. My setup <a name="setup"></a>
+## **1. My setup** <a name="setup"></a>
 
 On my **Windows 10** operating system, I installed these:
 
@@ -50,15 +51,15 @@ On my **Windows 10** operating system, I installed these:
 - [R](https://cran.r-project.org/mirrors.html)
 - (not necessarily but)[RStudio](https://posit.co/products/open-source/rstudio/)
 
-## 2. My configurations <a name="config"></a>
+## **2. My configurations** <a name="config"></a>
 
-### 2.1 VS Code configurations <a name="config-vs"></a>
+### **2.1 VS Code configurations** <a name="config-vs"></a>
 
-#### Install R support
+#### **Install R support**
 
 This is to use R from VS Code. Install the [R Extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) for VS Code. 
 
-#### Link Rmd files with rmd language
+#### **Link Rmd files with rmd language**
 
 This step ensures any language specific settings you use in VS Code get correctly assigned to `.Rmd` files. I chose to link `.Rmd` with the `rmd` language, to use `knitr` from within VS Code. However, this link will make VS Code fail to generate document outline. If you don't feel like you need to knit directly from VS Code, you can instead link `.Rmd` with `markdown`, which will allow VS Code to generate document outline, which is super helpful for organising your texts:
 
@@ -68,7 +69,7 @@ In VS Code, press `Ctrl`+`,`  to open settings. Search for `files` in settings, 
 
 ![file-associate](/images/tutorial_mdtex/file-associate.png)
 
-#### Setup themes language-specific editor fonts
+#### **Setup themes language-specific editor fonts**
 
 You can change the default dark theme to a theme that gets you into the mood of writing by selecting clicking on the Manage icon at the sidebar, then select Themes - Color Theme. Or press `Ctrl`+`K` then `Ctrl`+`T`. 
 
@@ -93,19 +94,19 @@ Inside `settings.json`, add
 
 These lines specify that I want VS Code to show `markdown` as well as `rmd` files with Calibri size 18, which is what I feel the most comfortable looking at while I'm writing large chunks of texts. 
 
-#### Install spellcheck
+#### **Install spellcheck**
 
 Spellcheck is perhaps the most important thing I need to be able to write directly in VS Code. Install [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). 
 
 For me, it's also very helpful to include `"editor.renderWhitespace": "all"` in my `settings.json`, so that I could monitor whether I accidentally put more whitespace than needed in my texts. 
 
-#### Use the Zen Mode
+#### **Use the Zen Mode**
 
 I use the Zen Mode of VS Code when I'm writing. Zen Mode allows you to focus on the writing by hiding most of the UI. Enter Zen Mode by pressing `Ctrl`+`K` then `Z`. Exit Zen Mode by double pressing `Esc`. 
 
-### 2.2 MiKTeX configurations <a name="config-miktex"></a>
+### **2.2 MiKTeX configurations** <a name="config-miktex"></a>
 
-#### Automatically install missing packages
+#### **Automatically install missing packages**
 
 This step lets MiKTeX to automatically install missing LaTeX packages, so you don't need to approve each time. 
 
@@ -113,17 +114,17 @@ In MiKTeX Console, select Settings, then select Always for You can choose whethe
 
 ![miktex](/images/tutorial_mdtex/miktex.png)
 
-### 2.3 R configurations <a name="config-r"></a>
+### **2.3 R configurations** <a name="config-r"></a>
 
-#### Install tinytex and TinyTeX
+#### **Install tinytex and TinyTeX**
 
 (I'm not sure whether this step is needed, but I was having trouble asking R to find MiKTeX when rendering PDFs, so I just installed TinyTeX instead.) In a R console (either in RStudio or VS Code), run `install.packages("tinytex")` and then `tinytex::install_tinytex()`. 
 
-## 3. Example <a name="example"></a>
+## **3. Example** <a name="example"></a>
 
-### 3.1 Writing in `.md` then rendering `.pdf` and/or `.docx` <a name="md"></a>
+### **3.1 Writing in `.md` then rendering `.pdf` and/or `.docx`** <a name="md"></a>
 
-#### How to render files using Pandoc
+#### **How to render files using Pandoc**
 
 This is an example of writing in `.md` and rendering `.pdf`, `.tex`, or `.docx` files using Pandoc. 
 
@@ -177,11 +178,11 @@ pandoc -C input.tex -o output.docx
 
 Pandoc options are very powerful. Detailed formatting such as using templates are all realised using options. More details at [Pandoc User's Guide](https://pandoc.org/MANUAL.html#options). 
 
-#### More elements to your `.md` file
+#### **More elements to your `.md` file**
 
 I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/coding/programming/2023/02/16/rmarkdown-latex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc. Anything that does not require R code chunks to realise can also be used in `.md` files. 
 
-### 3.1 Writing in `.Rmd` then rendering `.pdf` and/or `.docx` <a name="rmd"></a>
+### **3.1 Writing in `.Rmd` then rendering `.pdf` and/or `.docx`** <a name="rmd"></a>
 
 Once we have the R Extension for VS Code, we can write `.Rmd` files and convert to other formats inside VS Code. For example: 
 
@@ -209,6 +210,10 @@ output:
 pandoc -C input.tex -o output.docx
 ```
 
-#### More elements to your `.Rmd` file
+#### **More elements to your `.Rmd` file**
 
 I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/coding/programming/2023/02/16/rmarkdown-latex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc.
+
+### **3.3 One (silly) trick** <a name="silly-trick"></a>
+
+Since the only difference between a `.md` file and a `.Rmd` file (when no code chunks are involved) is a few lines in the YAML header, it's possible to switch back and form between `.md` and `.Rmd` simply by copy pasting the body text. This is silly but I like the flexibility of having a solution when I suddenly want to include something in the document that only the other format can handle. 
