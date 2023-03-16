@@ -56,7 +56,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /images/preview.png
+      image: /images/preview.jpg
 
 # Exclude from processing.
 # The following items will not be processed, by default.
