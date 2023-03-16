@@ -46,9 +46,9 @@ header_pages:
 
 excerpt_separator: "<!--excerpt-->"
 
-# For SEO plugin to gather meta data
+# For jekyll-seo-tag plugin to gather meta data
 tagline: PhD student, University College London
-logo: /images/preview.png
+logo: https://yiling-huo.github.io/images/preview.png
 
 # Exclude from processing.
 # The following items will not be processed, by default.
