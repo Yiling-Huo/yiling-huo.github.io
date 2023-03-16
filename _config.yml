@@ -48,8 +48,11 @@ excerpt_separator: "<!--excerpt-->"
 
 # Set global variables for jekyll-seo-tag plugin to gather meta data 
 # doesn't seem to be working? adds to the head source code, but when sharing on twitter, there's no image
+twitter:
+  username: YlHuo
+  card: summary
 tagline: PhD student | Linguistics | University College London
-logo: /images/preview.png
+image: /images/preview.png
 # Set page defaults for jekyll-seo-tag plugin to gather meta data
 # defaults:
 #   - scope:
