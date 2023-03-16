@@ -1,0 +1,16 @@
+<h4 style="padding: 1em 0 0 0;">Related Posts</h4>
+
+{% for item in page.related %}
+<p>{{ item }}</p>
+<ul style="list-style-type: none">
+    {% for post in site.tags[item] %}
+        {% if post.id != page.id %}
+            <li>
+                <a href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endfor %}

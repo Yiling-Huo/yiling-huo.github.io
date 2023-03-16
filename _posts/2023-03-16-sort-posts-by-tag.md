@@ -4,7 +4,8 @@ title: How to show Jekyll posts from one category, sorted by tags
 date: 2023-03-16 10:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Website building']
+tags: ['Website building', 'Jekyll']
+related: ['Jekyll']
 ---
 
 Here is my solution that allows your Jekyll page to show blog posts from one category, sorted by tags. 

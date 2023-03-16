@@ -4,7 +4,8 @@ title: Extract normalised pitch contour
 date: 2023-03-10 13:00
 author: Yiling Huo
 category: 'Tutorials' 
-tags: ['Psycholinguistics']
+tags: ['Psycholinguistics', 'Praat']
+related: ['Praat']
 ---
 
 On this page I present a Praat script that extracts pitch contour information based on `.wav` sounds and `.Textgrid` files. 

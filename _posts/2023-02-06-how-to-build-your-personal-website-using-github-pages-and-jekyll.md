@@ -4,7 +4,8 @@ title: How to build your personal website using Github Pages and Jekyll on Windo
 date: 2023-02-06 10:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Website building']
+tags: ['Website building', 'Jekyll']
+related: ['Jekyll']
 ---
 
 This is what I did to build my personal website using Github Pages and Jekyll. 
@@ -254,13 +255,3 @@ Under Actions, you should see that Github is trying to build the website. **When
 **Now everyone can access your website using your url /<your user name/>.github.io.**
 
 #### Have some patience, and have fun!
-
-
-
-
-
-
-
-
-
-
