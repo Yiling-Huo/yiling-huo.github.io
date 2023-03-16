@@ -3,7 +3,6 @@ layout: post
 title: Make auditory serial presentation stimuli
 date: 2023-03-10 14:00
 author: Yiling Huo
-comments: true
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Praat']
 related: ['Praat']
