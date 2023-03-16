@@ -3,7 +3,8 @@ layout: post
 title: Make auditory serial presentation stimuli
 date: 2023-03-10 14:00
 author: Yiling Huo
-categories: [Tutorials, 'Psycholinguistics']
+category: 'Tutorials'
+tags: ['Psycholinguistics']
 ---
 
 Psycholinguistic research sometimes require the stimuli to have specific timing. On this page, I share a Praat script that given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids. 

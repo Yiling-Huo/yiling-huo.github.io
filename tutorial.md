@@ -2,6 +2,6 @@
 layout: multi-categories
 title: Tutorials
 permalink: /tutorials/
-category: Tutorials
-subcat: ['Psycholinguistics', 'Coding/Programming']
+category: 'Tutorials'
+tags: ['Psycholinguistics', 'Markup and Markdown', 'Website building']
 ---
