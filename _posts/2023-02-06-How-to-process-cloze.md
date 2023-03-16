@@ -3,6 +3,7 @@ layout: post
 title: Automated processing of Chinese cloze responses
 date: 2023-02-06 16:00
 author: Yiling Huo
+comments: true
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Python']
 related: ['Python']

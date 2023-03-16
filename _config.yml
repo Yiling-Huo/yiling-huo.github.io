@@ -35,6 +35,8 @@ twitter:
   username: YlHuo
   card: summary
 
+disqus.shortname: "Comments"
+
 # Theme-specific settings
 
 minima:
@@ -71,3 +73,5 @@ minima:
 # Set to `true` to show excerpts on the homepage.
 #
 # show_excerpts: false
+
+
