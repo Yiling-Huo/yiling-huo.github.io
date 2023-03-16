@@ -46,9 +46,14 @@ header_pages:
 
 excerpt_separator: "<!--excerpt-->"
 
-# For jekyll-seo-tag plugin to gather meta data
-tagline: PhD student, University College London
-logo: https://yiling-huo.github.io/images/preview.png
+# Set global variables for jekyll-seo-tag plugin to gather meta data (doesn't seem to be working?)
+tagline: PhD student | Linguistics | University College London
+# Set page defaults for jekyll-seo-tag plugin to gather meta data
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/preview.png
 
 # Exclude from processing.
 # The following items will not be processed, by default.
