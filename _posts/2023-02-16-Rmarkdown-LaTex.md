@@ -4,7 +4,7 @@ title: How I got ready to write LaTeX files inside R Markdown
 date: 2023-02-16 21:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Markup and Markdown', 'Markdowns and TeX']
+tags: ['Markdown', 'Markdowns and TeX']
 related: ['Markdowns and TeX']
 ---
 

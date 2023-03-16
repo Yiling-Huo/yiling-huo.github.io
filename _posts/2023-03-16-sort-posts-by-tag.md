@@ -4,7 +4,7 @@ title: How to show Jekyll posts from one category, sorted by tags
 date: 2023-03-16 10:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Website building', 'Jekyll']
+tags: ['Markup', 'Jekyll']
 related: ['Jekyll']
 ---
 

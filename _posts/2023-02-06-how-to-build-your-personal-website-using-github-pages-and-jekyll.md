@@ -4,7 +4,7 @@ title: How to build your personal website using Github Pages and Jekyll on Windo
 date: 2023-02-06 10:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Website building', 'Jekyll']
+tags: ['Markup', 'Jekyll']
 related: ['Jekyll']
 ---
 
