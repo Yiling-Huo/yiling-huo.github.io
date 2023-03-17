@@ -5,7 +5,6 @@ date: 2023-02-06 10:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markup', 'Jekyll']
-related: ['Jekyll']
 ---
 
 This is what I did to build my personal website using Github Pages and Jekyll. 

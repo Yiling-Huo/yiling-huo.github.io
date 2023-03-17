@@ -5,7 +5,6 @@ date: 2023-03-16 10:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markup', 'Jekyll']
-related: ['Jekyll']
 ---
 
 Here is my solution that allows your Jekyll page to show blog posts from one category, sorted by tags. 

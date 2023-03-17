@@ -5,7 +5,6 @@ date: 2023-02-06 16:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Python']
-related: ['Python']
 ---
 
 <p>The cloze task is widely used in psycholinguistics, mainly to determine the predictability of a word given certain context. In a cloze task, the participant sees incomplete sentences, and is asked to complete the sentences by writing down one or a few words. The predictability, or the cloze probability, of a given word is the proportion of people who fill a gap in a sentence with that specific word. Therefore, processing cloze responses includes counting the frequency of each word appeared in all responses. In many languages, such as English, this task is easy to automate: word boundaries are easy to determine. In languages such as Chinese, where no written word boundaries exist, we need a solution to automate the processing of cloze responses. </p>

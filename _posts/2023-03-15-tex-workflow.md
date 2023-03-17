@@ -4,8 +4,7 @@ title: My workflow of creating PDF and docx files using Rmd and Markdown
 date: 2023-03-15 10:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Markdown', 'Markdowns and TeX']
-related: ['Markdowns and TeX']
+tags: ['Markdown', 'TeX']
 ---
 
 On this page, I record my workflow of working with Markdown, RMarkdown, and Pandoc, to achieve a good writing and rendering experience, while allowing some room for collaboration.

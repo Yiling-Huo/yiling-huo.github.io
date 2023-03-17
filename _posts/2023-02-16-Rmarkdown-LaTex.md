@@ -4,8 +4,7 @@ title: How I got ready to write LaTeX files inside R Markdown
 date: 2023-02-16 21:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Markdown', 'Markdowns and TeX']
-related: ['Markdowns and TeX']
+tags: ['Markdown', 'TeX']
 ---
 
 As an academic rooky I feel that I will eventually need to deal with LaTeX one way or another. However, I wonder whether I have to fully learn LaTeX if I'm already familiar with markdown, a way simpler formatting language. So I started searching the internet for solutions, and I think I found something useful for me. 
