@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: 19 Dec 2020, Fengler, Meyer, &amp; Friederici (2016)
 date: 2020-12-19 16:48
 author: Yiling Huo

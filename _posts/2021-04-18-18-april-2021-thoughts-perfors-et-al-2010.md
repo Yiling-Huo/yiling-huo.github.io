@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: 18 April 2021, thoughts & Perfors et al. (2010)
 date: 2021-04-18 13:13
 author: Yiling Huo

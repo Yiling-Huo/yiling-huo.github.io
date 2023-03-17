@@ -9,6 +9,9 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  // Set background color with some opacity
+  // background-color: rgba(255, 255, 255, 0.6);
 }
 
 .site-title {
@@ -200,8 +203,14 @@
 /**
  * Page content
  */
-.page-content {
-  padding: $spacing-unit 0;
+ // For wide pages, background color is handled here
+.page-content-wide-page {
+  flex: 1 0 auto;
+  background-color: rgba(255,255,255,0.8);
+}
+
+// For narrow pages, background color is handled by wrapper-narrow in _base.scss
+.page-content-narrow-page {
   flex: 1 0 auto;
 }
 

@@ -21,7 +21,7 @@ dl, dd, ol, ul, figure {
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  background-color: $background-color;
+  // background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -32,8 +32,36 @@ body {
   min-height: 100vh;
   flex-direction: column;
   overflow-wrap: break-word;
+
+  /* Set background */
+  background-image: url("/images/background.png");
+  background-color: rgba(255,255,255,0.8);
+  background-blend-mode: color;
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
+.bg {
+  /* The image used */
+  background-image: url("/images/background.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
 
 
 /**
@@ -197,7 +225,7 @@ pre {
 /**
  * Wrapper
  */
-.wrapper {
+ .wrapper_header_footer {
   max-width: calc(#{$content-width} - (#{$spacing-unit}));
   margin-right: auto;
   margin-left: auto;
@@ -210,6 +238,53 @@ pre {
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
   }
+}
+
+// For wide pages, background color is handled by page-content-wide-page in _layout.scss
+.wrapper-wide {
+  flex: 1;
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit * .5;
+  padding-left: $spacing-unit * .5;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+
+  @extend %clearfix;
+
+  @media screen and (min-width: $on-large) {
+    flex: 1;
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding-right: $spacing-unit * 5;
+    padding-left: $spacing-unit * 5;
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+  }
+}
+
+// For narrow pages, background color is handled here
+.wrapper-narrow {
+  flex: 1;
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit * .5;
+  padding-left: $spacing-unit * .5;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+
+  @extend %clearfix;
+
+  @media screen and (min-width: $on-large) {
+    flex: 1;
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding-right: $spacing-unit * 5;
+    padding-left: $spacing-unit * 5;
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+  }
+  background-color: rgba(255,255,255,0.87);
 }
 
 

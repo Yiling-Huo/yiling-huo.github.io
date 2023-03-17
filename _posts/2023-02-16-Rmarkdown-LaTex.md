@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: How I got ready to write LaTeX files inside R Markdown
 date: 2023-02-16 21:00
 author: Yiling Huo

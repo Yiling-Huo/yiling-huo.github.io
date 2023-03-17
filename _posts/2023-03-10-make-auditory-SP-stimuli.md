@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: Make auditory serial presentation stimuli
 date: 2023-03-10 14:00
 author: Yiling Huo

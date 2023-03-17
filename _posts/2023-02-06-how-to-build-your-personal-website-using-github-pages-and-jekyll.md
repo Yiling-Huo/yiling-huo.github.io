@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: How to build your personal website using Github Pages and Jekyll on Windows (for dummies)
 date: 2023-02-06 10:00
 author: Yiling Huo

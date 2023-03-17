@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: 7 Jan 2021, Boylan &amp; Pylkkänen (2016)
 date: 2021-01-07 16:33
 author: Yiling Huo

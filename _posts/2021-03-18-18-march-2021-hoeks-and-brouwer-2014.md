@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: 18 March 2021, Hoeks and Brouwer (2014)
 date: 2021-03-18 19:12
 author: Yiling Huo

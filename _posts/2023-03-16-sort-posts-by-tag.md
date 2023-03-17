@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: How to show Jekyll posts from one category, sorted by tags
 date: 2023-03-16 10:00
 author: Yiling Huo

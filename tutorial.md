@@ -1,5 +1,5 @@
 ---
-layout: multi-categories
+layout: multi-categories-narrow
 title: Tutorials
 permalink: /tutorials/
 category: 'Tutorials'

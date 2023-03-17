@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: 23 Jan 2021, Delaney-Busch et al. 2019
 date: 2021-01-23 21:41
 author: Yiling Huo

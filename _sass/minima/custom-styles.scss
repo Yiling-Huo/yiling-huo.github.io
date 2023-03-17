@@ -1,2 +1,24 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+.tag {
+    display: inline-block;
+    *display: inline; /* for older IE */
+    *zoom: 1; /* for older IE */
+    height: 1em;
+}
+
+.back-to-top {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: block; 
+    clear: both; 
+    text-transform: uppercase; 
+    text-align: right; 
+    position: fixed; 
+    bottom: 5%; 
+    right: 10%; 
+    background-color: rgba(255,255,255,0.8);
+}

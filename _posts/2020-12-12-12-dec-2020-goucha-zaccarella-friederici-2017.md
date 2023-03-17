@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: 12 Dec 2020, Goucha, Zaccarella, &amp; Friederici (2017)
 date: 2020-12-12 21:20
 author: Yiling Huo

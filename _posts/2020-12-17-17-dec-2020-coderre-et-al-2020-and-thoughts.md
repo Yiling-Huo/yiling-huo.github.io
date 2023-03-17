@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-narrow
 title: 17 Dec 2020, Coderre et al. (2020), and thoughts
 date: 2020-12-17 20:01
 author: Yiling Huo
