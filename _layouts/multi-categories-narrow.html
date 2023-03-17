@@ -3,44 +3,53 @@ layout: base-narrow
 ---
 
 <style>
+h2{
+    line-height:"70%";
+    margin-bottom: -0.6em;
+}
 h3{
-    padding: 1em 0 0 0;
+    line-height:"80%";
     margin: 0px;
 }
 </style>
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<article class="post">
 
-  <ul  style="list-style-type: none">
-    {% for i in page.tags %}
-        <li><a href="#{{ i }}">{{ i }}</a></li>
-    {% endfor %}
-  </ul>
+  <header class="post-header">
+    {%- if page.title -%}
+      <h1 class="post-title">{{ page.title }}</h1>
+    {%- endif -%}
+  </header>
 
-  {{ content }}
-
-
-  {% for item in page.tags %}
-    <h2 style="margin: 1.5em 0 0 0;">{{ item }}</h2><a name="{{ item }}"></a>
-    <ul style="list-style-type: none">
-    {% for post in site.tags[item] %}
-        <li>
-        <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-            </a>
-        </h3>
-        <span class="post-meta">{{ post.date | date_to_long_string }}</span>
-        {{ post.excerpt }}
-        <!-- {% if post.content contains site.excerpt_separator %}
-            <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
-        {% endif %} -->
-        </li>
-    {% endfor %}
+  <div class="post-content">
+    <ul  style="list-style-type: none">
+      {% for i in page.tags %}
+          <li><a href="#{{ i }}">{{ i }}</a></li>
+      {% endfor %}
     </ul>
-  {% endfor %}
 
-</div>
+    {{ content }}
+
+
+    {% for item in page.tags %}
+      <h2>{{ item }}</h2><a name="{{ item }}"></a>
+      <ul style="list-style-type: none">
+      {% for post in site.tags[item] %}
+          <li>
+          <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+              </a>
+          </h3>
+          <span class="post-meta">{{ post.date | date_to_long_string }}</span>
+          {{ post.excerpt }}
+          <!-- {% if post.content contains site.excerpt_separator %}
+              <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+          {% endif %} -->
+          </li>
+      {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+
+</article>
