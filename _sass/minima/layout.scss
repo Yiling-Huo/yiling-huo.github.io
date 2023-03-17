@@ -3,15 +3,12 @@
  */
 .site-header {
   border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $border-color-01;
+  border-bottom: 0px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   // Positioning context for the mobile navigation icon
   position: relative;
-
-  // Set background color with some opacity
-  // background-color: rgba(255, 255, 255, 0.6);
 }
 
 .site-title {
@@ -125,7 +122,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $border-color-01;
+  border-top: 0px solid $border-color-01;
   padding: $spacing-unit 0;
 }
 
@@ -305,7 +302,7 @@
     a {
       display: block;
       padding: 10px 12px;
-      border: 1px solid $border-color-01;
+      border: 0px solid $border-color-01;
       &:hover { border-color: $border-color-02 }
     }
   }
