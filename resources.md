@@ -4,7 +4,7 @@ title: Resources
 permalink: /resources/
 ---
 
-Scripts and resorces that I have created or modified. 
+Scripts and resources that I have created or modified. 
 
 ## Praat scripts:
 
