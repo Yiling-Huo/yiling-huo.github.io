@@ -1,6 +1,6 @@
 ---
 layout: base-narrow
-title: Tutorials
+title: Tags
 permalink: /tags/
 ---
 
