@@ -20,7 +20,7 @@ plugins:
 markdown: kramdown
 
 header_pages:
- - index.md
+ - index.html
  - CV.md
  - publications.md
  - teaching.md
