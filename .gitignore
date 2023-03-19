@@ -21,9 +21,3 @@ Gemfile.lock
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Image file that are not needed
-
-images/profile_image_2_square.jpg
-images/tag.png
-images/background-large.png
