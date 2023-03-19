@@ -6,7 +6,6 @@ layout: base-wide
 title: About
 ---
 
-
 <img src="/images/profile_image_2_square.webp" alt="" align="left" height="55%" width="55%" vspace="20" hspace="25">
 
 <font size="+1">
