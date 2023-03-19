@@ -6,9 +6,10 @@ layout: base-wide
 title: About
 ---
 
-<font size="+1">
+
 <img src="/images/profile_image_2_square.webp" alt="" align="left" height="55%" width="55%" vspace="20" hspace="25">
 
+<font size="+1">
 <p style="padding: 5em 0 1em 0;"><h2>About me</h2></p>
 
 <p>Having finished my MSc and started my PhD at UCL, I’m still new to the world of research. There isn’t much on these pages now, but I’ll do my best to fill it with my work!</p>
