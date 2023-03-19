@@ -441,7 +441,7 @@ This NEG is one CL pipe\\
 
 ### **Including Chinese and Japanese characters** <a name="step2.9"></a>
 
-The easiest way to include some Chinese and Japanese characters in an otherwise English document is using XeTeX's `xeCJK` package. This package also supports Korean characters, with some font settings, details [here](https://www.overleaf.com/learn/latex/Korean) and [here](https://www.jkangpathology.com/post/2020-10-27-use-korean-font-in-rmarkdown/). To use this package, the PDF engine has to be set to XeTeX. 
+The easiest way to include some Chinese and Japanese characters in an otherwise English document is using XeTeX's `xeCJK` package. This package also supports Korean characters, with some font settings, details [here](https://www.overleaf.com/learn/latex/Korean) and [here](https://www.jkangpathology.com/post/2020-10-27-use-korean-font-in-rmarkdown/). To use this package, the PDF engine has to be set to xelatex. 
 
 In your YAML header, specify the PDF engine, and use the `xeCJK` package: 
 
@@ -457,7 +457,7 @@ Then you can freely include the characters in your document:
 ```
 For example, my document needs these characters:
 
-- 用中文说你好
+- 用汉语说你好
 - 日本語でこんにちは
 ```
 
