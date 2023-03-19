@@ -49,9 +49,9 @@ tags: ['Food', 'Travel', 'My hobbies']
 In your `my-layout.html` in the `_layouts` folder, use for loops to (1) make a list of tags to allow readers to easily navigate to each tag; and (2) show posts sorted by tags. 
 
 {% raw %}
-<pre><code>&lt;div class=&quot;home&quot;&gt;
+<pre><code>&lt;div&gt;
 {%- if page.title -%}
-    &lt;h1 class=&quot;page-heading&quot;&gt;{{ page.title }}&lt;/h1&gt;
+    &lt;h1&gt;{{ page.title }}&lt;/h1&gt;
 {%- endif -%}
 
 &lt;!-- a list of tags to show up at the top of the page --&gt;
@@ -65,16 +65,16 @@ In your `my-layout.html` in the `_layouts` folder, use for loops to (1) make a l
 
 &lt;!-- sort posts by tags --&gt;
 {% for item in page.tags %}
-    &lt;h2 style=&quot;margin: 1.5em 0 0 0;&quot;&gt;{{ item }}&lt;/h2&gt;&lt;a name=&quot;{{ item }}&quot;&gt;&lt;/a&gt;
+    &lt;h2&gt;{{ item }}&lt;/h2&gt;&lt;a name=&quot;{{ item }}&quot;&gt;&lt;/a&gt;
     &lt;ul style=&quot;list-style-type: none&quot;&gt;
     {% for post in site.tags[item] %}
         &lt;li&gt;
         &lt;h3&gt;
-            &lt;a class=&quot;post-link&quot; href=&quot;{{ post.url | relative_url }}&quot;&gt;
+            &lt;a href=&quot;{{ post.url | relative_url }}&quot;&gt;
                 {{ post.title | escape }}
             &lt;/a&gt;
         &lt;/h3&gt;
-        &lt;span class=&quot;post-meta&quot;&gt;{{ post.date | date_to_long_string }}&lt;/span&gt;
+        &lt;span&gt;{{ post.date | date_to_long_string }}&lt;/span&gt;
         {{ post.excerpt }}
         {% if post.content contains site.excerpt_separator %}
             &lt;a href=&quot;{{ site.baseurl }}{{ post.url }}&quot;&gt;Read more&lt;/a&gt;
