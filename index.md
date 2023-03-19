@@ -6,7 +6,7 @@ layout: base-wide
 title: About
 ---
 
-<img src="/images/profile_image_2_square.webp" alt="" align="left" height="55%" width="55%" vspace="20" hspace="25">
+<img src="/images/profile_image_2_square.webp" alt="profile-image" style="float: left; margin: 2em 2em 1em 0;" width="55%">
 
 <font size="+1">
 <p style="padding: 5em 0 1em 0;"><h2>About me</h2></p>
