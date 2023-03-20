@@ -18,7 +18,7 @@ Scripts and resources that I have created or modified.
 
 ## Python scripts:
 
-- Chinese cloze responses:
+- Automated processing of Chinese cloze responses:
 
   <a href="/files/resources/python/chinese-cloze.zip" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/02/06/How-to-process-cloze.html). Two scripts that process data collected from cloze tasks in Chinese. In a cloze task, the participant sees incomplete sentences and is asked to complete the sentence by providing one or a few words.
 
