@@ -1,7 +1,7 @@
 ---
 layout: page-narrow
 title: Resources
-permalink: /resources/
+permalink: /test/
 ---
 
 test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text test text 
