@@ -129,7 +129,7 @@ print("The value of b is: " + str(b))
 
 #### *method 1: include plots as images*
 
-R Markdown allows including external images quite easily. If you have been working in other R project and generated R plots, you can save the plots as `.pdf` first, and include the `.pdf` image in your `.rmd` document. 
+R Markdown allows including external images quite easily. If you have been working in other R project and generated R plots, you can save the plots as `.pdf` first, and include the `.pdf` image in your `.rmd` document. (Other image formats are also fine, and may be preferred if your have complex plots. `.pdf`'s advantage is it's vector-based, so can be directly sent to your editors for publishing.)
 
 In your other R project, if you have base R plots:
 ```{r}
