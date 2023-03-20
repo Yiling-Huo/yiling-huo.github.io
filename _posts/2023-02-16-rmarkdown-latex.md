@@ -1,6 +1,6 @@
 ---
 layout: post-narrow
-title: How I got ready to write LaTeX files inside R Markdown
+title: How I got ready to write LaTeX files inside RMarkdown
 date: 2023-02-16 21:00
 author: Yiling Huo
 category: 'Tutorials'
@@ -13,7 +13,7 @@ As an academic rooky I feel that I will eventually need to deal with LaTeX one w
 
 LaTeX comes in a thousand flavours and each person will have a different preference. This post is therefore mostly recording what I have done for myself. 
 
-For context, I study psycholinguistics, where I put participants inside or in front of machines and do experiments with them (non-invasively, of course). So I already regularly deal with not-quire-small data sets in R, and share my workflow and results with supervisors and colleagues using R Markdown. I also teach an introduction to statistics with R workshop where it'd be nice to prepare handouts that can include R codes and R results. I am also interested in sharing stuff I created with the community so it'd be nice to create pretty documentations. So when I learned that I can integrate LaTeX with R Markdown, I immediately felt that this is where I want to start. 
+For context, I study psycholinguistics, where I put participants inside or in front of machines and do experiments with them (non-invasively, of course). So I already regularly deal with not-quire-small data sets in R, and share my workflow and results with supervisors and colleagues using RMarkdown. I also teach an introduction to statistics with R workshop where it'd be nice to prepare handouts that can include R codes and R results. I am also interested in sharing stuff I created with the community so it'd be nice to create pretty documentations. So when I learned that I can integrate LaTeX with RMarkdown, I immediately felt that this is where I want to start. 
 
 Some other things about my solution that I like include:
 
@@ -21,12 +21,12 @@ Some other things about my solution that I like include:
 - I'm already working with R and RStudio, and I want to minimise new software that needed to be installed. 
 - I like the simpler, visually less-confusing style of markdown. 
 
-In this post, I will walk you step by step through how I set up everything to use R Markdown to generate LaTeX files, including simple handouts, journal articles, books, and theses. 
+In this post, I will walk you step by step through how I set up everything to use RMarkdown to generate LaTeX files, including simple handouts, journal articles, books, and theses. 
 
 ### On this page
 1. [Prerequisites](#step1)
-2. [Write a simple pdf handout with R Markdown](#step2)
-    - [Writing your texts in R Markdown](#step2.1)
+2. [Write a simple pdf handout with RMarkdown](#step2)
+    - [Writing your texts in RMarkdown](#step2.1)
     - [Including R and/or other languages codes and results](#step2.2)
     - [Including figures and plots](#step2.3)
     - [Including tables](#step2.4)
@@ -35,15 +35,15 @@ In this post, I will walk you step by step through how I set up everything to us
     - [Including syntax trees](#step2.7)
     - [Including linguistic examples](#step2.8)
     - [Including Chinese and Japanese characters](#step2.9)
-3. [Write a journal article with R Markdown](#step3)
-4. [To be updated: Write a book with R Markdown](#step4)
+3. [Write a journal article with RMarkdown](#step3)
+4. [To be updated: Write a book with RMarkdown](#step4)
 5. [Tips](#step5)
 
 Useful resources:
 
-- [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+- [RMarkdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 - [Tinytex documentation](https://yihui.org/tinytex/)
-- [Mathematics in R Markdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html)
+- [Mathematics in RMarkdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html)
 - [tablesgenerator](https://www.tablesgenerator.com/)
 
 
@@ -54,13 +54,13 @@ My solution requires [R](https://cloud.r-project.org/), [RStudio](https://posit.
 Inside RStudio, install [tinytex](https://yihui.org/tinytex/) and TinyTeX by running `install.packages("tinytex")` and then `tinytex::install_tinytex()` in the console. 
 
 >How it works:
->1. In RStudio, I create R Markdown `.rmd` files and write my texts, codes, and generate my results and plots. 
+>1. In RStudio, I create RMarkdown `.rmd` files and write my texts, codes, and generate my results and plots. 
 >2. I knit my `.rmd` file. During this process, RStudio calls Pandoc, which will convert the document to `.tex` and generate a `.pdf` file accordingly. 
 
 
-## **2. Write a simple pdf handout with R Markdown** <a name="step2"></a>
+## **2. Write a simple pdf handout with RMarkdown** <a name="step2"></a>
 
-Create a new `.rmd` file: File - New File - R Markdown...
+Create a new `.rmd` file: File - New File - RMarkdown...
 
 Select Default Output Format: PDF. 
 
@@ -75,7 +75,7 @@ We can edit this `.rmd` file and knit it:
 ![example_rmd](/images/tutorial_rmdtex/example_rmd.png) ![example_pdf](/images/tutorial_rmdtex/example_pdf.png)
 
 
-### **Writing your texts in R Markdown:** <a name="step2.1"></a>
+### **Writing your texts in RMarkdown:** <a name="step2.1"></a>
 
 Use [markdown syntax](https://www.markdownguide.org/basic-syntax/) to write your texts. For example, for your section title (heading level 1), you can write `# 1. Introduction`. To bold your text, write `**text to bold**`. 
 
@@ -108,7 +108,7 @@ t.test(value ~ group, data=data_2, var.equal=TRUE)
 
 ![r_chunk](/images/tutorial_rmdtex/r_chunk.png)
 
-R Markdown supports many languages other than R through the `knitr` package. A list of supported languages can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html). For example, if I want to include a chunk of python code: 
+RMarkdown supports many languages other than R through the `knitr` package. A list of supported languages can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html). For example, if I want to include a chunk of python code: 
 
 ````{python}
 ```{python}
@@ -129,7 +129,7 @@ print("The value of b is: " + str(b))
 
 #### *method 1: include plots as images*
 
-R Markdown allows including external images quite easily. If you have been working in other R project and generated R plots, you can save the plots as `.pdf` first, and include the `.pdf` image in your `.rmd` document. (Other image formats are also fine, and may be preferred if your have complex plots. `.pdf`'s advantage is it's vector-based, so can be directly sent to your editors for publishing.)
+RMarkdown allows including external images quite easily. If you have been working in other R project and generated R plots, you can save the plots as `.pdf` first, and include the `.pdf` image in your `.rmd` document. (Other image formats are also fine, and may be preferred if your have complex plots. `.pdf`'s advantage is it's vector-based, so can be directly sent to your editors for publishing.)
 
 In your other R project, if you have base R plots:
 ```{r}
@@ -162,7 +162,7 @@ knitr::include_graphics("./file_name.pdf")
 
 Put your `.pdf` figure in the same folder as your `.rmd`, or specify the relative path to your figure such as `(./path/to/figure/figure.pdf)`. 
 
-The above line includes some common LaTeX figure configurations you can directly add to your markdown file: `\label{figure-name}` allows you to label your figure for cross referencing, `out.width=40%` allows you to control the size of the figure. 
+The above line includes some common LaTeX figure configurations you can directly add to youRMarkdown file: `\label{figure-name}` allows you to label your figure for cross referencing, `out.width=40%` allows you to control the size of the figure. 
 
 Alternatively, you can include images using Markdown syntax:
 
@@ -469,19 +469,19 @@ For example, my document needs these characters:
 
 *Note that your PC needs to have fonts for these languages installed.*
 
-## **3. Write a journal article with R Markdown** <a name="step3"></a>
+## **3. Write a journal article with RMarkdown** <a name="step3"></a>
 
 You can use the `rticles` [package](https://github.com/rstudio/rticles) to easily use templates from a large number of publishers. 
 
 In R console, run `install.packages("rticles")`. 
 
-In File - New File - R Markdown..., select using templates, and select your target publisher. Replace the template content with your content, and your document will be the format required by your target publisher. 
+In File - New File - RMarkdown..., select using templates, and select your target publisher. Replace the template content with your content, and your document will be the format required by your target publisher. 
 
 For example, I have created an example using the Taylor & Francis Journal Article template: 
 
 ![example_article](/images/tutorial_rmdtex/example_article.png) ![example_article_pdf](/images/tutorial_rmdtex/example_article_pdf.png)
 
-## **4. To be updated: Write a book with R Markdown** <a name="step4"></a>
+## **4. To be updated: Write a book with RMarkdown** <a name="step4"></a>
 
 It's possible to write chapters of books with `.rmd` and combine them with `.rnw`. More detail to be updated!
 
