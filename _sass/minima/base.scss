@@ -48,6 +48,7 @@ body {
   background-size: cover;
 }
 
+// This is only used to manage the raw background (without white filter) on narrow pages
 .bg {
   /* The image used */
   background-image: url("/images/background.webp");
@@ -88,16 +89,19 @@ hr {
 /**
  * `main` element
  */
-// main {
-//   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
-// }
-
-/* Added bg.main to flex mains that have bg as parent and also manage flex of wrapper when having wrapper children*/
-.bg > main {
+// flex mains that have bg as parent and also manage flex of wrapper when having wrapper children
+main {
   display: flex; /* Default value of `display` of `main` element is 'inline' in IE 11. */
   flex-direction: column;
   flex: 1;
 }
+
+/* Added bg.main to flex mains that have bg as parent and also manage flex of wrapper when having wrapper children*/
+// .bg > main {
+//   display: flex; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+//   flex-direction: column;
+//   flex: 1;
+// }
 
 
 /**
@@ -252,7 +256,7 @@ pre {
   }
 }
 
-// For wide pages, background color is handled by page-content-wide-page in _layout.scss
+// For wide pages, background color is handled by body
 .wrapper-wide {
   flex: 1;
   max-width: calc(#{$content-width} - (#{$spacing-unit}));

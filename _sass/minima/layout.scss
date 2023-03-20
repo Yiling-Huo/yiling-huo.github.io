@@ -202,16 +202,8 @@
 /**
  * Page content
  */
- // For wide pages, background color is handled here
-.page-content-wide-page {
-  background-color: rgba(255,255,255,0.8);
-}
 
-// For narrow pages, background color is handled by wrapper-narrow in _base.scss
-// Here is to just say some random thing so that the class can be kept
-.page-content-narrow-page {
-  flex: 1 0 auto;
-}
+.page-content
 
 .page-heading {
   @include relative-font-size(2);
