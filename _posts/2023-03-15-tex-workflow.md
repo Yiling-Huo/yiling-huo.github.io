@@ -42,7 +42,7 @@ For now, I'm keeping both options because
     - [Writing in `.Rmd` then rendering `.pdf` and/or `.docx`](#rmd)
     - [One (silly) trick](#silly-trick)
 
-Might be helpful: <a href="https://yiling-huo.github.io/tutorials/2023/02/16/Rmarkdown-LaTex.html" target="_blank">A more detailed tutorial on creating `.Rmd` for rendering to `.pdf`</a>
+Might be helpful: <a href="https://yiling-huo.github.io/tutorials/2023/02/16/rmarkdown-latex.html" target="_blank">A more detailed tutorial on creating `.Rmd` for rendering to `.pdf`</a>
 
 ## **1. My setup** <a name="setup"></a>
 
@@ -187,7 +187,7 @@ pandoc -C input.tex -o output.docx
 
 #### **More elements to your `.md` file**
 
-I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/coding/programming/2023/02/16/Rmarkdown-LaTex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc. Anything that does not require R code chunks to realise can also be used in `.md` files. 
+I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/coding/programming/2023/02/16/rmarkdown-latex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc. Anything that does not require R code chunks to realise can also be used in `.md` files. 
 
 ### **3.1 Writing in `.Rmd` then rendering `.pdf` and/or `.docx`** <a name="rmd"></a>
 
@@ -221,7 +221,7 @@ pandoc -C input.tex -o output.docx
 
 #### **More elements to your `.Rmd` file**
 
-I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/2023/02/16/Rmarkdown-LaTex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc.
+I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/2023/02/16/rmarkdown-latex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc.
 
 ### **3.3 One (silly) trick** <a name="silly-trick"></a>
 
