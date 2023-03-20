@@ -10,7 +10,7 @@ permalink: /teaching/
 
 - **2021-2022** PLINSTAT (workshop) Introduction to Statistics for Linguists using R 
 
-#### Beijing Forein Studies University
+#### Beijing Foreign Studies University
 
 - **2017-2018** French as a second foreign language, Department of Chinese Language and Literature 
 
