@@ -103,6 +103,10 @@ Spellcheck is perhaps the most important thing I need to be able to write direct
 
 For me, it's also very helpful to include `"editor.renderWhitespace": "all"` in my `settings.json`, so that I could monitor whether I accidentally put more whitespace than needed in my texts. 
 
+#### **Install word count**
+
+Word count is important for writing, needless to say. Unfortunately I haven't found a VS Code word count extension that's designed specifically for text writing (only counting words while ignoring markdown symbols and code chunks). The word count extension I'm using is [WordCounter](https://marketplace.visualstudio.com/items?itemName=kirozen.wordcounter).
+
 #### **Use the Zen Mode**
 
 I use the Zen Mode of VS Code when I'm writing. Zen Mode allows you to focus on the writing by hiding most of the UI. Enter Zen Mode by pressing `Ctrl`+`K` then `Z`. Exit Zen Mode by double pressing `Esc`. 
