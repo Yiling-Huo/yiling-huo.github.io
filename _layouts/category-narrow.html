@@ -3,32 +3,39 @@ layout: base-narrow
 ---
 
 <style>
-h3{
-    padding: 1em 0 0 0;
-    margin: 0px;
-}
+  h2{
+      line-height:"70%";
+      margin-bottom: -0.6em;
+  }
+  h3{
+      line-height:"80%";
+      margin: 0px;
+  }
 </style>
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<article class="post">
+  <header class="post-header">
+    {%- if page.title -%}
+      <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+  </header>
 
-  {{ content }}
+  <div class="post-content">
 
+    {{ content }}
 
-  <ul style="list-style-type: none">
-  {% for post in site.categories[page.categories] %}
-    <li>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-        </a>
-      </h3>
-      <span class="post-meta">{{ post.date | date_to_long_string }}</span>
-      {{ post.content | truncatewords: 100 }}
-    </li>
-  {% endfor %}
-  </ul>
-
-</div>
+    <ul style="list-style-type: none">
+    {% for post in site.categories[page.categories] %}
+      <li>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+          </a>
+        </h3>
+        <span class="post-meta">{{ post.date | date_to_long_string }}</span>
+        {{ post.content | truncatewords: 100 }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</article>

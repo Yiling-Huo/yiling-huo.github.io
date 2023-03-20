@@ -61,6 +61,12 @@ body {
   background-attachment: fixed;
   background-size: cover;
 
+  /* Because bg is the most parent layer of the pages now, so flexing needs to be done on this layer for it to work */
+  /* This website has layers: body > bg > main (page-content) > wrapper */
+  /* Also display:flex allows children elements to flex */
+  display: flex;
+  flex: 1 0 auto;
+  flex-grow: 1;
 }
 
 
@@ -82,10 +88,16 @@ hr {
 /**
  * `main` element
  */
-main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
-}
+// main {
+//   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+// }
 
+/* Added bg.main to flex mains that have bg as parent and also manage flex of wrapper when having wrapper children*/
+.bg > main {
+  display: flex; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  flex-direction: column;
+  flex: 1;
+}
 
 
 /**
@@ -253,9 +265,11 @@ pre {
 
   @extend %clearfix;
 
+  // If on a large screen, just fix the width of the wrapper to make sure it stays its place even if content is short
   @media screen and (min-width: $on-large) {
     flex: 1;
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    // original: max-width:
+    width: calc(#{$content-width} - (#{$spacing-unit} * 2));
     padding-right: $spacing-unit * 5;
     padding-left: $spacing-unit * 5;
     padding-top: $spacing-unit;

@@ -124,6 +124,8 @@
 .site-footer {
   border-top: 0px solid $border-color-01;
   padding: $spacing-unit 0;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .footer-heading {
@@ -202,11 +204,11 @@
  */
  // For wide pages, background color is handled here
 .page-content-wide-page {
-  flex: 1 0 auto;
   background-color: rgba(255,255,255,0.8);
 }
 
 // For narrow pages, background color is handled by wrapper-narrow in _base.scss
+// Here is to just say some random thing so that the class can be kept
 .page-content-narrow-page {
   flex: 1 0 auto;
 }
