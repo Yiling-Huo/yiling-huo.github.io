@@ -42,7 +42,7 @@ For now, I'm keeping both options because
     - [Writing in `.Rmd` then rendering `.pdf` and/or `.docx`](#rmd)
     - [One (silly) trick](#silly-trick)
 
-Useful link: <a href="https://yiling-huo.github.io/tutorials/2023/02/16/Rmarkdown-LaTex.html" target="_blank">A more detailed tutorial on creating `.Rmd` for rendering to `.pdf`</a>
+Might be helpful: <a href="https://yiling-huo.github.io/tutorials/2023/02/16/Rmarkdown-LaTex.html" target="_blank">A more detailed tutorial on creating `.Rmd` for rendering to `.pdf`</a>
 
 ## **1. My setup** <a name="setup"></a>
 
