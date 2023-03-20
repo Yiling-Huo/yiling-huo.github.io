@@ -259,7 +259,7 @@ pre {
 // For wide pages, background color is handled by body
 .wrapper-wide {
   flex: 1;
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  max-width: calc(100vw - (#{$spacing-unit}));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit * .5;
@@ -292,7 +292,7 @@ pre {
 // For narrow pages, background color is handled here
 .wrapper-narrow {
   flex: 1;
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  max-width: calc(100vw - (#{$spacing-unit}));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit * .5;
