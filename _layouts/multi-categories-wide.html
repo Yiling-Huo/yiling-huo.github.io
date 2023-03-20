@@ -24,7 +24,7 @@ layout: base-wide
     <div class="post-content">
       <ul  style="list-style-type: none">
         {% for i in page.tags %}
-            <li><a href="#{{ i }}">{{ i }}</a></li>
+            <li><a href="#{{ i | slugify }}">{{ i }}</a></li>
         {% endfor %}
       </ul>
   
@@ -32,7 +32,7 @@ layout: base-wide
   
   
       {% for item in page.tags %}
-        <h2>{{ item }}</h2><a name="{{ item }}"></a>
+        <h2>{{ item }}</h2><a name="{{ item | slugify }}"></a>
         <ul style="list-style-type: none">
         {% for post in site.tags[item] %}
             <li>

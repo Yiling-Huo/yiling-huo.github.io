@@ -1,7 +1,7 @@
 <p style="line-height: 80%; font-size:80%; padding: 1em 0 0 0;"><img class="tag" src="/images/tag.svg" alt="tags" />
     Tags: 
     {% for item in page.tags %}
-    <a href="{{ site.url }}/tags/#{{ item }}">{{ item }}</a>  
+    <a href="{{ site.url }}/tags/#{{ item | slugify }}">{{ item }}</a>  
     {% endfor %}
 </p>
 

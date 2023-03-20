@@ -57,7 +57,7 @@ In your `my-layout.html` in the `_layouts` folder, use for loops to (1) make a l
 &lt;!-- a list of tags to show up at the top of the page --&gt;
 &lt;ul  style=&quot;list-style-type: none&quot;&gt;
     {% for i in page.tags %}
-        &lt;li&gt;&lt;a href=&quot;#{{ i }}&quot;&gt;{{ i }}&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#{{ i | slugify }}&quot;&gt;{{ i }}&lt;/a&gt;&lt;/li&gt;
     {% endfor %}
 &lt;/ul&gt;
 
@@ -65,7 +65,7 @@ In your `my-layout.html` in the `_layouts` folder, use for loops to (1) make a l
 
 &lt;!-- sort posts by tags --&gt;
 {% for item in page.tags %}
-    &lt;h2&gt;{{ item }}&lt;/h2&gt;&lt;a name=&quot;{{ item }}&quot;&gt;&lt;/a&gt;
+    &lt;h2&gt;{{ item }}&lt;/h2&gt;&lt;a name=&quot;{{ item | slugify }}&quot;&gt;&lt;/a&gt;
     &lt;ul style=&quot;list-style-type: none&quot;&gt;
     {% for post in site.tags[item] %}
         &lt;li&gt;
