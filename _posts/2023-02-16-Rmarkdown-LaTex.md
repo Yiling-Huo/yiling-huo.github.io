@@ -387,7 +387,7 @@ output:
 ---
 ```
 
-The `qtree` package allows users to write syntax trees in phrase marker style, and will generate trees during output:
+The `qtree` package allows users to write syntax trees in phrase marker style (with some simplest LaTeX syntax), and will generate trees during output:
 
 ````
 ```{=latex}
@@ -413,6 +413,7 @@ output:
 
 The simplest linguistic example using `bg4e` looks like this: 
 
+````
 ```{=latex}
 \begin{exe}
 \ex
@@ -420,6 +421,7 @@ The simplest linguistic example using `bg4e` looks like this:
 This is not a pipe. 
 \end{exe}
 ```
+```` 
 
 ![lingexp](/images/tutorial_rmdtex/lingexp.png)
 
@@ -427,7 +429,8 @@ Reference the examples using `\label{label-name}` and `\ref{label-name}`.
 
 The `bg4e` package allows more formatting of examples, such as ungrammatical marking, listing, glosses, etc. You can refer to their [documentation](http://www.bakoma-tex.com/doc/latex/gb4e/gb4e-doc.pdf) for more details. 
 
-```
+````
+```{=latex}
 \begin{exe}
 \ex
 \label{label-name}
@@ -436,6 +439,7 @@ This NEG is one CL pipe\\
 \trans ‘This is not a pipe.’
 \end{exe}
 ```
+````
 
 ![lingexp1](/images/tutorial_rmdtex/lingexp1.png)
 
