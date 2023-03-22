@@ -40,6 +40,8 @@ For now, I'm keeping both options because
 3. [Example](#example)
     - [Writing in `.md` then rendering `.pdf` and/or `.docx`](#md)
     - [Writing in `.Rmd` then rendering `.pdf` and/or `.docx`](#rmd)
+4. [Tips](#tips)
+    - [Using VS Code's snippets](#snippet)
     - [One (silly) trick](#silly-trick)
 
 Might be helpful: <a href="https://yiling-huo.github.io/tutorials/2023/02/16/rmarkdown-latex.html" target="_blank">A more detailed tutorial on creating `.Rmd` for rendering to `.pdf`</a>
@@ -189,7 +191,7 @@ pandoc -C input.tex -o output.docx
 
 I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/coding/programming/2023/02/16/rmarkdown-latex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc. Anything that does not require R code chunks to realise can also be used in `.md` files. 
 
-### **3.1 Writing in `.Rmd` then rendering `.pdf` and/or `.docx`** <a name="rmd"></a>
+### **3.2 Writing in `.Rmd` then rendering `.pdf` and/or `.docx`** <a name="rmd"></a>
 
 Once we have the R Extension for VS Code, we can write `.Rmd` files and convert to other formats inside VS Code. For example: 
 
@@ -223,6 +225,39 @@ pandoc -C input.tex -o output.docx
 
 I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/2023/02/16/rmarkdown-latex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc.
 
-### **3.3 One (silly) trick** <a name="silly-trick"></a>
+## **4. Tips** <a name="tips"></a>
+
+### **4.1 Using VS Code's snippet** <a name="snippet"></a>
+
+Snippets allow users to easily insert templated codes or texts. I put some frequently used LaTeX codes as snippets for markdown and RMarkdown, such as codes to wrap text around figures, which saves me loads of time and brain cells when I'm writing. 
+
+To create your own snippets, select File - Preferences - Configure User Snippets, and then select the markdown or the rmd language. 
+
+A `language.json` file will be opened, where you can create customised snippets for a specific language. The snippet contains a name, a prefix which is what you need to type to call the snippet, a body which is the code context, and a description. For example, this is my snippet for inserting a figure that allows text to wrap around it: 
+
+```{json}
+"Latex Wrap figure": {
+    "prefix": ["wfig"],
+    "body":[
+        "```{=latex}",
+        "\\begin{wrapfigure}{$1}{0.${2}2\\textwidth}",
+        "\\centering",
+        "\\includegraphics[width=0.$2\\textwidth]{$3}",
+        "\\caption{$4}",
+        "\\label{$5}",
+        "\\end{wrapfigure}",
+        "```"
+    ],
+    "description": "Wrap figure with latex wrapfigure."
+}
+```
+
+Placeholders such as `$1` and `$2` allow you to quickly jump to the next placeholder with the `Tab` key. In my example snippet, `$1` is where to put the position of the wrap box (`l` left, `r` right, etc.), `$2` is the percentage width of the figure, with `0.${2}2` in the second body line to automatically set the width of the wrap box to 2% larger than the figure width. `$3` is the name of the figure, `$4` is the caption, and `$5` is the label. 
+
+Note that you will need to escape JSON symbols such as backslashes and double quotes by putting a backslash `\` in front of them. 
+
+VS Code will not automatically activate snippets for markdown. To force it, press `Ctrl`+`space` before typing the prefix. 
+
+### **4.2 One (silly) trick** <a name="silly-trick"></a>
 
 Since the only difference between a `.md` file and a `.Rmd` file (when no code chunks are involved) is a few lines in the YAML header, it's possible to switch back and form between `.md` and `.Rmd` simply by copy pasting the body text. This is silly but I like the flexibility of having a solution when I suddenly want to include something in the document that only the other format can handle. 
