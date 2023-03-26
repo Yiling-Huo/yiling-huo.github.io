@@ -74,7 +74,7 @@ In VS Code, press `Ctrl`+`,`  to open settings. Search for `files` in settings, 
 
 ![file-associate](/images/tutorial_mdtex/file-associate.png)
 
-#### **Setup themes language-specific editor fonts**
+#### **Setup themes and language-specific editor fonts**
 
 You can change the default dark theme to a theme that gets you into the mood of writing by selecting clicking on the Manage icon at the sidebar, then select Themes - Color Theme. Or press `Ctrl`+`K` then `Ctrl`+`T`. 
 
@@ -107,7 +107,7 @@ For me, it's also very helpful to include `"editor.renderWhitespace": "all"` in 
 
 #### **Install word count**
 
-Word count is important for writing, needless to say. Unfortunately I haven't found a VS Code word count extension that's designed specifically for text writing (only counting words while ignoring markdown symbols and code chunks). The word count extension I'm using is [WordCounter](https://marketplace.visualstudio.com/items?itemName=kirozen.wordcounter).
+Word count is important for writing, needless to say. Unfortunately I haven't found a VS Code word count extension that's designed specifically for text writing (only counting words while ignoring markdown symbols and code chunks). The word count extension I'm currently using is [WordCounter](https://marketplace.visualstudio.com/items?itemName=kirozen.wordcounter).
 
 #### **Use the Zen Mode**
 
@@ -254,7 +254,7 @@ A `language.json` file will be opened, where you can create customised snippets 
 
 Placeholders such as `$1` and `$2` allow you to quickly jump to the next placeholder with the `Tab` key. In my example snippet, `$1` is where to put the position of the wrap box (`l` left, `r` right, etc.), `$2` is the percentage width of the figure, with `0.${2}2` in the second body line to automatically set the width of the wrap box to 2% larger than the figure width. `$3` is the name of the figure, `$4` is the caption, and `$5` is the label. 
 
-Note that you will need to escape JSON symbols such as backslashes and double quotes by putting a backslash `\` in front of them. 
+Note that you will need to escape JSON symbols such as backslashes and double quotes by putting a backslash `\` in front of them. In order to include the LaTeX line break symbol `\\`, you'll need six backslashes in `language.json`: `\\\\\\`. 
 
 VS Code will not automatically activate snippets for markdown. To force it, press `Ctrl`+`space` before typing the prefix. 
 
