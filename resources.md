@@ -22,6 +22,10 @@ Scripts and resources that I have created or modified.
 
   <a href="/files/resources/python/chinese-cloze.zip" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/02/06/How-to-process-cloze.html). Two scripts that process data collected from cloze tasks in Chinese. In a cloze task, the participant sees incomplete sentences and is asked to complete the sentence by providing one or a few words.
 
+- Compare images from two folders:
+
+  <a href="/files/resources/python/compare_images.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/30/compare-images.html). A python script that compares images from to folders to search for duplicates. 
+
 ## R scripts:
 
 - Remove outliers:
