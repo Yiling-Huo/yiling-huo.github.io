@@ -1,7 +1,7 @@
 ---
 layout: post-narrow
 title: Comparing images from two folders
-date: 2023-03-30 15:00
+date: 2023-03-30 12:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Python']
