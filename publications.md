@@ -8,7 +8,7 @@ permalink: /publications/
 
 (I'm working hard to have something here!)
 
-## Talks & Posters
+## Conference Talks & Posters
 
 - **Huo, Y.**, Wang, S., & Chow, W.Y. (2023) *Do listeners detect prediction errors in lexical tone? An investigation with tone sandhi in Mandarin Chinese shows unexpected prediction inhibition*. Poster presented at the 36th Annual Conference on Human Sentence Processing, University of Pittsburgh, PA, USA. <a href="https://virtual.oxfordabstracts.com/#/event/3615/submission/71" target="_blank">Poster</a>
 - **Huo, Y.** & Chow, W.Y. (2022) *An investigation into listeners’ selective failure to use phonological knowledge in language prediction*. Poster presented at the Architectures and Mechanisms of Language Processing (AMLaP) 2022, University of York, York, UK. <a href="https://virtual.oxfordabstracts.com/#/event/3067/submission/153" target="_blank">Poster</a>
