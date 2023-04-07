@@ -51,7 +51,7 @@ $sp-profile-image: url("/images/profile/profile-sp.webp");
 $sp-brand-color-light: lighten($sp-brand-color, 40%) !default;
 $sp-brand-color-dark: darken($sp-brand-color, 25%) !default;
 
-$sp-site-title-color: $sp-brand-color-dark !default;
+$sp-site-title-color: darken(#828282, 25%) !default;
 
 $sp-text-color: #111111 !default;
 $sp-background-color: #fdfdfd !default;
@@ -61,7 +61,7 @@ $sp-link-hover-color: $sp-text-color !default;
 
 $sp-border-color-01: $sp-brand-color-light !default;
 $sp-border-color-02: lighten($sp-brand-color, 35%) !default;
-$sp-border-color-03: $sp-brand-color-dark !default;
+$sp-border-color-03: #625b5d !default; //#505050 added the pink filter for the background image
 
 $sp-table-text-color:      lighten($sp-text-color, 18%) !default;
 $sp-table-zebra-color:     lighten($sp-brand-color, 46%) !default;
