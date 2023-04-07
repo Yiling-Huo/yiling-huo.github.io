@@ -38,6 +38,7 @@ twitter:
 # Theme-specific settings
 
 minima:
+  skin: spring
   # Minima date format.
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
   #
@@ -62,11 +63,6 @@ minima:
     - { platform: twitter,        user_url: "https://twitter.com/YlHuo" }
   #   - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
 
-# If you want to link only specific pages in your header, uncomment this and add the path to the pages in
-# order as they should show up.
-#
-# header_pages:
-#   - about.md
 
 # Set to `true` to show excerpts on the homepage.
 #

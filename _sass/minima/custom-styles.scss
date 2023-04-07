@@ -23,3 +23,11 @@
     background-color: rgba(255,255,255,0.8);
 }
 
+.profile {
+    content: $profile-image;
+}
+
+.season::before {
+    content: $title;
+    font-size: 70%;
+}
