@@ -42,24 +42,24 @@ $de-table-border-color:    $de-border-color-01 !default;
 
 // spring theme
 $sp-title:                 "  -spring edition- ";
-$sp-brand-color:           #e7ca09 !default; //#ff8ca1 !default;
-$sp-code-background-color: #f6ffc1 !default; //#ffe3e8 !default;
-$sp-link-base-color:       #9bb600 !default; //#F96D87 !default;
+$sp-brand-color:           #d1ce00 !default; //#e7ca09 !default;
+$sp-code-background-color: #f6ffc1 !default;
+$sp-link-base-color:       #9bb600 !default;
 $sp-background-image: url("/images/background/background-sp.webp");
 $sp-profile-image: url("/images/profile/profile-sp.webp");
 
-$sp-brand-color-light: lighten($sp-brand-color, 40%) !default;
+$sp-brand-color-light: lighten($sp-brand-color, 50%) !default;
 $sp-brand-color-dark: darken($sp-brand-color, 25%) !default;
 
-$sp-site-title-color: darken(#828282, 25%) !default;
+$sp-site-title-color: #455500 !default; //darken(#828282, 25%) !default;
 
 $sp-text-color: #111111 !default;
-$sp-background-color: #fdfdfd !default;
+$sp-background-color: lighten($sp-brand-color, 56%) !default; //#fdfdfd !default; //this variable is only used for navigation background color when narrow window
 
 $sp-link-visited-color: darken($sp-link-base-color, 10%) !default;
 $sp-link-hover-color: $sp-text-color !default;
 
-$sp-border-color-01: $sp-brand-color-light !default;
+$sp-border-color-01: lighten($sp-code-background-color, 5%) !default; //$sp-brand-color-light !default;
 $sp-border-color-02: lighten($sp-brand-color, 35%) !default;
 $sp-border-color-03: #455500 !default; //#505050 added the green
 
