@@ -10,7 +10,7 @@ Scripts and resources that I have created or modified.
 
 - Make auditory serial presentation stimuli:
 
-  <a href="/files/resources/praat/auditory-SP-stimuli-from-textgrid" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/10/make-auditory-SP-stimuli.html). A Praat script that given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids.
+  <a href="/files/resources/praat/auditory-SP-stimuli-from-textgrid" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/10/make-auditory-sp-stimuli.html). A Praat script that given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids.
   
 - Extract pitch contour:
 
