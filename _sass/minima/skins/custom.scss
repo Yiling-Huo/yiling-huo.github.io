@@ -42,9 +42,9 @@ $de-table-border-color:    $de-border-color-01 !default;
 
 // spring theme
 $sp-title:                 "  -spring edition- ";
-$sp-brand-color:           #ff8ca1 !default;
-$sp-code-background-color: #ffe3e8 !default;
-$sp-link-base-color:       #F96D87 !default;
+$sp-brand-color:           #e7ca09 !default; //#ff8ca1 !default;
+$sp-code-background-color: #f6ffc1 !default; //#ffe3e8 !default;
+$sp-link-base-color:       #9bb600 !default; //#F96D87 !default;
 $sp-background-image: url("/images/background/background-sp.webp");
 $sp-profile-image: url("/images/profile/profile-sp.webp");
 
@@ -56,12 +56,12 @@ $sp-site-title-color: darken(#828282, 25%) !default;
 $sp-text-color: #111111 !default;
 $sp-background-color: #fdfdfd !default;
 
-$sp-link-visited-color: darken($sp-link-base-color, 15%) !default;
+$sp-link-visited-color: darken($sp-link-base-color, 10%) !default;
 $sp-link-hover-color: $sp-text-color !default;
 
 $sp-border-color-01: $sp-brand-color-light !default;
 $sp-border-color-02: lighten($sp-brand-color, 35%) !default;
-$sp-border-color-03: #625b5d !default; //#505050 added the pink filter for the background image
+$sp-border-color-03: #455500 !default; //#505050 added the green
 
 $sp-table-text-color:      lighten($sp-text-color, 18%) !default;
 $sp-table-zebra-color:     lighten($sp-brand-color, 46%) !default;
