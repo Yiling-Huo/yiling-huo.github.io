@@ -67,28 +67,28 @@ $sp-table-text-color:      lighten($sp-text-color, 18%) !default;
 $sp-table-zebra-color:     lighten($sp-brand-color, 46%) !default;
 $sp-table-header-bg-color: lighten($sp-brand-color, 43%) !default;
 $sp-table-header-border:   lighten($sp-brand-color, 37%) !default;
-$sp-table-border-color:    $sp-border-color-01 !default;
+$sp-table-border-color:    $sp-brand-color-light !default; //$sp-border-color-01 !default;
 
 // summer theme
 $su-title:                 "  -summer edition- ";
-$su-brand-color:           #00bfff !default;
+$su-brand-color:           #dac700 !default; //#00bfff !default;
 $su-code-background-color: #d3f4ff !default;
 $su-link-base-color:       #00a9df !default;
 $su-background-image: url("/images/background/background-su.webp");
 $su-profile-image: url("/images/profile/profile-su.webp");
 
 $su-brand-color-light: lighten($su-brand-color, 40%) !default;
-$su-brand-color-dark: darken($su-brand-color, 25%) !default;
+$su-brand-color-dark: darken(#00bfff, 25%) !default;
 
 $su-site-title-color: $su-brand-color-dark !default;
 
 $su-text-color: #111111 !default;
-$su-background-color: #fdfdfd !default;
+$su-background-color: lighten($su-link-base-color, 52%) !default;  //#fdfdfd !default;
 
 $su-link-visited-color: darken($su-link-base-color, 15%) !default;
 $su-link-hover-color: $su-text-color !default;
 
-$su-border-color-01: $su-brand-color-light !default;
+$su-border-color-01: lighten($su-code-background-color, 5%) !default; //$su-brand-color-light !default;
 $su-border-color-02: lighten($su-brand-color, 35%) !default;
 $su-border-color-03: $su-brand-color-dark !default;
 
@@ -96,42 +96,42 @@ $su-table-text-color:      lighten($su-text-color, 18%) !default;
 $su-table-zebra-color:     lighten($su-brand-color, 46%) !default;
 $su-table-header-bg-color: lighten($su-brand-color, 43%) !default;
 $su-table-header-border:   lighten($su-brand-color, 37%) !default;
-$su-table-border-color:    $su-border-color-01 !default;
+$su-table-border-color:    $su-brand-color-light !default; //$su-border-color-01 !default;
 
 // autumn theme
 $au-title:                 "  -autumn edition- ";
-$au-brand-color:           #e76016 !default;
-$au-code-background-color: #ffe9dd !default;
+$au-brand-color:           #859c00 !default;
+$au-code-background-color: #fdece3 !default;
 $au-link-base-color:       #e76016 !default;
 $au-background-image: url("/images/background/background-au.webp");
 $au-profile-image: url("/images/profile/profile-au.webp");
 
 $au-brand-color-light: lighten($au-brand-color, 40%) !default;
-$au-brand-color-dark: darken($au-brand-color, 25%) !default;
+$au-brand-color-dark: darken($au-link-base-color, 25%) !default;
 
 $au-site-title-color: $au-brand-color-dark !default;
 
 $au-text-color: #111111 !default;
-$au-background-color: #fdfdfd !default;
+$au-background-color: lighten($au-link-base-color, 47%) !default; //#fdfdfd !default; //this variable is only used for navigation background color when narrow window
 
 $au-link-visited-color: darken($au-link-base-color, 15%) !default;
 $au-link-hover-color: $au-text-color !default;
 
-$au-border-color-01: $au-brand-color-light !default;
+$au-border-color-01: #fdfdfd !default; //lighten($au-code-background-color, 2%) !default; //$sp-brand-color-light !default;
 $au-border-color-02: lighten($au-brand-color, 35%) !default;
 $au-border-color-03: $au-brand-color-dark !default;
 
 $au-table-text-color:      lighten($au-text-color, 18%) !default;
-$au-table-zebra-color:     lighten($au-brand-color, 46%) !default;
-$au-table-header-bg-color: lighten($au-brand-color, 43%) !default;
-$au-table-header-border:   lighten($au-brand-color, 37%) !default;
-$au-table-border-color:    $au-border-color-01 !default;
+$au-table-zebra-color:     lighten($au-link-base-color, 46%) !default;
+$au-table-header-bg-color: lighten($au-link-base-color, 43%) !default;
+$au-table-header-border:   lighten($au-link-base-color, 37%) !default;
+$au-table-border-color:    lighten($au-link-base-color, 40%) !default; //$au-border-color-01 !default;
 
 // winter theme
 $wi-title:                 "  -winter edition- ";
 $wi-brand-color:           #828282 !default;
-$wi-code-background-color: #eeeeff !default;
-$wi-link-base-color:       #2a7ae2 !default;
+$wi-code-background-color: #d6e9ff !default;
+$wi-link-base-color:       #0078ff !default;
 $wi-background-image: url("/images/background/background-wi.webp");
 $wi-profile-image: url("/images/profile/profile-wi.webp");
 
