@@ -298,19 +298,18 @@ bibliography: ["references1.bib", "references2.bib"]
 
 Note that the first argument is your citation `key`, such as `kutas1984brain` and `chomsky2014minimalist`. To cite an item in-text, simply write `@key`. To enclose citation in parentheses, write `[@key]`. To cite multiple items in one parentheses, write `[@key1; @key2; @key3]`. More detailed explanation can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html). 
 
-Citation style is managed by `.csl` files. Download the desired `.csl` file [here](https://www.zotero.org/styles?q=APA) and put it in the same folder. 
+Citation style is managed by `.csl` files. Download the desired `.csl` file [here](https://www.zotero.org/styles?q=APA) and put it in the same folder. Use `reference-section-title:` in the front matter to give your reference section a title.
 
 ```
 ---
 bibliography: references.bib
 csl: apa-6th-edition.csl
+reference-section-title: "References"
 ---
 ```
 
 ```
 The N400 ERP component's amplitude is associated with a word's predictability (cloze probability) [@kutas1984brain]. 
-
-**References**
 ```
 
 ![citation](/images/tutorial_rmdtex/citation.png)
