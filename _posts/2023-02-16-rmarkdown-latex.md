@@ -495,21 +495,21 @@ output:
 
 # Introduction
 
-```{r, child='intro.md'}
+```{r, child='intro.Rmd'}
 ```
 
 # Experiment 1
 
-```{r, child=c('exp1_intro.md', 'exp1_methods.md', 'exp1_dis.md')}
+```{r, child=c('exp1_intro.Rmd', 'exp1_methods.Rmd', 'exp1_dis.Rmd')}
 ```
 
 # General Discussion
 
-```{r, child='general_dis.md'}
+```{r, child='general_dis.Rmd'}
 ```
 ````
 
-A sample child document `exp1_methods.md`:
+A sample child document `exp1_methods.Rmd`:
 
 ````
 ## Methods
