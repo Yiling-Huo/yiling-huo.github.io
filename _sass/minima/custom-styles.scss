@@ -36,3 +36,9 @@
 hr.brand {
     border: 1px solid $brand-color;
 }
+
+.post-updated {
+    font-size: $small-font-size;
+    color: $brand-color;
+    line-height: 0%;
+  }

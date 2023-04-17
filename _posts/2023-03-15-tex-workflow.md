@@ -2,6 +2,7 @@
 layout: post-narrow
 title: My workflow of creating PDF and docx files using Rmd and Markdown
 date: 2023-03-15 10:00
+modified_date: 2023-04-17 13:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
@@ -40,7 +41,8 @@ For now, I'm keeping both options because
 3. [Example](#example)
     - [Writing in `.md` then rendering `.pdf` and/or `.docx`](#md)
     - [Writing in `.Rmd` then rendering `.pdf` and/or `.docx`](#rmd)
-4. [Tips](#tips)
+4. [Putting together a large document: `.rmd` parent and `.md`/`.rmd` children](#parent)
+5. [Tips](#tips)
     - [Using VS Code's snippets](#snippet)
     - [One (silly) trick](#silly-trick)
 
@@ -225,9 +227,81 @@ pandoc -C input.tex -o output.docx
 
 I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/2023/02/16/rmarkdown-latex.html) on creating `.Rmd` for rendering to `.pdf`. The tutorial shows how to include figures, tables, citations, linguistic examples, etc.
 
-## **4. Tips** <a name="tips"></a>
+## **4. Putting together a large document: `.rmd` parent and `.md`/`.rmd` children**<a name="parent"></a>
 
-### **4.1 Using VS Code's snippet** <a name="snippet"></a>
+When a document gets long, you may prefer to write different sections separately in separate files. It's easy to use RMarkdown to put many child files together and organise them into a neat large document. As far as I know, RMarkdown can handle both Markdown children and RMarkdown children. To include child files in a RMarkdown file, use:
+
+````
+```{r, child=c('one.Rmd', 'two.Rmd')}
+```
+````
+
+For example, I have written the intro, methods, and discussion sections for a paper separately. Here's what the main RMarkdown file looks like:
+
+````
+---
+title: "Sample"
+author: "Yiling Huo"
+date: \today
+bibliography: ref.bib
+csl: apa.csl
+reference-section-title: "References"
+output:
+    pdf_document:
+        latex_engine: xelatex
+        keep_tex: true
+        number_sections: true
+---
+
+# Introduction
+
+```{r, child='intro.md'}
+```
+
+# Experiment 1
+
+```{r, child=c('exp1_intro.md', 'exp1_methods.md', 'exp1_dis.md')}
+```
+
+# General Discussion
+
+```{r, child='general_dis.md'}
+```
+````
+
+A sample child document `exp1_methods.md`:
+
+````
+## Methods
+
+### Participants
+
+Sample text Sample text Sample text Sample text 
+
+### Stmuli
+
+Sample text Sample text Sample text Sample text Sample text Sample text Sample text 
+
+### Procedure
+
+Sample text Sample text Sample text 
+
+## Restults
+
+Sample text Sample text Sample text Sample text 
+
+## Discussion
+
+Sample text Sample text Sample text 
+````
+
+When I knit the parent RMarkdown, the output looks like this:
+
+![parent-output](/images/tutorial_mdtex/parent-output.png)
+
+## **5. Tips** <a name="tips"></a>
+
+### **5.1 Using VS Code's snippet** <a name="snippet"></a>
 
 Snippets allow users to easily insert templated codes or texts. I put some frequently used LaTeX codes as snippets for markdown and RMarkdown, such as codes to wrap text around figures, which saves me loads of time and brain cells when I'm writing. 
 
@@ -258,6 +332,6 @@ Note that you will need to escape JSON symbols such as backslashes and double qu
 
 VS Code will not automatically activate snippets for markdown. To force it, press `Ctrl`+`space` before typing the prefix. 
 
-### **4.2 One (silly) trick** <a name="silly-trick"></a>
+### **5.2 One (silly) trick** <a name="silly-trick"></a>
 
 Since the only difference between a `.md` file and a `.Rmd` file (when no code chunks are involved) is a few lines in the YAML header, it's possible to switch back and form between `.md` and `.Rmd` simply by copy pasting the body text. This is silly but I like the flexibility of having a solution when I suddenly want to include something in the document that only the other format can handle. 
