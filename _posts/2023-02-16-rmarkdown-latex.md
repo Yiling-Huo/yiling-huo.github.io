@@ -2,7 +2,7 @@
 layout: post-narrow
 title: How I got ready to write LaTeX files inside RMarkdown
 date: 2023-02-16 21:00
-modified_date: 2023-04-14 10:00
+modified_date: 2023-04-17 10:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
@@ -36,8 +36,8 @@ In this post, I will walk you step by step through how I set up everything to us
     - [Including syntax trees](#step2.7)
     - [Including linguistic examples](#step2.8)
     - [Including Chinese and Japanese characters](#step2.9)
-3. [Write a journal article with RMarkdown](#step3)
-4. [To be updated: Write a book with RMarkdown](#step4)
+3. [Put together a long document using multiple RMarkdown files](#step3)
+4. [Write a journal article with RMarkdown](#step4)
 5. [Tips](#step5)
 
 Useful resources:
@@ -469,7 +469,77 @@ For example, my document needs these characters:
 
 *Note that your PC needs to have fonts for these languages installed.*
 
-## **3. Write a journal article with RMarkdown** <a name="step3"></a>
+## **3. Put together a long document using multiple RMarkdown files** <a name="step3"></a>
+
+When you are preparing a long document, you might prefer to write each section in a different RMarkdown file. You can easily do that and put the long file together using an index (main structure) RMarkdown file. To include other Rmd files as child files:
+
+````
+```{r, child=c('one.Rmd', 'two.Rmd')}
+```
+````
+
+For example, my index RMarkdown file may look like this:
+
+````
+---
+title: "Sample"
+author: "Yiling Huo"
+date: \today
+bibliography: ref.bib
+csl: apa.csl
+reference-section-title: "References"
+output:
+    pdf_document:
+        number_sections: true
+---
+
+# Introduction
+
+```{r, child='intro.md'}
+```
+
+# Experiment 1
+
+```{r, child=c('exp1_intro.md', 'exp1_methods.md', 'exp1_dis.md')}
+```
+
+# General Discussion
+
+```{r, child='general_dis.md'}
+```
+````
+
+A sample child document `exp1_methods.md`:
+
+````
+## Methods
+
+### Participants
+
+Sample text Sample text Sample text Sample text 
+
+### Stmuli
+
+Sample text Sample text Sample text Sample text Sample text Sample text Sample text 
+
+### Procedure
+
+Sample text Sample text Sample text 
+
+## Restults
+
+Sample text Sample text Sample text Sample text 
+
+## Discussion
+
+Sample text Sample text Sample text 
+````
+
+When I knit the parent RMarkdown, the output looks like this:
+
+![parent-output](/images/tutorial_rmdtex/parent-output.png)
+
+## **4. Write a journal article with RMarkdown** <a name="step4"></a>
 
 You can use the `rticles` [package](https://github.com/rstudio/rticles) to easily use templates from a large number of publishers. 
 
@@ -480,10 +550,6 @@ In File - New File - RMarkdown..., select using templates, and select your targe
 For example, I have created an example using the Taylor & Francis Journal Article template: 
 
 ![example_article](/images/tutorial_rmdtex/example_article.png) ![example_article_pdf](/images/tutorial_rmdtex/example_article_pdf.png)
-
-## **4. To be updated: Write a book with RMarkdown** <a name="step4"></a>
-
-It's possible to write chapters of books with `.rmd` and combine them with `.rnw`. More detail to be updated!
 
 ## **5. Tips** <a name="step5"></a>
 
