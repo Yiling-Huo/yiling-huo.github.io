@@ -31,3 +31,7 @@ Scripts and resources that I have created or modified.
 - Remove outliers:
 
   <a href="/files/resources/r/remove_outlier_function.R" download>Download</a>. A simple function that removes outliers from a data frame based on the 3s.d. rule. 
+
+- Remove track loss trials:
+
+  <a href="/files/resources/r/remove_trackloss.R" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/04/25/trackloss.html). A function that removes trials from visual world eye-tracking data where an extensive amount of observations do not detect the eye gaze on any of the images in the visual display. 
