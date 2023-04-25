@@ -2,7 +2,7 @@
 layout: post-narrow
 title: How I got ready to write LaTeX files inside RMarkdown
 date: 2023-02-16 21:00
-modified_date: 2023-04-17 10:00
+modified_date: 2023-04-25 10:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
@@ -16,13 +16,7 @@ LaTeX comes in a thousand flavours and each person will have a different prefere
 
 For context, I study psycholinguistics, where I put participants inside or in front of machines and do experiments with them (non-invasively, of course). So I already regularly deal with not-quire-small data sets in R, and share my workflow and results with supervisors and colleagues using RMarkdown. I also teach an introduction to statistics with R workshop where it'd be nice to prepare handouts that can include R codes and R results. I am also interested in sharing stuff I created with the community so it'd be nice to create pretty documentations. So when I learned that I can integrate LaTeX with RMarkdown, I immediately felt that this is where I want to start. 
 
-Some other things about my solution that I like include:
-
-- I can use RStudio's MS word style visual editor to edit the documents.
-- I'm already working with R and RStudio, and I want to minimise new software that needed to be installed. 
-- I like the simpler, visually less-confusing style of markdown. 
-
-In this post, I will walk you step by step through how I set up everything to use RMarkdown to generate LaTeX files, including simple handouts, journal articles, books, and theses. 
+On this page, I will walk you step by step through how I set up everything to use RMarkdown to generate LaTeX files, including simple handouts, journal articles, and theses combined from multiple files. 
 
 ### On this page
 1. [Prerequisites](#step1)
@@ -43,7 +37,6 @@ In this post, I will walk you step by step through how I set up everything to us
 Useful resources:
 
 - [RMarkdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
-- [Tinytex documentation](https://yihui.org/tinytex/)
 - [Mathematics in RMarkdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html)
 - [tablesgenerator](https://www.tablesgenerator.com/)
 
