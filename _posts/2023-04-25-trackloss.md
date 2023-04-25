@@ -20,7 +20,7 @@ Download the <a href="/files/resources/r/remove_trackloss.R" download>R script</
 Prepare your data. As a R data frame, your data should at least contain three columns: 
 - Participant id
 - Trial number
-- Track loss: a binary numeric column indexing whether eye gaze was detected on any of the objects in the visual display. 0 = no eye gaze on any objects; 1 = eye gaze detected on a object. 
+- Track loss: a binary numeric column indexing whether eye gaze was detected on any of the objects in the visual display. 0 = no eye gaze on any objects; 1 = eye gaze detected on an object. 
 
 ![sample_data](/images/tutorial_trackloss/data.png)
 
