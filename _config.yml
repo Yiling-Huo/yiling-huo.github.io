@@ -24,7 +24,7 @@ header_pages:
  - CV.md
  - publications.md
  - teaching.md
- - tutorials/tutorial.md
+ - tutorials/tutorials.md
  - resources.md
 
 excerpt_separator: "<!--excerpt-->"
