@@ -8,16 +8,19 @@
 <h3>Related Posts</h3>
 
 {% for item in page.tags %}
-<p style="line-height: 70%;">{{ item }}</p>
-<ul style="list-style-type: none">
-    {% for post in site.tags[item] %}
-        {% if post.id != page.id %}
-            <li>
-                <a href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                </a>
-            </li>
-        {% endif %}
-    {% endfor %}
-</ul>
+    {% if site.tags[item].size > 1 %}
+    <!-- if there is at least another post in the same tag -->
+        <p style="line-height: 70%;">{{ item }}</p>
+        <ul style="list-style-type: none">
+            {% for post in site.tags[item] %}
+                {% if post.id != page.id %}
+                    <li>
+                        <a href="{{ post.url | relative_url }}">
+                            {{ post.title | escape }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
 {% endfor %}
