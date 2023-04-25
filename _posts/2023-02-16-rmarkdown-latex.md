@@ -156,7 +156,7 @@ knitr::include_graphics("./file_name.pdf")
 
 Put your `.pdf` figure in the same folder as your `.rmd`, or specify the relative path to your figure such as `(./path/to/figure/figure.pdf)`. 
 
-The above line includes some common LaTeX figure configurations you can directly add to youRMarkdown file: `\label{figure-name}` allows you to label your figure for cross referencing, `out.width=40%` allows you to control the size of the figure. 
+The above line includes some common LaTeX figure configurations you can directly add to your RMarkdown file: `\label{figure-name}` allows you to label your figure for cross referencing, `out.width=40%` allows you to control the size of the figure. 
 
 Alternatively, you can include images using Markdown syntax:
 
@@ -166,7 +166,7 @@ Alternatively, you can include images using Markdown syntax:
 
 ![pdf_plot](/images/tutorial_rmdtex/pdf_plot.png)
 
-Other images can also be included in this manner. 
+Other images can also be included in these manners. 
 
 #### *method 2: include R plots as R object*
 
