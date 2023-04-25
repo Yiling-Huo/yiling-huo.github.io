@@ -11,23 +11,24 @@ One step of cleaning visual world eye-tracking data is to exclude track loss tri
 
 <!--excerpt-->
 
-My method is inspired by the eyetrackingR package.
+My method is inspired by the [eyetrackingR package](http://www.eyetracking-r.com/).
 
 ## Step 1: Preparation
 
 Download the <a href="/files/resources/r/remove_trackloss.R" download>R script</a>.
 
-Prepare your data. As a R data frame, your data should at least contain three columns: participant id, trial number, and a boolean column indexing whether eye gaze was detected on any of the objects in the visual display. Like this:
+Prepare your data. As a R data frame, your data should at least contain three columns: 
+- Participant id
+- Trial number
+- Track loss: a binary numeric column indexing whether eye gaze was detected on any of the objects in the visual display. 0 = no eye gaze on any objects; 1 = eye gaze detected on a object. 
 
 ![sample_data](/images/tutorial_trackloss/data.png)
 
 ## Step 2: Source the function
 
-Open your IDE for R. Here, I'm using RStudio. Open `remove_trackloss.R`, and press `source`. 
+Open your IDE for R. Here, I'm using RStudio. Open `remove_trackloss.R`, and source it by pressing `source`. The function should be loaded to your R environment. 
 
 ![source](/images/tutorial_trackloss/source.png)
-
-The function should be loaded to your R environment. 
 
 ## Step 3: Run the function
 
@@ -49,8 +50,6 @@ The function is going to return a data frame that has all the track loss trials 
 
 ![cleaned](/images/tutorial_trackloss/data_cleaned.png)
 
-In addition, the console output should look like something like this:
+In addition, the console output tells you the data frame it was working with, the number of trials excluded, the (original) total number of trials, and the percentage excluded. It should look like something like this:
 
 ![output](/images/tutorial_trackloss/output.png)
-
-The console output tells you the data frame it was working with, the number of trials excluded, the (original) total number of trials, and the percentage excluded. 
