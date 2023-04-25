@@ -17,7 +17,7 @@ My method is inspired by the [eyetrackingR package](http://www.eyetracking-r.com
 
 Download the <a href="/files/resources/r/remove_trackloss.R" download>R script</a>.
 
-Prepare your data. As an R data frame, your data should have at least contain three columns: 
+Prepare your data. As an R data frame, your data should contain at least three columns: 
 - Participant id
 - Trial number
 - Track loss: a binary numeric column indexing whether eye gaze was detected on any of the objects in the visual display. 0 = no eye gaze on any objects; 1 = eye gaze detected on an object. 
