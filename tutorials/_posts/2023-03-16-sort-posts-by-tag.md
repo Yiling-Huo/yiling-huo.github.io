@@ -36,7 +36,7 @@ Example text Example text Example text Example text Example text Example text
 
 Insert `<!--excerpt-->` to separate the post excerpt from other texts. 
 
-In the `page.md` where you want to show posts, specify the category and the tags of posts to show on this page. If your post satisfy more than one tag specified in `tags`, the post will show up more than once. For example, this page will only show posts with the category `'Casual posts'` and at least one of the following tags: `'Food'`, `'Travel'`, or `'My hobbies'`: 
+In the `page.md` where you want to show posts, specify the category and the tags of posts to show on this page. If your post satisfies more than one tag specified in `tags`, the post will show up more than once. For example, this page will only show posts with the category `'Casual posts'` and at least one of the following tags: `'Food'`, `'Travel'`, or `'My hobbies'`: 
 ```
 ---
 layout: my-layout
@@ -96,4 +96,4 @@ excerpt_separator: "<!--excerpt-->"
 
 Now you can have pages that show posts from one category while sorted by tags!
 
-(I learned pieces of this solution online such as [this answer](https://stackoverflow.com/questions/28142299/jekyll-blog-show-posts-under-a-category) and [this answer](https://stackoverflow.com/questions/57199621/how-can-i-limit-the-number-of-lines-shown-on-the-homepage-of-a-jekyll-blog), and someone else's blog that I cannot find in my history anymore (the part about excerpts and readmore). So Let me know if you think that parts of my solution is from your post!)
+(I learned pieces of this solution online such as [this answer](https://stackoverflow.com/questions/28142299/jekyll-blog-show-posts-under-a-category) and [this answer](https://stackoverflow.com/questions/57199621/how-can-i-limit-the-number-of-lines-shown-on-the-homepage-of-a-jekyll-blog), and someone else's blog that I cannot find in my history anymore (the part about excerpts and readmore). So Let me know if you think that parts of my solution are from your post!)

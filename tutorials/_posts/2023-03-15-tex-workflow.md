@@ -107,6 +107,8 @@ Spellcheck is perhaps the most important thing I need to be able to write direct
 
 For me, it's also very helpful to include `"editor.renderWhitespace": "all"` in my `settings.json`, so that I could monitor whether I accidentally put more whitespace than needed in my texts. 
 
+For grammar suggestions, I use the [Grammarly extension](https://marketplace.visualstudio.com/items?itemName=znck.grammarly). However this extension's current support for Markdown files is not perfect (for example for some reasons it won't recognize some of my blog posts). 
+
 #### **Install word count**
 
 Word count is important for writing, needless to say. Unfortunately I haven't found a VS Code word count extension that's designed specifically for text writing (only counting words while ignoring markdown symbols and code chunks). The word count extension I'm currently using is [WordCounter](https://marketplace.visualstudio.com/items?itemName=kirozen.wordcounter).

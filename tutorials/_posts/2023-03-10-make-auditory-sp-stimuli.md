@@ -7,7 +7,7 @@ category: 'Tutorials'
 tags: ['Psycholinguistics', 'Praat']
 ---
 
-Psycholinguistic research sometimes require the stimuli to have specific timing. On this page, I share a Praat script that given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids. 
+Psycholinguistic research sometimes requires the stimuli to have specific timing. On this page, I share a Praat script that given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids. 
 
 <!--excerpt-->
 
@@ -24,7 +24,7 @@ Gather your stimuli `.wav` files, and make your `.Textgrid` files. The `.Textgri
 
 Additionally, since this script is originally designed to make sentence stimuli, it allows the user to define punctuations. Punctuations will be added as additional silences in the final product. All punctuations should have *the same* interval name, here I used 'p'. 
 
-*Note that while recoding this example, the speaker was instructed to speak one word at a time, to avoid co-articulation. This script will of course be able to handle completely natural recordings, provided the correct textgrid annotations.*
+*Note that while recording this example, the speaker was instructed to speak one word at a time, to avoid co-articulation. This script will of course be able to handle completely natural recordings, provided the correct textgrid annotations.*
 
 ### Step 2: Run the script
 

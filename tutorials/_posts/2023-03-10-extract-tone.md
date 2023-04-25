@@ -47,4 +47,4 @@ Define the variables based on what you need, then select OK. Praat will start pr
 
 ![csv](/images/tutorials/pitch/csv.png)
 
-File selection procedure used in this script is from [Scott Seyfarth annotation.Praat](https://gist.github.com/scjs/ffbbba71cc8b3ff9d0476c82b2df9d0f). 
+The file selection procedure used in this script is from [Scott Seyfarth annotation.Praat](https://gist.github.com/scjs/ffbbba71cc8b3ff9d0476c82b2df9d0f). 
