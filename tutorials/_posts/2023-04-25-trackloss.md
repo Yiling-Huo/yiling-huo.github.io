@@ -22,13 +22,13 @@ Prepare your data. As a R data frame, your data should at least contain three co
 - Trial number
 - Track loss: a binary numeric column indexing whether eye gaze was detected on any of the objects in the visual display. 0 = no eye gaze on any objects; 1 = eye gaze detected on an object. 
 
-![sample_data](/images/tutorial_trackloss/data.png)
+![sample_data](/images/tutorials/trackloss/data.png)
 
 ## Step 2: Source the function
 
 Open your IDE for R. Here, I'm using RStudio. Open `remove_trackloss.R`, and source it by pressing `source`. The function should be loaded to your R environment. 
 
-![source](/images/tutorial_trackloss/source.png)
+![source](/images/tutorials/trackloss/source.png)
 
 ## Step 3: Run the function
 
@@ -48,8 +48,8 @@ Where:
 
 The function is going to return a data frame that has all the track loss trials removed. 
 
-![cleaned](/images/tutorial_trackloss/data_cleaned.png)
+![cleaned](/images/tutorials/trackloss/data_cleaned.png)
 
 In addition, the console output tells you the data frame it was working with, the number of trials excluded, the (original) total number of trials, and the percentage excluded. It should look like something like this:
 
-![output](/images/tutorial_trackloss/output.png)
+![output](/images/tutorials/trackloss/output.png)

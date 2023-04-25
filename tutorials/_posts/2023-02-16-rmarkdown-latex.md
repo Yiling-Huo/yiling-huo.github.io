@@ -58,7 +58,7 @@ Create a new `.rmd` file: File - New File - RMarkdown...
 
 Select Default Output Format: PDF. 
 
-![create_rmd](/images/tutorial_rmdtex/create_rmd.png)
+![create_rmd](/images/tutorials/rmdtex/create_rmd.png)
 
 A `.rmd` file will be created, including some default text showing you how to write in markdown syntax and how to include R codes and plots. 
 
@@ -66,7 +66,7 @@ The `.rmd` file contains two parts: a YAML header, which is enclosed in triple d
 
 We can edit this `.rmd` file and knit it: 
 
-![example_rmd](/images/tutorial_rmdtex/example_rmd.png) ![example_pdf](/images/tutorial_rmdtex/example_pdf.png)
+![example_rmd](/images/tutorials/rmdtex/example_rmd.png) ![example_pdf](/images/tutorials/rmdtex/example_pdf.png)
 
 
 ### **Writing your texts in RMarkdown:** <a name="step2.1"></a>
@@ -100,7 +100,7 @@ t.test(value ~ group, data=data_2, var.equal=TRUE)
 ```
 ````
 
-![r_chunk](/images/tutorial_rmdtex/r_chunk.png)
+![r_chunk](/images/tutorials/rmdtex/r_chunk.png)
 
 RMarkdown supports many languages other than R through the `knitr` package. A list of supported languages can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html). For example, if I want to include a chunk of python code: 
 
@@ -117,7 +117,7 @@ print("The value of b is: " + str(b))
 ```
 ```` 
 
-![python](/images/tutorial_rmdtex/python.png)
+![python](/images/tutorials/rmdtex/python.png)
 
 ### **Including figures and plots:** <a name="step2.3"></a>
 
@@ -164,7 +164,7 @@ Alternatively, you can include images using Markdown syntax:
 ![Your-caption. \label{figure-label}](file_name.pdf){width=40%}
 ```
 
-![pdf_plot](/images/tutorial_rmdtex/pdf_plot.png)
+![pdf_plot](/images/tutorials/rmdtex/pdf_plot.png)
 
 Other images can also be included in these manners. 
 
@@ -207,7 +207,7 @@ Markdown allows you to create simple tables. Use pipes (\|) to create cells and 
 | $p<0.05$ | reject $H_0$ |
 ```
 
-![simple_table](/images/tutorial_rmdtex/simple_table.png)
+![simple_table](/images/tutorials/rmdtex/simple_table.png)
 
 #### *method 2: LaTeX tables*
 
@@ -227,7 +227,7 @@ If your table goes beyond the capacity of markdown, for example, if you want to 
 ```
 ````
 
-![latex_table](/images/tutorial_rmdtex/latex_table.png)
+![latex_table](/images/tutorials/rmdtex/latex_table.png)
 
 The table generator may tell you to add packages to your document preamble, you can do so in the YAML header at the beginning of your document. For example:
 
@@ -306,7 +306,7 @@ reference-section-title: "References"
 The N400 ERP component's amplitude is associated with a word's predictability (cloze probability) [@kutas1984brain]. 
 ```
 
-![citation](/images/tutorial_rmdtex/citation.png)
+![citation](/images/tutorials/rmdtex/citation.png)
 
 #### *Labelling and cross referencing tables and figures:*
 
@@ -324,7 +324,7 @@ Table: \label{tablekey} Your Caption.
 In Table \ref{tablekey}, we can learn about how to reference tables. 
 ```
 
-![table_ref](/images/tutorial_rmdtex/table_ref.png)
+![table_ref](/images/tutorials/rmdtex/table_ref.png)
 
 To label and reference a LaTeX table, include lines `\caption{}` and `\label{}` after line `\begin{table}[]`. Online table generators can take care of this. 
 
@@ -364,7 +364,7 @@ Or
 Figure \ref{figkey} shows how to reference figures. 
 ```` 
 
-![fig_ref](/images/tutorial_rmdtex/fig_ref.png)
+![fig_ref](/images/tutorials/rmdtex/fig_ref.png)
 
 ### **Including syntax trees:** <a name="step2.7"></a>
 
@@ -388,7 +388,7 @@ The `qtree` package allows users to write syntax trees in phrase marker style (w
 ```
 ````
 
-![tree](/images/tutorial_rmdtex/tree.png)
+![tree](/images/tutorials/rmdtex/tree.png)
 
 ### **Including linguistic examples:** <a name="step2.8"></a>
 
@@ -416,7 +416,7 @@ This is not a pipe.
 ```
 ```` 
 
-![lingexp](/images/tutorial_rmdtex/lingexp.png)
+![lingexp](/images/tutorials/rmdtex/lingexp.png)
 
 Reference the examples using `\label{label-name}` and `\ref{label-name}`. 
 
@@ -434,7 +434,7 @@ This NEG is one CL pipe\\
 ```
 ````
 
-![lingexp1](/images/tutorial_rmdtex/lingexp1.png)
+![lingexp1](/images/tutorials/rmdtex/lingexp1.png)
 
 ### **Including Chinese and Japanese characters** <a name="step2.9"></a>
 
@@ -458,7 +458,7 @@ For example, my document needs these characters:
 - 日本語でこんにちは
 ```
 
-![utf-8-characters](/images/tutorial_rmdtex/utf-8.png)
+![utf-8-characters](/images/tutorials/rmdtex/utf-8.png)
 
 *Note that your PC needs to have fonts for these languages installed.*
 
@@ -530,7 +530,7 @@ Sample text Sample text Sample text
 
 When I knit the parent RMarkdown, the output looks like this:
 
-![parent-output](/images/tutorial_rmdtex/parent-output.png)
+![parent-output](/images/tutorials/rmdtex/parent-output.png)
 
 ## **4. Write a journal article with RMarkdown** <a name="step4"></a>
 
@@ -542,7 +542,7 @@ In File - New File - RMarkdown..., select using templates, and select your targe
 
 For example, I have created an example using the Taylor & Francis Journal Article template: 
 
-![example_article](/images/tutorial_rmdtex/example_article.png) ![example_article_pdf](/images/tutorial_rmdtex/example_article_pdf.png)
+![example_article](/images/tutorials/rmdtex/example_article.png) ![example_article_pdf](/images/tutorials/rmdtex/example_article_pdf.png)
 
 ## **5. Tips** <a name="step5"></a>
 
@@ -550,7 +550,7 @@ For example, I have created an example using the Taylor & Francis Journal Articl
 
 You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStudio, turn on visual editor at the toolbar:
 
-![visual_editor](/images/tutorial_rmdtex/visual_editor.png)
+![visual_editor](/images/tutorials/rmdtex/visual_editor.png)
 
 ### Keep_tex: yes
 

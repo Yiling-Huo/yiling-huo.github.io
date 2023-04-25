@@ -21,7 +21,7 @@ Gather your `.wav` files and your `.Textgrid` files in the same folder. The `.Te
 
 For example, I am extracting the pitch contour of each syllable in a Chinese phrase, for further lexical tone analyses. My `.Textgrid` should contain one interval tier, where each syllable should be a named interval. 
 
-![praat1](/images/tutorial_pitch/praat1.png)
+![praat1](/images/tutorials/pitch/praat1.png)
 
 *Note: Inside your `.Textgrid`, you may want to choose to set the interval boundaries around the vowel (where pitch contour information is mostly carried), to better capture the pitch contour. Or you may want to set the interval boundaries around the entire syllable, like what I did with ka and fei in the example, to better represent the length of the syllable, although this will result in some 'undefined'/NA values during some consonants.*
 
@@ -45,6 +45,6 @@ Select Run - Run. You will be presented with a user interface, where you can spe
 
 Define the variables based on what you need, then select OK. Praat will start processing your files, and an output file summarising all pitch information extracted will be created in the same folder:
 
-![csv](/images/tutorial_pitch/csv.png)
+![csv](/images/tutorials/pitch/csv.png)
 
 File selection procedure used in this script is from [Scott Seyfarth annotation.Praat](https://gist.github.com/scjs/ffbbba71cc8b3ff9d0476c82b2df9d0f). 

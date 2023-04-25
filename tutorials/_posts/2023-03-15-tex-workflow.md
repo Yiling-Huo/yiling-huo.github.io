@@ -70,21 +70,21 @@ This is to use R from VS Code. Install the [R Extension](https://marketplace.vis
 
 This step ensures any language specific settings you use in VS Code get correctly assigned to `.Rmd` files. I chose to link `.Rmd` with the `rmd` language, to use `knitr` from within VS Code. However, this link will make VS Code fail to generate document outline. If you don't feel like you need to knit directly from VS Code, you can instead link `.Rmd` with `markdown`, which will allow VS Code to generate document outline, which is super helpful for organising your texts:
 
-![outline](/images/tutorial_mdtex/outline.png)
+![outline](/images/tutorials/mdtex/outline.png)
 
 In VS Code, press `Ctrl`+`,`  to open settings. Search for `files` in settings, and at `Files: Associations`, associate `*.Rmd` with `rmd`. 
 
-![file-associate](/images/tutorial_mdtex/file-associate.png)
+![file-associate](/images/tutorials/mdtex/file-associate.png)
 
 #### **Setup themes and language-specific editor fonts**
 
 You can change the default dark theme to a theme that gets you into the mood of writing by selecting clicking on the Manage icon at the sidebar, then select Themes - Color Theme. Or press `Ctrl`+`K` then `Ctrl`+`T`. 
 
-![theme](/images/tutorial_mdtex/theme.png)
+![theme](/images/tutorials/mdtex/theme.png)
 
 In VS Code, press `Ctrl`+`Shift`+`P` to open the Command Palette. Search for `Preferences: Open User Settings (JSON)` to open `settings.json`. 
 
-![font](/images/tutorial_mdtex/font.png)
+![font](/images/tutorials/mdtex/font.png)
 
 Inside `settings.json`, add
 
@@ -123,7 +123,7 @@ This step lets MiKTeX to automatically install missing LaTeX packages, so you do
 
 In MiKTeX Console, select Settings, then select Always for You can choose whether missing packages are to be installed automatically (on-the-fly). 
 
-![miktex](/images/tutorial_mdtex/miktex.png)
+![miktex](/images/tutorials/mdtex/miktex.png)
 
 ### **2.3 R configurations** <a name="config-r"></a>
 
@@ -141,7 +141,7 @@ This is an example of writing in `.md` and rendering `.pdf`, `.tex`, or `.docx` 
 
 First, prepare your `.md` file. Write your main text in [Markdown syntax](https://www.markdownguide.org/basic-syntax/). Inside the YAML header which is enclosed in dashed at the beginning of the document, you can specify some variables for Pandoc. 
 
-![md](/images/tutorial_mdtex/md.png)
+![md](/images/tutorials/mdtex/md.png)
 
 Note that some arguments are written differently in the `.md` YAML header and the `.Rmd` header. For example, where `.Rmd` can use `extra_dependencies: [""]` to use LaTeX packages, `.md` has to use `header-includes: usepackage{}`:
 
@@ -157,7 +157,7 @@ header-includes:
 
 After preparing your `.md` file, search for `cmd` in your Start menu to open a command prompt. In the command prompt, go to your directory by running `cd`:
 
-![cd](/images/tutorial_website/cd.png)
+![cd](/images/tutorials/website/cd.png)
 
 use Pandoc to convert your documents by running
 
@@ -175,7 +175,7 @@ Pandoc options are very powerful. Detailed formatting such as using templates ar
 
 Your output file should be created:
 
-![md-output](/images/tutorial_mdtex/md-output.png)
+![md-output](/images/tutorials/mdtex/md-output.png)
 
 Change the output format to convert to other formats. To create `.docx`, if there are LaTeX code chunks in the `.md`, you can first convert to `.tex`, then to `.docx`
 
@@ -185,7 +185,7 @@ pandoc -C input.md -o output.tex
 pandoc -C input.tex -o output.docx
 ```
 
-![md-output1](/images/tutorial_mdtex/md-output1.png)
+![md-output1](/images/tutorials/mdtex/md-output1.png)
 
 *Note that `.docx` requires more detailed options to work perfectly. I only use the `.docx` files so that my supervisor can directly comment and edit the texts on MS Teams. So missing a few unimportant elements or images not being the best size is trivial to me.*
 
@@ -197,15 +197,15 @@ I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/coding/
 
 Once we have the R Extension for VS Code, we can write `.Rmd` files and convert to other formats inside VS Code. For example: 
 
-![rmd](/images/tutorial_mdtex/rmd.png)
+![rmd](/images/tutorials/mdtex/rmd.png)
 
 After preparing your `.Rmd` file, knit your file to `.pdf` other formats by clicking the Knit Rmd button, or pressing `Ctrl`+`Shift`+`K`. 
 
-![rmd-knit](/images/tutorial_mdtex/rmd-knit.png)
+![rmd-knit](/images/tutorials/mdtex/rmd-knit.png)
 
 Sample `.pdf` output:
 
-![rmd-output](/images/tutorial_mdtex/rmd-output.png)
+![rmd-output](/images/tutorials/mdtex/rmd-output.png)
 
 Sample `.docx` output. Use `output: word_document` to knit to `.docx`. Note that knitting directly to `.docx` will ignore LaTeX code. If you have LaTeX code in your document, you can first convert to `.tex` by letting R keep the `.tex` file when rendering to `.pdf`, then let Pandoc handle the `.tex` to `.docx` conversion:
 
@@ -221,7 +221,7 @@ output:
 pandoc -C input.tex -o output.docx
 ```
 
-![rmd-output1](/images/tutorial_mdtex/rmd-output1.png)
+![rmd-output1](/images/tutorials/mdtex/rmd-output1.png)
 
 #### **More elements to your `.Rmd` file**
 
@@ -297,7 +297,7 @@ Sample text Sample text Sample text
 
 When I knit the parent RMarkdown, the output looks like this:
 
-![parent-output](/images/tutorial_mdtex/parent-output.png)
+![parent-output](/images/tutorials/mdtex/parent-output.png)
 
 ## **5. Tips** <a name="tips"></a>
 

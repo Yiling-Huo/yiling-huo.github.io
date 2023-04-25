@@ -14,7 +14,7 @@ Here is my solution that allows your Jekyll page to show blog posts from one cat
 
 Like this:
 
-<img src="/images/tutorial_sort_tag/outcome.png"  width="60%" height="60%">
+<img src="/images/tutorials/sort_tag/outcome.png"  width="60%" height="60%">
 
 We'll use the `category`/`categories` and the `tags` variables in Jekyll posts' front matter. 
 

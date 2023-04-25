@@ -31,9 +31,9 @@ This script will take every image in folder 1, compare it with every image in fo
 
 Note that this script uses the `imagehash` package to compare images. This package is good at detecting true duplicates, but cannot detect slightly edited images:
 
-![good](/images/tutorial_compare_img/good.png) 
+![good](/images/tutorials/compare_img/good.png) 
 
-![bad](/images/tutorial_compare_img/bad.png)
+![bad](/images/tutorials/compare_img/bad.png)
 
 At the beginning of the script, define your variables:
 
@@ -46,10 +46,10 @@ At the beginning of the script, define your variables:
 
 Run the script, and a `summary.csv` will be created, like this:
 
-![summary-true](/images/tutorial_compare_img/summary-true.png)
+![summary-true](/images/tutorials/compare_img/summary-true.png)
 
 Images will also be copied if `copy == True`. Note that as the images are duplicates, the script will copy the image from *folder 1* to the new folder. 
 
 If `copy == False`, the summary file will look like this:
 
-![summary-false](/images/tutorial_compare_img/summary-false.png)
+![summary-false](/images/tutorials/compare_img/summary-false.png)

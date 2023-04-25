@@ -20,7 +20,7 @@ Gather your stimuli `.wav` files, and make your `.Textgrid` files. The `.Textgri
 - Each word should be a named interval.
 - Each interval name should be used **only once**. (Thus I numbered all my intervals.)
 
-![praat1](/images/tutorial_auditory_sp/praat1.png)
+![praat1](/images/tutorials/auditory_sp/praat1.png)
 
 Additionally, since this script is originally designed to make sentence stimuli, it allows the user to define punctuations. Punctuations will be added as additional silences in the final product. All punctuations should have *the same* interval name, here I used 'p'. 
 
@@ -53,16 +53,16 @@ Select Run - Run. You will be presented with a user interface, where you can spe
     - **punctuation duration**: The duration of punctuation. In seconds.
 
 
-![praatui](/images/tutorial_auditory_sp/praatui.png)
+![praatui](/images/tutorials/auditory_sp/praatui.png)
 
 Define the variables based on what you need, then select OK. Praat will start processing your `.wav` files. 
 
 An example output `.wav` will look like this in Praat: 
 
-![praat2](/images/tutorial_auditory_sp/praat2.png)
+![praat2](/images/tutorials/auditory_sp/praat2.png)
 
 In addition, Praat will also write a `.txt` file to summarise the onset and offset of each fragment (including the silence): 
 
-![txt](/images/tutorial_auditory_sp/txt.png)
+![txt](/images/tutorials/auditory_sp/txt.png)
 
 You can see that Praat isn't perfect at manipulating the durations, but on the millisecond level, it does a good enough job. 
