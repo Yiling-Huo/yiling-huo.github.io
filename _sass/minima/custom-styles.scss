@@ -42,3 +42,25 @@ hr.brand {
     color: $brand-color;
     line-height: 0%;
   }
+
+// Comments
+
+.comment {padding: 0.2em 0.2em 1em; font-size: 90%;}
+.comment P:last-child {margin-bottom: 0;}
+.commentheader, .commentbody {padding: 0.4em 1em; margin-left: 2vw; margin-right: 2vw; border: 1px solid $table-border-color;}
+.commentheader {position: relative; background: $table-header-bg-color; border-bottom: 0; font-size: 80%;}
+.commentbody {padding: 0.8em 1em 0.8em;}
+.commentheader a {color: $table-text-color;}
+.commentheader::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0.8em;
+    height: 0.8em;
+    background: $table-header-bg-color;
+    transform: rotate(-45deg);
+    left: 0;
+    margin-left: -0.4em;
+    margin-top: 0.3em;
+    box-shadow: -1px -1px 0px 0px $table-header-border;
+}

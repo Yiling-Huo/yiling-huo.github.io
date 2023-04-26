@@ -38,9 +38,14 @@ layout: base-narrow
   
   {%- include related-reads.html -%}
 
-  {%- if site.disqus.shortname -%}
+  <!-- {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
-  {%- endif -%}
+  {%- endif -%} -->
+
+  {% include cookie-consent.html element="#comments"%}
+
+  <script src="/script/jquery.min.js"></script>
+  {% include comments.html element="#related" github_account="Yiling-Huo/yiling-huo.github.io" require_cookie_consent="true" %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

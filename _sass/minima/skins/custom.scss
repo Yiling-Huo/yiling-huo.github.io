@@ -35,10 +35,10 @@ $de-border-color-02: lighten($de-brand-color, 35%) !default;
 $de-border-color-03: $de-brand-color-dark !default;
 
 $de-table-text-color:      lighten($de-text-color, 18%) !default;
-$de-table-zebra-color:     lighten($de-brand-color, 46%) !default;
-$de-table-header-bg-color: lighten($de-brand-color, 43%) !default;
+$de-table-zebra-color:     adjust-color(lighten($de-brand-color, 46%), $alpha: -0.8) !default;
+$de-table-header-bg-color: adjust-color(lighten($de-brand-color, 43%), $alpha: -0.8) !default;
 $de-table-header-border:   lighten($de-brand-color, 37%) !default;
-$de-table-border-color:    $de-border-color-01 !default;
+$de-table-border-color:    adjust-color($de-border-color-01, $alpha: -0.5) !default;
 
 // spring theme
 $sp-title:                 "  -spring edition- ";
@@ -64,10 +64,10 @@ $sp-border-color-02: lighten($sp-brand-color, 35%) !default;
 $sp-border-color-03: #455500 !default; //#505050 added the green
 
 $sp-table-text-color:      lighten($sp-text-color, 18%) !default;
-$sp-table-zebra-color:     lighten($sp-brand-color, 46%) !default;
-$sp-table-header-bg-color: lighten($sp-brand-color, 43%) !default;
+$sp-table-zebra-color:     adjust-color(lighten($sp-brand-color, 46%), $alpha: -0.8) !default;
+$sp-table-header-bg-color: adjust-color(lighten($sp-brand-color, 43%), $alpha: -0.8) !default;
 $sp-table-header-border:   lighten($sp-brand-color, 37%) !default;
-$sp-table-border-color:    $sp-brand-color-light !default; //$sp-border-color-01 !default;
+$sp-table-border-color:    adjust-color($sp-brand-color-light, $alpha: -0.4) !default; //$sp-border-color-01 !default;
 
 // summer theme
 $su-title:                 "  -summer edition- ";
@@ -93,10 +93,10 @@ $su-border-color-02: lighten($su-brand-color, 35%) !default;
 $su-border-color-03: $su-brand-color-dark !default;
 
 $su-table-text-color:      lighten($su-text-color, 18%) !default;
-$su-table-zebra-color:     lighten($su-brand-color, 46%) !default;
-$su-table-header-bg-color: lighten($su-brand-color, 43%) !default;
+$su-table-zebra-color:     adjust-color(lighten($su-brand-color, 46%), $alpha: -0.8) !default;
+$su-table-header-bg-color: adjust-color(lighten($su-brand-color, 43%), $alpha: -0.8) !default;
 $su-table-header-border:   lighten($su-brand-color, 37%) !default;
-$su-table-border-color:    $su-brand-color-light !default; //$su-border-color-01 !default;
+$su-table-border-color:    adjust-color($su-brand-color-light, $alpha: -0.4) !default; //$sp-border-color-01 !default;
 
 // autumn theme
 $au-title:                 "  -autumn edition- ";
@@ -122,10 +122,10 @@ $au-border-color-02: lighten($au-brand-color, 35%) !default;
 $au-border-color-03: $au-brand-color-dark !default;
 
 $au-table-text-color:      lighten($au-text-color, 18%) !default;
-$au-table-zebra-color:     lighten($au-link-base-color, 46%) !default;
-$au-table-header-bg-color: lighten($au-link-base-color, 43%) !default;
+$au-table-zebra-color:     adjust-color(lighten($au-link-base-color, 46%), $alpha: -0.8) !default;
+$au-table-header-bg-color: adjust-color(lighten($au-link-base-color, 43%), $alpha: -0.8) !default;
 $au-table-header-border:   lighten($au-link-base-color, 37%) !default;
-$au-table-border-color:    lighten($au-link-base-color, 40%) !default; //$au-border-color-01 !default;
+$au-table-border-color:    adjust-color(lighten($au-link-base-color, 40%), $alpha: -0.4) !default; //$au-border-color-01 !default;
 
 // winter theme
 $wi-title:                 "  -winter edition- ";
@@ -151,10 +151,10 @@ $wi-border-color-02: lighten($wi-brand-color, 35%) !default;
 $wi-border-color-03: $wi-brand-color-dark !default;
 
 $wi-table-text-color:      lighten($wi-text-color, 18%) !default;
-$wi-table-zebra-color:     lighten($wi-brand-color, 46%) !default;
-$wi-table-header-bg-color: lighten($wi-brand-color, 43%) !default;
+$wi-table-zebra-color:     adjust-color(lighten($wi-brand-color, 46%), $alpha: -0.8) !default;
+$wi-table-header-bg-color: adjust-color(lighten($wi-brand-color, 43%), $alpha: -0.8) !default;
 $wi-table-header-border:   lighten($wi-brand-color, 37%) !default;
-$wi-table-border-color:    $wi-border-color-01 !default;
+$wi-table-border-color:    adjust-color($wi-border-color-01, $alpha: -0.4) !default;
 
 // Custom skin select
 //default winter
