@@ -2,7 +2,7 @@
 layout: post-narrow
 title: How I got ready to write LaTeX files inside RMarkdown
 date: 2023-02-16 21:00
-modified_date: 2023-04-25 10:00
+modified_date: 2023-04-29 10:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
@@ -48,8 +48,8 @@ My solution requires [R](https://cloud.r-project.org/), [RStudio](https://posit.
 Inside RStudio, install [tinytex](https://yihui.org/tinytex/) and TinyTeX by running `install.packages("tinytex")` and then `tinytex::install_tinytex()` in the console. 
 
 >How it works:
->1. In RStudio, I create RMarkdown `.rmd` files and write my texts, codes, and generate my results and plots. 
->2. I knit my `.rmd` file. During this process, RStudio calls Pandoc, which will convert the document to `.tex` and generate a `.pdf` file accordingly. 
+>1. Create RMarkdown `.rmd` documents and write texts, codes, and generate results and plots. 
+>2. Knit the `.rmd` file. During this process, RStudio calls Pandoc, which will convert the document to `.tex` and generate a `.pdf` file accordingly. 
 
 
 ## **2. Write a simple pdf handout with RMarkdown** <a name="step2"></a>
@@ -64,10 +64,9 @@ A `.rmd` file will be created, including some default text showing you how to wr
 
 The `.rmd` file contains two parts: a YAML header, which is enclosed in triple dashes on either side; and the text body. Inside the YAML header, we specify global variables for the document, and Pandoc will read the YAML header and adjust the LaTeX preamble accordingly during output. 
 
-We can edit this `.rmd` file and knit it: 
+We can edit this RMarkdown file and knit it by clicking the knit button. A PDF file will be created. Something like this:
 
-![example_rmd](/images/tutorials/rmdtex/example_rmd.png) ![example_pdf](/images/tutorials/rmdtex/example_pdf.png)
-
+<img src="/images/tutorials/rmdtex/example_rmd.png"  width="49%"> <img src="/images/tutorials/rmdtex/example_pdf.png"  width="49%">
 
 ### **Writing your texts in RMarkdown:** <a name="step2.1"></a>
 
@@ -253,7 +252,22 @@ A list of how to write common mathematical notations can be found [here](https:/
 
 #### *Citing others' work:*
 
-Citations can be managed simply. To begin, you can put all of your citations in `.bib` format in a `.bib` file. (To create a new `.bib` file, simply create a new `.txt` file then change the extension.) Put the `.bib` file in the same folder as your `.rmd` file. From your source material, simply look for BibTeX format citation, then copy and paste to the `.bib` file. Like this: 
+Citations can be managed simply. To begin, you can put all of your citations in `.bib` format in a `.bib` file. (To create a new `.bib` file, simply create a new `.txt` file then change the extension.) Put the `.bib` file in the same folder as your `.rmd` file. Specify your reference file in the YAML header:
+
+```
+---
+bibliography: references.bib
+---
+```
+Or use multiple bib files:
+
+```
+---
+bibliography: ["references1.bib", "references2.bib"]
+---
+```
+
+From your source material, simply look for BibTeX format citation, then copy and paste the content to the `.bib` file. Like this: 
 
 ```
 @article{kutas1984brain,
@@ -275,22 +289,7 @@ Citations can be managed simply. To begin, you can put all of your citations in 
 }
 ```
 
-Specify your reference file in the YAML header:
-
-```
----
-bibliography: references.bib
----
-```
-Or use multiple bib files:
-
-```
----
-bibliography: ["references1.bib", "references2.bib"]
----
-```
-
-Note that the first argument is your citation `key`, such as `kutas1984brain` and `chomsky2014minimalist`. To cite an item in-text, simply write `@key`. To enclose citation in parentheses, write `[@key]`. To cite multiple items in one parentheses, write `[@key1; @key2; @key3]`. More detailed explanation can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html). 
+Note that the first argument of a BibTex citation entry is the key, such as `kutas1984brain` and `chomsky2014minimalist`. To cite an item in-text, simply write `@key`. To enclose citation in parentheses, write `[@key]`. To cite multiple items in one parentheses, write `[@key1; @key2; @key3]`. You can also have normal text within the citation parentheses, such as `[e.g., @key]` or `[for a review, see @key]`. A more detailed explanation can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html). 
 
 Citation style is managed by `.csl` files. Download the desired `.csl` file [here](https://www.zotero.org/styles?q=APA) and put it in the same folder. Use `reference-section-title:` in the front matter to give your reference section a title.
 
