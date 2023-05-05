@@ -2,6 +2,8 @@
  * Site header
  */
 .site-header {
+  // white cover is handled here instead of body because of Firefox incompatibility
+  background-color: rgba(255,255,255,0.8);
   border-top: 5px solid $border-color-03;
   border-bottom: 0px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
@@ -122,6 +124,8 @@
  * Site footer
  */
 .site-footer {
+  // white cover is handled here instead of body because of Firefox incompatibility
+  background-color: rgba(255,255,255,0.8);
   border-top: 0px solid $border-color-01;
   padding: $spacing-unit 0;
   flex-grow: 0;
@@ -203,7 +207,10 @@
  * Page content
  */
 
-.page-content
+.page-content {
+  // white cover is handled here instead of body because of Firefox incompatibility
+  background-color: rgba(255,255,255,0.8);
+}
 
 .page-heading {
   @include relative-font-size(2);

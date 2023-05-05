@@ -34,9 +34,10 @@ body {
   overflow-wrap: break-word;
 
   /* Set background */
+  /* because of Firefox 112.02 win 10 incompatibility, the white cover over background is now handled by site-header, site-footer, and page-content respectively. On narrow layouts, the bg layer is moved to under page-content to accommodate this. */
   background-image: $background-image;
-  background-color: rgba(255,255,255,0.8);
-  background-blend-mode: color;
+  // background-color: rgba(255,255,255,0.8);
+  // background-blend-mode: color;
 
   /* Full height */
   height: 100%; 
