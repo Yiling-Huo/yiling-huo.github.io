@@ -2,7 +2,7 @@
 layout: post-narrow
 title: My workflow of creating PDF and docx files using Rmd and Markdown
 date: 2023-03-15 10:00
-modified_date: 2023-04-25 18:00
+modified_date: 2023-05-09 10:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']

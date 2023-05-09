@@ -2,7 +2,7 @@
 layout: post-narrow
 title: How I got ready to write LaTeX files inside RMarkdown
 date: 2023-02-16 21:00
-modified_date: 2023-04-29 10:00
+modified_date: 2023-05-09 10:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
