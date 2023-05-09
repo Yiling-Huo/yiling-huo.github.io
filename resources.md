@@ -10,7 +10,7 @@ Scripts and resources that I have created or modified.
 
 - Make auditory serial presentation stimuli:
 
-  <a href="/files/resources/praat/auditory-SP-stimuli-from-textgrid" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/10/make-auditory-sp-stimuli.html). A Praat script that given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids.
+  <a href="/files/resources/praat/auditory-SP-stimuli-from-textgrid" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/10/make-auditory-sp-stimuli.html). A Praat script that, given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids.
   
 - Extract pitch contour:
 
@@ -24,14 +24,14 @@ Scripts and resources that I have created or modified.
 
 - Compare images from two folders:
 
-  <a href="/files/resources/python/compare_images.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/30/compare-images.html). A python script that compares images from to folders to search for duplicates. 
+  <a href="/files/resources/python/compare_images.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/30/compare-images.html). A Python script that compares images from two folders to search for duplicates. 
 
 ## R scripts:
 
 - Remove outliers:
 
-  <a href="/files/resources/r/remove_outlier_function.R" download>Download</a>. A simple function that removes outliers from a data frame based on the 3s.d. rule. 
+  <a href="/files/resources/r/remove_outlier_function.R" download>Download</a>. A simple function that removes outliers from a data frame based on the 3 s.d. rule. 
 
 - Remove track loss trials:
 
-  <a href="/files/resources/r/remove_trackloss.R" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/04/25/trackloss.html). A function that removes trials from visual world eye-tracking data where an extensive amount of observations do not detect the eye gaze on any of the images in the visual display. 
+  <a href="/files/resources/r/remove_trackloss.R" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/04/25/trackloss.html). A function that removes trials from visual world eye-tracking data where no eye gaze can be detected on any of the images in the visual display for an extensive proportion of the time. 
