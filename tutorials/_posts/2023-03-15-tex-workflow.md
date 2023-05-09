@@ -88,7 +88,7 @@ In VS Code, press `Ctrl`+`Shift`+`P` to open the Command Palette. Search for `Pr
 
 Inside `settings.json`, add
 
-```
+```{=json}
     "[markdown]": {
         "editor.fontFamily": "Calibri",
         "editor.fontSize": 18
@@ -112,6 +112,10 @@ For grammar suggestions, I use the [Grammarly extension](https://marketplace.vis
 #### **Install word count**
 
 Word count is important for writing, needless to say. Unfortunately I haven't found a VS Code word count extension that's designed specifically for text writing (only counting words while ignoring markdown symbols and code chunks). The word count extension I'm currently using is [WordCounter](https://marketplace.visualstudio.com/items?itemName=kirozen.wordcounter).
+
+#### **Markdown preview**
+
+I couldn't find a perfect solution for Pandoc-based preview tool, but [Codebraid Preview](https://marketplace.visualstudio.com/items?itemName=gpoore.codebraid-preview&ssr=false) does a decent job. Not that in order for the citation process to work in the preview, the default reader for `.md` files needs to be set to `markdown` instead of the default `commonmark_x`. Note that there is some issues with rendering raw LaTeX in markdown files. Details in the extension's documentation.
 
 #### **Use the Zen Mode**
 
@@ -311,7 +315,7 @@ To create your own snippets, select File - Preferences - Configure User Snippets
 
 A `language.json` file will be opened, where you can create customised snippets for a specific language. The snippet contains a name, a prefix which is what you need to type to call the snippet, a body which is the code context, and a description. For example, this is my snippet for inserting a figure that allows text to wrap around it: 
 
-```{json}
+```{=json}
 "Latex Wrap figure": {
     "prefix": ["wfig"],
     "body":[

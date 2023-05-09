@@ -252,7 +252,7 @@ A list of how to write common mathematical notations can be found [here](https:/
 
 #### *Citing others' work:*
 
-Citations can be managed simply. To begin, you can put all of your citations in `.bib` format in a `.bib` file. (To create a new `.bib` file, simply create a new `.txt` file then change the extension.) Put the `.bib` file in the same folder as your `.rmd` file. Specify your reference file in the YAML header:
+Citations can be managed simply. To begin, you can put all of your citations in .bib format in a `.bib` file. (To create a new .bib file, simply create a new .txt file then change the extension.) Put the `.bib` file in the same folder as your `.rmd` file. Specify your reference file in the YAML header:
 
 ```
 ---
@@ -289,6 +289,8 @@ From your source material, simply look for BibTeX format citation, then copy and
 }
 ```
 
+Popular citation management apps should have an option to export a .bib file from your citation pool, too. For example, I use Mendeley to manage my references. In Mendeley, you can export a .bib file by selecting citations you want to export and clicking File - Export. This will export a .bib file containing information of all the documents you selected. 
+
 Note that the first argument of a BibTex citation entry is the key, such as `kutas1984brain` and `chomsky2014minimalist`. To cite an item in-text, simply write `@key`. To enclose citation in parentheses, write `[@key]`. To cite multiple items in one parentheses, write `[@key1; @key2; @key3]`. You can also have normal text within the citation parentheses, such as `[e.g., @key]` or `[for a review, see @key]`. A more detailed explanation can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html). 
 
 Citation style is managed by `.csl` files. Download the desired `.csl` file [here](https://www.zotero.org/styles?q=APA) and put it in the same folder. Use `reference-section-title:` in the front matter to give your reference section a title.
@@ -307,9 +309,17 @@ The N400 ERP component's amplitude is associated with a word's predictability (c
 
 ![citation](/images/tutorials/rmdtex/citation.png)
 
-#### *Labelling and cross referencing tables and figures:*
+#### *Labelling and cross referencing sections, tables, and figures:*
 
-Labelling and referencing tables and figures can be managed by some simple LaTeX syntax. 
+Labelling and referencing can be managed by some simple LaTeX syntax. 
+
+To label a section in your document, add `{#id}` to the end of your section header. To reference this section, write `\ref{id}`. 
+
+```
+## Neuronal Cytoarchitecture {#cyto}
+
+In section \ref{cyto}, we talk about neuronal cytoarchitecture. 
+```
 
 To label and reference a markdown table:
 
