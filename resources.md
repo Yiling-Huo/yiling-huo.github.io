@@ -35,3 +35,9 @@ Scripts and resources that I have created or modified.
 - Remove track loss trials:
 
   <a href="/files/resources/r/remove_trackloss.R" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/04/25/trackloss.html). A function that removes trials from visual world eye-tracking data where no eye gaze can be detected on any of the images in the visual display for an extensive proportion of the time. 
+
+## Games
+
+- Cyber fortune cookie:
+  <img src="/images/resources/fortune-cookie-game.png"  width="40%">
+  <a href="/files/resources/games/Cyber-fortune-cookie_exe.win-amd64-3.11.zip" download>Download</a> (24.8 MB). [Code](https://github.com/Yiling-Huo/cyber-fortune-cookie). A mini-game made with python and pygame, in which you can open fortune cookies and get your fortune. 
