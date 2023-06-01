@@ -36,7 +36,7 @@ Scripts and resources that I have created or modified.
 
   <a href="/files/resources/r/remove_trackloss.R" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/04/25/trackloss.html). A function that removes trials from visual world eye-tracking data where no eye gaze can be detected on any of the images in the visual display for an extensive proportion of the time. 
 
-## Games
+## Games:
 
 - Cyber fortune cookie:
 
