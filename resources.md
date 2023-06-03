@@ -42,4 +42,4 @@ Scripts and resources that I have created or modified.
 
   <p><img src="/images/resources/fortune-cookie-game.png"  width="40%"></p>
 
-  <a href="/files/resources/games/Cyber-fortune-cookie_exe.win-amd64-3.11.zip" download>Download</a> (24.8 MB). [Code](https://github.com/Yiling-Huo/cyber-fortune-cookie). A mini-game made with python and pygame, in which you can open fortune cookies and get your fortune. *Works only on Windows*. 
+  <a href="/files/resources/games/cyber-fortune-cookie_exe.win-amd64-3.10.zip" download>Download</a> (22.4 MB). [Code](https://github.com/Yiling-Huo/cyber-fortune-cookie). A mini-game made with python and pygame, in which you can open fortune cookies and get your fortune. *Works only on Windows*. 
