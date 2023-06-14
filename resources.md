@@ -32,7 +32,7 @@ Scripts and resources that I have created or modified.
 
 - Convert audio:
 
-  <a href="/files/resources/python/convert_audio.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/06/14/convert-audio.html). A Python script that converts audio file formats using `pydub` and ffmpeg. 
+  <a href="/files/resources/python/convert_audio.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/06/14/convert-audio.html). A Python script that converts audio file formats using pydub and ffmpeg. 
 
 ## R scripts:
 
