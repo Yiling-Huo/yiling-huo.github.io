@@ -2,6 +2,7 @@
 layout: post-narrow
 title: Comparing images from two folders
 date: 2023-03-30 15:00
+modified_date: 2023-06-14 15:00
 author: Yiling Huo
 comment_issue_id: 5
 category: 'Tutorials'
