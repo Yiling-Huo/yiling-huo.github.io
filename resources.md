@@ -16,6 +16,10 @@ Scripts and resources that I have created or modified.
 
   <a href="/files/resources/praat/extract_pitch_contour" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/10/extract-tone.html). A Praat script that extracts pitch contour information based on `.wav` sounds and `.Textgrid` files.
 
+- Get duration:
+
+  <a href="/files/resources/praat/get_duration" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/06/14/get-duration.html). A Praat script that gets audio file durations from a directory containing audio files. The script outputs a .csv file.
+
 ## Python scripts:
 
 - Automated processing of Chinese cloze responses:
@@ -25,6 +29,10 @@ Scripts and resources that I have created or modified.
 - Compare images from two folders:
 
   <a href="/files/resources/python/compare_images.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/03/30/compare-images.html). A Python script that compares images from two folders to search for duplicates. 
+
+- Convert audio:
+
+  <a href="/files/resources/python/convert_audio.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/06/14/convert-audio.html). A Python script that converts audio file formats using `pydub` and ffmpeg. 
 
 ## R scripts:
 
