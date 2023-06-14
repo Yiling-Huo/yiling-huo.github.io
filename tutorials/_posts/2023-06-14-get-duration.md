@@ -21,7 +21,7 @@ Open [Praat](https://www.fon.hum.uva.nl/praat/) and Select Praat - Open Praat sc
 
 Select Run - Run. You will be taken to a window where you can choose where your audio files are located. 
 
-![ui](/images/tutorials/get_duration/ui.png)
+<img src="/images/tutorials/get_duration/ui.png"  width="49%">
 
 After choosing the directory, Praat is going to look at all files with the provided extension, get the files' durations, and create a output .csv file in the same folder. The output should look like this:
 
