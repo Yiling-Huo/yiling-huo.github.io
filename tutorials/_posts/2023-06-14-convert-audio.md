@@ -23,24 +23,14 @@ Download the <a href="/files/resources/python/convert_audio.py" download>Python 
 
 Open `convert_audio.py` in an IDLE. Modify these variables: 
 
+- AudioSegment.converter: string. Path to your `ffmpeg.exe`.
+- AudioSegment.ffmpeg: string. Path to your `ffmpeg.exe`.
+- AudioSegment.ffprobe: string. Path to your `ffprobe.exe`.
+
 - dataDir: string. Input folder. Where your original audio files are located.
 - outDir: string. Output folder. Where you want your converted files.
 - input_format: string. Format of your original audio files. **Please include '.'**.
 - output_format: string. Format of your output audio files. **Please include '.'**.
-
-```
-# chose input and output folders (where the original files are and where you want to save new files)
-dataDir = (os.getcwd() + '/') # input folder
-outDir = (os.getcwd()+'/output/') # output folder
-if not os.path.exists(outDir):
-    os.makedirs(outDir)
-print ('Input files are taken from ' + dataDir)
-print ('Output files are created in ' + outDir)
-
-# set up input and output formats
-input_format = '.mp3'
-output_format = '.wav'
-```
 
 Run the script. Pydub is going to call ffmpeg to convert all files in your chosen folder with the original extension to the output format. 
 
