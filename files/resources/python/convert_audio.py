@@ -29,7 +29,7 @@ for dataFile in dataFileList:
             sound = AudioSegment.from_file(dataFile)
             outname = outDir + dataFile[:-(len(input_format))] + output_format
             print("Output file: " + outname)
-            sound.export(outname, format=output_format[-1:])
+            sound.export(outname, format=output_format[1:])
         except IOError:
             print('cannot open file ')
 
