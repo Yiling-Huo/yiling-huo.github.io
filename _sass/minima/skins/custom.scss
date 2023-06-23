@@ -71,24 +71,24 @@ $sp-table-border-color:    adjust-color($sp-brand-color-light, $alpha: -0.4) !de
 
 // summer theme
 $su-title:                 "  -summer edition- ";
-$su-brand-color:           #dac700 !default; //#00bfff !default;
-$su-code-background-color: #d3f4ff !default;
-$su-link-base-color:       #00a9df !default;
+$su-brand-color:           #1ebeae !default; //#00bfff !default;
+$su-code-background-color: #fffbd8 !default;
+$su-link-base-color:       #21c5e2 !default;
 $su-background-image: url("/images/background/background-su.webp");
 $su-profile-image: url("/images/profile/profile-su.webp");
 
 $su-brand-color-light: lighten($su-brand-color, 40%) !default;
-$su-brand-color-dark: darken(#00bfff, 25%) !default;
+$su-brand-color-dark: darken(#b4d4dc, 25%) !default;
 
 $su-site-title-color: $su-brand-color-dark !default;
 
 $su-text-color: #111111 !default;
-$su-background-color: lighten($su-link-base-color, 52%) !default;  //#fdfdfd !default;
+$su-background-color: lighten($su-link-base-color, 45%) !default;  //#fdfdfd !default;
 
 $su-link-visited-color: darken($su-link-base-color, 15%) !default;
 $su-link-hover-color: $su-text-color !default;
 
-$su-border-color-01: lighten($su-code-background-color, 5%) !default; //$su-brand-color-light !default;
+$su-border-color-01: lighten($su-code-background-color, 2%) !default; //$su-brand-color-light !default;
 $su-border-color-02: lighten($su-brand-color, 35%) !default;
 $su-border-color-03: $su-brand-color-dark !default;
 
