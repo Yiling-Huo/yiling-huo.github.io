@@ -21,7 +21,7 @@ Summary of my actual workflow:
 
 What I like about this workflow:
 
-- Markdown is supported my most text editors and it's easy to find one where it feels comfortable to write.
+- Markdown is supported by most text editors and it's easy to find one where it feels comfortable to write.
 - Knitting RMarkdown is extremely straightforward with just one click.
 - Letting knitr keep the tex and letting Pandoc do the tex to docx conversion creates better-looking docx files than letting knitr generate docx files directly. 
 
@@ -148,7 +148,7 @@ After preparing your `.md` file, search for `cmd` in your Start menu to open a c
 
 ![cd](/images/tutorials/website/cd.png)
 
-use Pandoc to convert your documents by running
+Use Pandoc to convert your documents by running
 
 ```
 pandoc input.md -o output.pdf
@@ -169,9 +169,9 @@ Your output file should be created:
 Change the output format to convert to other formats. To create `.docx`, if there are LaTeX code chunks in the `.md`, you can first convert to `.tex`, then to `.docx`
 
 ```
-pandoc -C input.md -o output.tex
+pandoc -C input.md -o temp.tex
 
-pandoc -C input.tex -o output.docx
+pandoc -C temp.tex -o output.docx
 ```
 
 ![md-output1](/images/tutorials/mdtex/md-output1.png)
@@ -188,13 +188,14 @@ Once we have the R Extension for VS Code, we can write in the RMarkdown files an
 
 ```
 ---
-output: pdf_document:
-    latex_engine: xelatex
-    extra_dependencies: ['xeCJK', 'booktabs']
-    number_sections: true
-    keep_tex: true
-    includes:
-            after_body: appendix.tex
+output: 
+    pdf_document:
+        latex_engine: xelatex
+        extra_dependencies: ['xeCJK', 'booktabs']
+        number_sections: true
+        keep_tex: true
+        includes:
+                after_body: appendix.tex
 ---
 ```
 
@@ -329,7 +330,8 @@ VS Code will not automatically activate snippets for markdown. To force it, pres
 
 ### **5.2 My actual workflow** <a name="actual-flow"></a>
 
-1. Write sections of my documents as Markdown files without YAML headers. :
+1. Write sections of my documents as Markdown files without YAML headers:
+
 ```
 Sample text 
 
@@ -341,7 +343,9 @@ Sample text Sample text Sample text
 
 Sample text Sample text Sample text
 ```
+
 2. Have a parent RMarkdown file with Markdown children (with YAML header):
+
 ````
 ---
 title: "Sample"
@@ -367,5 +371,6 @@ output:
 ```{r, child='general_dis.md'}
 ```
 ````
+
 3. For PDF, knit the RMarkdown file. 
 4. For docx, knit the RMarkdown first while keeping the tex and let Pandoc handle tex to docx: `pandoc input.tex -o output.docx`
