@@ -2,7 +2,7 @@
 layout: post-narrow
 title: My workflow of creating PDF and docx files using Rmd and Markdown
 date: 2023-03-15 10:00
-modified_date: 2023-05-09 10:00
+modified_date: 2023-07-10 23:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
@@ -12,25 +12,18 @@ On this page, I record my workflow of working with Markdown, RMarkdown, and Pand
 
 <!--excerpt-->
 
-Here are the things I do in this workflow:
+Summary of my actual workflow:
 
-- Write in `.md`.
-- Convert to `.pdf` using Pandoc to make pretty documents.
-- Convert to `.docx` using Pandoc to collaborate with colleagues (often using MS Teams). 
-- (Convert from `.docx` to `.pdf`, or to `.md` for further editing.)
+1. Write (separate sections of my documents) in markdown.
+2. Have a parent RMarkdown file that has markdown children.
+3. For PDF: knit the RMarkdown parent file.
+4. For MS Word docx: knit the RMarkdown parent file into PDF while keeping the tex file. Let Pandoc handle the tex to docx conversion. 
 
-Or
+What I like about this workflow:
 
-- Write in `.Rmd`. 
-- Convert to `.pdf` using `knitr` to make pretty documents.
-- Convert to `.docx` using `knitr` to collaborate. 
-
-For now, I'm keeping both options because 
-1. The text editor I'm using, [VS Code](https://code.visualstudio.com/), does not support document outline for `.Rmd`. So it's easier to organise the text if I write in `.md`. 
-2. I prefer using VS Code to write rather than RStudio (which does support document outline for `.Rmd`), as I'm used to writing stuff while looking at the MS Word default font Calibri, which is easily achievable in VS Code. 
-3. However, `knitr` and `rticles` makes it easier to convert documents and use publisher templates, instead of writing a long command line, it's just a few simple clicks. 
-4. Also, sometimes my documents need to include codes, which I find is easier to do with `.Rmd`. 
-5. Nevertheless it's easy enough to switch back and forth between `.md` and `.Rmd`, so I can have the best of both worlds. 
+- Markdown is supported my most text editors and it's easy to find one where it feels comfortable to write.
+- Knitting RMarkdown is extremely straightforward with just one click.
+- Letting knitr keep the tex and letting Pandoc do the tex to docx conversion creates better-looking docx files than letting knitr generate docx files directly. 
 
 ### On this page
 1. [My setup](#setup)
@@ -44,7 +37,7 @@ For now, I'm keeping both options because
 4. [Putting together a large document: `.rmd` parent and `.md`/`.rmd` children](#parent)
 5. [Tips](#tips)
     - [Using VS Code's snippets](#snippet)
-    - [One (silly) trick](#silly-trick)
+    - [My actual workflow](#actual-flow)
 
 Might be helpful: <a href="https://yiling-huo.github.io/tutorials/2023/02/16/rmarkdown-latex.html" target="_blank">A more detailed tutorial on creating `.Rmd` for rendering to `.pdf`</a>
 
@@ -145,19 +138,9 @@ In MiKTeX Console, select Settings, then select Always for You can choose whethe
 
 This is an example of writing in `.md` and rendering `.pdf`, `.tex`, or `.docx` files using Pandoc. 
 
-First, prepare your `.md` file. Write your main text in [Markdown syntax](https://www.markdownguide.org/basic-syntax/). Inside the YAML header which is enclosed in dashed at the beginning of the document, you can specify some variables for Pandoc. 
+First, prepare your `.md` file. Write your main text in [Markdown syntax](https://www.markdownguide.org/basic-syntax/). Inside the YAML header which is enclosed in dashes at the beginning of the document, you can specify your document's metadata such as title, author, date, and what to include as tex code before the document. These metadata are essentially Pandoc options. A list of what's possible to include in the YAML header can be found [here](https://pandoc.org/MANUAL.html#defaults-files). Following the link you can also learn how to, instead of using a YAML header block in each of your markdown file, use what's called a default file to make things more concise. 
 
 ![md](/images/tutorials/mdtex/md.png)
-
-Note that some arguments are written differently in the `.md` YAML header and the `.Rmd` header. For example, where `.Rmd` can use `extra_dependencies: [""]` to use LaTeX packages, `.md` has to use `header-includes: usepackage{}`:
-
-```
----
-header-includes:
-    - \usepackage{xeCJK}
-    - \usepackage{booktabs}
----
-```
 
 *The default Pandoc PDF layout is somewhat odd with extremely large margins, which is why I like to specify page margins manually using `geometry: "left=cm,right=cm,top=cm,bottom=cm"`.*
 
@@ -201,19 +184,25 @@ I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/coding/
 
 ### **3.2 Writing in `.Rmd` then rendering `.pdf` and/or `.docx`** <a name="rmd"></a>
 
-Once we have the R Extension for VS Code, we can write `.Rmd` files and convert to other formats inside VS Code. For example: 
+Once we have the R Extension for VS Code, we can write in the RMarkdown files and convert to other formats inside VS Code. The YAML header for RMarkdown files and for markdown files look fairly similar, but you can specify many things easily under `output: pdf_document` with RMarkdown. For example:
 
-![rmd](/images/tutorials/mdtex/rmd.png)
+```
+---
+output: pdf_document:
+    latex_engine: xelatex
+    extra_dependencies: ['xeCJK', 'booktabs']
+    number_sections: true
+    keep_tex: true
+    includes:
+            after_body: appendix.tex
+---
+```
 
 After preparing your `.Rmd` file, knit your file to `.pdf` other formats by clicking the Knit Rmd button, or pressing `Ctrl`+`Shift`+`K`. 
 
 ![rmd-knit](/images/tutorials/mdtex/rmd-knit.png)
 
-Sample `.pdf` output:
-
-![rmd-output](/images/tutorials/mdtex/rmd-output.png)
-
-Sample `.docx` output. Use `output: word_document` to knit to `.docx`. Note that knitting directly to `.docx` will ignore LaTeX code. If you have LaTeX code in your document, you can first convert to `.tex` by letting R keep the `.tex` file when rendering to `.pdf`, then let Pandoc handle the `.tex` to `.docx` conversion:
+For MS Word files, use `output: word_document` to knit to `.docx`. Note that knitting directly to `.docx` will ignore LaTeX code. If you have LaTeX code in your document, you can first convert to `.tex` by letting R keep the `.tex` file when rendering to `.pdf`, then let Pandoc handle the `.tex` to `.docx` conversion:
 
 ```
 ---
@@ -338,6 +327,45 @@ Note that you will need to escape JSON symbols such as backslashes and double qu
 
 VS Code will not automatically activate snippets for markdown. To force it, press `Ctrl`+`space` before typing the prefix. 
 
-### **5.2 One (silly) trick** <a name="silly-trick"></a>
+### **5.2 My actual workflow** <a name="actual-flow"></a>
 
-Since the only difference between a `.md` file and a `.Rmd` file (when no code chunks are involved) is a few lines in the YAML header, it's possible to switch back and form between `.md` and `.Rmd` simply by copy pasting the body text. This is silly but I like the flexibility of having a solution when I suddenly want to include something in the document that only the other format can handle. 
+1. Write sections of my documents as Markdown files without YAML headers. :
+```
+Sample text 
+
+## Subsection 1
+
+Sample text Sample text Sample text
+
+## Subsection 2
+
+Sample text Sample text Sample text
+```
+2. Have a parent RMarkdown file with Markdown children (with YAML header):
+````
+---
+title: "Sample"
+author: "Yiling Huo"
+date: \today
+output:
+    pdf_document:
+        keep_tex: true
+---
+
+# Introduction
+
+```{r, child='intro.md'}
+```
+
+# Experiment 1
+
+```{r, child=c('exp1_intro.md', 'exp1_methods.md', 'exp1_dis.md')}
+```
+
+# General Discussion
+
+```{r, child='general_dis.md'}
+```
+````
+3. For PDF, knit the RMarkdown file. 
+4. For docx, knit the RMarkdown first while keeping the tex and let Pandoc handle tex to docx: `pandoc input.tex -o output.docx`
