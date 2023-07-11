@@ -3,23 +3,26 @@
 # What this script does:
 # 1. Takes sound files and textgrid files with the same name, 
 # 2. extract all intervals with a name in the selected tier,
-# 3. divide each interval into 10 equal-length mini-intervals, 
+# 3. divide each interval into a pre-determined amount of equal-length mini-intervals, 
 # 4. extract pitch at each boundary of the mini-intervals, 
 # 5. and save all the pitch information in a csv file.
 
 # What this script is good for:
 # Extract pitch contour information (e.g. lexical tone) for further analysis. 
 
-# Parameters:
-# Tier number: number of tier your intervals are in
-# Sound file extensions: The extension of sould files in your folder (e.g.: .wav)
-# Result output folder: folder to safe the output csv file. The folder must end with '\'
-# Result file name: name of the result file
-# Time steps: (standard value: 0.0) the measurement interval (frame duration), in seconds. If you supply 0, Praat will use a time step of 0.75 / (pitch floor), e.g. 0.01 seconds if the pitch floor is 75 Hz; in this example, Praat computes 100 pitch values per second.
-# Pitch floor: (standard value: 75 Hz) candidates below this frequency will not be recruited. This parameter determines the length of the analysis window: it will be 3 longest periods long, i.e., if the pitch floor is 75 Hz, the window will be 3/75 = 0.04 seconds long.
-# Pitch ceiling: (standard value: 600 Hz) candidates above this frequency will be ignored.
+# General variables:
+    # Tier number: index of the tier of interest (where the intervals are defined).
+    # Sound file extensions: The extension of should files in your folder (e.g.: .wav)
+    # Result file name: name of the result file. Recommended extension .csv
+    # Normalise by: precision of sampling. For example, 10 means that Praat will extract pitch information at time 0%, 10%, 20%, …, 100% (10+1 data points in total); and 50 means that Praat will extract pitch information at times 0%, 2%, 4%, 6%, …, 100% (50+1 data points in total).
+
+# Pitch parameters:
+    # Time steps: (Praat default: 0.0) the measurement interval (frame duration), in seconds. If you supply 0, Praat will use a time step of 0.75 / (pitch floor), e.g. 0.01 seconds if the pitch floor is 75 Hz; in this example, Praat computes 100 pitch values per second.
+    # Pitch floor: (Praat default: 75 Hz) candidates below this frequency will not be recruited. This parameter determines the length of the analysis window: it will be 3 longest periods long, i.e., if the pitch floor is 75 Hz, the window will be 3/75 = 0.04 seconds long.
+    # Pitch ceiling: (Praat default: 600 Hz) candidates above this frequency will be ignored.
 
 form Extract normalised pitch contour
+    comment General variables:
     integer Tier_number 1
     word Sound_file_extension .wav
     sentence Result_file_name pitch.csv
