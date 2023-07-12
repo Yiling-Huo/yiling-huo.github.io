@@ -191,7 +191,7 @@ To add a new blog post, create a file in the _posts folder, following the Jekyll
 
 ### **Step 7: Change the theme** <a name="step7"></a>
 
-There are many free [Jekyll themes](https://jekyllrb.com/docs/themes/) you can use. If the theme exists on GitHub and has a license that allows you to use, you can simply clone the theme's repository, edit, and push to your repository. The easiest way to do this is to go to the theme's GitHub page, clone the repository (download as a .zip) and copy everything to your website's directory. 
+There are many free [Jekyll themes](https://jekyllrb.com/docs/themes/) you can use. If the theme exists on GitHub and has a license that allows you to use, you can simply clone the theme's repository, edit, and push to your repository. The most brain-less way to do this is to go to the theme's GitHub page, download the files as a .zip and copy everything to your website's directory. (An alternative way is to fork the theme's repository directly on GitHub.)
 
 Here I'll demonstrate how to do this with the [YAT](https://github.com/jeffreytse/jekyll-theme-yat/) theme. First, go to the theme's GitHub page, and download the code as .zip.
 
