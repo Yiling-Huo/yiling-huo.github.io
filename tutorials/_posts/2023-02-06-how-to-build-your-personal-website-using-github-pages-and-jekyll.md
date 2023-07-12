@@ -199,7 +199,7 @@ Here I'll demonstrate how to do this with the [YAT](https://github.com/jeffreyts
 
 Next, clone your website's GitHub repository to your local directory. Replace the content in your directory with the theme's files. 
 
-![theme1](/images/tutorials/website/theme1.png)
+<img src="/images/tutorials/website/theme1.png" width="75%" height="75%">
 
 The next thing to do is to install all the gems needed for this theme. Then, serve it locally to have a look. 
 
@@ -211,7 +211,7 @@ The next thing to do is to install all the gems needed for this theme. Then, ser
 
 Edit the pages as you see fit: edit _config.yml, edit index.md (or index.html in this case), add pages, add posts in the _posts folder, edit layouts in the _layouts folder, etc. 
 
-After you're done, follow the next steps to deploy your pages. 
+After you're done, follow the next steps and deploy your pages. 
 
 > Do not forget to credit the theme creators!
 
