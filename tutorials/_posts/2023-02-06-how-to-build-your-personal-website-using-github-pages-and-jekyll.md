@@ -197,15 +197,7 @@ Here I'll demonstrate how to do this with the [YAT](https://github.com/jeffreyts
 
 <img src="/images/tutorials/website/clone_other_repo1.png" width="80%" height="80%">
 
-Next, clone your website's GitHub repository to your local directory. Replace the content in your directory with the theme's files. 
-
-<img src="/images/tutorials/website/theme1.png" width="75%" height="75%">
-
-The next thing to do is to install all the gems needed for this theme. Then, serve it locally to have a look. 
-
-![theme2](/images/tutorials/website/theme2.png)
-
-![theme3](/images/tutorials/website/theme3.png)
+Next, clone your website's GitHub repository to your local directory. Replace all content in your directory with the theme's files. The next thing to do is to install all the gems needed for this theme by running `bundle install` in a command prompt. Then, serve it locally by running `bundle exec jekyll serve` to have a look. 
 
 ![theme4](/images/tutorials/website/theme4.png)
 
