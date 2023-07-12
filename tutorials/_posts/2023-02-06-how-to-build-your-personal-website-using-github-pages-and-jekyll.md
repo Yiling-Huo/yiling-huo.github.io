@@ -28,7 +28,7 @@ In this tutorial, I will help you set up your personal website step-by-step. The
 
 ### **Step 1: Set up GitHub Pages** <a name="step1"></a>
 
-The first thing we need to do is set up GitHub Pages.  Go to [www.github.com] and register an account. GitHub is an internet hosting service for all kinds of coding. You will probably find it useful for other purposes, too!
+The first thing we need to do is set up GitHub Pages.  Go to [GitHub](www.github.com) and register an account. GitHub is an internet hosting service for all kinds of coding. You will probably find it useful for other purposes, too!
 
 ![register github](/images/tutorials/website/signup_github.png)
 
@@ -42,7 +42,7 @@ On the create new repository page, you must **name your repository with \<your u
 
 ### **Step 2: Pull repository for local editing** <a name="step2"></a>
 
-Next, we will need to pull the GitHub repository to a local directory. Go to [https://gitforwindows.org/] and download Git for Windows. Git for Windows allows you to use the version control system Git on the Windows operating system. In other words, it will allow you to download your GitHub repository to your local directory, edit things locally, and upload your local directory to your GitHub repository. (I also use [GitHub Desktop](https://desktop.github.com/) on top of Git for Windows to make things easier.)
+Next, we will need to pull the GitHub repository to a local directory. Go to [Git for Windows](https://gitforwindows.org/) and download Git for Windows. Git for Windows allows you to use the version control system Git on the Windows operating system. In other words, it will allow you to download your GitHub repository to your local directory, edit things locally, and upload your local directory to your GitHub repository. (I also use [GitHub Desktop](https://desktop.github.com/) on top of Git for Windows to make things easier.)
 
 While installing Git for Windows, we don't need to change any settings. After installing, go to your list of apps, open Git GUI, and select Clone Existing Repository.
 
