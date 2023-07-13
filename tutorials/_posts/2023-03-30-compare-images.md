@@ -58,7 +58,7 @@ If `copy == False`, the summary file will look like this:
 
 ## Full script
 
-```
+```python
 # This script compares images from two folders, write down duplicate images, and optionally copy all unique images from the two folders into a new folder. 
 # Created by Yiling Huo, 30 March 2023
 

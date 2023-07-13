@@ -36,7 +36,7 @@ Run the script. Pydub is going to call ffmpeg to convert all files in your chose
 
 ## Full script
 
-```
+```python
 import os
 from pydub import AudioSegment
 

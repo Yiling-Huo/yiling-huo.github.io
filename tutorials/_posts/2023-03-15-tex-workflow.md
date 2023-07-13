@@ -81,7 +81,7 @@ In VS Code, press `Ctrl`+`Shift`+`P` to open the Command Palette. Search for `Pr
 
 Inside `settings.json`, add
 
-```{=json}
+```json
     "[markdown]": {
         "editor.fontFamily": "Calibri",
         "editor.fontSize": 18
@@ -186,7 +186,7 @@ I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/coding/
 
 Once we have the R Extension for VS Code, we can write in the RMarkdown files and convert to other formats inside VS Code. The YAML header for RMarkdown files and for markdown files look fairly similar, but you can specify many things easily under `output: pdf_document` with RMarkdown. For example:
 
-```
+```yaml
 ---
 output: 
     pdf_document:
@@ -205,7 +205,7 @@ After preparing your `.Rmd` file, knit your file to `.pdf` other formats by clic
 
 For MS Word files, use `output: word_document` to knit to `.docx`. Note that knitting directly to `.docx` will ignore LaTeX code. If you have LaTeX code in your document, you can first convert to `.tex` by letting R keep the `.tex` file when rendering to `.pdf`, then let Pandoc handle the `.tex` to `.docx` conversion:
 
-```
+```yaml
 ---
 output:
     pdf_document:
@@ -227,14 +227,14 @@ I have a more detailed [tutorial](https://yiling-huo.github.io/tutorials/2023/02
 
 When a document gets long, you may prefer to write different sections separately in separate files. It's easy to use RMarkdown to put many child files together and organise them into a neat large document. As far as I know, RMarkdown can handle both Markdown children and RMarkdown children. To include child files in a RMarkdown file, use:
 
-````
+````md
 ```{r, child=c('one.Rmd', 'two.Rmd')}
 ```
 ````
 
 For example, I have written the intro, methods, and discussion sections for a paper separately. Here's what the main RMarkdown file looks like:
 
-````
+````md
 ---
 title: "Sample"
 author: "Yiling Huo"
@@ -267,7 +267,7 @@ output:
 
 A sample child document `exp1_methods.md`:
 
-````
+````md
 ## Methods
 
 ### Participants
@@ -305,7 +305,7 @@ To create your own snippets, select File - Preferences - Configure User Snippets
 
 A `language.json` file will be opened, where you can create customised snippets for a specific language. The snippet contains a name, a prefix which is what you need to type to call the snippet, a body which is the code context, and a description. For example, this is my snippet for inserting a figure that allows text to wrap around it: 
 
-```{=json}
+```json
 "Latex Wrap figure": {
     "prefix": ["wfig"],
     "body":[
@@ -332,7 +332,7 @@ VS Code will not automatically activate snippets for markdown. To force it, pres
 
 1. Write sections of my documents as Markdown files without YAML headers:
 
-```
+```md
 Sample text 
 
 ## Subsection 1
@@ -346,7 +346,7 @@ Sample text Sample text Sample text
 
 2. Have a parent RMarkdown file with Markdown children (with YAML header):
 
-````
+````md
 ---
 title: "Sample"
 author: "Yiling Huo"

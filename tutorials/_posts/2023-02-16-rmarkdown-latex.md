@@ -78,7 +78,7 @@ Use [markdown syntax](https://www.markdownguide.org/basic-syntax/) to write your
 
 In RStudio, you can include a R code chunk in your document by pressing Ctrl + Alt + I (Mac: Cmd + Option + I); or clicking the Add Chunk button in the toolbar; or simply typing:
 
-````{r}
+````md
 ```{r}
 
 ```
@@ -86,7 +86,7 @@ In RStudio, you can include a R code chunk in your document by pressing Ctrl + A
 
 You can name your chunk by typing after `{r`, separated by a space: `{r chunk_name}`. Chunk options are separated by comma: `{r chunk_name, echo = TRUE, message = FALSE, warning = FALSE}`. Chunk options control whether and how the code and the results are shown in your output document. You can find a list of all possible chunk options at the [knitr documentation](https://yihui.org/knitr/options/). 
 
-````{r}
+````r
 ```{r}
 # First, let's create our data frame
 value <- c(76, 67, 66, 72, 74, 64, 72, 70, 74, 78, 66, 63, 68, 68, 60, 67, 58, 70, 67, 66)
@@ -103,7 +103,7 @@ t.test(value ~ group, data=data_2, var.equal=TRUE)
 
 RMarkdown supports many languages other than R through the knitr package. A list of supported languages can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html). For example, if I want to include a chunk of python code: 
 
-````{python}
+````python
 ```{python}
 a = True
 
@@ -125,7 +125,7 @@ print("The value of b is: " + str(b))
 RMarkdown allows including external images quite easily. If you have been working in other R project and generated R plots, you can save the plots as PDF first, and include the PDF image in your .rmd document. (Other image formats are also fine, and may be preferred if your have complex plots. PDF's advantage is it's vector-based, so can be directly sent to your editors for publishing.)
 
 In your other R project, if you have base R plots:
-```{r}
+```r
 # dimensions are in inches. width = 7.25 satisfies most journal requirements.
 
 # create pdf file
@@ -138,7 +138,7 @@ dev.off()
 
 If you have ggplot2 plots:
 
-```{r}
+```r
 pdf("file_name.pdf", width = 7.25, height = 5)
 print(ggplot_object)
 dev.off()
@@ -146,7 +146,7 @@ dev.off()
 
 In your RMarkdown file, you can include your figures in a R code chunk. Specify chunk options, then use knitr to include the plot:
 
-````{r}
+````r
 ```{r, echo=FALSE, out.width="40%", fig.align="center", fig.cap="\\label{figure-label}Plot of our data"}
 
 knitr::include_graphics("./file_name.pdf")
@@ -159,7 +159,7 @@ The above line includes some common LaTeX figure configurations you can directly
 
 Alternatively, you can include images using Markdown syntax:
 
-```{markdown}
+```md
 ![Your-caption. \label{figure-label}](file_name.pdf){width=40%}
 ```
 
@@ -171,13 +171,13 @@ Other images can also be included in these manners.
 
 Another method is to directly include your R plots as a R object. In your other R project, run:
 
-```{r}
+```r
 saveRDS(object_name, "./file_name.rds")
 ```
 
 Note that your plot cannot refer to data frames other than the one originally mentioned in the main function. For example, the following plot CANNOT be successfully read:
 
-```{r}
+```r
 plot <- ggplot(data_frame_1, aes(x=a, y=b)) +
     	geom_bar(stat='stat') +
         goem_point(data=data_frame_2, aes(x=mean(V1), y=0.5)) # the point refers to data from another data frame
@@ -185,7 +185,7 @@ plot <- ggplot(data_frame_1, aes(x=a, y=b)) +
 
 In your RMarkdown file: 
 
-````{r}
+````r
 ```{r, echo=FALSE, out.width="40%", out.height="40%", fig.align="center", fig.cap="\\label{fig:fig1}Plot of our data"}
 
 plot <- readRDS("rile_name.rds")
@@ -199,7 +199,7 @@ plot
 
 Markdown allows you to create simple tables. Use pipes (\|) to create cells and use multiple hyphens (---) to separate the header from other cells. More details [here](https://www.markdownguide.org/extended-syntax/). For example:
 
-```
+```md
 | p-value | decision |
 | --- | --- |
 | $p>0.05$ | do not reject $H_0$ |
@@ -212,7 +212,7 @@ Markdown allows you to create simple tables. Use pipes (\|) to create cells and 
 
 If your table goes beyond the capacity of markdown, for example, if you want to merge cells, you can directly include a LaTeX table as a LaTeX chunk. Don't worry about not knowing LaTeX, there are many online tools such as [tablesgenerator](https://www.tablesgenerator.com/) that allow you to generate LaTeX code for tables. Simply copy and paste the codes in your document. You can also make it a code chunk. For example: 
 
-````
+````latex
 ```{=latex}
 \begin{table}[]
 \begin{tabular}{lllll}
@@ -230,7 +230,7 @@ If your table goes beyond the capacity of markdown, for example, if you want to 
 
 The table generator may tell you to add packages to your document preamble, you can do so in the YAML header at the beginning of your document. For example:
 
-```
+```yaml
 ---
 output:
   pdf_document: 
@@ -254,14 +254,14 @@ A list of how to write common mathematical notations can be found [here](https:/
 
 Citations can be managed simply. To begin, you can put all of your citations in .bib format in a .bib file. (To create a new .bib file, simply create a new .txt file then change the extension.) Put the .bib file in the same folder as your RMarkdown file. Specify your reference file in the YAML header:
 
-```
+```yaml
 ---
 bibliography: references.bib
 ---
 ```
 Or use multiple bib files:
 
-```
+```yaml
 ---
 bibliography: ["references1.bib", "references2.bib"]
 ---
@@ -295,7 +295,7 @@ Note that the first argument of a BibTex citation entry is the key, such as `kut
 
 Citation style is managed by .csl files. Download the desired .csl file [here](https://www.zotero.org/styles?q=APA) and put it in the same folder. Use `reference-section-title:` in the front matter to give your reference section a title.
 
-```
+```yaml
 ---
 bibliography: references.bib
 csl: apa-6th-edition.csl
@@ -303,7 +303,7 @@ reference-section-title: "References"
 ---
 ```
 
-```
+```md
 The N400 ERP component's amplitude is associated with a word's predictability (cloze probability) [@kutas1984brain]. 
 ```
 
@@ -315,7 +315,7 @@ Labelling and referencing can be managed by some simple LaTeX syntax.
 
 To label a section in your document, add `{#id}` to the end of your section header. To reference this section, write `\ref{id}`. 
 
-```
+```md
 ## Neuronal Cytoarchitecture {#cyto}
 
 In section \ref{cyto}, we talk about neuronal cytoarchitecture. 
@@ -323,7 +323,7 @@ In section \ref{cyto}, we talk about neuronal cytoarchitecture.
 
 To label and reference a markdown table:
 
-```
+```md
 | Header 1 | Header 2 |
 | --- | --- |
 | Cell content 1 | Cell content 2 |
@@ -337,7 +337,7 @@ In Table \ref{tablekey}, we can learn about how to reference tables.
 
 To label and reference a LaTeX table, include lines `\caption{}` and `\label{}` after line `\begin{table}[]`. Online table generators can take care of this. 
 
-````
+````latex
 ```{=latex}
 \begin{table}[h]
 \caption{Caption}
@@ -356,7 +356,7 @@ In Table \ref{tablekey2}, we can learn about how to reference tables.
 
 To label and reference a figure, include `\label{}` in your figure caption:
 
-````{r}
+````md
 ```{r, echo=FALSE, out.width="40%", out.height="40%", fig.align="center", fig.cap="\\label{figkey}Plot of our data"}
 
 knitr::include_graphics("./file_name.pdf")
@@ -367,7 +367,7 @@ Figure \ref{figkey} shows how to reference figures.
 
 Or
 
-````{markdown}
+````md
 ![Your-caption. \label{figkey}](file_name.pdf){width=40%}
 
 Figure \ref{figkey} shows how to reference figures. 
@@ -381,7 +381,7 @@ I work closely with linguistics, so one day I may need to include syntax trees i
 
 Syntax trees can be easily included as LaTeX codes using the packages such as [Forest](https://mirror.ox.ac.uk/sites/ctan.org/graphics/pgf/contrib/forest/forest-doc.pdf) or [Qtree](https://www.ling.upenn.edu/advice/latex/qtree/qtreenotes.pdf). Here I will show a simple example using Qtree. Include the package in the YAML header:
 
-```
+```yaml
 ---
 output:
   pdf_document: 
@@ -391,7 +391,7 @@ output:
 
 The Qtree package allows users to write syntax trees in phrase marker style (with some simplest LaTeX syntax), and will generate trees during output:
 
-````
+````latex
 ```{=latex}
 \Tree [.S This [.VP [.V is ] \qroof{a simple tree}.NP ] ]
 ```
@@ -407,7 +407,7 @@ There are several LaTeX packages that deal with linguistic examples, in this tut
 
 Include the bg4e package in the YAML header:
 
-```
+```yaml
 output: 
   pdf_document:
     extra_dependencies: ["gb4e"]
@@ -415,7 +415,7 @@ output:
 
 The simplest linguistic example using bg4e looks like this: 
 
-````
+````latex
 ```{=latex}
 \begin{exe}
 \ex
@@ -431,7 +431,7 @@ Reference the examples using `\label{label-name}` and `\ref{label-name}`.
 
 The bg4e package allows more formatting of examples, such as ungrammatical marking, listing, glosses, etc. You can refer to their [documentation](http://www.bakoma-tex.com/doc/latex/gb4e/gb4e-doc.pdf) for more details. 
 
-````
+````latex
 ```{=latex}
 \begin{exe}
 \ex
@@ -451,7 +451,7 @@ The easiest way to include some Chinese and Japanese characters in an otherwise 
 
 In your YAML header, specify the PDF engine, and use the xeCJK package: 
 
-```
+```yaml
 output: 
    pdf_document:
        latex_engine: xelatex
@@ -460,7 +460,7 @@ output:
 
 Then you can freely include the characters in your document:
 
-```
+```md
 For example, my document needs these characters:
 
 - 用汉语说你好
@@ -475,14 +475,14 @@ For example, my document needs these characters:
 
 When you are preparing a long document, you might prefer to write each section in a different RMarkdown file. You can easily do that and put the long file together using an index (main structure) RMarkdown file. To include other Rmd files as child files:
 
-````
+````md
 ```{r, child=c('one.Rmd', 'two.Rmd')}
 ```
 ````
 
 For example, my index RMarkdown file may look like this:
 
-````
+````md
 ---
 title: "Sample"
 author: "Yiling Huo"
@@ -513,7 +513,7 @@ output:
 
 A sample child document `exp1_methods.Rmd`:
 
-````
+````md
 ## Methods
 
 ### Participants
@@ -565,7 +565,7 @@ You may find it easier to edit texts using RStudio's MS Word style visual editor
 
 Inside the YAML header, under output, set `keep_tex: ` to `yes` to generate .tex files alongside PDF files. 
 
-```
+```yaml
 ---
 output:
   pdf_document:

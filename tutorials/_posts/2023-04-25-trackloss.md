@@ -35,7 +35,7 @@ Open your IDE for R. Here, I'm using RStudio. Open `remove_trackloss.R`, and sou
 
 Next, load your data and remove track loss trials by running:
 
-```
+```r
 cleaned_data <- remove_trackloss(data=data, subject_col = 'subject', trial_col = 'trial', trackloss_col = 'tracked', threshold = 0.5)
 ```
 

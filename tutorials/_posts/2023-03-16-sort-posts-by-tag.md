@@ -20,7 +20,7 @@ We'll use the `category`/`categories` and the `tags` variables in Jekyll posts' 
 
 First, in your `year-month-date-post.md` in the `_posts` folder, put down both the post's category (which will be used to select whether this post shows up on a specific page at all), and its tags (which the page will use to sort where the post shows up on the page). For example, this post will only show up on a page that shows the category `'Casual posts'`, and it will show under the `'Food'` section: 
 
-```
+```yaml
 ---
 layout: post
 categories: ['Casual posts']
@@ -37,7 +37,7 @@ Example text Example text Example text Example text Example text Example text
 Insert `<!--excerpt-->` to separate the post excerpt from other texts. 
 
 In the `page.md` where you want to show posts, specify the category and the tags of posts to show on this page. If your post satisfies more than one tag specified in `tags`, the post will show up more than once. For example, this page will only show posts with the category `'Casual posts'` and at least one of the following tags: `'Food'`, `'Travel'`, or `'My hobbies'`: 
-```
+```yaml
 ---
 layout: my-layout
 title: Example sort by category page

@@ -118,13 +118,13 @@ We will need to make some small changes to make sure the website runs smoothly w
 
 Inside the Gemfile, comment out this line:
 
-```Ruby 
+```ruby
 #gem "jekyll", "~> 4.2.2"
 ```
 
 And add these two lines:
 
-```Ruby 
+```ruby
 gem "github-pages", "~> 227", group: :jekyll_plugins
 gem "webrick", "~> 1.8"
 ```
@@ -135,7 +135,7 @@ To open the Gemfile, simple right click and select open with any text editor (No
 
 Then, inside _config.yml, comment out these two lines. We won't need these because GitHub Pages will automatically set these urls.
 
-```Ruby
+```ruby
 # baseurl: "" 
 # url: ""
 ```
