@@ -86,7 +86,7 @@ In RStudio, you can include a R code chunk in your document by pressing Ctrl + A
 
 You can name your chunk by typing after `{r`, separated by a space: `{r chunk_name}`. Chunk options are separated by comma: `{r chunk_name, echo = TRUE, message = FALSE, warning = FALSE}`. Chunk options control whether and how the code and the results are shown in your output document. You can find a list of all possible chunk options at the [knitr documentation](https://yihui.org/knitr/options/). 
 
-````r
+````md
 ```{r}
 # First, let's create our data frame
 value <- c(76, 67, 66, 72, 74, 64, 72, 70, 74, 78, 66, 63, 68, 68, 60, 67, 58, 70, 67, 66)
@@ -103,7 +103,7 @@ t.test(value ~ group, data=data_2, var.equal=TRUE)
 
 RMarkdown supports many languages other than R through the knitr package. A list of supported languages can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html). For example, if I want to include a chunk of python code: 
 
-````python
+````md
 ```{python}
 a = True
 
@@ -146,7 +146,7 @@ dev.off()
 
 In your RMarkdown file, you can include your figures in a R code chunk. Specify chunk options, then use knitr to include the plot:
 
-````r
+````md
 ```{r, echo=FALSE, out.width="40%", fig.align="center", fig.cap="\\label{figure-label}Plot of our data"}
 
 knitr::include_graphics("./file_name.pdf")
@@ -185,7 +185,7 @@ plot <- ggplot(data_frame_1, aes(x=a, y=b)) +
 
 In your RMarkdown file: 
 
-````r
+````md
 ```{r, echo=FALSE, out.width="40%", out.height="40%", fig.align="center", fig.cap="\\label{fig:fig1}Plot of our data"}
 
 plot <- readRDS("rile_name.rds")
@@ -315,7 +315,7 @@ Labelling and referencing can be managed by some simple LaTeX syntax.
 
 To label a section in your document, add `{#id}` to the end of your section header. To reference this section, write `\ref{id}`. 
 
-```md
+```
 ## Neuronal Cytoarchitecture {#cyto}
 
 In section \ref{cyto}, we talk about neuronal cytoarchitecture. 
@@ -323,7 +323,7 @@ In section \ref{cyto}, we talk about neuronal cytoarchitecture.
 
 To label and reference a markdown table:
 
-```md
+```
 | Header 1 | Header 2 |
 | --- | --- |
 | Cell content 1 | Cell content 2 |
@@ -452,10 +452,12 @@ The easiest way to include some Chinese and Japanese characters in an otherwise 
 In your YAML header, specify the PDF engine, and use the xeCJK package: 
 
 ```yaml
+---
 output: 
    pdf_document:
        latex_engine: xelatex
        extra_dependencies: ["xeCJK"]
+---
 ```
 
 Then you can freely include the characters in your document:

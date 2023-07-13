@@ -82,6 +82,7 @@ In VS Code, press `Ctrl`+`Shift`+`P` to open the Command Palette. Search for `Pr
 Inside `settings.json`, add
 
 ```json
+{
     "[markdown]": {
         "editor.fontFamily": "Calibri",
         "editor.fontSize": 18
@@ -90,6 +91,7 @@ Inside `settings.json`, add
         "editor.fontFamily": "Calibri",
         "editor.fontSize": 18
     },
+}
 ```
 
 These lines specify that I want VS Code to show `markdown` as well as `rmd` files with Calibri size 18, which is what I feel the most comfortable looking at while I'm writing large chunks of texts. 
