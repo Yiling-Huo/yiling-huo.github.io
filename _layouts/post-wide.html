@@ -16,8 +16,7 @@ layout: base-wide
             <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
-      {%- endif -%}
-      &nbsp• Reading time: {{ page.content | reading_time }}</p>
+      {%- endif -%}</p>
     {%- if page.modified_date -%}
     <p class="post-updated">
       Last updated: 
