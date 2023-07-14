@@ -6,6 +6,7 @@ modified_date: 2023-07-10 23:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
+reading-time: 11
 ---
 
 On this page, I record my workflow of working with Markdown, RMarkdown, and Pandoc, to achieve a good writing and rendering experience, while allowing some room for collaboration.

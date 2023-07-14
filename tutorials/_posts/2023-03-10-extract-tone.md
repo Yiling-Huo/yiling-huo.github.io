@@ -7,6 +7,7 @@ author: Yiling Huo
 comment_issue_id: 3
 category: 'Tutorials' 
 tags: ['Psycholinguistics', 'Praat']
+reading-time: 5
 ---
 
 On this page I present a Praat script that extracts pitch contour information based on `.wav` sounds and `.Textgrid` files. 

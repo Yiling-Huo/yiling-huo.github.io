@@ -16,7 +16,21 @@ layout: base-narrow
             <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
-      {%- endif -%}</p>
+      {%- endif -%}
+      {%- if page.reading-time -%}
+      <!-- get reading time -1 minute for the text -->
+      {%- assign t = page.reading-time | minus: 1 -%} 
+      {% case t %}
+        {% when -1 %}
+        • Reading time: Less than 1 minute
+        {% when 0 %}
+        • Reading time: 1 minute
+        {% else %}
+        • Reading time: {{ page.reading-time }} minutes
+      {% endcase %}
+      {% else %}
+      {%- endif -%}
+    </p>
     {%- if page.modified_date -%}
     <p class="post-updated">
       Last updated: 

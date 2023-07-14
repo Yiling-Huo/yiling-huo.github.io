@@ -6,6 +6,7 @@ author: Yiling Huo
 comment_issue_id: 6
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'R']
+reading-time: 2
 ---
 
 One step of cleaning visual world eye-tracking data is to exclude track loss trials. These are trials where for an extensive amount of time, no eye gaze was detected on any objects in the visual display. There are multiple reasons for track loss. For example, the participant may not have paid attention to the visual display, or the eye-tracker may have been 'drifting'. On this page, I share an R function that removes track loss trials from visual world eye-tracking data. 

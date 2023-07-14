@@ -6,6 +6,7 @@ modified_date: 2023-07-12 12:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
+reading-time: 14
 ---
 
 As an academic rooky I feel that I will eventually need to deal with LaTeX one way or another. However, I wonder whether I have to fully learn LaTeX if I'm already familiar with markdown, a way simpler formatting language. So I started searching the internet for solutions, and I think I found something useful for me. 

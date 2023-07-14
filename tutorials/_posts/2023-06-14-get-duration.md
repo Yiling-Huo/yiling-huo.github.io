@@ -5,6 +5,7 @@ date: 2023-06-14 14:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Praat']
+reading-time: 1
 ---
 
 On this page I share a Praat script that gets audio file durations from a directory containing audio files. The script outputs a .csv file.

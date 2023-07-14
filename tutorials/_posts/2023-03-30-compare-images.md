@@ -7,6 +7,7 @@ author: Yiling Huo
 comment_issue_id: 5
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Python']
+reading-time: 5
 ---
 
 Sometimes psychology researchers need to recycle stimuli from old experiments, usually because they have already got some standardized measures for the old stimuli. 
