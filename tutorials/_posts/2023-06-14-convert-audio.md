@@ -6,6 +6,7 @@ author: Yiling Huo
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Python']
 reading-time: 2
+comment_issue_id: 8
 ---
 
 I work closely with auditory stimuli. Sometimes I need to convert a large number of audio files from one format to another, usually because different experiment software works better with different audio formats. Here I share my Python script that converts all audio files in a folder from one format to another.
