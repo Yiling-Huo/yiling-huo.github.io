@@ -1,7 +1,6 @@
 ---
-layout: multi-categories-narrow
+layout: category-tags-narrow
 title: Tutorials
-permalink: /tutorials/
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Markdown', 'Markup']
 ---
