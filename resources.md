@@ -34,6 +34,10 @@ Scripts and resources that I have created or modified.
 
   <a href="/files/resources/python/convert_audio.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/06/14/convert-audio.html). A Python script that converts audio file formats using pydub and ffmpeg. 
 
+- Noise reduction:
+
+  <a href="/files/resources/python/noise_reduction.py" download>Download</a>. [Tutorial](https://yiling-huo.github.io/tutorials/2023/07/23/noise-reduction.html). A Python script that reduces breathing and room noise from recordings. 
+
 ## R scripts:
 
 - Remove outliers:
