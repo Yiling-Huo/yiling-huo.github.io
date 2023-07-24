@@ -11,18 +11,23 @@
     {% if site.tags[item].size > 1 %}
     <!-- if there is at least another post in the same tag -->
         <p style="line-height: 70%;">{{ item }}</p>
+        {% assign count = 0 %}
         <ul style="list-style-type: none">
             {% for post in site.tags[item] %}
                 {% if post.id != page.id %}
-                    <li>
-                        <a href="{{ post.url | relative_url }}">
-                            {{ post.title | escape }}
-                        </a>
-                    </li>
+                    {% if count > 4 %} <!-- if more than three posts in a tag -->
+                        <li><a href="{{ site.url }}/tags/#{{ item | slugify }}">More Posts >></a></li>
+                        {% break %}
+                    {% else %}
+                    {% assign count = count | plus: 1 %}
+                        <li>
+                            <a href="{{ post.url | relative_url }}">
+                                {{ post.title | escape }}
+                            </a>
+                        </li>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
         </ul>
     {% endif %}
 {% endfor %}
-
-<div id="related"></div>

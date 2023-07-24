@@ -43,7 +43,7 @@ layout: base-wide
       {% assign count = 0 %}
         {% for post in site.tags[item] %}
           {% if count > 2 %} <!-- if more than three posts in a tag -->
-            <li><h4><a href="{{ page.url | relative_url }}{{ item | slugify }}">More Posts</a></h4></li>
+            <li><h4><a href="{{ page.url | relative_url }}{{ item | slugify }}">More Posts >></a></h4></li>
             {% break %}
           {% else %}
             {% assign count = count | plus: 1 %}
