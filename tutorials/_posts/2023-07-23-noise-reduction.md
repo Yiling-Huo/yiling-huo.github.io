@@ -14,7 +14,7 @@ On this page I share my Python script that removes breathing and room noise from
 
 <!--excerpt-->
 
-I recently started a timed/speeded cloze experiment where participants complete sentences orally within a time limit. Reaction time is important in this paradigm: it reflects how much processing the participant needs before a lexical item wins the "inner competition" and gets produced. However during data processing I discovered a problem: although my recording equipment was good and the environment was quiet, some participants produced loud breathing sounds (they sounded very bored &#128517) that my onset detection script will mistake as speech onset. Here is what I did to remove these sounds as much as possible in order to get more accurate speech onset data. 
+I recently started a timed/speeded cloze experiment where participants complete sentences orally within a time limit. Reaction time is important in this paradigm: it reflects how much processing the participant needs before a lexical item wins the "inner competition" and gets produced. However during data processing I discovered a problem: although my recording equipment was good and the environment was quiet, some participants produced loud breathing sounds (they sounded very bored &#128517;) that my onset detection script will mistake as speech onset. Here is what I did to remove these sounds as much as possible in order to get more accurate speech onset data. 
 
 What this script does:
 - Based on by-participant noise samples, reduce noise from multiple recordings.

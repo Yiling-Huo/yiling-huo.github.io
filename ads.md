@@ -1,6 +1,6 @@
 ---
-layout: category-narrow
+layout: category-tags-narrow
 title: Ads
-permalink: /ads/
-categories: Ads
+category: 'Ads'
+tags: ['Participant recruit']
 ---
