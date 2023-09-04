@@ -4,7 +4,7 @@ title: CV
 permalink: /cv/
 ---
 
-<a href="/files/cv_huo_yiling.pdf" download>download CV</a>
+<a href="/files/docs/cv_huo_yiling.pdf" download>download CV</a>
 
 ## Education
 
