@@ -8,8 +8,8 @@ permalink: /teaching/
 
 #### University College London
 
-- **2023** UCL Linguistics Autumn School, Psycholinguistics: The Eye-tracking Method and its Application in Language Research [Slides](https://yiling-huo.github.io/eye-tracking-workshop-slides/)
-- **2021-2022** PLINSTAT (workshop) Introduction to Statistics for Linguists using R 
+- **2023-2024** Psycholinguistics: The Eye-tracking Method and its Application in Language Research, UCL Linguistics Autumn School 2023 [Slides](https://yiling-huo.github.io/eye-tracking-workshop-slides/)
+- **2021-2022** PLINSTAT Introduction to Statistics for Linguists using R 
 
 #### Beijing Foreign Studies University
 
