@@ -8,6 +8,7 @@ permalink: /teaching/
 
 #### University College London
 
+- **2023** UCL Linguistics Autumn School, Psycholinguistics: The Eye-tracking Method and its Application in Language Research [Slides](https://yiling-huo.github.io/eye-tracking-workshop-slides/)
 - **2021-2022** PLINSTAT (workshop) Introduction to Statistics for Linguists using R 
 
 #### Beijing Foreign Studies University
@@ -19,3 +20,6 @@ permalink: /teaching/
 #### University College London
 
 - **2022-2023** [PLIN0038 Neurolinguistics](https://www.ucl.ac.uk/module-catalogue/modules/neurolinguistics-PLIN0038)
+- **2023-2024** [PALS0001 Introduction to the Brain and Imaging the Brain](https://www.ucl.ac.uk/module-catalogue/modules/introduction-to-the-brain-and-imaging-the-brain-PALS0001)
+- **2023-2024** [PLIN0033 Psycholinguistics: General Processing](https://www.ucl.ac.uk/module-catalogue/modules/psycholinguistics-general-processing-PLIN0033)
+- **2023-2024** [PLIN0038 Neurolinguistics](https://www.ucl.ac.uk/module-catalogue/modules/neurolinguistics-PLIN0038)
