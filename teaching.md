@@ -8,7 +8,7 @@ permalink: /teaching/
 
 #### University College London
 
-- **2023-2024** Psycholinguistics: Intro to the Eye-tracking Method and its Application in Language Research, UCL Linguistics Autumn School 2023 
+- **2023-2024** Introduction to the Eye-tracking Method and its Application in Language Research, UCL Linguistics Autumn School 2023 
 <!-- [Slides](https://yiling-huo.github.io/eye-tracking-workshop-slides/) -->
 - **2021-2022** PLINSTAT Introduction to Statistics for Linguists using R 
 
