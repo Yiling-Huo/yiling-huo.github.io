@@ -2,7 +2,7 @@
 layout: post-narrow
 title: How I got ready to write LaTeX files inside RMarkdown
 date: 2023-02-16 21:00
-modified_date: 2023-07-12 12:00
+modified_date: 2023-10-09 12:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
@@ -309,6 +309,14 @@ The N400 ERP component's amplitude is associated with a word's predictability (c
 ```
 
 ![citation](/images/tutorials/rmdtex/citation.png)
+
+If you are citing multiple papers from the same author(s), you can write down the authors' name manually and use a minus (-) sign before the @ sign to suppress the authors' name in the citation:
+
+```md
+Lew-Williams & Fernald [-@lew2007young;  -@lew2010real] used the visual world paradigm.
+```
+
+![citation](/images/tutorials/rmdtex/citation2.png)
 
 #### *Labelling and cross referencing sections, tables, and figures:*
 

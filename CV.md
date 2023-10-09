@@ -8,7 +8,7 @@ permalink: /cv/
 
 ## Education
 
-- **Current** University College London – MPhil/PhD Linguistics
+- **Current** University College London – PhD Linguistics
 - **2019** University College London – MSc Language Sciences
 - **2018** Beijing Foreign Studies University – BA French
 
