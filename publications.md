@@ -8,15 +8,15 @@ permalink: /publications/
 
 (I'm working hard to have something here!)
 
-## Talks & Posters
+## Presentations
 
-### Seminars / Talks
+### Talks
 
-- *Limited involvement of Mandarin Chinese tone sandhi in prediction during language comprehension*. Talk at the Symposium: Tone and prediction in language. 17 Nov. 2023, Lund University, Lund, Sweden. <a href="/files/docs/lund-talk-hyl-1117-to-upload.pdf" target="_blank">Slides</a>
+- Huo, Y. (2023) *Limited involvement of Mandarin Chinese tone sandhi in prediction during language comprehension*. Talk at the Symposium: Tone and prediction in language. 17 Nov. 2023, Lund University, Lund, Sweden. <a href="/files/docs/lund-talk-hyl-1117-to-upload.pdf" target="_blank">Slides</a>
 
-- *The (perhaps) limited role of phonology in prediction during language comprehension*. Talk at the 1st Chandler House symposium. 18 Apr. 2023, Division of Psychology and Language Sciences, University College London, London, UK. <a href="https://yiling-huo.github.io/chsymposium23-slides/" target="_blank">Slides</a>
+- Huo, Y. (2023) *The (perhaps) limited role of phonology in prediction during language comprehension*. Talk at the 1st Chandler House symposium. 18 Apr. 2023, Division of Psychology and Language Sciences, University College London, London, UK. <a href="https://yiling-huo.github.io/chsymposium23-slides/" target="_blank">Slides</a>
 
-### Conference presentations
+### Posters
 
 - **Huo, Y.**, Wang, S., & Chow, W.Y. (2023) *Task modulates predictive behaviour in constraining context: Eye-tracking evidence from a prediction error study*. Poster presented at LingCologne2023: Prediction in Language, University of Cologne, Cologne, Germany. <a href="https://lingcologne.uni-koeln.de/e-book-of-abstracts/huo-et-al-task-modulates-predictive-behaviour-in-constraining-context-eye-tracking-evidence-from-a-prediction-error-study" target="_blank">Abstract</a> <a href="/files/docs/poster_portrait_20230607.pdf" target="_blank">Poster</a>
 - **Huo, Y.**, Wang, S., & Chow, W.Y. (2023) *Do listeners detect prediction errors in lexical tone? An investigation with tone sandhi in Mandarin Chinese shows unexpected prediction inhibition*. Poster presented at the 36th Annual Conference on Human Sentence Processing, University of Pittsburgh, PA, USA. <a href="https://d3ijlhudpq9yjw.cloudfront.net/d35861e0-2177-4ff1-9a8d-9b9c1c7aee93.pdf" target="_blank">Abstract</a> <a href="https://virtual.oxfordabstracts.com/#/event/3615/submission/71" target="_blank">Poster</a>
