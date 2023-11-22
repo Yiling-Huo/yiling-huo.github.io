@@ -131,12 +131,12 @@ $au-table-border-color:    adjust-color(lighten($au-link-base-color, 40%), $alph
 $wi-title:                 "  -winter edition- ";
 $wi-brand-color:           #828282 !default;
 $wi-code-background-color: #d6e9ff !default;
-$wi-link-base-color:       #0078ff !default;
+$wi-link-base-color:       #0095ff !default;
 $wi-background-image: url("/images/background/background-wi.webp");
 $wi-profile-image: url("/images/profile/profile-wi.webp");
 
 $wi-brand-color-light: lighten($wi-brand-color, 40%) !default;
-$wi-brand-color-dark: darken($wi-brand-color, 25%) !default;
+$wi-brand-color-dark: darken($wi-link-base-color, 25%) !default;
 
 $wi-site-title-color: $wi-brand-color-dark !default;
 
