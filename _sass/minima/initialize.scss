@@ -16,7 +16,7 @@ $table-text-align: left !default;
 // Width of the content area
 $content-width:    800px !default;
 
-$on-palm:          600px !default;
+$on-palm:          685px !default; //changed from minima default 600px to 685px because menu is longer now because of the publications & presentations tag
 $on-laptop:        800px !default;
 
 $on-medium:        $on-palm !default;
