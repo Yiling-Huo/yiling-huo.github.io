@@ -2,7 +2,7 @@
 layout: post-narrow
 title: How I got ready to write LaTeX files inside RMarkdown
 date: 2023-02-16 21:00
-modified_date: 2023-10-09 12:00
+modified_date: 2023-12-01 18:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Markdown', 'TeX']
@@ -87,7 +87,7 @@ In RStudio, you can include a R code chunk in your document by pressing Ctrl + A
 
 You can name your chunk by typing after `{r`, separated by a space: `{r chunk_name}`. Chunk options are separated by comma: `{r chunk_name, echo = TRUE, message = FALSE, warning = FALSE}`. Chunk options control whether and how the code and the results are shown in your output document. You can find a list of all possible chunk options at the [knitr documentation](https://yihui.org/knitr/options/). 
 
-````md
+````text
 ```{r}
 # First, let's create our data frame
 value <- c(76, 67, 66, 72, 74, 64, 72, 70, 74, 78, 66, 63, 68, 68, 60, 67, 58, 70, 67, 66)
@@ -104,7 +104,7 @@ t.test(value ~ group, data=data_2, var.equal=TRUE)
 
 RMarkdown supports many languages other than R through the knitr package. A list of supported languages can be found [here](https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html). For example, if I want to include a chunk of python code: 
 
-````md
+````python
 ```{python}
 a = True
 
@@ -566,12 +566,6 @@ For example, I have created an example using the Taylor & Francis Journal Articl
 
 ## **5. Tips** <a name="step5"></a>
 
-### Use RStudio's visual editor 
-
-You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStudio, turn on visual editor at the toolbar:
-
-![visual_editor](/images/tutorials/rmdtex/visual_editor.png)
-
 ### Keep_tex: yes
 
 Inside the YAML header, under output, set `keep_tex: ` to `yes` to generate .tex files alongside PDF files. 
@@ -583,3 +577,9 @@ output:
     keep_tex: yes
 ---
 ```
+
+### Use RStudio's visual editor 
+
+You may find it easier to edit texts using RStudio's MS Word style visual editor. In RStudio, turn on visual editor at the toolbar:
+
+![visual_editor](/images/tutorials/rmdtex/visual_editor.png)
