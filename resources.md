@@ -50,14 +50,20 @@ Scripts and resources that I have created or modified.
 
 ## Games(?):
 
-- Cyber fortune cookie:
+- Chengyu Maze 成语迷宫:
 
-  <a href="/files/resources/games/cyber-fortune-cookie_exe.win-amd64-3.10.zip" download>Download</a> (22.4 MB, *The build only works on Windows, _please download the code if using Mac.*) [Code](https://github.com/Yiling-Huo/cyber-fortune-cookie). A mini-game made with python and pygame, in which you can open fortune cookies and get your fortune. 
+  <a href="/files/resources/games/chengyu-maze.zip" download>Download</a> (25 MB, *The build only works on Windows, please download the source code if using Mac.*) [Code](https://github.com/Yiling-Huo/chengyu-maze). A game that looks like the maze task used by psycholinguists, but with Chinese chengyu (four-character idioms). Made with pygame. 
 
-  <p><img src="/images/resources/fortune-cookie-game.png"  width="40%"></p>
+  <p><img src="/images/resources/chengyu1.png"  width="40%"><img src="/images/resources/chengyu2.png"  width="40%"></p>
 
 - TicTacToe Lite:
 
-  <a href="/files/resources/games/TicTacToe-Lite.zip" download>Download</a> (22.2 MB, *The build only works on Windows, please download the code if using Mac.*) [Code](https://github.com/Yiling-Huo/tic-tac-toe). A mini-game tic-tac-toe game made with pygame. Based on a class practice in [PLIN0034](https://www.ucl.ac.uk/module-catalogue/modules/introduction-to-computational-linguistics-PLIN0034).
+  <a href="/files/resources/games/TicTacToe-Lite.zip" download>Download</a> (22.8 MB, *The build only works on Windows, please download the source code if using Mac.*) [Code](https://github.com/Yiling-Huo/tic-tac-toe). A mini-game tic-tac-toe game made with pygame. Based on a class practice in [PLIN0034](https://www.ucl.ac.uk/module-catalogue/modules/introduction-to-computational-linguistics-PLIN0034).
 
   <p><img src="/images/resources/tic-tac-toe.png"  width="40%"></p>
+
+- Cyber fortune cookie:
+
+  <a href="/files/resources/games/cyber-fortune-cookie_exe.win-amd64-3.10.zip" download>Download</a> (23 MB, *The build only works on Windows, _please download the source code if using Mac.*) [Code](https://github.com/Yiling-Huo/cyber-fortune-cookie). A mini-game made with python and pygame, in which you can open fortune cookies and get your fortune. 
+
+  <p><img src="/images/resources/fortune-cookie-game.png"  width="40%"></p>
