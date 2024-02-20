@@ -34,7 +34,7 @@ Get one noise sample for each participant in another folder. The file names shou
 
 ## Step 2: Run the script
 
-Open `noise_reduction.py` and notice these variables:
+Open `noise_reduction.py`  in an IDE and notice these variables:
 
 - audioFormat: string. The format of your recordings (both speech and noise)
 
