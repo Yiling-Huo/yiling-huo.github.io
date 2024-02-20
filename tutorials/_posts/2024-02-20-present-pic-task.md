@@ -83,28 +83,12 @@ input_file = 'pic-names.csv'
 pic_dir = 'assets/'
 results_dir = 'results/'
 
-instructions = ['您将看到图片，以及图片所指代的名词', '请熟悉每张图片所指代的词', '按空格键进入下一张图片']
+instructions = ['您将看到图片，以及图片所指代的名词', '请熟悉每张图片所指代的词', '按空格键进入下一张图片', '按回车键开始任务']
 
 instruction_font = 'simsun'
 instruction_font_size = 50
 trial_font = 'simsun'
 trial_font_size = 75
-
-##########
-# Materials
-##########
-
-# get a dict of pics and names with pics as keys and names as values
-with open(input_file, 'r', encoding='utf-8') as input:
-    cr = csv.reader(input)
-    content = [line for line in cr]
-    pics = {}
-    first = True
-    for row in content:
-        if first:
-            first = False
-        else:
-            pics[row[1]] = row[0]
 
 ##########
 # Functions
@@ -131,8 +115,7 @@ def next_trial():
             data.append([now_date, now_time, subj, trial_number, data_pic, data_label, rt])
         # get a new random trial
         rand_key = random.choice(list(pics.keys()))
-        # use fixed pic size (400x400 for same size as eye tracking exp) or use screen proportion
-        #pic = pygame.transform.scale(pygame.image.load('assets/'+rand_key),(400,400))
+        # use screen proportion
         pic = pygame.transform.scale(pygame.image.load(pic_dir+rand_key),((screen_width*0.27),(screen_width*0.27)))
         text = text_font_trial.render(pics[rand_key], True, black)
         screen.blit(pic, ((screen_width*0.365),(screen_height*0.15)))
@@ -160,18 +143,29 @@ def next_trial():
 ##########
 def main():
     global screen, screen_width, screen_height, text_font_ins, text_font_trial
-    global pic, text, data, last_time, trial_number, subj
+    global pics, pic, text, data, last_time, trial_number, subj
     # Set working directory to the location of this .py file
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))\
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     # create results folder if nonexistent
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
+
+    # get a dict of pics and names with pics as keys and names as values
+    with open(input_file, 'r', encoding='utf-8') as input:
+        cr = csv.reader(input)
+        content = [line for line in cr]
+        pics = {}
+        first = True
+        for row in content:
+            if first:
+                first = False
+            else:
+                pics[row[1]] = row[0]
 
     # pygame initialisation
     pygame.init()
     # full screen
     screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-    #screen = pygame.display.set_mode((700, 500))
     # get screen size
     screen_width, screen_height = screen.get_size()
     clock = pygame.time.Clock()
@@ -225,6 +219,7 @@ def main():
                     else:
                         subj += event.unicode
                         wipe()
+                # handle start and next trial
                 elif not started:
                     if event.key == pygame.K_RETURN:
                         started = True

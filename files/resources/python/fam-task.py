@@ -149,6 +149,7 @@ def main():
                     else:
                         subj += event.unicode
                         wipe()
+                # handle start and next trial
                 elif not started:
                     if event.key == pygame.K_RETURN:
                         started = True
