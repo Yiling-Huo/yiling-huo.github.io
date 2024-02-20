@@ -50,6 +50,8 @@ Scripts and resources that I have created or modified.
 
 ## Games:
 
+*Troubleshoot:* If you're on Windows and you see an error saying *api-ms-win-core-path-l1-1-1.ddl is missing* when trying to open one of the games, this may be because your PC doesn't have the Visual C++ Redistributable for Visual Studio 2015 or 2017, which is required by Python. Try downloading it [for x86 (32bit) Windows](https://aka.ms/vs/16/release/vc_redist.x86.exe) or [for x64 (64 bit) Windows](https://aka.ms/vs/16/release/vc_redist.x64.exe). 
+
 - Chengyu Maze 成语迷宫: <a id="chengyu"></a>
 
   <a href="/files/resources/games/chengyu-maze.zip" download>Download</a> (25 MB, *The build only works on Windows, please download the source code if using Mac.*) [Code](https://github.com/Yiling-Huo/chengyu-maze). A game that looks like the maze task used by psycholinguists, but with Chinese chengyu (four-character idioms). Made with pygame. 
