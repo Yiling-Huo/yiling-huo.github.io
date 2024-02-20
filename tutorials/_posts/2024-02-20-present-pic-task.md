@@ -7,7 +7,7 @@ author: Yiling Huo
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Python', 'Visual world eye-tracking']
 comment_issue_id: 11
-reading-time: 4
+reading-time: 6
 ---
 
 In a visual world eye-tracking experiment, sometimes the researcher needs to familiarise participants with the pictures they will see before the eye-tracking procedure to allow the participants to associate each picture with a specific label. On this page I share a Python program for this familiarisation task, based on pygame. 
