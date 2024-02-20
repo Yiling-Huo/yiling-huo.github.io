@@ -59,7 +59,7 @@ In each trial, a random picture along with its label is presented on the screen,
 
 <img src="/images/tutorials/fam-task/trial.png"  width="70%">
 
-Once all trials in the list have finished, the program will create a data file named according to your subject number in the designated folder. The data file will record the date and time of trial, the subject number, the trial number, the picture file, the label, and how much time is spent on presenting that picture (rt).
+Once all trials in the list have finished, the program will quit after creating a data file named subject.csv in the designated folder. The data file will record the date and time of trial, the subject number, the trial number, the picture file, the label, and how much time is spent on presenting that picture (rt, in milliseconds).
 
 <img src="/images/tutorials/fam-task/data.png"  width="70%">
 
