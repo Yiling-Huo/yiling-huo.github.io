@@ -62,6 +62,12 @@ Scripts and resources that I have created or modified.
 
   <p><img src="/images/resources/chengyu1.png"  width="40%"><img src="/images/resources/chengyu2.png"  width="40%"></p>
 
+- CFG Maze Game: <a id="cfg"></a>
+
+  <a href="https://github.com/Yiling-Huo/cfg-maze/blob/main/build.zip" download>Download</a> (22.7 MB, *The build only works on Windows, please download the source code if using Mac.*) [Code](https://github.com/Yiling-Huo/cfg-maze). A game that looks like the maze task used by psycholinguists, but the sentences are generated using a (very simple) context-free grammar (CFG) sentence generator. (Hey, an interdisciplinary work between psycholinguistics and computational linguistics /j.) Made with pygame. 
+
+  <p><img src="/images/resources/cfg1.png"  width="40%"><img src="/images/resources/cfg2.png"  width="40%"></p>
+
 - TicTacToe Lite: <a id="tictactoe"></a>
 
   <a href="/files/resources/games/TicTacToe-Lite.zip" download>Download</a> (22.8 MB, *The build only works on Windows, please download the source code if using Mac.*) [Code](https://github.com/Yiling-Huo/tic-tac-toe). A mini-game tic-tac-toe game made with pygame. Based on a class practice in [PLIN0034](https://www.ucl.ac.uk/module-catalogue/modules/introduction-to-computational-linguistics-PLIN0034).
