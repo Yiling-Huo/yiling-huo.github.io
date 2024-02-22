@@ -138,7 +138,9 @@ $wi-profile-image: url("/images/profile/profile-wi.webp");
 $wi-brand-color-light: lighten($wi-brand-color, 40%) !default;
 $wi-brand-color-dark: darken($wi-link-base-color, 25%) !default;
 
-$wi-site-title-color: $wi-brand-color-dark !default;
+// $wi-site-title-color: $wi-brand-color-dark !default;
+
+$wi-site-title-color: $wi-code-background-color !default;
 
 $wi-text-color: #111111 !default;
 $wi-background-color: #fdfdfd !default;
