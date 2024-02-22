@@ -3,12 +3,13 @@ layout: page-narrow
 title: Resources
 permalink: /resources/
 sections: ['Games','Scripts']
+scripts: ['Praat','Python','R']
 ---
 
 <div>
   <p style="font-size: 120%;">
     {% for sec in page.sections %}
-    <a href="#{{ sec | slugify }}" class="post-tag">{{ sec }}</a>
+    <a href="#{{ sec | slugify }}">{{ sec }}</a>
     &#160 &#160
     {% endfor %}
   </p>
@@ -44,6 +45,15 @@ sections: ['Games','Scripts']
 </ul>
 
 <h2 id="scripts">Scripts</h2>
+
+<div>
+  <p style="font-size: 110%;">
+    {% for t in page.scripts %}
+    <a href="#{{ t | slugify }}">{{ t }}</a>
+    &#160 &#160
+    {% endfor %}
+  </p>
+</div>
 
 <h3 id="praat">Praat scripts:</h3>
 
