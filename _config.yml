@@ -21,11 +21,12 @@ markdown: kramdown
 
 header_pages:
  - index.html
- - CV.md
+# - CV.md
  - publications.md
  - teaching.md
  - tutorials/index.md
  - resources.md
+ - links.html
 
 excerpt_separator: "<!--excerpt-->"
 
