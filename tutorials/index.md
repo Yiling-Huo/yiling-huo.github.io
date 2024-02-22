@@ -1,5 +1,5 @@
 ---
-layout: category-tags-narrow
+layout: category-tags
 title: Tutorials
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Markdown', 'Markup']

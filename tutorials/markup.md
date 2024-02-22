@@ -1,5 +1,5 @@
 ---
-layout: tag-narrow
+layout: tag
 title: Tutorials
 category: 'Tutorials'
 tags: ['Markup']

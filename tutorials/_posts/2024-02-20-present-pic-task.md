@@ -1,5 +1,5 @@
 ---
-layout: post-narrow
+layout: post
 title: Python program to present an array of pictures and their labels
 date: 2024-02-20 21:00
 modified_date:

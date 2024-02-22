@@ -1,5 +1,5 @@
 ---
-layout: post-narrow
+layout: post
 title: Convert audio file formats using Python
 date: 2023-06-14 10:00
 author: Yiling Huo
