@@ -1,5 +1,5 @@
 ---
-layout: post-narrow
+layout: post
 title: Extract normalised pitch contour
 date: 2023-03-10 13:00
 modified_date: 2023-06-14 15:00

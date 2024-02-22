@@ -1,5 +1,6 @@
 html {
   font-size: $base-font-size;
+  scroll-behavior: smooth;
 }
 
 /**
@@ -35,7 +36,8 @@ body {
 
   /* Set background */
   /* because of Firefox 112.02 win 10 incompatibility, the white cover over background is now handled by site-header, site-footer, and page-content respectively. On narrow layouts, the bg layer is moved to under page-content to accommodate this. */
-  background-color: #fdfdfd;
+  background-color: $background-color;
+  // background-color: #fdfdfd;
   // background-image: $background-image;
   // background-color: rgba(255,255,255,0.8);
   // background-blend-mode: color;
@@ -51,27 +53,27 @@ body {
 }
 
 // This is only used to manage the raw background (without white filter) on narrow pages
-.bg {
-  /* The image used */
-  background-color: #fdfdfd;
-  // background-image: $background-image;
+// .bg {
+//   /* The image used */
+//   background-color: #fdfdfd;
+//   // background-image: $background-image;
 
-  /* Full height */
-  height: 100%; 
+//   /* Full height */
+//   height: 100%; 
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+//   /* Center and scale the image nicely */
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-size: cover;
 
-  /* Because bg is the most parent layer of the pages now, so flexing needs to be done on this layer for it to work */
-  /* This website has layers: body > bg > main (page-content) > wrapper */
-  /* Also display:flex allows children elements to flex */
-  display: flex;
-  flex: 1 0 auto;
-  flex-grow: 1;
-}
+//   /* Because bg is the most parent layer of the pages now, so flexing needs to be done on this layer for it to work */
+//   /* This website has layers: body > bg > main (page-content) > wrapper */
+//   /* Also display:flex allows children elements to flex */
+//   display: flex;
+//   flex: 1 0 auto;
+//   flex-grow: 1;
+// }
 
 
 /**
@@ -260,7 +262,7 @@ pre {
 }
 
 // For wide pages, background color is handled by body
-.wrapper-wide {
+.wrapper {
   flex: 1;
   max-width: calc(100vw - (#{$spacing-unit}));
   margin-right: auto;
@@ -293,39 +295,39 @@ pre {
 }
 
 // For narrow pages, background color is handled here
-.wrapper-narrow {
-  flex: 1;
-  max-width: calc(100vw - (#{$spacing-unit}));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit * .5;
-  padding-left: $spacing-unit * .5;
-  padding-top: $spacing-unit;
-  padding-bottom: $spacing-unit;
+// .wrapper-narrow {
+//   flex: 1;
+//   max-width: calc(100vw - (#{$spacing-unit}));
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding-right: $spacing-unit * .5;
+//   padding-left: $spacing-unit * .5;
+//   padding-top: $spacing-unit;
+//   padding-bottom: $spacing-unit;
 
-  background-color: rgba(255,255,255,0.87);
+//   background-color: rgba(255,255,255,0.87);
 
-  @extend %clearfix;
+//   @extend %clearfix;
 
-  @media screen and (min-width: $on-large) {
-    flex: 1;
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    padding-top: $spacing-unit;
-    padding-bottom: $spacing-unit;
-  }
+//   @media screen and (min-width: $on-large) {
+//     flex: 1;
+//     max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+//     padding-right: $spacing-unit;
+//     padding-left: $spacing-unit;
+//     padding-top: $spacing-unit;
+//     padding-bottom: $spacing-unit;
+//   }
 
-  @media screen and (min-width: $on-exlarge) {
-    flex: 1;
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-    padding-right: $spacing-unit * 5;
-    padding-left: $spacing-unit * 5;
-    padding-top: $spacing-unit;
-    padding-bottom: $spacing-unit;
-  }
+//   @media screen and (min-width: $on-exlarge) {
+//     flex: 1;
+//     max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+//     padding-right: $spacing-unit * 5;
+//     padding-left: $spacing-unit * 5;
+//     padding-top: $spacing-unit;
+//     padding-bottom: $spacing-unit;
+//   }
   
-}
+// }
 
 
 

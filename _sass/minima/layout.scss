@@ -4,9 +4,11 @@
 .site-header {
   // white cover is handled here instead of body because of Firefox incompatibility
   // background-color: rgba(255,255,255,0.8);
-  background-color: $border-color-03;
+  // background-color: $border-color-03;
+  background-image: $background-image;
+  background-size: 100%;
   // border-top: 5px solid $border-color-03;
-  border-bottom: 7px solid #111111;
+  // border-bottom: 7px solid #111111;
   // border-bottom: 0px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -16,9 +18,11 @@
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
+  @include relative-font-size(2);
+  font-weight: 800;
   letter-spacing: -1px;
+  // font-weight: 300;
+  // letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
 
@@ -36,7 +40,7 @@
   position: absolute;
   top: 9px;
   right: $spacing-unit * .5;
-  background-color: $background-color;
+  background-color: $border-color-03;
   border: 1px solid $border-color-01;
   border-radius: 5px;
   text-align: right;
@@ -54,7 +58,7 @@
     text-align: center;
 
     > svg path {
-      fill: $border-color-03;
+      fill: $border-color-01;
     }
   }
 
@@ -78,6 +82,7 @@
   }
 
   .page-link {
+    font-weight: 500;
     color: #fdfdfd;
     // color: $text-color;
     line-height: $base-line-height;
@@ -114,7 +119,8 @@
       padding: 0;
 
       &:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 15px;
+        // margin-right: 20px;
       }
       margin-left: auto;
     }
@@ -128,7 +134,7 @@
  */
 .site-footer {
   // white cover is handled here instead of body because of Firefox incompatibility
-  background-color: rgba(255,255,255,0.8);
+  // background-color: rgba(255,255,255,0.8);
   border-top: 0px solid $border-color-01;
   padding: $spacing-unit 0;
   flex-grow: 0;
@@ -210,10 +216,11 @@
  * Page content
  */
 
-.page-content {
-  // white cover is handled here instead of body because of Firefox incompatibility
-  // background-color: rgba(255,255,255,0.8);
-}
+// .page-content {
+//   // white cover is handled here instead of body because of Firefox incompatibility
+//   // background-color: rgba(255,255,255,0.8);
+//   // background-color: $background-color;
+// }
 
 .page-heading {
   @include relative-font-size(2);

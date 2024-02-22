@@ -1,5 +1,5 @@
 ---
-layout: post-narrow
+layout: post
 title: How I got ready to write LaTeX files inside RMarkdown
 date: 2023-02-16 21:00
 modified_date: 2023-12-01 18:00

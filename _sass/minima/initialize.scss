@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: "Montserrat", "Lato", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
+$base-font-family: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
 $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
@@ -14,14 +14,14 @@ $spacing-unit:     30px !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    900px !default;
 
 $on-palm:          650px !default; //changed from minima default 600px to 685px because menu is longer now because of the publications & presentations tag
-$on-laptop:        800px !default;
+$on-laptop:        900px !default;
 
 $on-medium:        $on-palm !default;
 $on-large:         $on-laptop !default;
-$on-exlarge:       1100px !default;
+$on-exlarge:       1200px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {

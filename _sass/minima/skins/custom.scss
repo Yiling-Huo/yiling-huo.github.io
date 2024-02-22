@@ -18,11 +18,13 @@ $de-code-background-color: #eeeeff !default;
 $de-link-base-color:       #2a7ae2 !default;
 $de-background-image: url("/images/background/background-de.webp");
 $de-profile-image: url("/images/profile/profile-de.webp");
+$de-header-ext-img: url("/images/background/header-ext-de.webp");
 
 $de-brand-color-light: lighten($de-brand-color, 40%) !default;
 $de-brand-color-dark: darken($de-brand-color, 25%) !default;
 
-$de-site-title-color: $de-brand-color-dark !default;
+$de-site-title-color: #fdfdfd !default;
+// $de-site-title-color: $de-brand-color-dark !default;
 
 $de-text-color: #111111 !default;
 $de-background-color: #fdfdfd !default;
@@ -47,19 +49,23 @@ $sp-code-background-color: #f6ffc1 !default;
 $sp-link-base-color:       #9bb600 !default;
 $sp-background-image: url("/images/background/background-sp.webp");
 $sp-profile-image: url("/images/profile/profile-sp.webp");
+$sp-header-ext-img: url("/images/background/header-ext-sp.webp");
 
 $sp-brand-color-light: lighten($sp-brand-color, 50%) !default;
 $sp-brand-color-dark: darken($sp-brand-color, 25%) !default;
 
-$sp-site-title-color: #455500 !default; //darken(#828282, 25%) !default;
+$sp-site-title-color: $sp-code-background-color;
+// $sp-site-title-color: #455500 !default; //darken(#828282, 25%) !default;
 
 $sp-text-color: #111111 !default;
-$sp-background-color: lighten($sp-brand-color, 56%) !default; //#fdfdfd !default; //this variable is only used for navigation background color when narrow window
+$sp-background-color: #f7f7f0 !default;
+// $sp-background-color: lighten($sp-brand-color, 56%) !default; //#fdfdfd !default; //this variable is only used for navigation background color when narrow window
 
 $sp-link-visited-color: darken($sp-link-base-color, 10%) !default;
 $sp-link-hover-color: $sp-text-color !default;
 
-$sp-border-color-01: lighten($sp-code-background-color, 5%) !default; //$sp-brand-color-light !default;
+$sp-border-color-01:$sp-link-base-color;
+// $sp-border-color-01: lighten($sp-code-background-color, 5%) !default; //$sp-brand-color-light !default;
 $sp-border-color-02: lighten($sp-brand-color, 35%) !default;
 $sp-border-color-03: #455500 !default; //#505050 added the green
 
@@ -71,19 +77,21 @@ $sp-table-border-color:    adjust-color($sp-brand-color-light, $alpha: -0.4) !de
 
 // summer theme
 $su-title:                 "  -summer edition- ";
-$su-brand-color:           #1ebeae !default; //#00bfff !default;
+$su-brand-color:           #1ebcbe !default; //#00bfff !default;
 $su-code-background-color: #fffbd8 !default;
-$su-link-base-color:       #21c5e2 !default;
+$su-link-base-color:       #1799c8 !default;
 $su-background-image: url("/images/background/background-su.webp");
 $su-profile-image: url("/images/profile/profile-su.webp");
+$su-header-ext-img: url("/images/background/header-ext-su.webp");
 
 $su-brand-color-light: lighten($su-brand-color, 40%) !default;
 $su-brand-color-dark: darken(#b4d4dc, 25%) !default;
 
-$su-site-title-color: $su-brand-color-dark !default;
+$su-site-title-color: $su-code-background-color !default;
+// $su-site-title-color: $su-brand-color-dark !default;
 
 $su-text-color: #111111 !default;
-$su-background-color: lighten($su-link-base-color, 45%) !default;  //#fdfdfd !default;
+$su-background-color: #eff7f7 !default;  //#fdfdfd !default;
 
 $su-link-visited-color: darken($su-link-base-color, 15%) !default;
 $su-link-hover-color: $su-text-color !default;
@@ -105,19 +113,21 @@ $au-code-background-color: #fdece3 !default;
 $au-link-base-color:       #e76016 !default;
 $au-background-image: url("/images/background/background-au.webp");
 $au-profile-image: url("/images/profile/profile-au.webp");
+$au-header-ext-img: url("/images/background/header-ext-au.webp");
 
 $au-brand-color-light: lighten($au-brand-color, 40%) !default;
 $au-brand-color-dark: darken($au-link-base-color, 25%) !default;
 
-$au-site-title-color: $au-brand-color-dark !default;
+$au-site-title-color: $au-code-background-color !default;
+// $au-site-title-color: $au-brand-color-dark !default;
 
 $au-text-color: #111111 !default;
-$au-background-color: lighten($au-link-base-color, 47%) !default; //#fdfdfd !default; //this variable is only used for navigation background color when narrow window
+$au-background-color: #f8f8f1 !default; //#fdfdfd !default; //this variable is only used for navigation background color when narrow window
 
 $au-link-visited-color: darken($au-link-base-color, 15%) !default;
 $au-link-hover-color: $au-text-color !default;
 
-$au-border-color-01: #fdfdfd !default; //lighten($au-code-background-color, 2%) !default; //$sp-brand-color-light !default;
+$au-border-color-01: #e47a40 !default; //lighten($au-code-background-color, 2%) !default; //$sp-brand-color-light !default;
 $au-border-color-02: lighten($au-brand-color, 35%) !default;
 $au-border-color-03: $au-brand-color-dark !default;
 
@@ -129,11 +139,12 @@ $au-table-border-color:    adjust-color(lighten($au-link-base-color, 40%), $alph
 
 // winter theme
 $wi-title:                 "  -winter edition- ";
-$wi-brand-color:           #828282 !default;
+$wi-brand-color:           #b6c6d6 !default;
 $wi-code-background-color: #d6e9ff !default;
 $wi-link-base-color:       #0095ff !default;
 $wi-background-image: url("/images/background/background-wi.webp");
 $wi-profile-image: url("/images/profile/profile-wi.webp");
+$wi-header-ext-img: url("/images/background/header-ext-wi.webp");
 
 $wi-brand-color-light: lighten($wi-brand-color, 40%) !default;
 $wi-brand-color-dark: darken($wi-link-base-color, 25%) !default;
@@ -143,12 +154,13 @@ $wi-brand-color-dark: darken($wi-link-base-color, 25%) !default;
 $wi-site-title-color: $wi-code-background-color !default;
 
 $wi-text-color: #111111 !default;
-$wi-background-color: #fdfdfd !default;
+$wi-background-color: #f3f1f8 !default;
 
 $wi-link-visited-color: darken($wi-link-base-color, 15%) !default;
 $wi-link-hover-color: $wi-text-color !default;
 
-$wi-border-color-01: $wi-brand-color-light !default;
+$wi-border-color-01: #82b7da;
+// $wi-border-color-01: $wi-brand-color-light !default;
 $wi-border-color-02: lighten($wi-brand-color, 35%) !default;
 $wi-border-color-03: $wi-brand-color-dark !default;
 
@@ -159,12 +171,13 @@ $wi-table-header-border:   lighten($wi-brand-color, 37%) !default;
 $wi-table-border-color:    adjust-color(lighten($wi-brand-color, 25%), $alpha: -0.6) !default;
 
 // Custom skin select
-//default winter
+//default
 $brand-color: $de-brand-color;
 $link-base-color: $de-link-base-color;
 $code-background-color: $de-code-background-color;
 $background-image: $de-background-image;
 $profile-image: $de-profile-image;
+$header-ext-img: $de-header-ext-img;
 $title: $de-title;
 
 $brand-color-light: $de-brand-color-light;
@@ -194,6 +207,7 @@ $table-border-color: $de-table-border-color;
     $code-background-color: $sp-code-background-color;
     $background-image: $sp-background-image;
     $profile-image: $sp-profile-image;
+    $header-ext-img: $sp-header-ext-img;
     $title: $sp-title;
 
     $brand-color-light: $sp-brand-color-light;
@@ -222,6 +236,7 @@ $table-border-color: $de-table-border-color;
     $code-background-color: $su-code-background-color;
     $background-image: $su-background-image;
     $profile-image: $su-profile-image;
+    $header-ext-img: $su-header-ext-img;
     $title: $su-title;
 
     $brand-color-light: $su-brand-color-light;
@@ -250,6 +265,7 @@ $table-border-color: $de-table-border-color;
     $code-background-color: $au-code-background-color;
     $background-image: $au-background-image;
     $profile-image: $au-profile-image;
+    $header-ext-img: $au-header-ext-img;
     $title: $au-title;
 
     $brand-color-light: $au-brand-color-light;
@@ -278,6 +294,7 @@ $table-border-color: $de-table-border-color;
     $code-background-color: $wi-code-background-color;
     $background-image: $wi-background-image;
     $profile-image: $wi-profile-image;
+    $header-ext-img: $wi-header-ext-img;
     $title: $wi-title;
 
     $brand-color-light: $wi-brand-color-light;
