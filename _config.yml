@@ -23,7 +23,7 @@ header_pages:
  - publications.md
  - teaching.md
  - tutorials/index.md
- - resources.md
+ - resources.html
  - links.html
 
 excerpt_separator: "<!--excerpt-->"

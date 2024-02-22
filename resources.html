@@ -1,0 +1,101 @@
+---
+layout: page-narrow
+title: Resources
+permalink: /resources/
+sections: ['Games','Scripts']
+---
+
+<div>
+  <p style="font-size: 120%;">
+    {% for sec in page.sections %}
+    <a href="#{{ sec | slugify }}" class="post-tag">{{ sec }}</a>
+    &#160 &#160
+    {% endfor %}
+  </p>
+</div>
+
+<hr class="brand"/>
+
+<h2 id="games">Games</h2>
+
+<p><em>Troubleshoot</em>: If you're on Windows and you see an error saying *api-ms-win-core-path-l1-1-1.ddl is missing* when trying to open one of the games, this may be because your PC doesn't have the Visual C++ Redistributable for Visual Studio 2015 or 2017, which is required by Python. Try downloading it <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">for x86 (32bit) Windows</a> or <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">for x64 (64 bit) Windows</a>.</p>
+
+<ul>
+  <li>
+    <p>Chengyu Maze 成语迷宫: <a id="chengyu"></a></p>
+    <p><a href="/files/resources/games/chengyu-maze.zip" download>Download</a> (25 MB, *The build only works on Windows, please download the source code if using Mac.*) <a href="https://github.com/Yiling-Huo/chengyu-maze">Source code</a>. A game that looks like the maze task used by psycholinguists, but with Chinese chengyu (four-character idioms). Made with pygame.</p>
+    <p><img src="/images/resources/chengyu1.png"  width="40%"><img src="/images/resources/chengyu2.png"  width="40%"></p>
+  </li>
+  <li>
+    <p>CFG Maze Game: <a id="cfg"></a></p>
+    <p><a href="https://github.com/Yiling-Huo/cfg-maze/blob/main/build.zip" download>Download</a> (22.7 MB, *The build only works on Windows, please download the source code if using Mac.*) <a href="https://github.com/Yiling-Huo/cfg-maze">Source code</a>. A game that looks like the maze task used by psycholinguists, but the sentences are generated using a (very simple) context-free grammar (CFG) sentence generator. (Hey, an interdisciplinary work between psycholinguistics and computational linguistics /j.) Made with pygame. </p>
+    <p><img src="/images/resources/cfg1.png"  width="40%"><img src="/images/resources/cfg2.png"  width="40%"></p>
+  </li>
+  <li>
+    <p>TicTacToe Lite: <a id="tictactoe"></a></p>
+    <p><a href="/files/resources/games/TicTacToe-Lite.zip" download>Download</a> (22.8 MB, *The build only works on Windows, please download the source code if using Mac.*) <a href="https://github.com/Yiling-Huo/tic-tac-toe">Source code</a>. A mini-game tic-tac-toe game made with pygame. Based on a class practice in <a href="https://www.ucl.ac.uk/module-catalogue/modules/introduction-to-computational-linguistics-PLIN0034">PLIN0034</a>.</p>
+    <p><img src="/images/resources/tic-tac-toe.png"  width="40%"></p>
+  </li>
+  <li>
+    <p>Cyber fortune cookie: <a id="fortune"></a></p>
+    <p><a href="/files/resources/games/cyber-fortune-cookie_exe.win-amd64-3.10.zip" download>Download</a> (23 MB, *The build only works on Windows, please download the source code if using Mac.*) <a href="https://github.com/Yiling-Huo/cyber-fortune-cookie">Source code</a>. A mini-game made with python and pygame, in which you can open fortune cookies and get your fortune. </p>
+    <p><img src="/images/resources/fortune-cookie-game.png"  width="40%"></p>
+  </li>
+</ul>
+
+<h2 id="scripts">Scripts</h2>
+
+<h3 id="praat">Praat scripts:</h3>
+
+<ul>
+  <li>
+    <p>Make auditory serial presentation stimuli:</p>
+    <p><a href="/files/resources/praat/auditory-SP-stimuli-from-textgrid" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2023/03/10/make-auditory-sp-stimuli.html">Tutorial</a>. A Praat script that, given the stimulus-onset asynchrony (SOA), makes auditory serial presentation stimuli from continuous speech recordings and their textgrids.</p>
+  </li>
+  <li>
+    <p>Extract pitch contour:</p>
+    <p><a href="/files/resources/praat/extract_pitch_contour" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2023/03/10/extract-tone.html">Tutorial</a>. A Praat script that extracts pitch contour information based on `.wav` sounds and `.Textgrid` files.</p>
+  </li>
+  <li>
+    <p>Get duration:</p>
+    <p><a href="/files/resources/praat/get_duration" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2023/06/14/get-duration.html">Tutorial</a>. A Praat script that gets audio file durations from a directory containing audio files. The script outputs a .csv file.</p>
+  </li>
+</ul>
+
+<h3 id="python">Python scripts:</h3>
+
+<ul>
+  <li>
+    <p>Automated processing of Chinese cloze responses:</p>
+    <p><a href="/files/resources/python/chinese-cloze.zip" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2023/02/06/How-to-process-cloze.html">Tutorial</a>. Two scripts that process data collected from cloze tasks in Chinese. In a cloze task, the participant sees incomplete sentences and is asked to complete the sentence by providing one or a few words.</p>
+  </li>
+  <li>
+    <p>Compare images from two folders:</p>
+    <p><a href="/files/resources/python/compare_images.py" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2023/03/30/compare-images.html">Tutorial</a>. A Python script that compares images from two folders to search for duplicates. </p>
+  </li>
+  <li>
+    <p>Convert audio:</p>
+    <p><a href="/files/resources/python/convert_audio.py" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2023/06/14/convert-audio.html">Tutorial</a>. A Python script that converts audio file formats using pydub and ffmpeg.</p>
+  </li>
+  <li>
+    <p>Noise reduction:</p>
+    <p><a href="/files/resources/python/noise_reduction.py" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2023/07/23/noise-reduction.html">Tutorial</a>. A Python script that reduces breathing and room noise from recordings. </p>
+  </li>
+  <li>
+    <p>Present pictures and labels:</p>
+    <p><a href="/files/resources/python/fam-task.py" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2024/02/20/present-pic-task.html">Tutorial</a>. A Python (pygame) program that presents participants with a series of pictures and their labels. </p>
+  </li>
+</ul>
+
+<h3 id="r">R scripts:</h3>
+
+<ul>
+  <li>
+    <p>Remove outliers:</p>
+    <p><a href="/files/resources/r/remove_outlier_function.R" download>Download</a>. A simple function that removes outliers from a data frame based on the 3 s.d. rule. </p>
+  </li>
+  <li>
+    <p>Remove track loss trials:</p>
+    <p><a href="/files/resources/r/remove_trackloss.R" download>Download</a>. <a href="https://yiling-huo.github.io/tutorials/2023/04/25/trackloss.html">Tutorial</a>. A function that removes trials from visual world eye-tracking data where no eye gaze can be detected on any of the images in the visual display for an extensive proportion of the time. </p>
+  </li>
+</ul>
