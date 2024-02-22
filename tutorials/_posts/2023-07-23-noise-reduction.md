@@ -1,5 +1,5 @@
 ---
-layout: post-narrow
+layout: post
 title: Reducing breathing and room noise from speech samples
 date: 2023-07-23 10:00
 modified_date:

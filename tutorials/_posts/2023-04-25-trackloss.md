@@ -1,5 +1,5 @@
 ---
-layout: post-narrow
+layout: post
 title: Remove track loss trials from visual world eye-tracking data
 date: 2023-04-25 10:00
 author: Yiling Huo

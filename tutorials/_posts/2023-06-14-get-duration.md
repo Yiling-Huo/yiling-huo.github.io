@@ -1,5 +1,5 @@
 ---
-layout: post-narrow
+layout: post
 title: Get audio file durations using Praat
 date: 2023-06-14 14:00
 author: Yiling Huo

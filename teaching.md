@@ -1,5 +1,5 @@
 ---
-layout: page-wide
+layout: page
 title: Teaching
 permalink: /teaching/
 ---

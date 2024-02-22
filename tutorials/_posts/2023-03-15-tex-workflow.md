@@ -1,5 +1,5 @@
 ---
-layout: post-narrow
+layout: post
 title: My workflow of creating PDF and docx files using Rmd and Markdown
 date: 2023-03-15 10:00
 modified_date: 2023-12-01 18:00
