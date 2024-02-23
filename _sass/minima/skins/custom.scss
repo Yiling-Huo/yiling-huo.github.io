@@ -19,6 +19,7 @@ $de-link-base-color:       #2a7ae2 !default;
 $de-background-image: url("/images/background/background-de.webp");
 $de-profile-image: url("/images/profile/profile-de.webp");
 $de-header-ext-img: url("/images/background/header-ext-de.webp");
+$de-footer-ext-img: url("/images/background/footer-ext-wi.webp");
 
 $de-brand-color-light: lighten($de-brand-color, 40%) !default;
 $de-brand-color-dark: darken($de-brand-color, 25%) !default;
@@ -50,6 +51,7 @@ $sp-link-base-color:       #9bb600 !default;
 $sp-background-image: url("/images/background/background-sp.webp");
 $sp-profile-image: url("/images/profile/profile-sp.webp");
 $sp-header-ext-img: url("/images/background/header-ext-sp.webp");
+$sp-footer-ext-img: url("/images/background/footer-ext-sp.webp");
 
 $sp-brand-color-light: lighten($sp-brand-color, 50%) !default;
 $sp-brand-color-dark: darken($sp-brand-color, 25%) !default;
@@ -83,6 +85,7 @@ $su-link-base-color:       #1799c8 !default;
 $su-background-image: url("/images/background/background-su.webp");
 $su-profile-image: url("/images/profile/profile-su.webp");
 $su-header-ext-img: url("/images/background/header-ext-su.webp");
+$su-footer-ext-img: url("/images/background/footer-ext-su.webp");
 
 $su-brand-color-light: lighten($su-brand-color, 40%) !default;
 $su-brand-color-dark: darken(#b4d4dc, 25%) !default;
@@ -98,7 +101,7 @@ $su-link-hover-color: $su-text-color !default;
 
 $su-border-color-01: lighten($su-code-background-color, 2%) !default; //$su-brand-color-light !default;
 $su-border-color-02: lighten($su-brand-color, 35%) !default;
-$su-border-color-03: $su-brand-color-dark !default;
+$su-border-color-03: darken($su-link-base-color, 25%) !default;
 
 $su-table-text-color:      lighten($su-text-color, 18%) !default;
 $su-table-zebra-color:     adjust-color(lighten($su-brand-color, 46%), $alpha: -0.65) !default;
@@ -114,6 +117,7 @@ $au-link-base-color:       #e76016 !default;
 $au-background-image: url("/images/background/background-au.webp");
 $au-profile-image: url("/images/profile/profile-au.webp");
 $au-header-ext-img: url("/images/background/header-ext-au.webp");
+$au-footer-ext-img: url("/images/background/footer-ext-au.webp");
 
 $au-brand-color-light: lighten($au-brand-color, 40%) !default;
 $au-brand-color-dark: darken($au-link-base-color, 25%) !default;
@@ -145,6 +149,7 @@ $wi-link-base-color:       #0095ff !default;
 $wi-background-image: url("/images/background/background-wi.webp");
 $wi-profile-image: url("/images/profile/profile-wi.webp");
 $wi-header-ext-img: url("/images/background/header-ext-wi.webp");
+$wi-footer-ext-img: url("/images/background/footer-ext-wi.webp");
 
 $wi-brand-color-light: lighten($wi-brand-color, 40%) !default;
 $wi-brand-color-dark: darken($wi-link-base-color, 25%) !default;
@@ -178,6 +183,7 @@ $code-background-color: $de-code-background-color;
 $background-image: $de-background-image;
 $profile-image: $de-profile-image;
 $header-ext-img: $de-header-ext-img;
+$footer-ext-img: $de-footer-ext-img;
 $title: $de-title;
 
 $brand-color-light: $de-brand-color-light;
@@ -208,6 +214,7 @@ $table-border-color: $de-table-border-color;
     $background-image: $sp-background-image;
     $profile-image: $sp-profile-image;
     $header-ext-img: $sp-header-ext-img;
+    $footer-ext-img: $sp-footer-ext-img;
     $title: $sp-title;
 
     $brand-color-light: $sp-brand-color-light;
@@ -237,6 +244,7 @@ $table-border-color: $de-table-border-color;
     $background-image: $su-background-image;
     $profile-image: $su-profile-image;
     $header-ext-img: $su-header-ext-img;
+    $footer-ext-img: $su-footer-ext-img;
     $title: $su-title;
 
     $brand-color-light: $su-brand-color-light;
@@ -266,6 +274,7 @@ $table-border-color: $de-table-border-color;
     $background-image: $au-background-image;
     $profile-image: $au-profile-image;
     $header-ext-img: $au-header-ext-img;
+    $footer-ext-img: $au-footer-ext-img;
     $title: $au-title;
 
     $brand-color-light: $au-brand-color-light;
@@ -295,6 +304,7 @@ $table-border-color: $de-table-border-color;
     $background-image: $wi-background-image;
     $profile-image: $wi-profile-image;
     $header-ext-img: $wi-header-ext-img;
+    $footer-ext-img: $wi-footer-ext-img;
     $title: $wi-title;
 
     $brand-color-light: $wi-brand-color-light;

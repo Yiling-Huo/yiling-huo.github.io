@@ -7,6 +7,12 @@
     width: 100%;
 }
 
+.footer-ext {
+    content: $footer-ext-img;
+    height: 100%;
+    width: 100%;
+}
+
 .tag {
     display: inline-block;
     *display: inline; /* for older IE */

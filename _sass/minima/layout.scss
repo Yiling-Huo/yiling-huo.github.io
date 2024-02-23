@@ -135,6 +135,8 @@
 .site-footer {
   // white cover is handled here instead of body because of Firefox incompatibility
   // background-color: rgba(255,255,255,0.8);
+  // in new design, background should be the cover color for header as well, so here it should be border 3, the color shown for the menu button
+  background-color: $border-color-03;
   border-top: 0px solid $border-color-01;
   padding: $spacing-unit 0;
   flex-grow: 0;
@@ -159,7 +161,8 @@
 .footer-col-wrapper,
 .social-links {
   @include relative-font-size(0.9375);
-  color: #828282;
+  color: #fdfdfd;
+  // color: #828282;
 }
 
 .footer-col {
