@@ -1,4 +1,4 @@
----
+a---
 layout: post
 title: Participant recruitment for LING-2021-10-01, March 2024
 date: 2024-02-27 17:00
@@ -8,6 +8,10 @@ category: 'Ads'
 tags: ['Participant recruit']
 reading-time: 2
 ---
+
+## 【Mandarin Chinese speakers wanted】Eye-tracking study [£9 for participation, 45min]
+
+<!--excerpt-->
 
 **Please read the descriptions carefully before booking**
 
@@ -26,7 +30,7 @@ reading-time: 2
 - Right handed. 
 - Normal or corrected-to-normal vision.
     - No more than 600 degrees of myopia/hyperopia. 
-    - In case of any vision conditions, make sure you have access to functioning vision correction (i.e. your glasses/contact lenses need to give you normal vision).
+    - In case of any vision conditions, make sure you have access to working vision correction (i.e. your glasses/contact lenses need to give you normal vision).
 - Normal hearing in both ears.
 - No history of neurological/psychological disorders.
 - No tattoo near the eyes. 
@@ -34,13 +38,11 @@ reading-time: 2
 
 ## Description
 
-【Mandarin Chinese speakers wanted】Eye-tracking study [£9 for participation, 45min]
-
 This study examines how Chinese sentences are processed by native Mandarin speakers.
 
 The main experiment will record your eye-movements towards pictures on a computer screen while you listen to sentences. The entire experiment will be about 0.75 hours.
 
-The experiment will take place **in person** in Chandler House, 2 Wakefield Street, WC1N 1PF. Please meet the experimenter at the reception. The building is very close to the Brunswick shopping centre. Directions and a map can be found here: http://www.ucl.ac.uk/maps/chandler-house. Please **do not wear eye make-up** (especially eyeliner and mascara) on the day of the study. Or you can remove your eye make-up before the experiment. It is ok to wear contact lenses or glasses. If you wear both regular glasses and contact lenses on a daily basis, please wear contact lenses on the day of the experiment. However, **please do NOT wear coloured contact lenses**. Any questions, please email yiling.huo.18@ucl.ac.uk.
+The experiment will take place **in person** in Chandler House, 2 Wakefield Street, WC1N 1PF. Please meet the experimenter at the reception. The building is very close to the Brunswick shopping centre. Directions and a map can be found [here](http://www.ucl.ac.uk/maps/chandler-house). Please **do not wear eye make-up** (especially eyeliner and mascara) on the day of the study. Or you can remove your eye make-up before the experiment. It is ok to wear contact lenses or glasses. If you wear both regular glasses and contact lenses on a daily basis, please wear contact lenses on the day of the experiment. However, **please do NOT wear coloured contact lenses**. Any questions, please email yiling.huo.18@ucl.ac.uk.
 
 ## Preparation
 
