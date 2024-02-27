@@ -1,4 +1,4 @@
-a---
+---
 layout: post
 title: Participant recruitment for LING-2021-10-01, March 2024
 date: 2024-02-27 17:00
@@ -46,4 +46,6 @@ The experiment will take place **in person** in Chandler House, 2 Wakefield Stre
 
 ## Preparation
 
-Remove your eye-makeup before experiment. Please remember to wear your glasses or contact lenses if needed. Please DO NOT wear coloured contact lenses.
+- Remove your eye makeup before the  experiment. 
+- Please remember to wear your glasses or contact lenses if needed. 
+- Please DO NOT wear coloured contact lenses.
