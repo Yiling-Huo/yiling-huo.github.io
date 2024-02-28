@@ -4,8 +4,9 @@ name: Update Season skin
 on:
   schedule:
     - cron: '* * * * *' # for testing, runs every minute
-  env:
-    TZ: 'UTC' # set the timezone environment to UTC for the duration of the workflow run. Because GitHub Actions runners typically use the UTC time. 
+
+env:
+  TZ: 'UTC' # set the timezone environment to UTC for the duration of the workflow run. Because GitHub Actions runners typically use the UTC time. 
 
 jobs:
   update-config:
