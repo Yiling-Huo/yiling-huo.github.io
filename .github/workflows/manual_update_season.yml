@@ -24,6 +24,8 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
+          git config user.name "${{ secrets.GITHUB_USERNAME }}"
+          git config user.email "${{ secrets.GITHUB_EMAIL }}"
           git add _config.yml
           git commit -m "Advance 'skin' variable to the next season"
           git push
