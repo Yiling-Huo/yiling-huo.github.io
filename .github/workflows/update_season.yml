@@ -9,28 +9,23 @@ env:
   TZ: 'UTC' # set the timezone environment to UTC for the duration of the workflow run. Because GitHub Actions runners typically use the UTC time. 
 
 jobs:
-  update-config:
+  advance-season:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Determine Current Season
-      id: get_season
-      run: |
-        season=$(bash script/get_season.sh)
-        echo "Current season: $season"
-        echo "::set-output name=season::$season"
+      - name: Determine Current Season
+        id: get_season
+        run: |
+          current_season=$(awk '/minima:/ {getline; print}' _config.yml | awk '{print $2}')
+          echo "Current season: $current_season"
+          next_season=$(bash scripts/get_season.sh "$current_season")
+          sed -i '/minima:/ {n; s/skin: .*/skin: '$next_season'/}' _config.yml
 
-    - name: Modify Config
-      run: |
-        season=$(echo "${{ steps.get_season.outputs.season }}")
-        echo "Updating 'skin' variable to $season"
-        sed -i 's/minima:\s*skin:\s*.*/minima: skin: '$season'/' _config.yml
-
-    - name: Commit and Push Changes
-      run: |
-        git add _config.yml
-        git commit -m "Update 'skin' variable based on current season"
-        git push
+      - name: Commit and Push Changes
+        run: |
+          git add _config.yml
+          git commit -m "Advance 'skin' variable to the next season"
+          git push

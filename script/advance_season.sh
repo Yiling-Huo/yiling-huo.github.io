@@ -2,22 +2,22 @@
 
 # This is used alongside the update_config.yaml in .github/workflows to auto update skin by season
 
-# Get the current month
-month=$(date "+%m")
+# Get current season
+current_season=$1
 
-# Determine the season based on the month
-case $month in
-    12 | 1 | 2)
-        echo "winter"
-        ;;
-    3 | 4 | 5)
+# just advance a season
+case $current_season in
+    "winter")
         echo "spring"
         ;;
-    6 | 7 | 8)
+    "spring")
         echo "summer"
         ;;
-    9 | 10 | 11)
+    "summer")
         echo "autumn"
+        ;;
+    "autumn")
+        echo "winter"
         ;;
     *)
         echo "default"
