@@ -4,8 +4,6 @@ name: Update Season skin
 on:
 schedule:
     - cron: '* * * * *' # for testing, runs every minute
-    # schedule:
-    #   - cron: '0 0 1 3,6,9,12 *' # Run at midnight on the 1st of March, June, September, and December
   env:
     TZ: 'UTC' # set the timezone environment to UTC for the duration of the workflow run. Because GitHub Actions runners typically use the UTC time. 
 
