@@ -32,5 +32,3 @@ jobs:
           git add _config.yml
           git commit -m "Advance to the next season"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
