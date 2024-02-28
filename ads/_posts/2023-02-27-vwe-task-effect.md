@@ -20,7 +20,7 @@ reading-time: 2
 - Compensation: £9
 - Location: Chandler House, UCL, WC1N 1PF
 - UCL Ethics Committee Approval Code: LING-2021-10-01
-- Booking page: [book](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/JFprM8hZAUuJlJNXj73RrQ2)
+- Booking page: [book here](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/JFprM8hZAUuJlJNXj73RrQ2) (*Please note that your appointment may be canceled if you do not meet the eligibility requirements.*)
 
 ## Eligibility requirements
 
