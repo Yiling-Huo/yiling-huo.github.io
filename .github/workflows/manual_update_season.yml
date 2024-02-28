@@ -6,6 +6,9 @@ on: workflow_dispatch
 env:
   TZ: 'UTC' # set the timezone environment to UTC for the duration of the workflow run. Because GitHub Actions runners typically use the UTC time. 
 
+permissions:
+  contents: write
+
 jobs:
   advance-season:
     runs-on: ubuntu-latest
