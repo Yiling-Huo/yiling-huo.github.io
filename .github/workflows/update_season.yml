@@ -14,13 +14,13 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Determine Current Season
       id: get_season
       run: |
         season=$(bash script/get_season.sh)
-        echo "::set-output name=season::$season"
+        echo "season=$season" >> $GITHUB_OUTPUT
 
     - name: Modify Config
       run: |
@@ -31,6 +31,6 @@ jobs:
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add _config.yaml
+        git add _config.yml
         git commit -m "Update 'skin' variable based on current season"
         git push
