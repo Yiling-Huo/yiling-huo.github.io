@@ -3,7 +3,7 @@ name: Update Season skin
 # Define the trigger for the workflow
 on:
   schedule:
-    - cron: '* * * * *' # for testing, runs every minute
+    - cron: '*/5 * * * *'
 
 env:
   TZ: 'UTC' # set the timezone environment to UTC for the duration of the workflow run. Because GitHub Actions runners typically use the UTC time. 
