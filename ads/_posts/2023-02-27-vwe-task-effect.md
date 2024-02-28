@@ -9,9 +9,9 @@ tags: ['Participant recruit']
 reading-time: 2
 ---
 
-## 【Mandarin Chinese speakers wanted】Eye-tracking study [£9 for participation, 45min]
-
 <!--excerpt-->
+
+## 【Mandarin Chinese speakers wanted】Eye-tracking study [£9 for participation, 45min]
 
 **Please read the descriptions carefully before booking**
 
@@ -24,6 +24,7 @@ reading-time: 2
 
 ## Eligibility requirements
 
+- Have not previously participated in any experiment where the Principle Investigator is Dr. Wing-Yee Chow. 
 - Native Mandarin Chinese (mainland variation) speaker. 
 - No other native languages & no dialects spoken more than Mandarin (e.g. Wu, Min, Yue/Cantonese). 
 - Age 18 or more. 
