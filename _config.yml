@@ -38,7 +38,7 @@ twitter:
 
   # Set season skin
 minima: 
-  skin: winter
+  skin: spring
 
   # Minima date format.
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
