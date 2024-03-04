@@ -47,6 +47,6 @@ The experiment will take place **in person** in Chandler House, 2 Wakefield Stre
 
 ## Preparation
 
-- Remove your eye makeup before the  experiment. 
+- Remove your eye makeup before the experiment. 
 - Please remember to wear your glasses or contact lenses if needed. 
 - Please DO NOT wear coloured contact lenses.
