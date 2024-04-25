@@ -2,5 +2,5 @@
 layout: category-tags
 title: Tutorials
 category: 'Tutorials'
-tags: ['Psycholinguistics', 'Markdown', 'Markup']
+tags: ['Psycholinguistics', 'Markup and Markdown']
 ---

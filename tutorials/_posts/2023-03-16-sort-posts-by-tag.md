@@ -5,7 +5,7 @@ date: 2023-03-16 10:00
 modified_date: 2023-03-20 10:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Markup', 'Jekyll']
+tags: ['Markup and Markdown', 'Jekyll']
 reading-time: 3
 ---
 

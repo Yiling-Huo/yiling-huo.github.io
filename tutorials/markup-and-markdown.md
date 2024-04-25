@@ -2,5 +2,5 @@
 layout: tag
 title: Tutorials
 category: 'Tutorials'
-tags: ['Markdown']
+tags: ['Markup and Markdown']
 ---
