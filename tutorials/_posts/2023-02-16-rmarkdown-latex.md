@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How I got ready to write LaTeX files inside RMarkdown
+title: How I got ready to make LaTeX files with RMarkdown
 date: 2023-02-16 21:00
 modified_date: 2023-12-01 18:00
 author: Yiling Huo
@@ -50,8 +50,7 @@ Inside RStudio, install [tinytex](https://yihui.org/tinytex/) and TinyTeX by run
 
 >How it works:
 >1. Create RMarkdown `.rmd` documents and write texts, codes, and generate results and plots. 
->2. Knit the .rmd file. During this process, RStudio calls Pandoc, which will convert the document to .tex and generate a .pdf file accordingly. 
-
+>2. Knit the .rmd file. During this process, knitr calls Pandoc, which will convert the document to .tex and generate a .pdf file accordingly. 
 
 ## **2. Write a simple pdf handout with RMarkdown** <a name="step2"></a>
 
