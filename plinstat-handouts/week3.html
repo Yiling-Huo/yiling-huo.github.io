@@ -12,7 +12,7 @@
 
 <meta name="author" content="Yiling Huo" />
 
-<meta name="date" content="2024-04-24" />
+<meta name="date" content="2024-04-29" />
 
 <title>Week 3: T-tests and ANOVAs</title>
 
@@ -91,9 +91,41 @@ if (window.hljs) {
 
 <h1 class="title toc-ignore">Week 3: T-tests and ANOVAs</h1>
 <h4 class="author">Yiling Huo</h4>
-<h4 class="date">2024-04-24</h4>
+<h4 class="date">2024-04-29</h4>
 
 
+<div id="TOC">
+<ul>
+<li><a href="#t-tests" id="toc-t-tests"><span class="toc-section-number">1</span> T-tests</a>
+<ul>
+<li><a href="#independent-vs.-repeated-measures" id="toc-independent-vs.-repeated-measures"><span class="toc-section-number">1.1</span> Independent vs. Repeated measures</a></li>
+<li><a href="#independent-samples-t-test" id="toc-independent-samples-t-test"><span class="toc-section-number">1.2</span> Independent samples t-test</a>
+<ul>
+<li><a href="#assumptions-of-independent-samples-t-test" id="toc-assumptions-of-independent-samples-t-test"><span class="toc-section-number">1.2.1</span> Assumptions of Independent samples t-test</a></li>
+<li><a href="#independent-samples-t-test-example" id="toc-independent-samples-t-test-example"><span class="toc-section-number">1.2.2</span> Independent samples t-test example</a></li>
+<li><a href="#do-it-in-r-independent-samples-t-test" id="toc-do-it-in-r-independent-samples-t-test"><span class="toc-section-number">1.2.3</span> Do it in R: Independent samples t-test</a></li>
+</ul></li>
+<li><a href="#paired-samples-t-test" id="toc-paired-samples-t-test"><span class="toc-section-number">1.3</span> Paired samples t-test</a>
+<ul>
+<li><a href="#assumptions-of-the-paired-samples-t-test" id="toc-assumptions-of-the-paired-samples-t-test"><span class="toc-section-number">1.3.1</span> Assumptions of the paired samples t-test</a></li>
+<li><a href="#paired-samples-t-test-example" id="toc-paired-samples-t-test-example"><span class="toc-section-number">1.3.2</span> Paired samples t-test example</a></li>
+<li><a href="#do-it-in-r-paired-samples-t-test" id="toc-do-it-in-r-paired-samples-t-test"><span class="toc-section-number">1.3.3</span> Do it in R: Paired samples t-test</a></li>
+</ul></li>
+<li><a href="#how-to-choose-the-correct-t-test" id="toc-how-to-choose-the-correct-t-test"><span class="toc-section-number">1.4</span> How to choose the correct t-test?</a></li>
+</ul></li>
+<li><a href="#analysis-of-variance-anova" id="toc-analysis-of-variance-anova"><span class="toc-section-number">2</span> Analysis of Variance (ANOVA)</a>
+<ul>
+<li><a href="#basic-logic-of-anova" id="toc-basic-logic-of-anova"><span class="toc-section-number">2.0.1</span> Basic logic of ANOVA</a></li>
+<li><a href="#using-anova-for-null-hypothesis-testing" id="toc-using-anova-for-null-hypothesis-testing"><span class="toc-section-number">2.0.2</span> Using ANOVA for null hypothesis testing</a></li>
+<li><a href="#one-way-between-subjects-anova" id="toc-one-way-between-subjects-anova"><span class="toc-section-number">2.1</span> One-way between-subjects ANOVA</a>
+<ul>
+<li><a href="#assumptions-of-one-way-between-subjects-anova" id="toc-assumptions-of-one-way-between-subjects-anova"><span class="toc-section-number">2.1.1</span> Assumptions of One-way between-subjects ANOVA</a></li>
+<li><a href="#one-way-between-subjects-anova-example" id="toc-one-way-between-subjects-anova-example"><span class="toc-section-number">2.1.2</span> One-way between-subjects ANOVA: Example</a></li>
+<li><a href="#do-it-in-r-one-way-between-subjects-anova" id="toc-do-it-in-r-one-way-between-subjects-anova"><span class="toc-section-number">2.1.3</span> Do it in R: One-way between-subjects ANOVA</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
 
 <!-- \definecolor{shadecolor}{RGB}{230, 230, 230} -->
 <style>
@@ -330,10 +362,10 @@ leveneTest(score ~ factor(group), data = df)</code></pre>
 ## sample estimates:
 ## mean in group SLI  mean in group TD 
 ##               7.5              12.8</code></pre>
-</div>
-<div id="report-the-results" class="section level3" number="1.2.4">
-<h3><span class="header-section-number">1.2.4</span> Report the results</h3>
-<p>An independent samples t-Test showed that 10 SLI children performed significantly worse [t(18)=-2.703, p=0.015] on a test of non-word repetition (M=7.5, s.d.=4.7) than 10 age-matched typically-developing controls (M=12.8, s.d.=4.05).<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> <strong>Reporting statistics</strong>: <br>Statistical tests need to be reported once the data have been analysed, usually in a short paragraph, containing: <br>1. Statistical test that was performed <br>2. The measures that were compared (with the different levels if there are any) <br>3. The means and standard deviations <br>4. Significant or non-significant? <br>5. Specific test value – in this case the t-statistic (later you will see the <span class="math inline">\(F\)</span>-value, <span class="math inline">\(\chi^2\)</span>, <span class="math inline">\(r\)</span>, etc.) <br>6. Degrees of freedom – convention dictates that these are placed in rounded parentheses <br>7. The specific <span class="math inline">\(p\)</span>-value. (as well as confidence intervals/effect size)</span> <label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> <strong>Degree of freedom</strong>: <br>The degree of freedom is the number of factors in a calculation that we can vary and still achieve a specific outcome. For example, I want a group of five numbers that has the mean of 10. The first four numbers can vary freely, but once the first four numbers are chosen, the last number must be fixed. Therefore, my degree of freedom is 4. <br>10, 11, x, y, z (mean = 10) (x=?? y=?? z=??)<br>10, 11, 9, 12, x (mean = 10) (x must be 8)<br>300, 4123, -50, 890, x (mean = 10) (x must be -5213)<br>In t-tests, degrees of freedom define the shape of the t-distribution used to calculate the p value. <span class="math inline">\(d.f. = n-1\)</span> is the basic method for calculating degrees of freedom. In the case of independent samples t-test, <em>two</em> means are calculated, thus <span class="math inline">\(d.f. = n_1 + n_2 -2\)</span>. The degree of freedom reflects sample size. The higher the d.f., the more power to reject <span class="math inline">\(H_0\)</span>. </span></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Report the results</li>
+</ol>
+<p>An independent samples t-test showed that 10 SLI children performed significantly worse [t(18)=-2.703, p=0.015] on a test of non-word repetition (M=7.5, s.d.=4.7) than 10 age-matched typically-developing controls (M=12.8, s.d.=4.05).<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> <strong>Reporting statistics</strong>: <br>Statistical tests need to be reported once the data have been analysed, usually in a short paragraph, containing: <br>1. Statistical test that was performed <br>2. The measures that were compared (with the different levels if there are any) <br>3. The means and standard deviations <br>4. Significant or non-significant? <br>5. Specific test value – in this case the t-statistic (later you will see the <span class="math inline">\(F\)</span>-value, <span class="math inline">\(\chi^2\)</span>, <span class="math inline">\(r\)</span>, etc.) <br>6. Degrees of freedom – convention dictates that these are placed in rounded parentheses <br>7. The specific <span class="math inline">\(p\)</span>-value. (as well as confidence intervals/effect size)</span> <label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> <strong>Degree of freedom</strong>: <br>The degree of freedom is the number of factors in a calculation that we can vary and still achieve a specific outcome. For example, I want a group of five numbers that has the mean of 10. The first four numbers can vary freely, but once the first four numbers are chosen, the last number must be fixed. Therefore, my degree of freedom is 4. <br>10, 11, x, y, z (mean = 10) (x=?? y=?? z=??)<br>10, 11, 9, 12, x (mean = 10) (x must be 8)<br>300, 4123, -50, 890, x (mean = 10) (x must be -5213)<br>In t-tests, degrees of freedom define the shape of the t-distribution used to calculate the p value. <span class="math inline">\(d.f. = n-1\)</span> is the basic method for calculating degrees of freedom. In the case of independent samples t-test, <em>two</em> means are calculated, thus <span class="math inline">\(d.f. = n_1 + n_2 -2\)</span>. The degree of freedom reflects sample size. The higher the d.f., the more power to reject <span class="math inline">\(H_0\)</span>. </span></p>
 </div>
 </div>
 <div id="paired-samples-t-test" class="section level2" number="1.3">
@@ -501,6 +533,10 @@ shapiro.test(dif)</code></pre>
 ## sample estimates:
 ## mean difference 
 ##             1.6</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Report the results</li>
+</ol>
+<p>A paired samples t-test revealed that 10 children with SLI’s performance did not signiticantly improve (t(9)=1.92, p=0.08) after the treatment (before: mean=7.9, sd=4.43; after: mean = 9.5, sd=3.57).</p>
 </div>
 </div>
 <div id="how-to-choose-the-correct-t-test" class="section level2" number="1.4">
@@ -932,14 +968,14 @@ pairwise.t.test(one_between_exp_1$score, one_between_exp_1$group,
 ## native          &lt; 2e-16     &lt; 2e-16        
 ## 
 ## P value adjustment method: bonferroni</code></pre>
-</div>
-<div id="reporting-the-results" class="section level3" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> Reporting the results</h3>
+<ol start="5" style="list-style-type: decimal">
+<li>Report the results</li>
+</ol>
 <p>The results of one-way analysis of variance (ANOVA) with <strong>one between-subject factor</strong> Group (native vs. intermediate L2 vs. advanced L2) indicate a significant <strong>main effect of Group</strong> (F(2, 27)=396.4, p&lt;0.001). Follow-up <strong>pairwise t-tests using Bonferroni correction</strong> method revealed that the main effect was due to significant difference among all the groups (all p’s&lt;0.001) (Native: mean=273.6, s.d.=15.81; Intermediate L2: mean=41.7, s.d.=18.48; Advanced L2: mean=112.5, s.d.=21.85).</p>
 <blockquote>
-<p><strong>Further readings</strong></p>
-<p>Field, A. P., Miles, J., &amp; Field, Zoë. (2012). Comparing several means: ANOVA (GLM1). In <a href="https://ucl.primo.exlibrisgroup.com/discovery/fulldisplay?vid=44UCL_INST:UCL_VU2&amp;isFrbr=true&amp;tab=local&amp;offset=0&amp;docid=alma9931077110204761&amp;query=any,contains,Statistics%20with%20R%20Field&amp;context=L&amp;adaptor=Local%20Search%20Engine&amp;sortby=rank&amp;lang=en&amp;search_scope=MyInst_and_CI&amp;facet=frbrgroupid,include,1551696951">Discovering statistics using r</a>.</p>
+<p><strong>Further readings</strong> <a id="readings"></a></p>
 <p>Field, A. P., Miles, J., &amp; Field, Zoë. (2012). Comparing two means. In <a href="https://ucl.primo.exlibrisgroup.com/discovery/fulldisplay?vid=44UCL_INST:UCL_VU2&amp;isFrbr=true&amp;tab=local&amp;offset=0&amp;docid=alma9931077110204761&amp;query=any,contains,Statistics%20with%20R%20Field&amp;context=L&amp;adaptor=Local%20Search%20Engine&amp;sortby=rank&amp;lang=en&amp;search_scope=MyInst_and_CI&amp;facet=frbrgroupid,include,1551696951">Discovering statistics using r</a>.</p>
+<p>Field, A. P., Miles, J., &amp; Field, Zoë. (2012). Comparing several means: ANOVA (GLM 1). In <a href="https://ucl.primo.exlibrisgroup.com/discovery/fulldisplay?vid=44UCL_INST:UCL_VU2&amp;isFrbr=true&amp;tab=local&amp;offset=0&amp;docid=alma9931077110204761&amp;query=any,contains,Statistics%20with%20R%20Field&amp;context=L&amp;adaptor=Local%20Search%20Engine&amp;sortby=rank&amp;lang=en&amp;search_scope=MyInst_and_CI&amp;facet=frbrgroupid,include,1551696951">Discovering statistics using r</a>.</p>
 <p>Phillips, N. D. (2018). <a href="https://bookdown.org/ndphillips/YaRrr/anova.html">ANOVA</a>. In YaRrr! The pirate’s guide to r.</p>
 <p>Phillips, N. D. (2018). <a href="https://bookdown.org/ndphillips/YaRrr/htests.html">Hypothesis tests</a>. In YaRrr! The pirate’s guide to r.</p>
 <p>Poldrack, R. A. (2019). <a href="https://statsthinking21.github.io/statsthinking21-core-site/hypothesis-testing.html#the-process-of-null-hypothesis-testing">Hypothesis testing</a>. In Statistical thinking for the 21st century.</p>
