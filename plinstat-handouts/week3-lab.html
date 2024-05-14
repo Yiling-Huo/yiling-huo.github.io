@@ -12,7 +12,7 @@
 
 <meta name="author" content="Yiling Huo" />
 
-<meta name="date" content="2024-04-25" />
+<meta name="date" content="2024-05-14" />
 
 <title>Week 3 Lab sheet</title>
 
@@ -91,7 +91,7 @@ if (window.hljs) {
 
 <h1 class="title toc-ignore">Week 3 Lab sheet</h1>
 <h4 class="author">Yiling Huo</h4>
-<h4 class="date">2024-04-25</h4>
+<h4 class="date">2024-05-14</h4>
 
 
 
@@ -108,7 +108,7 @@ pre.r { background-color: #e8e6e8; }
 <li><strong>Factors</strong>: used to categorise data. <code>a &lt;- factor()</code>. For example, <code>music_genre &lt;- factor(c(&quot;Jazz&quot;, &quot;Rock&quot;, &quot;Classic&quot;, &quot;Classic&quot;, &quot;Pop&quot;, &quot;Jazz&quot;, &quot;Rock&quot;, &quot;Jazz&quot;))</code>, music_genre is a factor with 4 levels Jazz, Rock, Classic, and Pop (duplicate values are ignored). It’s good practice to convert categorical independent variables to factors before running statistical analysis.</li>
 <li>Lists: a collection of data which is ordered and changeable. <code>a &lt;- list()</code>. For example, <code>edibles &lt;- list(c(&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;), c(&quot;tomato&quot;, &quot;potato&quot;, &quot;spinach&quot;), c(&quot;rice&quot;, &quot;bread&quot;, &quot;noodle&quot;))</code>, edibles is a list of vectors.</li>
 <li>Matrices: two-dimensional object with rows and columns. <code>a &lt;- matrix()</code>. For example, <code>thismatrix &lt;- matrix(c(1,2,3,4,5,6), nrow = 3, ncol = 2)</code>, thismatrix is a matrix with 2 columns and 3 rows.</li>
-<li>Arrays: compared to matrices, arrays can have one, two , or more than two dimensions. <code>a &lt;- array()</code>. For example, <code>thisarray &lt;- c(1:24)</code>, thisarray is a one-dimensional array.</li>
+<li>Arrays: compared to matrices, arrays can have one, two , or more than two dimensions. <code>a &lt;- array()</code>. For example, <code>thisarray &lt;- array(1:24)</code>, thisarray is a one-dimensional array.</li>
 <li><strong>Data frames</strong>: data displayed in a table-like format.<code>a &lt;- data.frame()</code>. For example, <code>df &lt;- data.frame (Training = c(&quot;Strength&quot;, &quot;Stamina&quot;, &quot;Other&quot;), Pulse = c(100, 150, 120), Duration = c(60, 30, 45))</code>, df is a data frame with columns Training, Pulse, and Duration, with three rows of data.</li>
 </ul>
 </div>
@@ -128,8 +128,8 @@ pre.r { background-color: #e8e6e8; }
 <div id="exercise-2-word-frequency-in-two-types-of-writings" class="section level1">
 <h1>Exercise 2: Word frequency in two types of writings</h1>
 <p>I’m interested in whether the frequency of the word ‘museum’ differ between humanities journal papers and blog articles on similar topics. I randomly accessed 10 corpora of humanities journals papers, and calculated the count of the word ‘museum’ per million words in each corpus. And then I did the same with humanities blog articles.</p>
-<p>Frequencies of ‘museum’ in each journal paper corpus (number per million): 76 67 66 72 74 64 72 70 74 78</p>
-<p>Frequencies of ‘museum’ in each blog article corpus (number per million): 66 63 68 68 60 67 58 70 67 66</p>
+<p>Frequencies of ‘museum’ in each journal paper corpus (count per million): 76 67 66 72 74 64 72 70 74 78</p>
+<p>Frequencies of ‘museum’ in each blog article corpus (count per million): 66 63 68 68 60 67 58 70 67 66</p>
 <ol style="list-style-type: decimal">
 <li>Decide which test to use.</li>
 <li>Make a data frame with the data:
@@ -139,7 +139,7 @@ pre.r { background-color: #e8e6e8; }
 <li>make a data frame using the vectors with <code>data.frame()</code></li>
 </ul></li>
 <li>Visualise your data using <code>boxplot()</code>.</li>
-<li>Get the descriptive statistics (means and standard deviations) using <code>describeBy()</code>.</li>
+<li>Get the descriptive statistics (means and standard deviations) using <code>describeBy()</code> from the <code>psych</code> package.</li>
 <li>Check whether your data meet the assumptions of your chosen statistical test.</li>
 <li>Run the test.</li>
 <li>Is there a significant difference between the frequency of ‘musuem’ in journal papers and blog articles?</li>

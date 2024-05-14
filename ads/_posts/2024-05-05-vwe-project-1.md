@@ -26,7 +26,7 @@ excerpt -->
 
 ## Eligibility requirements
 
-- Have not previously participated in any experiment where the Principle Investigator is Dr. Wing-Yee Chow. 
+- Have not previously participated in any experiment (online, eye-tracking, EEG, etc.) where the Principle Investigator is Dr. Wing-Yee Chow. 
 - Native Mandarin Chinese (mainland variation) speaker. 
 - No other native languages & No dialects spoken more than Mandarin (e.g. Wu, Min, Yue/Cantonese). 
 - Age 18 or more. 
