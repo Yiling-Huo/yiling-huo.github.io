@@ -143,7 +143,7 @@ pre.r { background-color: #e8e6e8; }
 ## 
 ## data:  data
 ## W = 0.94113, p-value = 0.2518</code></pre>
-<ol start="4" style="list-style-type: decimal">
+<ol start="5" style="list-style-type: decimal">
 <li>Run the one sample t-test. Hint: <code>t.test(data, mu = 100)</code>.</li>
 </ol>
 <pre class="r"><code>t.test(data, mu=100)</code></pre>
@@ -158,7 +158,7 @@ pre.r { background-color: #e8e6e8; }
 ## sample estimates:
 ## mean of x 
 ##     108.1</code></pre>
-<ol start="5" style="list-style-type: decimal">
+<ol start="6" style="list-style-type: decimal">
 <li>Are UCL students’ IQs significantly different from the average?
 <ul>
 <li>Looks like so.</li>
@@ -471,8 +471,7 @@ leveneTest(score ~ group, data = data_4)</code></pre>
 ## group  2  0.0053 0.9947
 ##       42</code></pre>
 <pre class="r"><code># Finally, run pair-wise t-tests with Bonferroni correction as post-hocs.
-pairwise.t.test(data_4$score, data_4$group,
-                 p.adjust.method = &quot;bonferroni&quot;)</code></pre>
+pairwise.t.test(data_4$score, data_4$group, p.adjust.method = &quot;bonferroni&quot;)</code></pre>
 <pre><code>## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ## 
