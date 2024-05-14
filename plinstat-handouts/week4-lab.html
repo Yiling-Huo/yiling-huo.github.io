@@ -12,7 +12,7 @@
 
 <meta name="author" content="Yiling Huo" />
 
-<meta name="date" content="2024-04-29" />
+<meta name="date" content="2024-05-14" />
 
 <title>Week 4 Lab sheet</title>
 
@@ -91,18 +91,18 @@ if (window.hljs) {
 
 <h1 class="title toc-ignore">Week 4 Lab sheet</h1>
 <h4 class="author">Yiling Huo</h4>
-<h4 class="date">2024-04-29</h4>
+<h4 class="date">2024-05-14</h4>
 
 
 
 <style>
 pre.r { background-color: #e8e6e8; }
 </style>
-<p><em>All data in the exercises are randomly-generated fake data.</em></p>
+<p><em>All data in the exercises are simulated fake data.</em></p>
 <div id="before-the-exercises-r-operators-and-loops" class="section level1">
 <h1>Before the exercises: R operators and loops</h1>
 <ul>
-<li><code>&lt;-</code> or <code>-&gt;</code>: assign values to objects.</li>
+<li><code>&lt;-</code>, <code>-&gt;</code>: assign values to objects.</li>
 <li><code>==</code>: check whether two values are equal.</li>
 <li><code>!=</code>: check whether two values are not equal.</li>
 <li><code>&amp;</code>: and. Returns TRUE if both elements are TRUE.</li>
@@ -180,7 +180,7 @@ statement
 <li>Visualise the data using your preferred type of plot and get descriptive statistics.</li>
 <li>Remember we need by-participant (or by-item) means rather than raw data. Convert raw data to by-participant means. Hint: <code>data_mean &lt;- aggregate(DV ~ factor1+factor2+factor3..., data=data_frame, FUN=mean)</code>.</li>
 <li>Check whether the data meet the assumptions and run the test.</li>
-<li>Find out the sizes of the effects.<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> ezANOVA automatically reports the <em>generalised</em> eta-squared (ges). This is slightly different from the partial eta-squares in some assumptions, but for our purposes you can just report the generalised eta-squared. </span></li>
+<li>Find out the sizes of the effects.<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> ezANOVA automatically reports the <em>generalised</em> eta-squared (ges). This is slightly different from the partial eta-squared in terms of some assumptions, but for our purposes let’s report the <em>generalised</em> eta-squared</span></li>
 <li>Report your findings in a short paragraph.</li>
 </ol>
 </div>

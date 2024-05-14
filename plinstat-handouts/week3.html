@@ -12,7 +12,7 @@
 
 <meta name="author" content="Yiling Huo" />
 
-<meta name="date" content="2024-04-29" />
+<meta name="date" content="2024-05-14" />
 
 <title>Week 3: T-tests and ANOVAs</title>
 
@@ -91,7 +91,7 @@ if (window.hljs) {
 
 <h1 class="title toc-ignore">Week 3: T-tests and ANOVAs</h1>
 <h4 class="author">Yiling Huo</h4>
-<h4 class="date">2024-04-29</h4>
+<h4 class="date">2024-05-14</h4>
 
 
 <div id="TOC">
@@ -130,6 +130,9 @@ if (window.hljs) {
 <!-- \definecolor{shadecolor}{RGB}{230, 230, 230} -->
 <style>
 pre.r { background-color: #e8e6e8; }
+h3 {
+font-size: 1.5rem;
+}
 </style>
 <p>So far, we’ve talked about null hypothesis testing, normal distribution, and some descriptive statistics. This week and next week, we are going to talk about a few ways to test null hypotheses by comparing means. And for the last week, we are going to talk about regression models.</p>
 <div id="t-tests" class="section level1" number="1">
@@ -953,7 +956,7 @@ leveneTest(score ~ group, data = one_between_exp_1)</code></pre>
 ## group  2  0.2038 0.8168
 ##       27</code></pre>
 <ol start="4" style="list-style-type: decimal">
-<li>Post-hoc tests<label for="tufte-sn-9" class="margin-toggle sidenote-number">9</label><input type="checkbox" id="tufte-sn-9" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">9</span> <strong>ANOVA post-hoc tests</strong>: <br>The ANOVA only tells us whether there is <strong>at lease one group</strong> that is different from others. But a lot of the times we need more details than that, for example we are usually interested in exactly which group(s) stood out from others. In this case, we can do pair-wise t-tests following the ANOVA. But wait a second, didn’t I just say the reason we were running ANOVAs in the first place was multiple t-tests increase the chance of type I errors? You are right to ask this question. When doing pair-wise t-tests, we can adjust the p values, so that there is an <strong>overall</strong> chance of error at 5%. This is called the Bonferroni correction method. Bonferroni correction divides the overall alpha level by the number of tests being conducted, for example, if you are doing 20 t-tests simultaneously (on the same data set), the alpha level of each test should be <span class="math inline">\(\alpha = 0.05/20 = 0.0025\)</span> (i.e. you’d only say you found a significant difference if <span class="math inline">\(p &lt; 0.0025\)</span>). </span> <label for="tufte-sn-10" class="margin-toggle sidenote-number">10</label><input type="checkbox" id="tufte-sn-10" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">10</span> <strong>How to read the pairwise t-test results:</strong>: <br>The pairwise t-test gives us a table of p-values for the pairwise comparisons. Each p-value in a cell is the result of a comparison between the group in the column and the group in the row. We see that all of the pairwise comparisons are highly significant, which means that there are significant differences between each of our three groups.</span></li>
+<li>Post-hoc tests<label for="tufte-sn-9" class="margin-toggle sidenote-number">9</label><input type="checkbox" id="tufte-sn-9" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">9</span> <strong>ANOVA post-hoc tests</strong>: <br>The ANOVA only tells us whether there is <strong>at lease one group</strong> that is different from others. But a lot of the times we need more details than that, for example we are usually interested in exactly which group(s) stood out from others. In this case, we can do pair-wise t-tests following the ANOVA. But wait a second, didn’t I just say the reason we were running ANOVAs in the first place was multiple t-tests increase the chance of type I errors? You are right to ask this question. When doing pair-wise t-tests, we can adjust the p values, so that there is an <strong>overall</strong> chance of error at 5%. This is called the Bonferroni correction method. Bonferroni correction divides the overall alpha level by the number of tests being conducted, for example, if you are doing 20 t-tests simultaneously (on the same data set), the alpha level of each test should be <span class="math inline">\(\alpha = 0.05/20 = 0.0025\)</span> (i.e. you’d only say you found a significant difference if <span class="math inline">\(p &lt; 0.0025\)</span>). </span> <label for="tufte-sn-10" class="margin-toggle sidenote-number">10</label><input type="checkbox" id="tufte-sn-10" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">10</span> You might wonder why don’t we just do corrected pairwise t-tests and forget about ANOVAs? We usually want to run as few statistical tests on our data as possible. ANOVAs give you some immediate, easy-to-intepret overall results. When you have a significant result, then of course you’d have to do the pairwise t-tests to explore that in more detail, but <em>when you don’t find any significant effects with the ANOVA</em>, you are able to stop right there with the conclusion that none of the groups you tested stood out, so you just ran one test on your data instead of many.</span> <label for="tufte-sn-11" class="margin-toggle sidenote-number">11</label><input type="checkbox" id="tufte-sn-11" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">11</span> <strong>How to read the pairwise t-test results:</strong>: <br>The pairwise t-test gives us a table of p-values for the pairwise comparisons. Each p-value in a cell is the result of a comparison between the group in the column and the group in the row. We see that all of the pairwise comparisons are highly significant, which means that there are significant differences between each of our three groups.</span></li>
 </ol>
 <pre class="r"><code># one-way ANOVA post hoc: pairwise t-tests with Bonferroni correction
 pairwise.t.test(one_between_exp_1$score, one_between_exp_1$group,
@@ -976,9 +979,10 @@ pairwise.t.test(one_between_exp_1$score, one_between_exp_1$group,
 <p><strong>Further readings</strong> <a id="readings"></a></p>
 <p>Field, A. P., Miles, J., &amp; Field, Zoë. (2012). Comparing two means. In <a href="https://ucl.primo.exlibrisgroup.com/discovery/fulldisplay?vid=44UCL_INST:UCL_VU2&amp;isFrbr=true&amp;tab=local&amp;offset=0&amp;docid=alma9931077110204761&amp;query=any,contains,Statistics%20with%20R%20Field&amp;context=L&amp;adaptor=Local%20Search%20Engine&amp;sortby=rank&amp;lang=en&amp;search_scope=MyInst_and_CI&amp;facet=frbrgroupid,include,1551696951">Discovering statistics using r</a>.</p>
 <p>Field, A. P., Miles, J., &amp; Field, Zoë. (2012). Comparing several means: ANOVA (GLM 1). In <a href="https://ucl.primo.exlibrisgroup.com/discovery/fulldisplay?vid=44UCL_INST:UCL_VU2&amp;isFrbr=true&amp;tab=local&amp;offset=0&amp;docid=alma9931077110204761&amp;query=any,contains,Statistics%20with%20R%20Field&amp;context=L&amp;adaptor=Local%20Search%20Engine&amp;sortby=rank&amp;lang=en&amp;search_scope=MyInst_and_CI&amp;facet=frbrgroupid,include,1551696951">Discovering statistics using r</a>.</p>
-<p>Phillips, N. D. (2018). <a href="https://bookdown.org/ndphillips/YaRrr/anova.html">ANOVA</a>. In YaRrr! The pirate’s guide to r.</p>
 <p>Phillips, N. D. (2018). <a href="https://bookdown.org/ndphillips/YaRrr/htests.html">Hypothesis tests</a>. In YaRrr! The pirate’s guide to r.</p>
+<p>Phillips, N. D. (2018). <a href="https://bookdown.org/ndphillips/YaRrr/anova.html">ANOVA</a>. In YaRrr! The pirate’s guide to r.</p>
 <p>Poldrack, R. A. (2019). <a href="https://statsthinking21.github.io/statsthinking21-core-site/hypothesis-testing.html#the-process-of-null-hypothesis-testing">Hypothesis testing</a>. In Statistical thinking for the 21st century.</p>
+<p>Poldrack, R. A. (2019). <a href="https://statsthinking21.github.io/statsthinking21-core-site/comparing-means.html">Comparing means</a>. In Statistical thinking for the 21st century.</p>
 </blockquote>
 </div>
 </div>
