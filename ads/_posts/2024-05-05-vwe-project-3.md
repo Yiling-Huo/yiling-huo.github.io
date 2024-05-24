@@ -9,9 +9,9 @@ tags: ['Participant recruit']
 reading-time: 2
 ---
 
-<!-- **Recruitment full**
+<!-- **Recruitment full** -->
 
-excerpt -->
+<!--excerpt-->
 
 ## 【Mandarin Chinese speakers wanted】Eye-tracking study [£9 for participation, 45min]
 
