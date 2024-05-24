@@ -22,7 +22,7 @@ reading-time: 2
 - Compensation: **£9** Amazon gift card
 - Location: Chandler House, UCL, WC1N 1PF
 - UCL Ethics Committee Approval Code: LING-2021-10-01
-- Booking page: **[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ZnlZanXeHEKNGtEfqGmTOw2)** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
+- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ZnlZanXeHEKNGtEfqGmTOw2)**</span> (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
 
 ## Eligibility requirements
 
