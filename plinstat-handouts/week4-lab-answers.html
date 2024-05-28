@@ -229,7 +229,7 @@ leveneTest(score ~ material*revision, data = data1)</code></pre>
 <p><em>Different ways to do pair-wise comparisons</em>:
 In the two-way between-subject example in the handout, I simply did pairwise comparisons between each possible combination of gropus. This is totally ok, like this:</p>
 <pre class="r"><code># Two-way between-subject ANOVA post-hocs
-# This is the methos I showed you in the handout, which compares each group with each other groups.
+# This is the method I showed you in the handout, which does all possible pair-wise comparisons
 data1$group &lt;- paste(&#39;set_&#39;, data1$material, &#39;_&#39;, data1$revision, sep = &#39;&#39;)
 data1$group &lt;- as.factor(data1$group)
 pairwise.t.test(data1$score, data1$group, p.adjust.method = &#39;bonferroni&#39;)</code></pre>
