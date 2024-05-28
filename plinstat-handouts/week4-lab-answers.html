@@ -269,7 +269,7 @@ data1_pt</code></pre>
 ## 3 C        score no_revision revisi…    10    10 0.0566  ns      0.0566  ns     
 ## # … with abbreviated variable names ¹​p.signif, ²​p.adj.signif</code></pre>
 <p>You might notice that the p-values are slightly different, this is because we are not doing the ‘useless’ comparisons, so we don’t need to adjust the p-values that much.</p>
-<p>Alternatively, if you only about whether the sets of materials differ when student get the revision session, and whether the sets of materials differ when students don’t get the revision session, you can do something like this:</p>
+<p>Alternatively (or in addition), if you care about whether the sets of materials differ when student get the revision session, and whether the sets of materials differ when students don’t get the revision session, you can do something like this:</p>
 <pre class="r"><code># we can also look at whether the sets of materials differ, when students revised vs. when they didn&#39;t revise. 
 data1_pt2 &lt;- data1 %&gt;%
   group_by(revision) %&gt;%
@@ -298,7 +298,7 @@ etaSquared(data1_result)</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>Report your findings in a short paragraph.</li>
 </ol>
-<p>Two-way between-subjects ANOVA revealed significant main effects of Material set (F(2, 54)=16.98, p&lt;0.001, <span class="math inline">\(\eta^2\)</span>=0.39) and Revision (F(1, 54)=8.74, p=0.005, <span class="math inline">\(\eta^2\)</span>=0.14), as well as a significant interaction (F(2, 54)=4.18, p=0.02, <span class="math inline">\(\eta^2\)</span>=0.13). Post-hoc pair-wise t-tests with Bonferroni correction revealed that the effect of Revision was only sigificant for Material set A (p=0.003), but not the other two sets of materials. (Alternatively: Without revision, Material sets B and C were significantly more effective than Material set A (both p’s&lt;0.01), while there was no significant difference between sets B and C. With revision, Material set A became as effective as Material set B; however, set C was still significantly more effective than both A and B (both p’s&lt;0.01). )</p>
+<p>Two-way between-subjects ANOVA revealed significant main effects of Material set (F(2, 54)=16.98, p&lt;0.001, <span class="math inline">\(\eta^2\)</span>=0.39) and Revision (F(1, 54)=8.74, p=0.005, <span class="math inline">\(\eta^2\)</span>=0.14), as well as a significant interaction (F(2, 54)=4.18, p=0.02, <span class="math inline">\(\eta^2\)</span>=0.13). Post-hoc pair-wise t-tests with Bonferroni correction revealed that the effect of Revision was only sigificant for Material set A (p=0.003), but not the other two sets of materials. (Alternatively or in addition: Without revision, Material sets B and C were significantly more effective than Material set A (both p’s&lt;0.01), while there was no significant difference between sets B and C. With revision, Material set A became as effective as Material set B; however, set C was still significantly more effective than both A and B (both p’s&lt;0.01). )</p>
 </div>
 <div id="exercise-2-negation" class="section level1">
 <h1>Exercise 2: Negation</h1>
