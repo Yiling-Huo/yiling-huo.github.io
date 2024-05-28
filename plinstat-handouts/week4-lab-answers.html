@@ -226,8 +226,36 @@ leveneTest(score ~ material*revision, data = data1)</code></pre>
 ##       Df F value Pr(&gt;F)
 ## group  5  0.5797 0.7153
 ##       54</code></pre>
+<p><em>Different ways to do pair-wise comparisons</em>:
+In the two-way between-subject example in the handout, I simply did pairwise comparisons between each possible combination of gropus. This is totally ok, like this:</p>
 <pre class="r"><code># Two-way between-subject ANOVA post-hocs
-# first, we look at whether revision has a significant effect for each material set.
+# This is the methos I showed you in the handout, which compares each group with each other groups.
+data1$group &lt;- paste(&#39;set_&#39;, data1$material, &#39;_&#39;, data1$revision, sep = &#39;&#39;)
+data1$group &lt;- as.factor(data1$group)
+pairwise.t.test(data1$score, data1$group, p.adjust.method = &#39;bonferroni&#39;)</code></pre>
+<pre><code>## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+## data:  data1$score and data1$group 
+## 
+##                   set_A_no_revision set_A_revision set_B_no_revision
+## set_A_revision    0.0052            -              -                
+## set_B_no_revision 0.0108            1.0000         -                
+## set_B_revision    0.0238            1.0000         1.0000           
+## set_C_no_revision 4.5e-05           1.0000         1.0000           
+## set_C_revision    1.5e-07           0.0706         0.0361           
+##                   set_B_revision set_C_no_revision
+## set_A_revision    -              -                
+## set_B_no_revision -              -                
+## set_B_revision    -              -                
+## set_C_no_revision 0.9677         -                
+## set_C_revision    0.0167         1.0000           
+## 
+## P value adjustment method: bonferroni</code></pre>
+<p>However we can also approach this in a more careful way: you might wonder what’s the point in comparisons such as set_A_revision vs. set_B_no-revision? These comparisons don’t sound very informative to the research question of this study.</p>
+<p>Can’t I do something that simply lets me know whether for each set of materials, there is an effect of revision or not (I only care about set_A_revision vs. set_A_no-revision; set_B_revision vs. set_B_no-revision; etc.)? You can, of course, and in fact in the Mixed-ANOVA example in the handout, I did something very similar. When you have a very clear idea of what comparisons will be useful for your research question, then all you need are those comparisons you planned to do.</p>
+<p>Let’s say we only want to know whether, for each set of materials, revision significantly changes students’ performance:</p>
+<pre class="r"><code># Let&#39;s look at whether revision has a significant effect for each material set.
 library(rstatix)
 data1_pt &lt;- data1 %&gt;%
   group_by(material) %&gt;%
@@ -240,23 +268,13 @@ data1_pt</code></pre>
 ## 2 B        score no_revision revisi…    10    10 0.815   ns      0.815   ns     
 ## 3 C        score no_revision revisi…    10    10 0.0566  ns      0.0566  ns     
 ## # … with abbreviated variable names ¹​p.signif, ²​p.adj.signif</code></pre>
+<p>You might notice that the p-values are slightly different, this is because we are not doing the ‘useless’ comparisons, so we don’t need to adjust the p-values that much.</p>
+<p>Alternatively, if you only about whether the sets of materials differ when student get the revision session, and whether the sets of materials differ when students don’t get the revision session, you can do something like this:</p>
 <pre class="r"><code># we can also look at whether the sets of materials differ, when students revised vs. when they didn&#39;t revise. 
 data1_pt2 &lt;- data1 %&gt;%
   group_by(revision) %&gt;%
-  anova_test(dv = score, wid = participant, between = material) %&gt;%
-  get_anova_table() %&gt;%
-  adjust_pvalue(method = &quot;bonferroni&quot;)
-data1_pt2</code></pre>
-<pre><code>## # A tibble: 2 × 9
-##   revision    Effect     DFn   DFd     F         p `p&lt;.05`   ges    p.adj
-##   &lt;chr&gt;       &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;
-## 1 no_revision material     2    27 13.8  0.0000739 *       0.506 0.000148
-## 2 revision    material     2    27  7.15 0.003     *       0.346 0.006</code></pre>
-<pre class="r"><code># we need follow up to know which sets differ.
-data1_pt3 &lt;- data1 %&gt;%
-  group_by(revision) %&gt;%
   rstatix::pairwise_t_test(score ~ material, p.adjust.method = &quot;bonferroni&quot;)
-data1_pt3</code></pre>
+data1_pt2</code></pre>
 <pre><code>## # A tibble: 6 × 10
 ##   revision    .y.   group1 group2    n1    n2         p p.signif   p.adj p.adj…¹
 ## * &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;  
@@ -267,6 +285,7 @@ data1_pt3</code></pre>
 ## 5 revision    score A      C         10    10 0.00583   **       1.75e-2 *      
 ## 6 revision    score B      C         10    10 0.00165   **       4.94e-3 **     
 ## # … with abbreviated variable name ¹​p.adj.signif</code></pre>
+<p>It’s up to you how you want to approach your pair-wise comparisons.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>Find out the sizes of the effects.</li>
 </ol>
@@ -279,7 +298,7 @@ etaSquared(data1_result)</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>Report your findings in a short paragraph.</li>
 </ol>
-<p>Two-way between-subjects ANOVA revealed significant main effects of Material set (F(2, 54)=16.98, p&lt;0.001, <span class="math inline">\(\eta^2\)</span>=0.39) and Revision (F(1, 54)=8.74, p=0.005, <span class="math inline">\(\eta^2\)</span>=0.14), as well as a significant interaction (F(2, 54)=4.18, p=0.02, <span class="math inline">\(\eta^2\)</span>=0.13). Post-hoc pair-wise t-tests with Bonferroni correction revealed that the effect of Revision was only sigificant for Material set A (p=0.003), but not the other two sets of materials. Without revision, Material sets B and C were significantly more effective than Material set A (both p’s&lt;0.01), while there was no significant difference between sets B and C. With revision, Material set A became as effective as Material set B; however, set C was still significantly more effective than both A and B (both p’s&lt;0.01).</p>
+<p>Two-way between-subjects ANOVA revealed significant main effects of Material set (F(2, 54)=16.98, p&lt;0.001, <span class="math inline">\(\eta^2\)</span>=0.39) and Revision (F(1, 54)=8.74, p=0.005, <span class="math inline">\(\eta^2\)</span>=0.14), as well as a significant interaction (F(2, 54)=4.18, p=0.02, <span class="math inline">\(\eta^2\)</span>=0.13). Post-hoc pair-wise t-tests with Bonferroni correction revealed that the effect of Revision was only sigificant for Material set A (p=0.003), but not the other two sets of materials. (Alternatively: Without revision, Material sets B and C were significantly more effective than Material set A (both p’s&lt;0.01), while there was no significant difference between sets B and C. With revision, Material set A became as effective as Material set B; however, set C was still significantly more effective than both A and B (both p’s&lt;0.01). )</p>
 </div>
 <div id="exercise-2-negation" class="section level1">
 <h1>Exercise 2: Negation</h1>
