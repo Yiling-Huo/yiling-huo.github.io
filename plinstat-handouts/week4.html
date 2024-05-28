@@ -12,7 +12,7 @@
 
 <meta name="author" content="Yiling Huo" />
 
-<meta name="date" content="2024-05-14" />
+<meta name="date" content="2024-05-28" />
 
 <title>Week 4: More ANOVAs, Effect sizes, and Non-parametric tests</title>
 
@@ -91,7 +91,7 @@ if (window.hljs) {
 
 <h1 class="title toc-ignore">Week 4: More ANOVAs, Effect sizes, and Non-parametric tests</h1>
 <h4 class="author">Yiling Huo</h4>
-<h4 class="date">2024-05-14</h4>
+<h4 class="date">2024-05-28</h4>
 
 
 <div id="TOC">
@@ -533,7 +533,7 @@ Pairwise t-test with Bonferroni correction methods revealed that while for the h
 </div>
 <div id="withitn-subject-anovas-the-ez-package" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Withitn-subject ANOVAs: the ez package</h1>
-<p>Now that we’ve talked about one way and factorial anovas, you might notice that so fat all of our examples only have between-subject factors. What if my factor(s) is within-subject?</p>
+<p>Now that we’ve talked about one way and factorial anovas, you might notice that so far all of our examples only have between-subject factors. What if my factor(s) is within-subject?</p>
 <p>Within-subject ANOVAs are not very different from between-subject ANOVAs, and here are some examples. There are a few different packages that can do within-subjects ANOVAs, and for this workshop we are going to use the <code>ez</code> package.</p>
 <div id="one-way-within-subjects-anova-example" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> One-way within-subjects ANOVA: Example</h2>
@@ -942,7 +942,7 @@ etaSquared(one_between_exp_1_result)</code></pre>
 <div id="the-chi-squared-chi2-test-when-data-is-categorical" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> The Chi-squared (<span class="math inline">\({\chi}^2\)</span>) test: when <em>data</em> is categorical</h2>
 <p>In this class we will not delve into the non-parametric equivalents of t-tests and ANOVAs. Instead, let’s talk about the Chi-squared test. This test is useful when you have <strong><em>categorical</em> data</strong> (<strong>DV</strong>) (which obviously will not be normally distributed). For example, suppose a biologist is interested in whether a certain chromosome W affects/determines the sex of a newly-discovered bird species. The biologist tested 100 chicks and determined their sex and whether they have the W chromosome. In this case, the Independent Variable is whether the bird has the W chromosome (categorical), and <em>the Dependent Variable is the bird’s sex</em> (also categorical, male or female). For a human example, suppose a neurolinguist is interested in whether having a certain gene x increases the chance of developping dyslexia. In this case the data is also categorical: someone either develops dyslexia or they don’t.</p>
-<p>What kinds of statistics can be compared in these situations? Because means and medians are meaningless for nominal categories. In the Chi-squared case, it’s all about counting! The Chi-squared test compared observed frequencies to expected frequencies (based on a null hypothesis). The biggere the difference between the expected and observed frequencies, the more likely the null hypothesis will be rejected.</p>
+<p>What kinds of statistics can be compared in these situations? Because means and medians are meaningless for nominal categories. In the Chi-squared case, it’s all about counting! The Chi-squared test compared observed frequencies to expected frequencies (based on a null hypothesis). The bigger the difference between the expected and observed frequencies, the more likely the null hypothesis will be rejected.</p>
 <div id="chi-squared-test-example-candies" class="section level3" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Chi-squared test example: candies</h3>
 <p>300 children (150 boys, 150 girls) are asked if they prefer Haribo or M&amp;Ms. Question: Is there a difference between boys &amp; girls in the preferred sweet?<label for="tufte-sn-9" class="margin-toggle sidenote-number">9</label><input type="checkbox" id="tufte-sn-9" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">9</span> Quick Q: what is the IV and what is the DV in this study? What data types are they?</span></p>
