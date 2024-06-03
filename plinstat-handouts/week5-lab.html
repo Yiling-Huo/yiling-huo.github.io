@@ -12,7 +12,7 @@
 
 <meta name="author" content="Yiling Huo" />
 
-<meta name="date" content="2024-05-03" />
+<meta name="date" content="2024-06-03" />
 
 <title>Week 5 Lab sheet</title>
 
@@ -91,7 +91,7 @@ if (window.hljs) {
 
 <h1 class="title toc-ignore">Week 5 Lab sheet</h1>
 <h4 class="author">Yiling Huo</h4>
-<h4 class="date">2024-05-03</h4>
+<h4 class="date">2024-06-03</h4>
 
 
 
@@ -112,7 +112,7 @@ pre.r { background-color: #e8e6e8; }
 </div>
 <div id="exercise-2-lexical-decision" class="section level1">
 <h1>Exercise 2: Lexical decision</h1>
-<p>Lexical decision is a popular task in psycho/neurolinguistics. In a lexical decision task, the participant is presented with a printed word, and is asked to decide whether this word is a real word or not in their language. Typically, the reaction times (RT) needed to make a correct decision is recorded. This time is associated with the difficulty of lexical access (pulling the lexical item out of your mental lexicon).</p>
+<p>Lexical decision is a popular task in psycho/neurolinguistics. In a lexical decision task, the participant is presented with a word, and is asked to decide whether this word is a real word or not in their language. Typically, reaction times (RT) needed to make a correct decision are recorded. This time is associated with the difficulty of lexical access (pulling the lexical item out of your mental lexicon).</p>
 <p>A psycholinguist wants to study whether difficulty of lexical access (as measured by lexical decision RTs) is affected by the target word’s frequency and its length. 50 participants performed the lexical decision task with words varying in frequency and length. Each participant completed 100 items. Reaction times are log-transformed.</p>
 <ol style="list-style-type: decimal">
 <li>Download the data <a href="https://yiling-huo.github.io/plinstat-handouts/data/lexical.csv" download>Here</a>.</li>
@@ -122,7 +122,7 @@ pre.r { background-color: #e8e6e8; }
 <li>Check the assumptions and run the tests.
 <ul>
 <li>If you decided to run a mixed-effects model, use the random effects structure <code>(1|subject) + (1|item)</code> (This is in case your computer cannot handle the maximal random effects structure (mine couldn’t)).</li>
-<li>specify <code>REML=FALSE</code> and <code>control=lmerControl(optimizer=&quot;bobyqa&quot;, optCtrl=list(maxfun=2e5))</code> while running your model to optimize performance.</li>
+<li>Following the above, specify <code>REML=FALSE</code> and <code>control=lmerControl(optimizer=&quot;bobyqa&quot;, optCtrl=list(maxfun=2e5))</code> while running your model to optimize performance.</li>
 </ul></li>
 <li>Report your findings in a short paragraph.</li>
 </ol>
@@ -130,16 +130,16 @@ pre.r { background-color: #e8e6e8; }
 <div id="exercise-3-scalar-implicature" class="section level1">
 <h1>Exercise 3: Scalar implicature</h1>
 <p>Scalar implicature refers to implicatures derived from quantifiers. If I say “James ate some of the apples”, many people will conclude that Jamed in fact did not eat all of the apples. Some adjectives can have the same effect: if I say “It’s warm today”, many will conclude that it’s warm but not hot today.</p>
-<p>An experimental pragmatician wants to investigate whether there is a difference between how often people derive implicature derived for the word “some” and for the word “warm”. 100 participants each read 25 sentences that contained “some”, and 25 sentences that contained “warm”, and for each sentence, the participant answered the yes-no question “Would you conclude that not all….” or “Would you conclude that …. is not hot”. If the answer was yes, their response was coded as 0, and if the answer was no, the response was coded as 0.</p>
+<p>An experimental pragmatician wants to investigate whether there is a difference between how often people derive implicature derived for the word “some” and for the word “warm”. 100 participants each read 25 sentences that contained “some”, and 25 sentences that contained “warm”, and for each sentence, the participant answered the yes-no question “Would you conclude that not all….” or “Would you conclude that …. is not hot”. If the answer was yes, their response was coded as 1, and if the answer was no, the response was coded as 0.</p>
 <ol style="list-style-type: decimal">
 <li>Download the data <a href="https://yiling-huo.github.io/plinstat-handouts/data/scalar.csv" download>Here</a>.</li>
-<li>Visualise the data using a scatter plot.</li>
+<li>Visualise the data.</li>
 <li>Make relevant categorical variables factors.</li>
 <li>Decide what analysis you should do to answer the research question.</li>
 <li>Choose the correct coding scheme for categorical factors, check the assumptions and run the test.
 <ul>
 <li>If you decided to run a mixed-effects model, use the random effects structure <code>(1+condition|item)</code>.</li>
-<li>specify <code>glmerControl(optimizer = &quot;bobyqa&quot;, optCtrl = list(maxfun = 2e5))</code> while running your model to optimize performance.</li>
+<li>Following the above, specify <code>glmerControl(optimizer = &quot;bobyqa&quot;, optCtrl = list(maxfun = 2e5))</code> while running your model to optimize performance.</li>
 </ul></li>
 <li>Report your findings in a short paragraph.</li>
 </ol>
@@ -148,7 +148,7 @@ pre.r { background-color: #e8e6e8; }
 <h1>Advanced excercise: Dealing with problematic mixed-effects models</h1>
 <p>In the handout I wrote about how to choose your random-effects structure in a mixed-model: always start with the maximal structure and <em>unless the model gives you a problem</em>, stick to it. But will maximal structures often give you problems? In my experience, yes, actually. Often this is because data I collect from an experiment is not big enough to support a maximal random-effects structure. Sure, one participant usually gives me a few dozen trials, but that’s just a few thousand data points if I have a couple dozen participants. That’s not a big data set at all unfortunately, especially if you have more than one fixed factors.</p>
 <p>Now what do you do? You should <em>find out what terms are the least important for the model and remove them one by one, until the model can be supported by your data</em>. But how to do that exactly? I’ll give you some of the real data I collected for you to try it out.</p>
-<p>Suppose the study was about whether a preceding phonological cue can facilitate lexical access<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> The design I described is different from my real design but for our purposes they’re close enough</span>. In each trial, participants were presented with two pictures (e.g. an orange and a pear) and listened to a spoken phrase that identified one of the pictures. The spoken phrase either contained a phonological cue that was informative about the target’s identity (<em>an</em> orange, the informative condition), or uninformative (<em>that</em> orange, the uninformative condition). Participant’s task was to decide which one of the pictures was named, asap. Their RT was recorded and log-transformed. Each participant completed 20 items. I needed to do a statistical test to determine whether participants’ reaction times were faster in the informative condition than the uninformative condition.</p>
+<p>Suppose the study was about whether a preceding phonological cue can facilitate lexical access<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> The design I described is different from my real design but for our purposes they’re close enough</span>. In each trial, participants were presented with two pictures (e.g. an orange and a pear) and listened to a spoken phrase that identified one of the pictures. The spoken phrase either contained a phonological cue that was informative about the target’s identity (<em>an</em> orange, as opposed to <em>a</em> pear, the informative condition), or uninformative (<em>that</em> orange, the uninformative condition). Participant’s task was to decide which one of the pictures was named, asap. Their RT was recorded and log-transformed. Each participant completed 20 items. I needed to do a statistical test to determine whether participants’ reaction times were faster in the informative condition than the uninformative condition.</p>
 <ol style="list-style-type: decimal">
 <li>Download the data <a href="https://yiling-huo.github.io/plinstat-handouts/data/rt.csv" download>Here</a>.</li>
 <li>Read the data into a R data frame and plot the two conditions against logRT.</li>
