@@ -13,20 +13,33 @@ reading-time: 2
 
 <!--excerpt-->
 
-## 【Mandarin Chinese speakers wanted】Eye-tracking study [£9 for participation, 45min]
+## 【Mandarin Chinese speakers wanted】Two eye-tracking experiments recruiting [£9, 45min or £11, 65min]
 
-**Please read the descriptions carefully before booking**
+<span style="font-size: 150%;">**Please read the descriptions carefully before booking**</span>
+
+## Experiment 1
 
 - Study type: standard in-lab study
-- Duration: 45min
+- Duration: **45min**
 - Compensation: **£9** Amazon gift card
 - Location: Chandler House, UCL, WC1N 1PF
 - UCL Ethics Committee Approval Code: LING-2021-10-01
-- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ZnlZanXeHEKNGtEfqGmTOw2)**</span> (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
+- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ZnlZanXeHEKNGtEfqGmTOw2)**</span> **for study 1** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
+- **It's ok to take part in both studies**.
+
+## Experiment 2 (Available soon)
+
+- Study type: standard in-lab study
+- Duration: **65min**
+- Compensation: **£11** Amazon gift card
+- Location: Chandler House, UCL, WC1N 1PF
+- UCL Ethics Committee Approval Code: LING-2021-10-01
+- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/VB_2y8YMOEeHje-oiyyDcA2)**</span> **for study 2** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
+- **It's ok to take part in both experiments**.
 
 ## Eligibility requirements
 
-- Have not previously participated in any experiment (online, eye-tracking, EEG, etc.) where the Principle Investigator is Dr. Wing-Yee Chow. 
+- Have not previously participated in any experiment (online, eye-tracking, EEG, etc.) where the Principle Investigator is Dr. Wing-Yee Chow, except for the ones advertised on this page. 
 - Native Mandarin Chinese (mainland variation) speaker. 
 - No other native languages & No dialects spoken more than Mandarin (e.g. Wu, Min, Yue/Cantonese). 
 - Age 18 or more. 
