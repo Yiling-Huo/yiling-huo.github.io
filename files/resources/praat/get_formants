@@ -1,0 +1,64 @@
+form Get by-interval average formants
+    word Sound_file_extension .wav
+    sentence Output_file_name formants.csv
+    integer Tier_number 1
+    comment Press OK to choose a directory.
+endform
+
+procedure getFiles: .dir$, .ext$
+    .obj = Create Strings as file list: "files", .dir$ + "/*" + .ext$
+    .length = Get number of strings
+
+    for .i to .length
+        .fname$ = Get string: .i
+        .files$ [.i] = .dir$ + "/" + .fname$
+
+    endfor
+
+    removeObject: .obj
+
+endproc
+
+procedure getTextGrid: .soundfile$
+    .path$ = replace$: .soundfile$, sound_file_extension$, ".TextGrid", 0
+    .textgrid = Read from file: .path$
+endproc
+
+directory$ = chooseDirectory$: "Choose a directory:"
+outfile$ = directory$ + "\" +output_file_name$
+writeFileLine: outfile$, "file,interval_number,interval_name,start_time,end_time,f1,f2,f3,f4"
+@getFiles: directory$, sound_file_extension$
+
+for i to getFiles.length
+    soundfile = Read from file: getFiles.files$ [i]
+    filename$ = selected$("Sound")
+    filename_full$ = filename$ + sound_file_extension$
+
+    @getTextGrid: getFiles.files$ [i]
+
+    interval_count = Get number of intervals: tier_number
+    intervals# = from_to#(1, interval_count)
+            
+    for j from 1 to size(intervals#)
+        selectObject: getTextGrid.textgrid
+        intervaln$ = string$(intervals#[j])
+        intervalname$ = Get label of interval: tier_number, intervals#[j]
+        if intervalname$ <> ""
+            t0 = Get starting point: tier_number, intervals#[j]
+            tn = Get end point: tier_number, intervals#[j]
+            selectObject: soundfile
+            Edit
+            editor: soundfile
+                Select: t0, tn
+                f1 = Get first formant
+                f2 = Get second formant
+                f3 = Get third formant
+                f4 = Get fourth formant
+            Close
+            appendFileLine: outfile$, "'filename_full$', 'intervaln$', 'intervalname$', 't0', 'tn', 'f1', 'f2', 'f3', 'f4'"
+        endif
+    endfor
+
+    select all
+    Remove
+endfor
