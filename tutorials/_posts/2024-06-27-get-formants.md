@@ -28,6 +28,8 @@ Download and open [Praat](https://www.fon.hum.uva.nl/praat/).
 
 Select Praat - Open Praat script..., and select the file `get_formants`.
 
+*If on Mac OS, replace the "\" in line 28 with "/".*
+
 Select Run - Run. You will be presented with a user interface, where you can specify a number of variables. 
 
 - **Sound file extensions**: The extension of should files in your folder (e.g.: .wav)

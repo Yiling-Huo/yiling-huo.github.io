@@ -34,6 +34,8 @@ Download and run [Praat](https://www.fon.hum.uva.nl/praat/).
 
 Select Praat - Open Praat script..., and select `auditory-SP-stimuli-from-textgrid`. 
 
+*If on Mac OS, replace the "\" in line 44 with "/".*
+
 Select Run - Run. You will be presented with a user interface, where you can specify a number of variables. 
 
 - The generals:

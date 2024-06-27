@@ -34,6 +34,8 @@ Download and open [Praat](https://www.fon.hum.uva.nl/praat/).
 
 Select Praat - Open Praat script..., and select `extract_pitch_contour`.
 
+*If on Mac OS, replace the "\" in line 55 with "/".*
+
 Select Run - Run. You will be presented with a user interface, where you can specify a number of variables. 
 
 - General variables:

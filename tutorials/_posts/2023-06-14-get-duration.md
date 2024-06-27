@@ -21,6 +21,8 @@ Download the <a href="/files/resources/praat/get_duration" download>Praat script
 
 Open [Praat](https://www.fon.hum.uva.nl/praat/) and Select Praat - Open Praat script..., and select the `get duration` script.
 
+*If on Mac OS, replace the "\" in line 22 with "/".*
+
 Select Run - Run. You will be taken to a window where you can choose where your audio files are located. 
 
 <img src="/images/tutorials/get_duration/ui.png"  width="49%">
