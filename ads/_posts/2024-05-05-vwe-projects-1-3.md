@@ -27,11 +27,15 @@ reading-time: 2
 - Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ZnlZanXeHEKNGtEfqGmTOw2)**</span> **for study 1** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
 - **It's ok to take part in both experiments**.
 
-## Experiment 2 (Available soon)
+## Experiment 2
 
 - Study type: standard in-lab study
-- Duration: **65min**
+- Duration: **75min**
 - Compensation: **£11** Amazon gift card
+- Location: Chandler House, UCL, WC1N 1PF
+- UCL Ethics Committee Approval Code: LING-2021-10-01
+- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/VB_2y8YMOEeHje-oiyyDcA2)**</span> **for study 2** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
+- **It's ok to take part in both experiments**.
 
 ## Eligibility requirements
 
