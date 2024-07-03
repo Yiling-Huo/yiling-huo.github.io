@@ -17,24 +17,28 @@ reading-time: 2
 
 <span style="font-size: 150%;">**Please read the descriptions carefully before booking**</span>
 
-## Experiment 1 (temporarily unavailable)
+I'm running two eye-tracking experiments that targets the same population. It's ok to participate in both experiments, however please note the study code so that you don't sign up for the same experiment twice. 
 
+## Experiment 1
+
+- Study code: TANGO
 - Study type: standard in-lab study
-- Duration: **45min**
+- Duration: **50min**
 - Compensation: **£9** Amazon gift card
-<!-- - Location: Chandler House, UCL, WC1N 1PF -->
-<!-- - UCL Ethics Committee Approval Code: LING-2021-10-01 -->
-<!-- - Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ZnlZanXeHEKNGtEfqGmTOw2)**</span> **for study 1** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*) -->
-<!-- - **It's ok to take part in both experiments**. -->
+- Location: Chandler House, UCL, WC1N 1PF
+- UCL Ethics Committee Approval Code: LING-2021-10-01
+- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ZnlZanXeHEKNGtEfqGmTOw2)**</span> **for study 1 TANGO** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
+- **It's ok to take part in both experiments**.
 
 ## Experiment 2
 
+- Study code: SIERRA
 - Study type: standard in-lab study
-- Duration: **75min**
-- Compensation: **£11.5** Amazon gift card
+- Duration: **60min**
+- Compensation: **£10** Amazon gift card
 - Location: Chandler House, UCL, WC1N 1PF
 - UCL Ethics Committee Approval Code: LING-2021-10-01
-- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/VB_2y8YMOEeHje-oiyyDcA2)**</span> **for study 2** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
+- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/VB_2y8YMOEeHje-oiyyDcA2)**</span> **for study 2 SIERRA** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
 - **It's ok to take part in both experiments**.
 
 ## Eligibility requirements
