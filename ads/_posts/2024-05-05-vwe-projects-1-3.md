@@ -17,11 +17,11 @@ reading-time: 2
 
 <span style="font-size: 150%;">**Please read the descriptions carefully before booking**</span>
 
-I'm running two eye-tracking experiments that targets the same population. It's ok to participate in both experiments, however please note the study code so that you don't sign up for the same experiment twice. 
+I'm running two eye-tracking experiments that target the same population. It's ok to participate in both experiments, however please note the study code so that you don't sign up for the same experiment twice. 
 
 ## Experiment 1
 
-- Study code: TANGO
+- **Study code: TANGO**
 - Study type: standard in-lab study
 - Duration: **50min**
 - Compensation: **£9** Amazon gift card
@@ -32,7 +32,7 @@ I'm running two eye-tracking experiments that targets the same population. It's 
 
 ## Experiment 2
 
-- Study code: SIERRA
+- **Study code: SIERRA**
 - Study type: standard in-lab study
 - Duration: **60min**
 - Compensation: **£10** Amazon gift card
