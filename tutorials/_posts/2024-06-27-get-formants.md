@@ -4,7 +4,7 @@ title: Extract by-interval mean formants in Praat
 date: 2024-06-27 15:00
 # modified_date: 2023-06-14 15:00
 author: Yiling Huo
-comment_issue_id: 12
+# comment_issue_id: 12
 category: 'Tutorials' 
 tags: ['Psycholinguistics', 'Praat']
 reading-time: 2
