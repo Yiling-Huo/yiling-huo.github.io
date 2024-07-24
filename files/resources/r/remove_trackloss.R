@@ -12,6 +12,9 @@ remove_trackloss <- function(data='', subject_col='', trial_col='', trackloss_co
   trial_n <- which(colnames(data)==trial_col)
   trackloss_n <- which(colnames(data)==trackloss_col)
   
+  # order the data frame by subject and trial
+  data <- data[with(data, order(data[,participant_n], data[,trial_n])), ]
+  
   # loop through all observations to determine whether each trial is a track loss trial
   participant <- as.vector(data[,participant_n])[1] # find the first trial
   trial <- as.numeric(as.vector(data[,trial_n])[1]) # find the first participant
@@ -43,12 +46,10 @@ remove_trackloss <- function(data='', subject_col='', trial_col='', trackloss_co
   }
   
   # print summary
-  print('exluded number of trials:')
-  print(length(which(dat_exclude$exclude==TRUE)))
-  print('out of number of trials:')
-  print(nrow(dat_exclude))
-  print('excluded percentage:')
-  print((length(which(dat_exclude$exclude==TRUE))/nrow(dat_exclude))*100)
+  print(paste('exluded number of trials:', length(which(dat_exclude$exclude==TRUE)), sep = ' '))
+  print(paste('out of number of trials:', nrow(dat_exclude), sep = ' '))
+  print(paste('excluded percentage: ', (length(which(dat_exclude$exclude==TRUE))/nrow(dat_exclude))*100, "%", sep = ''))
+  print(paste('number of trials remaining:', (nrow(dat_exclude)-length(which(dat_exclude$exclude==TRUE))), sep = ' '))
   
   # create and return the cleaned data frame
   data_cleaned <- merge(data, dat_exclude, by = c(subject_col, trial_col))
