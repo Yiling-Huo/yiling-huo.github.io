@@ -2,7 +2,7 @@
 layout: post
 title: Remove track loss trials from visual world eye-tracking data
 date: 2023-04-25 10:00
-modified_date: 2024-07-24 20:00
+modified_date: 2024-08-06 14:00
 author: Yiling Huo
 comment_issue_id: 6
 category: 'Tutorials'
@@ -18,7 +18,7 @@ My method is inspired by the [eyetrackingR package](http://www.eyetracking-r.com
 
 ## Step 1: Preparation
 
-Download the <a href="/files/resources/r/remove_trackloss.R" download>R script</a>.
+Download the <a href="https://gist.github.com/Yiling-Huo/9a49e7b7a5fdcf5bee46d4c741d9497e">R script</a>.
 
 Prepare your data. As an R data frame, your data should contain at least three columns: 
 - Participant id

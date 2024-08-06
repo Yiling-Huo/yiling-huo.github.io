@@ -2,12 +2,12 @@
 layout: post
 title: Reducing breathing and room noise from speech samples
 date: 2023-07-23 10:00
-modified_date:
+modified_date: 2024-08-06 14:00
 author: Yiling Huo
 category: 'Tutorials'
 tags: ['Psycholinguistics', 'Python']
 comment_issue_id: 10
-reading-time: 4
+reading-time: 3
 ---
 
 On this page I share my Python script that removes breathing and room noise from recordings of my participants' responses in a speech production experiment. 
@@ -26,7 +26,7 @@ This script uses the stationary noise reduction method in the [noisereduce](http
 
 Install Python and these packages: [pydub](https://github.com/jiaaro/pydub), [numpy](https://numpy.org/install/), and [noisereduce](https://github.com/timsainb/noisereduce). 
 
-Download the <a href="/files/resources/python/noise_reduction.py" download>Python script</a> , or see the full script at the end of this page. 
+Download the <a href="https://gist.github.com/Yiling-Huo/6fc080cba8f3f4260252c20bbf8eb320">Python script</a>.
 
 Gather your recordings in one folder. The recordings must contain participant information in the exact same places in the file name. For example: `S01_trial_1.wav` , `S21_trial_1.wav`. 
 
@@ -49,87 +49,3 @@ Open `noise_reduction.py`  in an IDE and notice these variables:
 - headroom: float. How close to the maximum volume to boost the signal up to (in dB).
 
 Once you've set all these variables correctly, run the script. The script should first take all sound files in the noiseDir and create a dictionary that has participant ID as keys and noise samples as values. Then the script should take all sound files in inDir and find the corresponding noise sample using info in the file name, then reduce noise. Then, the script can optionally normalize the sound volume, and finally save the output to outDir. 
-
-## Full script
-
-```python
-import os
-from pydub import AudioSegment, effects
-import numpy as np
-import noisereduce as nr
-
-##########
-
-# set working directory to the python file's directory
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-# set audio format (both input and output)
-audioFormat = 'wav'
-
-# input and output directories
-inDir = (os.getcwd()+'/recordings/')
-noiseDir = (os.getcwd()+'/noise_samples/')
-outDir = (os.getcwd()+'/noise_reduced/') 
-if not os.path.exists(outDir):
-    os.makedirs(outDir)
-
-# set participant identification
-'''
-For example, if idFirst = 0 and idLast = 3
-The script will take each file's first three letters (filename[0:3]) as your participant id
-'''
-idFirst = 0
-idLast = 3
-
-# set whether to normalise volume after noise reduction
-'''
-normalise = Ture to normalise volume
-headroom is how close to the maximum volume to boost the signal up to (in dB)
-'''
-normalise = True
-headroom = 2
-
-##########
-
-print('Input files are taken from ' + inDir)
-print('Noise samples are taken from ' + noiseDir)
-print('Output files are created in ' + outDir)
-
-# define read and write functions
-def read(file):
-    a = AudioSegment.from_file(file)
-    y = np.array(a.get_array_of_samples())
-    return a.frame_rate, y
-
-def write(file, data, rate, format, normalise_volume=True, headr=0.1):
-    y = np.int16(data)
-    channels = 2 if (data.ndim == 2 and data.shape[1] == 2) else 1
-    song = AudioSegment(y.tobytes(), frame_rate=rate, sample_width=2, channels=channels)
-    if normalise_volume:
-        song = effects.normalize(song, headroom=headr)
-    song.export(file, format=format)
-
-print('Reducing noise...')
-
-# get a dictionary of noise samples
-noises = {}
-noiseList = os.listdir(noiseDir)
-for noise in noiseList:
-    if noise[-(len(audioFormat)):]==audioFormat:
-        r, noises[noise[:-(len(audioFormat))]] = read(noiseDir + noise)
-
-# reduce noise (and optionally normalise volume) for recordings
-# https://timsainburg.com/noise-reduction-python.html
-# https://github.com/timsainb/noisereduce
-fileList = os.listdir(inDir)
-for file in fileList:
-    if file[-(len(audioFormat)):]==audioFormat:
-            print('Sound file: ' + file)
-            rate, sound = read(inDir + file)
-            noise = noises[file[idFirst:idLast]]
-            print('Noise sample: ' + file[idFirst:idLast])
-            reduced = nr.reduce_noise(y = sound, y_noise = noise, sr=rate, stationary=True)
-            write(outDir+file, reduced, rate, audioFormat, normalise_volume=normalise, headr=headroom)
-
-print ('Done.')
-```

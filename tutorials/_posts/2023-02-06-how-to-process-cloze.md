@@ -2,6 +2,7 @@
 layout: post
 title: Automated processing of Chinese cloze responses
 date: 2023-02-06 16:00
+modified_date: 2024-08-06-14:00
 author: Yiling Huo
 comment_issue_id: 2
 category: 'Tutorials'
@@ -31,7 +32,7 @@ On this page, I will explain step-by-step how my scripts work.
 
 Go to [SUBTLEX-CH](https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch) and download `SUBTLEX-CH-WF-PoS.zip`. Extract `SUBTLEX-CH-WF_PoS.xlsx`.
 
-Download the python scripts and some sample data <a href="/files/resources/python/chinese-cloze.zip" download>here</a>. Extract everything, including `01_create_index_using_SUBTLEX_CH_PoS.py` and `02_process_cloze_data.py`. 
+Find the python scripts and some sample data <a href="https://github.com/Yiling-Huo/chinese-cloze-processing">here</a>. 
 
 Pre-process your data. Your data should be in **long form** (one response per row), in `.csv` format, and contain at least these two columns:
 

@@ -2,6 +2,7 @@
 layout: post
 title: Make auditory serial presentation stimuli
 date: 2023-03-10 14:00
+modified_date: 2024-08-06-14:00
 author: Yiling Huo
 comment_issue_id: 4
 category: 'Tutorials'
@@ -15,7 +16,7 @@ Psycholinguistic research sometimes requires the stimuli to have specific timing
 
 ### Step 1: Preparation
 
-Download the <a href="/files/resources/praat/auditory-SP-stimuli-from-textgrid" download>Praat script</a>.
+Download the <a href="https://gist.github.com/Yiling-Huo/0ffafad45f39ae69556a46c3240429c6">Praat script</a>.
 
 Gather your stimuli `.wav` files, and make your `.Textgrid` files. The `.Textgrid` files should have the same name as your `.wav` files. Your textgrid files should contain at least one interval tier that Praat will use to make the serial presentation stimuli. For example, if I want to present a sentence word-by-word, with a between-word SOA = 800ms, my textgrid should look like this, where:
 
