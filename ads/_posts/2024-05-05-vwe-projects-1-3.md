@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Participant recruitment for LING-2021-10-01, June-July 2024
+title: Participant recruitment for LING-2021-10-01, September 2024
 date: 2024-02-27 17:00
 modified_date: 
 author: Yiling Huo
@@ -13,7 +13,7 @@ reading-time: 2
 
 <!--excerpt-->
 
-## 【Mandarin Chinese speakers wanted】Two eye-tracking experiments recruiting 
+## 【Mandarin Chinese speakers wanted】Eye-tracking experiment recruiting 
 
 <span style="font-size: 150%;">**Please read the descriptions carefully before booking**</span>
 
@@ -25,9 +25,9 @@ reading-time: 2
 - Compensation: **£9** Amazon gift card
 - Location: Chandler House, UCL, WC1N 1PF
 - UCL Ethics Committee Approval Code: LING-2021-10-01
-- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ZnlZanXeHEKNGtEfqGmTOw2)**</span> **for study 1 TANGO** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
+- Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/ihYY0V3wbka_2UE0XdZL-g2)**</span> **for study 1 TANGO** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*)
 
-## Experiment 2 (Temporarily unavailable)
+<!-- ## Experiment 2 (Temporarily unavailable)
 
 - **Study code: JULIETTE**
 - Study type: standard in-lab study
@@ -35,12 +35,12 @@ reading-time: 2
 - Compensation: **£13.5** Amazon gift card
 - Location: Chandler House, UCL, WC1N 1PF
 - UCL Ethics Committee Approval Code: LING-2021-10-01
-<!-- - Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/Jfr1wG4m1E2wzlxnXqBi0A2)**</span> **for study 2** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*) -->
+Booking page: <span style="font-size: 200%;">**[BOOK HERE](https://outlook.office365.com/owa/calendar/ExperimentparticipantsignupLING20211001March2024@live.ucl.ac.uk/bookings/s/Jfr1wG4m1E2wzlxnXqBi0A2)**</span> **for study 2** (*Please note that your appointment may be cancelled if you do not meet the eligibility requirements.*) -->
 
 ## Eligibility requirements
 
 - Have not previously participated in any experiment (online, eye-tracking, EEG, etc.) where the Principle Investigator is Dr. Wing-Yee Chow. 
-- *If you have already participated in one of the studies that was advertised on this page, please DO NOT participate in the other*. 
+<!-- - *If you have already participated in one of the studies that was advertised on this page, please DO NOT participate in the other*.  -->
 - Native Mandarin Chinese (mainland variation) speaker. 
 - No other native languages & No dialects spoken more than Mandarin (e.g. Wu, Min, Yue/Cantonese). 
 - Age 18 or more. 
