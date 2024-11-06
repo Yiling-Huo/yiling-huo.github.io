@@ -50,4 +50,4 @@ social_links:
   - { platform: orcid,        user_url: "https://orcid.org/0000-0002-9327-9412" }
 
 # Correct time zone for updating blog
-# timezone: Europe/London
+timezone: Europe/London
