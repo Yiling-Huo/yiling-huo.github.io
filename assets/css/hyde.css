@@ -174,7 +174,7 @@ a.sidebar-nav-item:focus {
 
 /* Spring */
 .theme-spring .sidebar {
-  background-image: url("/images/sidebar/sidebar-sp.png");
+  background-image: url("/images/sidebar/sidebar-sp.webp");
   background-size: cover;
 }
 .theme-spring .content a,
@@ -184,7 +184,7 @@ a.sidebar-nav-item:focus {
 
 /* Summer */
 .theme-summer .sidebar {
-  background-image: url("/images/sidebar/sidebar-su.png");
+  background-image: url("/images/sidebar/sidebar-su.webp");
   background-size: cover;
 }
 .theme-summer .content a,
@@ -194,7 +194,7 @@ a.sidebar-nav-item:focus {
 
 /* Autumn */
 .theme-autumn .sidebar {
-  background-image: url("/images/sidebar/sidebar-au.png");
+  background-image: url("/images/sidebar/sidebar-au.webp");
   background-size: cover;
 }
 .theme-autumn .content a,
@@ -204,7 +204,7 @@ a.sidebar-nav-item:focus {
 
 /* Winter */
 .theme-winter .sidebar {
-  background-image: url("/images/sidebar/sidebar-wi.png");
+  background-image: url("/images/sidebar/sidebar-wi.webp");
   background-size: cover;
 }
 .theme-winter .content a,
