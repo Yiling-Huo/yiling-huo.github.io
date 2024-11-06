@@ -1,65 +1,62 @@
 ---
-layout: base
+layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 id="post-title" class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}
-      {%- if page.reading-time -%}
-      <!-- get reading time -1 minute for the text -->
-      {%- assign t = page.reading-time | minus: 1 -%} 
-      {% case t %}
-        {% when -1 %}
-        • Reading time: Less than 1 minute
-        {% when 0 %}
-        • Reading time: 1 minute
-        {% else %}
-        • Reading time: {{ page.reading-time }} minutes
-      {% endcase %}
-      {% else %}
-      {%- endif -%}
-    </p>
-    {%- if page.modified_date -%}
-    <p class="post-updated">
-      Last updated: 
-      {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-      <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-        {{ mdate | date: date_format }}
-      </time>
-    </p>
+<div class="post">
+  <h1 id="post-title" class="post-title">{{ page.title }}</h1>
+  <p class="post-date">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date: date_format }}
+    </time>
+    {%- if page.author -%}
+      • {% for author in page.author %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+          {%- if forloop.last == false %}, {% endif -%}
+      {% endfor %}
     {%- endif -%}
-  </header>
+    {%- if page.reading-time -%}
+    <!-- get reading time -1 minute for the text -->
+    {%- assign t = page.reading-time | minus: 1 -%} 
+    {% case t %}
+      {% when -1 %}
+      • Reading time: Less than 1 minute
+      {% when 0 %}
+      • Reading time: 1 minute
+      {% else %}
+      • Reading time: {{ page.reading-time }} minutes
+    {% endcase %}
+    {% else %}
+    {%- endif -%}
+  </p>
+  {%- if page.modified_date -%}
+  <p class="post-date">
+    Last updated: 
+    {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+    <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+      {{ mdate | date: date_format }}
+    </time>
+  </p>
+  {%- endif -%}
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+  {{ content }}
 
-  <a class="back-to-top" href="#post-title">
-    Back to Top &uarr;
-  </a>
-  
-  {%- include related-reads.html -%}
+</div>
 
-  <!-- {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%} -->
+<a class="back-to-top" href="#post-title">
+  Back to Top &uarr;
+</a>
 
-  {% include cookie-consent.html element="#comments"%}
+{%- include related-reads.html -%}
 
-  <script src="/script/jquery.min.js"></script>
-  {% include comments.html element="#related" github_account="Yiling-Huo/yiling-huo.github.io" require_cookie_consent="true" %}
+<!-- {%- if site.disqus.shortname -%}
+  {%- include disqus_comments.html -%}
+{%- endif -%} -->
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+{% include cookie-consent.html element="#comments"%}
+
+<script src="/script/jquery.min.js"></script>
+{% include comments.html element="#related" github_account="Yiling-Huo/yiling-huo.github.io" require_cookie_consent="true" %}
+
+<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

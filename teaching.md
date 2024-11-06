@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Teaching
-permalink: /teaching/
+sidebar: true
+# permalink: /teaching/
 ---
 
 ## Lecturer / Teacher

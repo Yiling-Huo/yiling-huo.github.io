@@ -1,0 +1,49 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    {% if page.sidebar %}
+      <div class="sidebar-about">
+        <h1>
+          <a href="{{ "/" | relative_url }}">
+            {{ site.title }}
+          </a>
+        </h1>
+        <p class="lead">{{ site.description }}</p>
+      </div>
+    {% endif %}
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
+
+      {%- assign default_paths = site.pages | map: "path" -%}
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+      {% for path in page_paths %}
+      {%- assign this_page = site.pages | where: "path", path | first -%}
+        {% if this_page.title %}
+            <a class="sidebar-nav-item{% if page.url == this_page.url %} active{% endif %}" href="{{ this_page.url | relative_url }}">{{ this_page.title}}</a>
+        {% endif %}
+      {% endfor %}
+
+      <!-- {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %} -->
+
+      <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
+      <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+
+      <!-- <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="mailto:yiling.huo.18@ucl.ac.uk">Contact</a> -->
+    </nav>
+
+    <div>
+      {%- include social.html -%}
+    </div>
+
+    <p style="margin: 0;">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <p style="font-size: 80%; margin: 0;">Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/poole/hyde/">Hyde theme</a>.</p>
+  </div>
+</div>

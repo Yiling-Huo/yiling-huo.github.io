@@ -1,11 +1,11 @@
 ---
-layout: base
+layout: default
 ---
 
 <style>
   h2{
     line-height:"70%";
-    margin-bottom: -0.6em;
+    margin-bottom: 0.8em;
   }
   h3{
     line-height:"80%";
@@ -13,7 +13,7 @@ layout: base
   }
   h4{
     line-height:"90%";
-    margin-bottom: -0.6em;
+    margin-bottom: 0.2em;
     text-align: right;
     font-size: 80%;
   }
@@ -53,7 +53,7 @@ layout: base
                     {{ post.title | escape }}
                 </a>
             </h3>
-            <span class="post-meta">{{ post.date | date_to_long_string }}</span>
+            <span class="post-date">{{ post.date | date_to_long_string }}</span>
             {{ post.excerpt }}
             <!-- {% if post.content contains site.excerpt_separator %}
                 <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>

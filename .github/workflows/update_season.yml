@@ -19,10 +19,10 @@ jobs:
       - name: Advance a season
         id: advance_season
         run: |
-          current_season=$(awk '/minima:/ {getline; print}' _config.yml | awk '{print $2}')
+          current_season=$(awk '/hyde-theme:/ {getline; print}' _config.yml | awk '{print $2}')
           echo "Current season: $current_season"
           next_season=$(bash script/advance_season.sh "$current_season")
-          sed -i '/minima:/ {n; s/skin: .*/skin: '$next_season'/}' _config.yml
+          sed -i '/hyde-theme:/ {n; s/skin: .*/skin: '$next_season'/}' _config.yml
 
       - name: Commit and Push Changes
         run: |

@@ -1,23 +1,39 @@
-title: Yiling Huo
-author:
-  name: Yiling Huo 霍怡伶
-  email: yiling.huo.18@ucl.ac.uk
+# Dependencies
+markdown: kramdown
+highlighter: pygments
 
-tagline: PhD student | Linguistics | University College London
-# The `>` after `description:` means to ignore line-breaks until next key.
-# If you want to omit the line-break after the end of text, use `>-` instead.
+# Permalinks
+# permalink:        pretty
+# relative_permalinks: true
+
+# Setup
+title:            'Yiling Huo'
+tagline:          'PhD student | Linguistics | University College London'
 description: >
-  Hi! I'm Yiling, and this is my personal website. I'm interested in how the human mind processes language. So far, I've worked on the topic of prediction during language comprehension, using eye-tracking and behavioural methods.
+  Hi! I'm Yiling, and this is my personal website. I'm interested in how the human mind processes language.
 
-# Build settings
+# url:              http://hyde.getpoole.com
+# baseurl:          /
 
-# theme: minima
+# author:
+#   name:           'Yiling Huo'
+#   url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+# version:          2.1.0
+
+# github:
+#   repo:           https://github.com/poole/hyde
+
+hyde-theme:
+  skin: autumn
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-markdown: kramdown
+  - jekyll-paginate
 
 header_pages:
  - publications.md
@@ -26,47 +42,12 @@ header_pages:
  - resources.html
  - links.html
 
-excerpt_separator: "<!--excerpt-->"
+# Social links in sidebar
+social_links:
+  - { platform: email,        user_url: "mailto:yiling.huo.18@ucl.ac.uk" }
+  - { platform: twitter,        user_url: "https://twitter.com/YlHuo" }
+  - { platform: github,         user_url: "https://github.com/Yiling-Huo" }
+  - { platform: orcid,        user_url: "https://orcid.org/0000-0002-9327-9412" }
 
-# Set global variables for jekyll-seo-tag plugin to gather meta data 
-# seems like description overrides tagline
-twitter:
-  username: YlHuo
-  card: summary
-
-# Theme-specific settings
-
-  # Set season skin
-minima: 
-  skin: autumn
-
-  # Minima date format.
-  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
-  #
-  # date_format: "%b %-d, %Y"
-
-  # Generate social links in footer.
-  social_links:
-    - { platform: twitter,        user_url: "https://twitter.com/YlHuo" }
-    - { platform: github,         user_url: "https://github.com/Yiling-Huo" }
-    - { platform: orcid,        user_url: "https://orcid.org/0000-0002-9327-9412" }
-  # - { platform: devto,          user_url: "https://dev.to/jekyll" }
-  # - { platform: dribbble,       user_url: "https://dribbble.com/jekyll" }
-  # - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
-  #   - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
-  #   - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
-  #   - { platform: instagram,      user_url: "https://www.instagram.com/jekyll" }
-  #   - { platform: keybase,        user_url: "https://keybase.io/jekyll" }
-  #   - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jekyll" }
-  #   - { platform: microdotblog,   user_url: "https://micro.blog/jekyll" }
-  #   - { platform: pinterest,      user_url: "https://www.pinterest.com/jekyll" }
-  #   - { platform: stackoverflow,  user_url: "https://stackoverflow.com/users/1234567/jekyll" }
-  #   - { platform: telegram,       user_url: "https://t.me/jekyll" }
-  #   - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
-
-
-# Set to `true` to show excerpts on the homepage.
-#
-# show_excerpts: false
-
-timezone: Europe/London
+# Correct time zone for updating blog
+# timezone: Europe/London

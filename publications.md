@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Publications & Presentations
-permalink: /publications/
+sidebar: true
+# permalink: /publications/
 ---
 
 ## Publications
