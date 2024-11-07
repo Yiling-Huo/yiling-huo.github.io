@@ -42,6 +42,8 @@ node_modules
 
 # images
 images/sidebar/sidebar.psd
+images/photography/*.png
+images/photography/*.jpg
+images/photography/convert-images.py
 Gemfile.lock
-
 games copy.html

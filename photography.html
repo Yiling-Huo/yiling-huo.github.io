@@ -2,63 +2,96 @@
 layout: page
 title: Photography
 # permalink: /photography/
+sections: ['Travel - B&W','Travel - Color','Studies']
 ---
 
-<div class="gallery-container">
-    <button class="gallery-button prev" onclick="prevImage()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 6l-6 6l6 6" />
-        </svg>
-    </button>
-    <div class="gallery-track">
-        {% for item in site.data.gallery %}
-        <div class="gallery-item">
-          <img src="{{ item.image }}" alt="{{ item.caption }}" onContextMenu="return false;">
-          <div>{{ item.caption }}</div>
-        </div>
-        {% endfor %}
-    </div>
-    <button class="gallery-button next" onclick="nextImage()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 6l6 6l-6 6" />
-        </svg>
-    </button>
+<div>
+  <p style="font-size: 120%;">
+    {% for sec in page.sections %}
+    <a href="#{{ sec | slugify }}">{{ sec }}</a>
+    &#160 &#160 &#160
+    {% endfor %}
+  </p>
 </div>
+
+<hr/>
+
+{% for gallery in page.sections %}
+{% assign slugified_gallery = gallery | slugify %}
+<h3>{{ gallery }}</h3>
+<br/>
+{% for g in site.data.gallery %}
+  {% if g[0] == slugified_gallery %}
+    {% assign gallery_data = g[1] %}
+      <div class="gallery-container" id="{{slugified_gallery}}">
+        <button class="gallery-button prev" onclick="prevImage('{{slugified_gallery}}')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 6l-6 6l6 6" />
+            </svg>
+        </button>
+        <div class="gallery-track">
+              {% for item in gallery_data %}
+                <div class="gallery-item">
+                  <img src="{{ item.image }}" alt="{{ item.caption }}" onContextMenu="return false;">
+                  <div>{{ item.caption }}</div>
+                </div>
+              {% endfor %}
+        </div>
+        <button class="gallery-button next" onclick="nextImage('{{slugified_gallery}}')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 6l6 6l-6 6" />
+            </svg>
+        </button>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
 
 <script>
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-let currentIndex = getRandomInt(document.querySelectorAll(".gallery-item").length);
+// Store current indexes for each gallery
+const currentIndexes = {};
 
-function showImage(index) {
-  const track = document.querySelector(".gallery-track");
-  const containerWidth = document.querySelector(".gallery-container").offsetWidth;
-  const imageWidth = document.querySelector(".gallery-item").offsetWidth;
-
-  // Calculate the offset needed to center the image
-  const offset = ((containerWidth - imageWidth) /2);
+function showImage(galleryId, index) {
+  const galleryContainer = document.getElementById(galleryId);
+  const track = galleryContainer.querySelector(".gallery-track");
+  const containerWidth = galleryContainer.offsetWidth;
+  const imageWidth = galleryContainer.querySelector(".gallery-item").offsetWidth;
+  const offset = ((containerWidth - imageWidth) / 2);
 
   // Move the gallery track based on the index, centering the current image
   track.style.transform = `translateX(${-index * imageWidth + offset}px)`;
 
   // Update button visibility based on the current index
-  document.querySelector(".gallery-button.prev").style.visibility = index === 0 ? "hidden" : "visible";
-  document.querySelector(".gallery-button.next").style.visibility = index === document.querySelectorAll(".gallery-item").length - 1 ? "hidden" : "visible";
+  galleryContainer.querySelector(".gallery-button.prev").style.visibility = index === 0 ? "hidden" : "visible";
+  galleryContainer.querySelector(".gallery-button.next").style.visibility = index === galleryContainer.querySelectorAll(".gallery-item").length - 1 ? "hidden" : "visible";
+
+  // Save the current index for the gallery
+  currentIndexes[galleryId] = index;
 }
 
-function nextImage() {
-  const items = document.querySelectorAll(".gallery-item");
-  currentIndex = Math.min(currentIndex + 1, items.length - 1); // Increment index or cap at the last image
-  showImage(currentIndex);
+function nextImage(galleryId) {
+  const galleryContainer = document.getElementById(galleryId);
+  const items = galleryContainer.querySelectorAll(".gallery-item");
+  const currentIndex = currentIndexes[galleryId] || 0;
+  const newIndex = Math.min(currentIndex + 1, items.length - 1); // Increment index or cap at the last image
+  showImage(galleryId, newIndex);
 }
 
-function prevImage() {
-  currentIndex = Math.max(currentIndex - 1, 0); // Decrement index or cap at the first image
-  showImage(currentIndex);
+function prevImage(galleryId) {
+  const galleryContainer = document.getElementById(galleryId);
+  const currentIndex = currentIndexes[galleryId] || 0;
+  const newIndex = Math.max(currentIndex - 1, 0); // Decrement index or cap at the first image
+  showImage(galleryId, newIndex);
 }
 
-// Initial call to set button visibility based on the starting index
-showImage(currentIndex);
+// Initialize galleries with random starting points
+document.querySelectorAll(".gallery-container").forEach(gallery => {
+  const galleryId = gallery.id;
+  const randomIndex = getRandomInt(gallery.querySelectorAll(".gallery-item").length);
+  showImage(galleryId, randomIndex);
+});
 </script>
