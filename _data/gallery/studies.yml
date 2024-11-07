@@ -33,6 +33,12 @@
   
 - image: "/images/photography/36.webp"
   caption: "<ul class='gallery-caption'><li><em>Composition 2</em>, 2024</li><li>Cardiff, Wales</li><li>Sony Alpha 7 II</li></ul>"
+
+  - image: "/images/photography/39.webp"
+  caption: "<ul class='gallery-caption'><li><em>Composition 4</em>, 2024</li><li>Edinburgh, Scotland</li><li>Sony Alpha 7 II</li></ul>"
+
+- image: "/images/photography/40.webp"
+  caption: "<ul class='gallery-caption'><li><em>Composition 3</em>, 2024</li><li>Edinburgh, Scotland</li><li>Sony Alpha 7 II</li></ul>"
   
 - image: "/images/photography/27.webp"
   caption: "<ul class='gallery-caption'><li><em>Repetition</em>, 2024</li><li>Glasgow, Scotland</li><li>Sony Alpha 7 II</li></ul>"
@@ -42,3 +48,6 @@
   
 - image: "/images/photography/29.webp"
   caption: "<ul class='gallery-caption'><li><em>Blue</em>, 2024</li><li>Hull, England</li><li>Sony Alpha 7 II</li></ul>"
+
+- image: "/images/photography/41.webp"
+  caption: "<ul class='gallery-caption'><li><em>Crossroad</em>, 2024</li><li>Edinburgh, Scotland</li><li>Sony Alpha 7 II</li></ul>"
