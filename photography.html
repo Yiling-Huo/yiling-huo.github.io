@@ -32,7 +32,7 @@ sections: ['Travel - B&W','Travel - Color','Studies']
         <div class="gallery-track">
               {% for item in gallery_data %}
                 <div class="gallery-item">
-                  <img src="{{ item.image }}" alt="{{ item.caption }}" onContextMenu="return false;">
+                  <img class="gallery-image" src="{{ item.image }}" alt="{{ item.caption }}" onContextMenu="return false;">
                   <div>{{ item.caption }}</div>
                 </div>
               {% endfor %}
@@ -48,6 +48,18 @@ sections: ['Travel - B&W','Travel - Color','Studies']
 {% endfor %}
 
 <script>
+// Prevent image save
+// Select all images on the page
+const images = document.querySelectorAll('img');
+
+// Loop through each image and add the touchstart event listener
+images.forEach(image => {
+  image.addEventListener('touchstart', function(event) {
+    event.preventDefault();  // Prevent default long-press action
+  });
+});
+
+// Get random number
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
