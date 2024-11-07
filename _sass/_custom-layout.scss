@@ -1,3 +1,5 @@
+// Side bar social media icons
+
 .social-media-list {
     list-style: none;
     // margin-left: 0;
@@ -24,6 +26,8 @@
     vertical-align: text-bottom;
 }
 
+// Tag icon for posts
+
 .tag {
     padding: 0;
     margin: 0;
@@ -32,6 +36,8 @@
     *zoom: 1; /* for older IE */
     height: 1em;
 }
+
+// Back to top button for posts
 
 .back-to-top {
     padding-top: 0.3em;
@@ -48,9 +54,13 @@
     background-color: rgba(255,255,255,0.8);
 }
 
+// Profile picture
+
 .profile {
     content: url("/images/profile.webp");
 }
+
+// Photography page
 
 .gallery-container {
     position: relative;
@@ -113,4 +123,7 @@
 
 .gallery-caption {
     list-style-type:none;
+    // make sure texts stay centered
+    padding: 0; 
+    margin: 0;
 }
