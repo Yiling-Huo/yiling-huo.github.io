@@ -1,0 +1,64 @@
+---
+layout: page
+title: Photography
+# permalink: /photography/
+---
+
+<div class="gallery-container">
+    <button class="gallery-button prev" onclick="prevImage()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 6l-6 6l6 6" />
+        </svg>
+    </button>
+    <div class="gallery-track">
+        {% for item in site.data.gallery %}
+        <div class="gallery-item">
+          <img src="{{ item.image }}" alt="{{ item.caption }}" onContextMenu="return false;">
+          <div>{{ item.caption }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="gallery-button next" onclick="nextImage()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 6l6 6l-6 6" />
+        </svg>
+    </button>
+</div>
+
+<script>
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+let currentIndex = getRandomInt(document.querySelectorAll(".gallery-item").length);
+
+function showImage(index) {
+  const track = document.querySelector(".gallery-track");
+  const containerWidth = document.querySelector(".gallery-container").offsetWidth;
+  const imageWidth = document.querySelector(".gallery-item").offsetWidth;
+
+  // Calculate the offset needed to center the image
+  const offset = ((containerWidth - imageWidth) /2);
+
+  // Move the gallery track based on the index, centering the current image
+  track.style.transform = `translateX(${-index * imageWidth + offset}px)`;
+
+  // Update button visibility based on the current index
+  document.querySelector(".gallery-button.prev").style.visibility = index === 0 ? "hidden" : "visible";
+  document.querySelector(".gallery-button.next").style.visibility = index === document.querySelectorAll(".gallery-item").length - 1 ? "hidden" : "visible";
+}
+
+function nextImage() {
+  const items = document.querySelectorAll(".gallery-item");
+  currentIndex = Math.min(currentIndex + 1, items.length - 1); // Increment index or cap at the last image
+  showImage(currentIndex);
+}
+
+function prevImage() {
+  currentIndex = Math.max(currentIndex - 1, 0); // Decrement index or cap at the first image
+  showImage(currentIndex);
+}
+
+// Initial call to set button visibility based on the starting index
+showImage(currentIndex);
+</script>

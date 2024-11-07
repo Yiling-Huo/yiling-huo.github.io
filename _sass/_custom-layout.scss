@@ -51,3 +51,61 @@
 .profile {
     content: url("/images/profile.webp");
 }
+
+.gallery-container {
+    position: relative;
+    width: 100%; /* Set the width of the visible area */
+    // height: 75vh; /* Set the height of the visible area */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 50px 0;
+}
+
+@media (min-width: 48em) {
+.gallery-item {
+    width: 50vw;
+}
+}
+
+.gallery-item img {
+    max-width: 80%;
+    max-height: 80%;
+    padding: 0; /* Adjust padding to center the image */
+}
+
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1; /* Ensure buttons are above images */
+}
+
+.gallery-button.prev {
+    left: 10px;
+}
+
+.gallery-button.next {
+    right: 10px;
+}

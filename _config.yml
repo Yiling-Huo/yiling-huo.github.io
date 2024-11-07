@@ -39,7 +39,8 @@ header_pages:
  - publications.md
  - teaching.md
  - tutorials/index.md
- - resources.html
+ - games.html
+ - photography.html
  - links.html
 
 # Social links in sidebar
@@ -50,4 +51,4 @@ social_links:
   - { platform: orcid,        user_url: "https://orcid.org/0000-0002-9327-9412" }
 
 # Correct time zone for updating blog
-timezone: Europe/London
+#timezone: Europe/London
