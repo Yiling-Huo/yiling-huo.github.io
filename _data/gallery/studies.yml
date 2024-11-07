@@ -34,7 +34,7 @@
 - image: "/images/photography/36.webp"
   caption: "<ul class='gallery-caption'><li><em>Composition 2</em>, 2024</li><li>Cardiff, Wales</li><li>Sony Alpha 7 II</li></ul>"
 
-  - image: "/images/photography/39.webp"
+- image: "/images/photography/39.webp"
   caption: "<ul class='gallery-caption'><li><em>Composition 4</em>, 2024</li><li>Edinburgh, Scotland</li><li>Sony Alpha 7 II</li></ul>"
 
 - image: "/images/photography/40.webp"
@@ -51,3 +51,6 @@
 
 - image: "/images/photography/41.webp"
   caption: "<ul class='gallery-caption'><li><em>Crossroad</em>, 2024</li><li>Edinburgh, Scotland</li><li>Sony Alpha 7 II</li></ul>"
+
+- image: "/images/photography/43.webp"
+  caption: "<ul class='gallery-caption'><li><em>Second-order Creation</em>, 2024</li><li>London, England</li><li>iPhone 13 Pro</li></ul>"
