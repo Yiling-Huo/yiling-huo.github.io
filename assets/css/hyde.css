@@ -181,6 +181,9 @@ a.sidebar-nav-item:focus {
 .theme-spring .related-posts li a:hover {
   color: #c0989f;
 }
+.theme-spring .profile {
+  content: url("/images/profile/profile-sp.webp");
+}
 
 /* Summer */
 .theme-summer .sidebar {
@@ -190,6 +193,9 @@ a.sidebar-nav-item:focus {
 .theme-summer .content a,
 .theme-summer .related-posts li a:hover {
   color: #30ad6d;
+}
+.theme-summer .profile {
+  content: url("/images/profile/profile-su.webp");
 }
 
 /* Autumn */
@@ -201,6 +207,9 @@ a.sidebar-nav-item:focus {
 .theme-autumn .related-posts li a:hover {
   color: #d28445;
 }
+.theme-autumn .profile {
+  content: url("/images/profile/profile-au.webp");
+}
 
 /* Winter */
 .theme-winter .sidebar {
@@ -210,6 +219,9 @@ a.sidebar-nav-item:focus {
 .theme-winter .content a,
 .theme-winter .related-posts li a:hover {
   color: #000cba;
+}
+.theme-winter .profile {
+  content: url("/images/profile/profile-wi.webp");
 }
 
 
