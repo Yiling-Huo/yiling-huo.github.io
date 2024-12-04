@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - env:
+          github_token: ${{ secrets.PAT }}
+
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -27,7 +30,7 @@ jobs:
           next_season=$(bash script/advance_season.sh "$current_season")
           sed -i '/hyde-theme:/ {n; s/skin: .*/skin: '$next_season'/}' _config.yml
 
-      - name: Commit and Push Changes
+      - name: Commit
         run: |
           git config user.name ${{ secrets.MY_NAME }}
           git config user.email ${{ secrets.MY_EMAIL }}
