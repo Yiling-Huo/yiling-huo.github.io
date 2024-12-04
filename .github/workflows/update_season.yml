@@ -36,5 +36,5 @@ jobs:
           git add _config.yml
           git commit -m "Advance to the next season"
           # Authenticate using the PAT
-          git remote set-url origin https://x-access-token:${PERSONAL_ACCESS_TOKEN}@github.com/<OWNER>/<REPO>.git
+          git remote set-url origin https://x-access-token:${PERSONAL_ACCESS_TOKEN}@github.com/yiling-huo/yiling-huo.github.io.git
           git push origin master
