@@ -16,9 +16,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - env:
-          github_token: ${{ secrets.PAT }}
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -30,14 +27,14 @@ jobs:
           next_season=$(bash script/advance_season.sh "$current_season")
           sed -i '/hyde-theme:/ {n; s/skin: .*/skin: '$next_season'/}' _config.yml
 
-      - name: Commit
+      - name: Commit and Push
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PAT }}
         run: |
-          git config user.name ${{ secrets.MY_NAME }}
-          git config user.email ${{ secrets.MY_EMAIL }}
+          git config user.name "${{ secrets.MY_NAME }}" # Used for the commit author
+          git config user.email "${{ secrets.MY_EMAIL }}" # Used for the commit author's email
           git add _config.yml
           git commit -m "Advance to the next season"
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PAT }}
+          # Authenticate using the PAT
+          git remote set-url origin https://x-access-token:${PERSONAL_ACCESS_TOKEN}@github.com/<OWNER>/<REPO>.git
+          git push origin master
