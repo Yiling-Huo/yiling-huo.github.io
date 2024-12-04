@@ -30,4 +30,4 @@ jobs:
           git config user.email ${{ secrets.MY_EMAIL }}
           git add _config.yml
           git commit -m "Advance to the next season"
-          git push
+          git push origin master
