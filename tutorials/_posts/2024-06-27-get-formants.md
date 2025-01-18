@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Extract by-interval mean formants in Praat
+title: Extract by-interval average formants in Praat
 date: 2024-06-27 15:00
-modified_date: 2024-08-06-14:00
+modified_date: 2025-01-18 14:00
 author: Yiling Huo
 # comment_issue_id: 12
 category: 'Tutorials' 
@@ -10,7 +10,7 @@ tags: ['Psycholinguistics', 'Praat']
 reading-time: 2
 ---
 
-On this page I present a Praat script that extracts by-interval mean formants.
+On this page I present a Praat script that extracts by-interval average formants.
 
 <!--excerpt-->
 
