@@ -17,10 +17,16 @@
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
       {% for path in page_paths %}
+      <!-- add link to external website -->
+      <!-- {% if path == 'gist' %}
+        <a href="https://gist.github.com/Yiling-Huo">Gist</a>
+      {% else %} -->
+      <!-- other sidebar links -->
       {%- assign this_page = site.pages | where: "path", path | first -%}
         {% if this_page.title %}
             <a class="sidebar-nav-item{% if page.url == this_page.url %} active{% endif %}" href="{{ this_page.url | relative_url }}">{{ this_page.title}}</a>
         {% endif %}
+      <!-- {% endif %} -->
       {% endfor %}
 
       <!-- {% assign pages_list = site.pages %}

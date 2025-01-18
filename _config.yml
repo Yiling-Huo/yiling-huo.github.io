@@ -39,6 +39,7 @@ header_pages:
  - publications.md
  - teaching.md
  - tutorials/index.md
+ - gist
  - games.html
  - photography.html
  - links.html
@@ -48,7 +49,9 @@ social_links:
   - { platform: email,        user_url: "mailto:yiling.huo.18@ucl.ac.uk" }
   - { platform: twitter,        user_url: "https://twitter.com/YlHuo" }
   - { platform: github,         user_url: "https://github.com/Yiling-Huo" }
+  - { platform: gist,         user_url: "https://gist.github.com/Yiling-Huo" }
   - { platform: orcid,        user_url: "https://orcid.org/0000-0002-9327-9412" }
+  - { platform: linkedin,        user_url: "https://www.linkedin.com/in/yiling-huo-5b4228244/" }
 
 # Correct time zone for updating blog
-timezone: Europe/London
+#timezone: Europe/London
