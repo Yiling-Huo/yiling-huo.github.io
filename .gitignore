@@ -42,6 +42,7 @@ node_modules
 
 # images
 images/sidebar/sidebar.psd
+images/sidebar/*.png
 images/photography/*.png
 images/photography/*.jpg
 images/photography/convert-images.py
