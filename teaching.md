@@ -5,7 +5,7 @@ sidebar: true
 # permalink: /teaching/
 ---
 
-## Lecturer / Teacher
+## Lecturer
 
 #### University College London
 
@@ -20,7 +20,11 @@ sidebar: true
 
 ## Guest Lecturer
 
+#### University College London
+
 - **2024-2025** Introduction to Event-Related Potentials (ERPs) in Language Research, PALS0001 Introduction to the Brain and Imaging the Brain
+- **2024-2025** Lecture 7 - Predictive sentence processing, PLIN0033 Psycholinguistics: General Processing
+- **2024-2025** Lecture 8 - Interpreting pronouns and good-enough processing, PLIN0033 Psycholinguistics: General Processing
 
 ## Teaching Assistant
 

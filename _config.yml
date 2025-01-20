@@ -54,4 +54,4 @@ social_links:
   - { platform: linkedin,        user_url: "https://www.linkedin.com/in/yiling-huo-5b4228244/" }
 
 # Correct time zone for updating blog
-#timezone: Europe/London
+timezone: Europe/London
