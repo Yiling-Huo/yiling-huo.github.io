@@ -9,9 +9,9 @@ sidebar: true
 
 #### University College London
 
-- **2024-2025** Introduction to the Eye-tracking Method and its Application in Language Research, UCL Linguistics Short Courses24/25 <a href="https://ucl-linguistics-short-course.github.io/2024/" target="_blank"> Info </a> <a href="https://yiling-huo.github.io/eye-tracking-workshop-slides-2024/" target="_blank">Slides</a>
+- **2024-2025** Introduction to the Eye-tracking Method and its Application in Language Research, UCL Linguistics Short Courses 24/25 <a href="https://ucl-linguistics-short-course.github.io/2024/" target="_blank">Info</a> <a href="https://yiling-huo.github.io/eye-tracking-workshop-slides-2024/" target="_blank">Slides</a>
 - **2023-2024** PLINSTAT Introduction to Statistics for Linguists using R <a href="https://yiling-huo.github.io/plinstat-handouts/" target="_blank">Slides</a>
-- **2023-2024** Introduction to the Eye-tracking Method and its Application in Language Research, UCL Linguistics Autumn School 2023 <a href="https://sites.google.com/view/ucllinguisticsautumnschool2023/modules?authuser=0#h.865iukqf5v8l" target="_blank"> Info </a> <a href="https://yiling-huo.github.io/eye-tracking-workshop-slides-2023/" target="_blank">Slides</a>
+- **2023-2024** Introduction to the Eye-tracking Method and its Application in Language Research, UCL Linguistics Autumn School 2023 <a href="https://sites.google.com/view/ucllinguisticsautumnschool2023/modules?authuser=0#h.865iukqf5v8l" target="_blank">Info</a> <a href="https://yiling-huo.github.io/eye-tracking-workshop-slides-2023/" target="_blank">Slides</a>
 - **2021-2022** PLINSTAT Introduction to Statistics for Linguists using R 
 
 #### Beijing Foreign Studies University
