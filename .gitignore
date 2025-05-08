@@ -41,6 +41,7 @@ validation-report.json
 node_modules
 
 # images
+images/profile/*.png
 images/sidebar/sidebar.psd
 images/sidebar/*.png
 images/photography/*.png
