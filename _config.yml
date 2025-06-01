@@ -28,7 +28,7 @@ paginate:         5
 #   repo:           https://github.com/poole/hyde
 
 hyde-theme:
-  skin: spring
+  skin: summer
 
 plugins:
   - jekyll-feed
