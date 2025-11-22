@@ -7,7 +7,7 @@ author: Yiling Huo
 # comment_issue_id: 12
 category: 'Tutorials' 
 tags: ['Markup', 'AI', 'LaTeX', 'RMarkdown']
-reading-time: 2
+reading-time: 4
 ---
 
 One of the most important issues for nowadays higher education professionals is how to make the assessments AI-proof. Of course we all want our students to learn the knowledge with their *own* brain, but with the new developments in AI especially LLMs, students are more tempted than ever to skip the learning and just ask a tool to generate answers. Worst thing is, it's becoming more and more difficult to tell the AI-generated answers apart from human-written answers. So how do we try to make assignments AI-proof?
