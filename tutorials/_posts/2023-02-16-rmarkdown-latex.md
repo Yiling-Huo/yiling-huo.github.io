@@ -5,7 +5,7 @@ date: 2023-02-16 21:00
 modified_date: 2023-12-01 18:00
 author: Yiling Huo
 category: 'Tutorials'
-tags: ['Markup and Markdown', 'TeX']
+tags: ['Markup', 'LaTeX', 'RMarkdown']
 reading-time: 14
 ---
 
