@@ -29,6 +29,8 @@ However, since in this case the instructions will still be regular text, student
 
 # Using LaTeX to hide an undetectable instruction <a name="tex"></a>
 
+Tested and works on GPT-5 as of 22 Nov 2025.
+
 ## How it works <a name="how"></a>
 
 A friend of mine [Boyan](https://www.linkedin.com/in/boyan-yin-063498145/?originalSubdomain=uk) asked me if I could figure out how to hide instructions for AI inside assignments. Upon some research, I came across this [article about how PDF files can manipulate AI systems](https://fbeta.de/invisible-information-in-pdfs-new-ways-for-hiding-content-to-manipulate-ai-systems/). The article is written from a cybersecurity angle and focuses on how to *prevent* hidden information from polluting AI, but for our purposes we want the exact opposite: we *want* our assignment PDF files to pollute the AI systems enough so that it generates distinct results from human answers. Perfect. The trick is really simple. All you need is a bit of LaTeX knowledge. 
