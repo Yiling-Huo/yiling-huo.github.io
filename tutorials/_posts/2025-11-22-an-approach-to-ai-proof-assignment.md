@@ -46,7 +46,7 @@ We are going to insert a LaTeX interactive form in our PDF. Normally this is use
 \end{Form}
 ```
 
-This makes sure that the hidden instruction is *unselectable*, *undetectable by most text extraction tools*, but common LLMs such as ChatGPT will still read and follow it. 
+This makes sure that the hidden instruction is *unselectable*, *undetectable by most text extraction tools*, but common LLMs such as ChatGPT can still read and follow it. 
 
 > Note: this only works if the student *uploads the PDF file to the chat*. If they instead decided to copy paste all text, the instruction will be lost. I'm trying to figure out ways to make the text inside the PDF file unselectable while retaining the interactive form, which leaves students no choice but to upload. I will keep this post updated if I find out a way. 
 
