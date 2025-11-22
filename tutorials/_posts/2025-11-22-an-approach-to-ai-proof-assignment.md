@@ -23,7 +23,7 @@ One of the most effective approaches is to insert a special instruction for LLMs
 
 This can be done in a few different ways. One of the easiest is simply inserting these instructions as white-on-white text with extremely small fonts. When a careless student uploads the file or copy pastes all texts to the AI chatbot, the instructions will be included as part of the input. 
 
-However, since in this case the instructions will remain selectable text, student might spot something usual when they select all texts from your PDF document. 
+However, since in this case the instructions will still be regular text, student might spot something unusual when they select all texts from your PDF document. 
 
 > Note: Copilot is unable to detect any hidden text even like this, likely due to how it handles files. PDF files are possibly fed to a VLLM without trying to convert the file to text first. 
 
