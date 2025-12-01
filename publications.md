@@ -7,7 +7,13 @@ sidebar: true
 
 ## Publications
 
-(I'm working hard to have something here!)
+### Articles
+
+- Huo, Y. & Chow, W.Y. (in review) Listeners do not use Mandarin Chinese tone sandhi to predict upcoming words: a visual world eye-tracking study. *Language, Cognition, and Neuroscience*. 
+
+### PhD thesis
+
+Huo, Y. (2025) *Phonology in language prediction: the role of lexical tones and tone sandhi in Mandarin Chinese.* PhD thesis, University College London. <a href="https://discovery.ucl.ac.uk/id/eprint/10215115" target="_blank">View</a>
 
 ## Presentations
 
