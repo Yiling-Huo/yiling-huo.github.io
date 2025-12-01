@@ -8,7 +8,7 @@ highlighter: pygments
 
 # Setup
 title:            'Yiling Huo'
-tagline:          'PhD student | Linguistics | University College London'
+tagline:          'PhD Psycholinguistics'
 description: >
   Hi! I'm Yiling, and this is my personal website. I'm interested in the human brain and language. 
 
@@ -39,7 +39,6 @@ header_pages:
  - publications.html
  - teaching.html
  - tutorials/index.md
- - gist
  - games.html
  - photography.html
  - links.html
