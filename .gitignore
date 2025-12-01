@@ -49,3 +49,7 @@ images/photography/*.jpg
 images/photography/convert-images.py
 Gemfile.lock
 games copy.html
+
+# old pages
+_publications.node_modules
+_teaching.md

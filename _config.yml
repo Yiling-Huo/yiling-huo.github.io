@@ -36,8 +36,8 @@ plugins:
   - jekyll-paginate
 
 header_pages:
- - publications.md
- - teaching.md
+ - publications.html
+ - teaching.html
  - tutorials/index.md
  - gist
  - games.html
