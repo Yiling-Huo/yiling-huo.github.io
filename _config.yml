@@ -48,7 +48,7 @@ social_links:
   - { platform: email,        user_url: "mailto:yiling.huo.18@ucl.ac.uk" }
   - { platform: google_scholar,        user_url: "https://scholar.google.com/citations?user=1G1bmnkAAAAJ"}
   - { platform: orcid,        user_url: "https://orcid.org/0000-0002-9327-9412" }
-  - { platform: twitter,        user_url: "https://twitter.com/YlHuo" }
+  # - { platform: twitter,        user_url: "https://twitter.com/YlHuo" }
   - { platform: github,         user_url: "https://github.com/Yiling-Huo" }
   - { platform: gist,         user_url: "https://gist.github.com/Yiling-Huo" }
   - { platform: linkedin,        user_url: "https://www.linkedin.com/in/yiling-huo-5b4228244/" }
